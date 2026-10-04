@@ -834,6 +834,26 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
 #launchErr a{color:var(--teal);font-weight:600}
 .launch form{background:none!important;padding:0!important;border:0!important;box-shadow:none!important;border-radius:0!important;min-height:0}
 .launch-close-f{display:block;width:auto}
+/* offers v2: two groups, clickable */
+.offers-wrap{display:grid;gap:10px}
+.offers-h{display:flex;align-items:center;gap:14px;font:600 12px/1 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin:6px 0 2px}
+.offers-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.offers + .offers-h{margin-top:26px}
+button.offer{all:unset;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;padding:22px 14px;margin:0 -14px;border-bottom:0;cursor:pointer;border-radius:16px;position:relative;transition:background .35s,transform .35s cubic-bezier(.2,.7,.2,1)}
+button.offer h3{font:500 26px/1.15 var(--f-display);color:var(--ink);margin:0}
+button.offer p{grid-column:1/-1;font-size:15px;color:var(--muted);margin:0;padding-inline-end:90px}
+button.offer .enq{position:absolute;inset-inline-end:14px;bottom:20px;font:600 12px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--teal);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s}
+[dir=rtl] button.offer .enq{transform:translateX(6px)}
+button.offer .enq::after{content:" →"}
+[dir=rtl] button.offer .enq::after{content:" ←"}
+button.offer:hover,button.offer:focus-visible{background:rgba(255,255,255,.55)}
+button.offer:hover .enq,button.offer:focus-visible .enq{opacity:1;transform:none}
+button.offer:focus-visible{outline:2px solid var(--teal-2)}
+button.offer.svc h3::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--teal-2);margin-inline-end:12px;vertical-align:middle;position:relative;top:-3px}
+@media (hover:none){button.offer .enq{opacity:1;transform:none}}
+@media (max-width:600px){button.offer{grid-template-columns:1fr}button.offer p{padding-inline-end:0;padding-bottom:22px}button.offer span{justify-self:start}}
+button.offer::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:1px;background:var(--line)}
+.offers{border-top:0}
 </style>
 
 </head>
@@ -1174,12 +1194,21 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
         <span data-i18n="p1">Furniture &amp; decor</span><span data-i18n="p2">Lighting</span><span data-i18n="p3">Paint &amp; finishes</span><span data-i18n="p4">Rugs &amp; textiles</span><span data-i18n="p5">Flooring</span><span data-i18n="p6">Kitchen &amp; bath</span><span data-i18n="p7">Smart home</span><span data-i18n="p8">Real estate</span>
       </div>
     </div>
-    <div class="offers reveal">
-      <div class="offer"><h3 data-i18n="o1">Sponsored reels</h3><span data-i18n="o1t">Instagram · Facebook</span><p data-i18n="o1d">Your product shown in a real room, inside a lesson people save and share.</p></div>
-      <div class="offer"><h3 data-i18n="o2">Brand ambassador</h3><span data-i18n="o2t">Long term</span><p data-i18n="o2d">An ongoing partnership across a season of content, stories and launches.</p></div>
-      <div class="offer"><h3 data-i18n="o3">Showroom &amp; launch visits</h3><span data-i18n="o3t">Dubai · UAE</span><p data-i18n="o3d">On-site content from your store, showroom, project or event.</p></div>
-      <div class="offer"><h3 data-i18n="o4">Product edits</h3><span data-i18n="o4t">Stories · Guides</span><p data-i18n="o4d">Curated picks and styling guides that send followers straight to buy.</p></div>
-      <div class="offer"><h3 data-i18n="o5">Developer &amp; staging content</h3><span data-i18n="o5t">Real estate</span><p data-i18n="o5d">Styling stories for new homes, built on her experience staging 50+ properties.</p></div>
+    <div class="offers-wrap reveal">
+      <p class="offers-h"><span data-i18n="gHome">For your home</span></p>
+      <div class="offers">
+      <button type="button" class="offer svc" data-type="Interior design consultation"><h3 data-i18n="s1"></h3><span data-i18n="s1t"></span><p data-i18n="s1d"></p><i class="enq" data-i18n="enq">Enquire</i></button>
+      <button type="button" class="offer svc" data-type="3D design"><h3 data-i18n="s2"></h3><span data-i18n="s2t"></span><p data-i18n="s2d"></p><i class="enq" data-i18n="enq">Enquire</i></button>
+      <button type="button" class="offer svc" data-type="Interior project"><h3 data-i18n="s3"></h3><span data-i18n="s3t"></span><p data-i18n="s3d"></p><i class="enq" data-i18n="enq">Enquire</i></button>
+      </div>
+      <p class="offers-h"><span data-i18n="gBrand">For brands</span></p>
+      <div class="offers">
+      <button type="button" class="offer" data-type="Sponsored content"><h3 data-i18n="o1">Sponsored reels</h3><span data-i18n="o1t">Instagram · Facebook</span><p data-i18n="o1d">Your product shown in a real room, inside a lesson people save and share.</p><i class="enq" data-i18n="enq">Enquire</i></button>
+      <button type="button" class="offer" data-type="Brand collaboration"><h3 data-i18n="o2">Brand ambassador</h3><span data-i18n="o2t">Long term</span><p data-i18n="o2d">An ongoing partnership across a season of content, stories and launches.</p><i class="enq" data-i18n="enq">Enquire</i></button>
+      <button type="button" class="offer" data-type="Event or showroom visit"><h3 data-i18n="o3">Showroom &amp; launch visits</h3><span data-i18n="o3t">Dubai · UAE</span><p data-i18n="o3d">On-site content from your store, showroom, project or event.</p><i class="enq" data-i18n="enq">Enquire</i></button>
+      <button type="button" class="offer" data-type="Brand collaboration"><h3 data-i18n="o4">Product edits</h3><span data-i18n="o4t">Stories · Guides</span><p data-i18n="o4d">Curated picks and styling guides that send followers straight to buy.</p><i class="enq" data-i18n="enq">Enquire</i></button>
+      <button type="button" class="offer" data-type="Brand collaboration"><h3 data-i18n="o5">Developer &amp; staging content</h3><span data-i18n="o5t">Real estate</span><p data-i18n="o5d">Styling stories for new homes, built on her experience staging 50+ properties.</p><i class="enq" data-i18n="enq">Enquire</i></button>
+      </div>
     </div>
   </div>
 </section>
@@ -1227,6 +1256,9 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
           <option value="Event or showroom visit" data-i18n="opt3">Event or showroom visit</option>
           <option value="Media or interview" data-i18n="opt4">Media or interview</option>
           <option value="Book" data-i18n="opt5">Book</option>
+          <option value="Interior design consultation" data-i18n="s1">Interior design consultation</option>
+          <option value="3D design" data-i18n="s2">3D design &amp; visualisation</option>
+          <option value="Interior project" data-i18n="s3">Full interior project</option>
           <option value="Other" data-i18n="opt6">Other</option>
         </select>
       </label>
@@ -1806,13 +1838,25 @@ Object.assign(I18N.ja, {"lH": "<em>『Soul of the Room』</em>をいち早く", 
 Object.assign(I18N.de, {"lH": "Lies <em>Soul of the Room</em> als Erste:r", "lP": "Hinterlasse deine E-Mail und Farnaz sagt dir, wann das Buch erscheint, mit einem ersten Blick hinein.", "lBtn": "Auf die Liste", "lNote": "Kein Spam. Eine E-Mail, wenn das Buch erscheint.", "lOkH": "Du bist auf der Liste", "lOkP": "Danke! Du hörst von Farnaz, sobald Soul of the Room fertig ist.", "lErr": "Bitte gib deinen Namen und eine gültige E-Mail an.", "lFail": "Gerade keine Verbindung. Bitte versuche es erneut oder schreib Farnaz auf WhatsApp.", "lClose": "Schließen", "lSending": "Wird gesendet…", "partnerMsg": "Hallo Farnaz, ich möchte über eine Partnerschaft für Soul of the Room sprechen (Launch, Featured Brand oder Gifting).", "sentOkH3": "Nachricht gesendet", "sentOkP": "Danke! Farnaz oder ihr Team antworten innerhalb von zwei Werktagen. Für eine schnellere Antwort kannst du sie auch per WhatsApp senden."});
 Object.assign(I18N.fr, {"lH": "Lisez <em>Soul of the Room</em> en avant-première", "lP": "Laissez votre email et Farnaz vous préviendra le jour de la sortie, avec un premier aperçu des pages.", "lBtn": "Rejoindre la liste", "lNote": "Pas de spam. Un seul email à la sortie du livre.", "lOkH": "Vous êtes sur la liste", "lOkP": "Merci. Farnaz vous écrira dès que Soul of the Room sera prêt.", "lErr": "Merci d'indiquer votre nom et un email valide.", "lFail": "Connexion impossible pour le moment. Réessayez ou écrivez à Farnaz sur WhatsApp.", "lClose": "Fermer", "lSending": "Envoi…", "partnerMsg": "Bonjour Farnaz, j'aimerais parler d'un partenariat autour de Soul of the Room (lancement, marque mise en avant ou cadeaux).", "sentOkH3": "Message envoyé", "sentOkP": "Merci. Farnaz ou son équipe répondront sous deux jours ouvrés. Pour une réponse plus rapide, vous pouvez aussi l'envoyer sur WhatsApp."});
 
+/* design services */
+Object.assign(I18N.en, {"gHome": "For your home", "gBrand": "For brands", "s1": "Interior design consultation", "s1t": "In person · Online", "s1d": "A focused session in your home or by video: layout, colour, lighting and what to buy, with a clear written plan to follow.", "s2": "3D design &amp; visualisation", "s2t": "See it first", "s2d": "See your room in realistic 3D before you spend anything, with furniture, finishes and lighting planned to scale.", "s3": "Full interior projects", "s3t": "Dubai · UAE", "s3d": "From concept to the last cushion: design, sourcing, styling and staging for apartments, villas and show homes.", "enq": "Enquire"});
+Object.assign(I18N.fa, {"gHome": "برای خانه‌ی شما", "gBrand": "برای برندها", "s1": "مشاوره‌ی طراحی داخلی", "s1t": "حضوری · آنلاین", "s1d": "یک جلسه‌ی متمرکز در خانه‌ی شما یا تصویری: چیدمان، رنگ، نور و اینکه چه بخرید، همراه با یک برنامه‌ی مکتوب و روشن.", "s2": "طراحی و تصویرسازی سه‌بعدی", "s2t": "اول ببینید", "s2d": "پیش از هر هزینه‌ای، اتاق‌تان را به‌صورت سه‌بعدی واقعی ببینید؛ با مبلمان، متریال و نورپردازی در مقیاس درست.", "s3": "پروژه‌های کامل داخلی", "s3t": "دبی · امارات", "s3d": "از ایده تا آخرین کوسن: طراحی، تأمین، استایلینگ و استیجینگ برای آپارتمان، ویلا و واحد نمونه.", "enq": "درخواست"});
+Object.assign(I18N.ar, {"gHome": "لمنزلك", "gBrand": "للعلامات التجارية", "s1": "استشارة تصميم داخلي", "s1t": "حضوريًا · عبر الإنترنت", "s1d": "جلسة مركّزة في منزلك أو عبر الفيديو: التوزيع والألوان والإضاءة وما يجب شراؤه، مع خطة مكتوبة واضحة.", "s2": "تصميم وتصوّر ثلاثي الأبعاد", "s2t": "شاهده أولًا", "s2d": "شاهد غرفتك بتصميم ثلاثي الأبعاد واقعي قبل أن تنفق شيئًا، مع الأثاث والتشطيبات والإضاءة بالمقاسات الصحيحة.", "s3": "مشاريع داخلية متكاملة", "s3t": "دبي · الإمارات", "s3d": "من الفكرة حتى آخر وسادة: تصميم وتوريد وتنسيق وتجهيز للشقق والفلل والوحدات النموذجية.", "enq": "استفسار"});
+Object.assign(I18N.ru, {"gHome": "Для вашего дома", "gBrand": "Для брендов", "s1": "Консультация по дизайну интерьера", "s1t": "Лично · Онлайн", "s1d": "Сессия у вас дома или по видео: планировка, цвет, свет и что покупать, с понятным письменным планом.", "s2": "3D-дизайн и визуализация", "s2t": "Увидеть заранее", "s2d": "Увидьте комнату в реалистичном 3D до любых трат: мебель, отделка и свет в правильном масштабе.", "s3": "Интерьерные проекты под ключ", "s3t": "Дубай · ОАЭ", "s3d": "От идеи до последней подушки: дизайн, закупка, стайлинг и хоум-стейджинг квартир, вилл и шоу-румов.", "enq": "Запросить"});
+Object.assign(I18N.es, {"gHome": "Para tu hogar", "gBrand": "Para marcas", "s1": "Consultoría de interiorismo", "s1t": "Presencial · Online", "s1d": "Una sesión en tu casa o por videollamada: distribución, color, iluminación y qué comprar, con un plan escrito claro.", "s2": "Diseño y visualización 3D", "s2t": "Míralo antes", "s2d": "Ve tu espacio en 3D realista antes de gastar nada, con muebles, acabados e iluminación a escala.", "s3": "Proyectos de interiorismo completos", "s3t": "Dubái · EAU", "s3d": "De la idea al último cojín: diseño, compras, estilismo y home staging para pisos, villas y pisos piloto.", "enq": "Consultar"});
+Object.assign(I18N.it, {"gHome": "Per la tua casa", "gBrand": "Per i brand", "s1": "Consulenza di interior design", "s1t": "Di persona · Online", "s1d": "Una sessione a casa tua o in video: layout, colore, luce e cosa comprare, con un piano scritto chiaro.", "s2": "Progettazione e render 3D", "s2t": "Vedilo prima", "s2d": "Guarda la tua stanza in 3D realistico prima di spendere, con arredi, finiture e luci in scala.", "s3": "Progetti d'interni completi", "s3t": "Dubai · EAU", "s3d": "Dall'idea all'ultimo cuscino: progetto, acquisti, styling e home staging per appartamenti, ville e show home.", "enq": "Richiedi"});
+Object.assign(I18N.zh, {"gHome": "为你的家", "gBrand": "为品牌", "s1": "室内设计咨询", "s1t": "上门 · 线上", "s1d": "上门或视频的一对一咨询：布局、色彩、灯光和该买什么，并提供清晰的书面方案。", "s2": "3D 设计与效果图", "s2t": "先看效果", "s2d": "花钱之前，先在逼真的 3D 中看到你的房间，家具、材质和灯光都按比例规划。", "s3": "整体室内项目", "s3t": "迪拜 · 阿联酋", "s3d": "从概念到最后一个靠枕：为公寓、别墅和样板房提供设计、采购、软装和布置。", "enq": "咨询"});
+Object.assign(I18N.ja, {"gHome": "住まいのために", "gBrand": "ブランドの方へ", "s1": "インテリアデザイン相談", "s1t": "訪問 · オンライン", "s1d": "ご自宅またはビデオで：レイアウト、色、照明、何を買うべきかを相談し、わかりやすいプランをお渡しします。", "s2": "3D デザイン・ビジュアライゼーション", "s2t": "先に確認", "s2d": "お金をかける前に、家具・仕上げ・照明を実寸で配置したリアルな 3D でお部屋を確認できます。", "s3": "トータルインテリアプロジェクト", "s3t": "ドバイ · UAE", "s3d": "コンセプトから最後のクッションまで：アパート、ヴィラ、モデルルームのデザイン、調達、スタイリング、ステージング。", "enq": "問い合わせ"});
+Object.assign(I18N.de, {"gHome": "Für Ihr Zuhause", "gBrand": "Für Marken", "s1": "Interior-Design-Beratung", "s1t": "Vor Ort · Online", "s1d": "Eine Sitzung bei Ihnen zu Hause oder per Video: Grundriss, Farbe, Licht und was sich lohnt, mit einem klaren schriftlichen Plan.", "s2": "3D-Design &amp; Visualisierung", "s2t": "Vorher sehen", "s2d": "Sehen Sie Ihren Raum realistisch in 3D, bevor Sie etwas ausgeben, mit Möbeln, Oberflächen und Licht im Maßstab.", "s3": "Komplette Innenprojekte", "s3t": "Dubai · VAE", "s3d": "Von der Idee bis zum letzten Kissen: Design, Einkauf, Styling und Home-Staging für Wohnungen, Villen und Musterwohnungen.", "enq": "Anfragen"});
+Object.assign(I18N.fr, {"gHome": "Pour votre intérieur", "gBrand": "Pour les marques", "s1": "Conseil en décoration intérieure", "s1t": "Sur place · En ligne", "s1d": "Une séance chez vous ou en visio : agencement, couleurs, lumière et quoi acheter, avec un plan écrit clair.", "s2": "Conception &amp; visualisation 3D", "s2t": "Voir avant", "s2d": "Visualisez votre pièce en 3D réaliste avant de dépenser quoi que ce soit, mobilier, finitions et éclairage à l'échelle.", "s3": "Projets d'intérieur complets", "s3t": "Dubaï · EAU", "s3d": "De l'idée au dernier coussin : conception, achats, stylisme et home staging pour appartements, villas et logements témoins.", "enq": "Demander"});
+
 
 /* ===== Edit these details ===== */
 const CONFIG = {
   whatsapp: "971521235012",              // Farnaz's WhatsApp, digits only with country code
   whatsappDisplay: "+971 52 123 5012",   // how the number is shown
   email: "decorwithfarnaz@gmail.com",    // Farnaz's email (swap for a domain email later)
-  formEndpoint: "https://formsubmit.co/ajax/decorwithfarnaz@gmail.com", // inquiries + launch-list sign-ups arrive here by email (FormSubmit: click "Activate" in the first email once)
+  formEndpoint: "https://formsubmit.co/ajax/2b4ca41127912ca3bbac2accd0ee54b0", // inquiries + launch-list sign-ups arrive here by email (FormSubmit: click "Activate" in the first email once)
   stats: {                               // latest dashboard figures, used for the live estimate
     asOf: "2026-10-04T12:00:00+04:00",
     ig: { followers: 321000, gainPerDay: 45800 / 30 },
@@ -2034,6 +2078,14 @@ $('#partnerBook').addEventListener('click', e => {
   form.classList.add('flash'); setTimeout(() => form.classList.remove('flash'), 1600);
 });
 $('#f-msg').addEventListener('input', e => { e.target.dataset.auto = '0'; });
+$$('button.offer[data-type]').forEach(o => o.addEventListener('click', () => {
+  $('#f-type').value = o.dataset.type;
+  const msg = $('#f-msg'); if (msg.dataset.auto === '1') { msg.value = ''; msg.dataset.auto = '0'; }
+  sent.hidden = true; formParts().forEach(el => el.hidden = false);
+  $('#contact').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  setTimeout(() => $('#f-name').focus({ preventScroll: true }), 700);
+  form.classList.add('flash'); setTimeout(() => form.classList.remove('flash'), 1600);
+}));
 
 /* ---------- hero parallax ---------- */
 const stage = $('.hero-stage');
