@@ -1,0 +1,23 @@
+{
+  "name": "Third Skin Interiors",
+  "short_name": "Third Skin",
+  "description": "Third Skin Interiors by Farnaz Sadeghian, certified interior decorator in Dubai.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5EDE2",
+  "theme_color": "#561C24",
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

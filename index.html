@@ -1,0 +1,1728 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:title" content="Third Skin Interiors by Farnaz Sadeghian">
+<meta property="og:description" content="Certified interior decorator in Dubai teaching 389K followers how to make their house feel like home.">
+<meta property="og:image" content="img/farnaz-hero.jpg">
+<title>Third Skin Interiors</title>
+<meta name="author" content="Farnaz Sadeghian">
+<meta name="description" content="Third Skin Interiors by Farnaz, a certified interior decorator in Dubai teaching 389K followers how to make their house feel like home.">
+<meta name="theme-color" content="#561C24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Pinyon+Script&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;800&family=Vazirmatn:wght@400;600&display=swap">
+<style>
+/* Palette "Coffee" + Persian turquoise accent: #561C24 #6D2932 #C7B7A3 #E8D8C4 · #1C6E69 #23A399 #DCEDE8
+   Layout: arched frames and linen bands, like walking room to room; one wine accent */
+:root{
+  --cream:#F5EDE2; --linen:#E8D8C4; --paper:#FBF7F1;
+  --ink:#2B1517; --muted:#76605A; --line:#D9C9B5;
+  --wine:#561C24; --wine-2:#6D2932; --sand:#C7B7A3;
+  --teal:#1C6E69; --teal-2:#23A399; --mint:#DCEDE8; --pop:#F2A93B;
+  --f-display:"Playfair Display","Didot",Georgia,serif;
+  --f-script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
+  --f-logo:"DM Serif Display","Playfair Display",Georgia,serif;
+  --f-num:"DM Serif Display","Playfair Display",Georgia,serif;
+  --f-body:"Outfit","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-fa:"Vazirmatn",Tahoma,sans-serif;
+  --gutter:clamp(16px,4vw,48px); --max:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--cream);color:var(--ink);font:300 17px/1.65 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.fa{font-family:var(--f-fa);direction:rtl;unicode-bidi:isolate}
+.eyebrow{font:500 12px/1 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--wine)}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.04;letter-spacing:-.01em;margin:0;text-wrap:balance;color:var(--ink)}
+h2{font-size:clamp(36px,5vw,58px)}
+h2 em,h1 em{font-family:var(--f-script);font-style:normal;font-weight:400;font-size:1.18em;line-height:.9;letter-spacing:0;color:var(--wine);padding-inline:.04em}
+:root:lang(fa) h1 em,:root:lang(fa) h2 em,:root:lang(ar) h1 em,:root:lang(ar) h2 em,:root:lang(zh) h1 em,:root:lang(zh) h2 em,:root:lang(ja) h1 em,:root:lang(ja) h2 em{font-family:inherit;font-size:1em;font-style:normal}
+p{margin:0}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:56ch}
+section{padding-block:clamp(72px,10vw,128px)}
+.band{background:var(--linen)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font:500 14px/1 var(--f-body);letter-spacing:.06em;text-decoration:none;border:1px solid var(--wine);transition:background .25s,color .25s,transform .25s;cursor:pointer}
+.btn-solid{background:var(--wine);color:var(--paper)}
+.btn-solid:hover{background:var(--wine-2)}
+.btn-ghost{background:transparent;color:var(--wine)}
+.btn-ghost:hover{background:var(--wine);color:var(--paper)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--cream) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.logo{font:600 24px/1 var(--f-display);text-decoration:none;letter-spacing:.01em}
+.logo i{color:var(--wine);font-weight:400}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:14px;letter-spacing:.06em;color:var(--muted)}
+.nav-links a:hover{color:var(--wine)}
+.nav .btn{padding:11px 18px;font-size:13px}
+@media (max-width:860px){.nav-links{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,64px) clamp(64px,8vw,104px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,88px);align-items:center}
+.arch{position:relative;border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--linen);aspect-ratio:3/4;max-width:100%}
+.arch img{width:100%;height:100%;object-fit:cover}
+.hero .arch{box-shadow:0 30px 60px -30px rgba(70,30,25,.35)}
+.hero .arch img{object-position:22% 60%;animation:settle 1.6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes settle{from{transform:scale(1.06)}to{transform:scale(1)}}
+.hero-photo{position:relative}
+.hero-photo .tag{position:absolute;left:-10px;bottom:28px;background:var(--paper);padding:14px 18px;border-radius:14px;box-shadow:0 14px 30px -18px rgba(70,30,25,.45);display:flex;align-items:center;gap:12px;font-size:13px;line-height:1.3}
+.tag .dot{width:9px;height:9px;border-radius:50%;background:#2F8F5B;box-shadow:0 0 0 0 rgba(47,143,91,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(47,143,91,0)}100%{box-shadow:0 0 0 0 rgba(47,143,91,0)}}
+.tag b{font:400 18px/1.1 var(--f-num);display:block;font-variant-numeric:tabular-nums}
+.hero h1{font-size:clamp(48px,7.2vw,104px);letter-spacing:-.02em;margin-block:18px 22px}
+.hero .fa-line{font-size:18px;color:var(--wine);margin-bottom:18px;display:block;text-align:left}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.creds{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.creds span{display:flex;align-items:center;gap:8px}
+.creds span::before{content:"";width:5px;height:5px;transform:rotate(45deg);background:var(--sand)}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-photo{max-width:440px;margin-inline:auto;width:100%}.hero-photo .tag{left:8px}}
+
+/* stats */
+.stats-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:44px}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.platforms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.pcard{background:var(--paper);border-radius:22px;padding:clamp(24px,3vw,36px);display:grid;gap:18px;border:1px solid var(--line)}
+.pcard-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.handle{display:flex;align-items:center;gap:12px;font-weight:400;text-decoration:none}
+.handle svg{width:30px;height:30px;color:var(--wine)}
+.verified{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--muted)}
+.verified svg{width:15px;height:15px;color:#3B82D6}
+.count{font:400 clamp(60px,8vw,96px)/1 var(--f-num);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.count-label{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.gain{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--muted);padding-top:16px;border-top:1px dashed var(--line)}
+.gain b{color:var(--ink);font:400 16px/1 var(--f-num);font-variant-numeric:tabular-nums}
+.gain .up{color:#2F7A50}
+.reach{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border-radius:22px;overflow:hidden;margin-top:20px;border:1px solid var(--line)}
+.reach div{background:var(--linen);padding:26px 24px}
+.band .reach div{background:var(--cream)}
+.reach b{display:block;font:400 clamp(40px,4.6vw,58px)/1 var(--f-num);color:var(--wine);font-variant-numeric:tabular-nums}
+.reach span{font-size:13px;color:var(--muted);display:block;margin-top:8px;line-height:1.4}
+.note{font-size:12px;color:var(--muted);margin-top:14px}
+@media (max-width:820px){.platforms{grid-template-columns:1fr}.reach{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,6vw,90px);align-items:center}
+.about-photos{position:relative;padding-bottom:70px}
+.about-photos .arch{width:78%}
+.about-photos .arch img{object-position:50% 20%}
+.about-photos .small{position:absolute;right:0;bottom:0;width:48%;border-radius:16px;overflow:hidden;border:8px solid var(--cream);box-shadow:0 20px 40px -24px rgba(70,30,25,.5)}
+.about-photos .small img{aspect-ratio:4/5;object-fit:cover;object-position:60% 50%}
+.about-copy{display:grid;gap:22px}
+.about-copy p{max-width:58ch}
+.script{font:italic 400 clamp(24px,2.6vw,30px)/1.4 var(--f-display);color:var(--wine)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line);margin-top:8px}
+.facts div{padding:18px 0;border-bottom:1px solid var(--line)}
+.facts div:nth-child(odd){padding-right:18px}
+.facts b{display:block;font:400 36px/1.05 var(--f-num);color:var(--wine)}
+.facts span{font-size:14px;color:var(--muted)}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}.about-photos{max-width:460px;margin-inline:auto;width:100%}}
+
+/* before / after */
+.ba-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(28px,5vw,72px);align-items:center}
+.ba{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:8/5;background:var(--paper);user-select:none;touch-action:pan-y;box-shadow:0 30px 60px -36px rgba(70,30,25,.45)}
+.ba svg{position:absolute;inset:0;width:100%;height:100%}
+.ba .before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba .handle-line{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;margin-left:-1px;background:var(--paper);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--paper);display:grid;place-items:center;box-shadow:0 6px 18px rgba(40,20,15,.3);color:var(--wine)}
+.ba .knob svg{position:static;width:22px;height:22px}
+.ba .lbl{position:absolute;top:16px;padding:7px 12px;border-radius:999px;background:rgba(251,248,244,.9);font-size:11px;letter-spacing:.18em;text-transform:uppercase;pointer-events:none}
+.ba .lbl.l{left:16px}.ba .lbl.r{right:16px;color:var(--wine)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-tabs{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:9px 16px;font:400 13px/1 var(--f-body);color:var(--muted);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.steps{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.steps li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:15.5px}
+.steps li b{font:italic 500 22px/1 var(--f-display);color:var(--wine)}
+@media (max-width:900px){.ba-grid{grid-template-columns:1fr}}
+
+/* learn */
+.learn-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end;margin-bottom:48px}
+.topics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.topic{background:var(--paper);border:1px solid var(--line);border-radius:999px 999px 16px 16px;padding:44px 20px 24px;text-align:center;display:grid;gap:8px;transition:transform .3s,border-color .3s}
+.topic:hover{transform:translateY(-4px);border-color:var(--sand)}
+.topic svg{width:40px;height:40px;margin:0 auto 6px;color:var(--wine)}
+.topic h3{font-size:24px}
+.topic .fa{font-size:14px;color:var(--wine)}
+.topic p{font-size:14px;color:var(--muted);line-height:1.5}
+@media (max-width:980px){.topics{grid-template-columns:repeat(2,minmax(0,1fr))}.learn-head{grid-template-columns:1fr}}
+@media (max-width:440px){.topics{grid-template-columns:1fr}.topic{border-radius:140px 140px 16px 16px;padding-top:32px}}
+
+/* reels */
+.reels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:44px}
+.reel{position:relative;display:grid;align-content:space-between;gap:28px;min-height:230px;padding:26px;border-radius:20px;text-decoration:none;background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:transform .3s}
+.reel:hover{transform:translateY(-4px)}
+.reel.feature{background:var(--wine);color:var(--paper);border-color:var(--wine)}
+.reel.feature .muted,.reel.feature .fa{color:#E8CFC5}
+.reel .views{font:400 clamp(48px,5.5vw,68px)/1 var(--f-num);font-variant-numeric:tabular-nums}
+.reel .views small{font:400 13px var(--f-body);letter-spacing:.14em;text-transform:uppercase;margin-left:6px}
+.reel h3{font-size:24px;color:inherit}
+.reel .fa{font-size:15px;color:var(--wine);display:block;margin-top:6px}
+.reel .muted{font-size:13px;color:var(--muted)}
+.reel .play{position:absolute;right:22px;top:22px;width:38px;height:38px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;opacity:.6}
+.reel .play svg{width:14px;height:14px}
+@media (max-width:900px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.reels{grid-template-columns:1fr}}
+
+/* work with */
+.collab-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
+.offers{display:grid;gap:0;border-top:1px solid var(--line)}
+.offer{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.offer h3{font-size:26px}
+.offer p{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.offer span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);align-self:center}
+.partners{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.partners span{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--muted)}
+.book{margin-top:28px;background:var(--ink);color:var(--paper);border-radius:22px;padding:30px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.book .cover{width:74px;aspect-ratio:2/3;background:var(--wine);border-radius:3px 8px 8px 3px;box-shadow:inset 6px 0 0 rgba(0,0,0,.25),0 10px 20px -8px rgba(0,0,0,.5);display:grid;place-items:center;font:italic 500 13px/1.1 var(--f-display);text-align:center;color:#EAD5C8;padding:6px}
+.book h3{color:var(--paper);font-size:26px}
+.book p{color:#CDBFB3;font-size:14.5px;margin-top:6px}
+@media (max-width:820px){.collab-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--wine);color:var(--paper)}
+.contact h2,.contact .eyebrow{color:var(--paper)}
+.contact h2 em{color:#E7C3B4}
+.contact .lead{color:#E3CFC6}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.channels{display:grid;gap:12px;margin-top:32px}
+.channel{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:16px 18px;border:1px solid rgba(255,255,255,.18);border-radius:16px;text-decoration:none;color:var(--paper);transition:background .25s}
+.channel:hover{background:rgba(255,255,255,.07)}
+.channel svg{width:22px;height:22px}
+.channel .ic{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center}
+.channel small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#D9BFB4}
+.channel b{font-weight:400;word-break:break-word}
+.copy{background:none;border:1px solid rgba(255,255,255,.3);color:var(--paper);border-radius:999px;padding:6px 12px;font:400 12px var(--f-body);cursor:pointer}
+form{background:var(--paper);color:var(--ink);border-radius:24px;padding:clamp(24px,3.5vw,40px);display:grid;gap:16px}
+form h3{font-size:30px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{font:400 16px/1.4 var(--f-body);color:var(--ink);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:13px 14px;width:100%;letter-spacing:0;text-transform:none}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(86,28,36,.12)}
+textarea{min-height:120px;resize:vertical}
+.err{color:var(--wine);font-size:13px;min-height:1em}
+.sent{display:grid;gap:14px;text-align:left}
+.sent pre{white-space:pre-wrap;font:400 14px/1.5 var(--f-body);background:var(--cream);border-radius:12px;padding:14px;margin:0;max-height:180px;overflow:auto}
+.sent .acts{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+
+footer{padding-block:36px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer a{text-decoration:none}
+.float-wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;background:#1F7A4D;color:#fff;display:grid;place-items:center;box-shadow:0 12px 26px -10px rgba(0,0,0,.45);transition:transform .25s}
+.float-wa:hover{transform:scale(1.06)}
+.float-wa svg{width:28px;height:28px}
+
+.reveal{transition:opacity .9s ease,transform .9s ease}
+.js .reveal.pending{opacity:.001;transform:translateY(24px)}
+
+/* language menu */
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang{position:relative}
+.lang-btn{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font:400 13px/1 var(--f-body);color:var(--ink);cursor:pointer}
+.lang-btn:hover{border-color:var(--sand)}
+.flag{width:22px;height:15px;border-radius:3px;overflow:hidden;flex:none;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.lang-menu{position:absolute;right:0;top:calc(100% + 8px);background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:6px;list-style:none;margin:0;min-width:190px;box-shadow:0 20px 40px -20px rgba(70,30,25,.4);z-index:40}
+[dir="rtl"] .lang-menu{right:auto;left:0}
+.lang-menu button{display:flex;align-items:center;gap:12px;width:100%;background:none;border:0;border-radius:10px;padding:10px 12px;font:400 14px/1 var(--f-body);color:var(--ink);cursor:pointer;text-align:start}
+.lang-menu button:hover,.lang-menu button[aria-current="true"]{background:var(--linen)}
+.lang-menu button[aria-current="true"]::after{content:"";margin-inline-start:auto;width:6px;height:6px;border-radius:50%;background:var(--wine)}
+@media (max-width:520px){.nav .btn{display:none}.logo{font-size:22px}}
+/* script-specific type */
+:root:lang(fa),:root:lang(ar){--f-display:"Vazirmatn",Tahoma,sans-serif;--f-body:"Vazirmatn",Tahoma,sans-serif}
+:root:lang(fa) h1,:root:lang(ar) h1,:root:lang(fa) h2,:root:lang(ar) h2{font-weight:600;line-height:1.3}
+:root:lang(fa) h1,:root:lang(ar) h1{font-size:clamp(38px,5.6vw,72px)}
+:root:lang(fa) .script,:root:lang(ar) .script{font-style:normal;font-size:clamp(20px,2.4vw,26px);line-height:1.6}
+:root:lang(zh),:root:lang(ja){--f-display:"Noto Serif SC","Noto Serif JP","Songti SC","Hiragino Mincho ProN","Yu Mincho",serif;--f-body:"PingFang SC","Hiragino Sans","Noto Sans SC","Noto Sans JP","Microsoft YaHei",system-ui,sans-serif}
+:root:lang(zh) h1,:root:lang(ja) h1{font-size:clamp(38px,5.6vw,72px);line-height:1.2}
+:root:lang(zh) .eyebrow,:root:lang(ja) .eyebrow,:root:lang(fa) .eyebrow,:root:lang(ar) .eyebrow{letter-spacing:.06em}
+:root:lang(fa) .fa-accent{display:none}
+[dir="rtl"] .hero .fa-line{text-align:right}
+[dir="rtl"] .hero-photo .tag{left:auto;right:-10px}
+@media (max-width:820px){[dir="rtl"] .hero-photo .tag{right:8px}}
+[dir="rtl"] .about-photos .small{right:auto;left:0}
+[dir="rtl"] .facts div:nth-child(odd){padding-right:0;padding-left:18px}
+[dir="rtl"] .float-wa{right:auto;left:18px}
+[dir="rtl"] .btn svg use[href="#i-arrow"],[dir="rtl"] .channel > svg{transform:scaleX(-1)}
+[dir="rtl"] .reel .play{right:auto;left:22px}
+
+/* brand band with the 3D room logo */
+.brand-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,72px);align-items:center}
+.brand-grid .room3d{--ink:#2B1517;--wine:#561C24}
+.brand-copy{display:grid;gap:18px}
+.room3d[dir]{direction:ltr}
+@media (max-width:860px){.brand-grid{grid-template-columns:1fr}.brand-grid .room3d{max-width:420px}}
+
+/* Third Skin brand */
+.logo{display:inline-flex;align-items:center;gap:12px;color:var(--wine)}
+.logo .mark{width:50px;height:40px;flex:none;object-fit:contain}
+.logo .lw{display:flex;flex-direction:column;line-height:1}
+.logo .lw b{font:400 24px/1 var(--f-logo);letter-spacing:.05em;text-transform:uppercase;color:var(--wine)}
+.logo .lw small{font:600 10px/1 var(--f-body);letter-spacing:.5em;text-transform:uppercase;color:var(--ink);margin-top:5px}
+.quote{margin:10px 0 0;padding:26px 0 0 28px;border-left:2px solid var(--wine);display:grid;gap:12px}
+[dir="rtl"] .quote{border-left:0;border-right:2px solid var(--wine);padding:26px 28px 0 0}
+.quote blockquote{margin:0;font:italic 400 clamp(22px,2.4vw,30px)/1.45 var(--f-display);color:var(--ink)}
+.quote figcaption{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+:root:lang(fa) .quote blockquote,:root:lang(ar) .quote blockquote{font-style:normal}
+
+.contact-logo{display:block;width:clamp(170px,18vw,220px);height:auto;margin-bottom:28px}
+.foot-logo{display:block;width:min(300px,100%);height:auto}
+
+/* hero: headline written on the wall she points at */
+.hero-wall{padding:0;--H:clamp(620px,88vh,900px);background:linear-gradient(to bottom,#BCB5A7 0,#C1BAAC 45%,#AA9F91 85.9%,#DCD5C6 85.9%);overflow:hidden}
+.hero-stage{position:relative;max-width:1440px;margin:0 auto;height:var(--H)}
+.hero-img{position:absolute;left:0;top:0;height:100%;aspect-ratio:3/4;background:url(img/farnaz-hero.jpg) left top/100% 100% no-repeat;-webkit-mask-image:linear-gradient(to right,#000 72%,transparent 100%);mask-image:linear-gradient(to right,#000 72%,transparent 100%)}
+.hero-wall::before{content:"";position:absolute;inset:0;pointer-events:none}
+.hero-text{position:absolute;left:calc(var(--H)*.88 + 24px);right:var(--gutter);top:13%;max-width:620px;color:var(--ink)}
+.hero-wall .eyebrow{color:var(--ink)}
+.hero-wall h1{font-size:clamp(52px,6.4vw,104px);margin-block:16px 18px;color:#1E1214}
+.hero-wall h1 em{color:var(--wine)}
+.hero-wall .lead{color:#2B2223;max-width:52ch}
+.hero-wall .fa-line{color:var(--wine)}
+.hero-wall .creds{border-top-color:rgba(43,21,23,.25);color:#2B2223}
+.hero-wall .creds span::before{background:var(--teal-2)}
+.hero-wall .btn-ghost{color:var(--ink);border-color:var(--ink)}
+.hero-wall .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.hero-wall .tag{position:absolute;left:var(--gutter);bottom:4%;z-index:2;background:var(--paper);padding:14px 18px;border-radius:14px;box-shadow:0 14px 30px -18px rgba(70,30,25,.45);display:flex;align-items:center;gap:12px;font-size:13px;line-height:1.3}
+
+@media (max-width:1180px){.hero-text{left:calc(var(--H)*.78 + 16px);top:9%}.hero-wall h1{font-size:clamp(42px,5.2vw,70px)}.hero-wall .lead{font-size:16px}}
+@media (max-width:860px){
+  .hero-wall{--H:auto;background:var(--cream)}
+  .hero-stage{height:auto;display:flex;flex-direction:column}
+  .hero-img{position:relative;width:100%;height:auto;aspect-ratio:3/4;max-height:78vh;background-size:cover;background-position:30% 40%;-webkit-mask-image:none;mask-image:none}
+  .hero-wall .tag{bottom:auto;top:calc(min(78vh,133vw) - 86px)}
+  .hero-text{position:static;padding:28px var(--gutter) 56px;max-width:none}
+  .hero-wall h1{font-size:clamp(42px,11vw,64px)}
+}
+
+.studio-logo{display:block;width:min(420px,80%);height:auto;margin-inline:auto}
+
+
+/* Persian turquoise accents, used sparingly */
+.eyebrow{color:var(--teal)}
+.hero-wall .eyebrow{color:var(--teal)}
+.creds span::before,.hero-wall .creds span::before{background:var(--teal-2)}
+.tag .dot{background:var(--teal-2);box-shadow:0 0 0 0 rgba(35,163,153,.5)}
+.live .dot{background:var(--teal-2)!important}
+.gain .up{color:var(--teal)}
+.verified svg{color:var(--teal-2)}
+.topic svg{color:var(--teal)}
+.topic:nth-child(even){background:linear-gradient(180deg,var(--mint),var(--paper) 70%)}
+.topic:hover{border-color:var(--teal-2)}
+.reels .reel:nth-child(2){background:var(--teal);color:var(--paper);border-color:var(--teal)}
+.reels .reel:nth-child(2) .fa,.reels .reel:nth-child(2) .muted{color:#CDEBE6}
+.steps li b{color:var(--teal)}
+.quote{border-left-color:var(--teal-2)}
+[dir="rtl"] .quote{border-right-color:var(--teal-2)}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal)}
+.reach div:nth-child(2) b,.reach div:nth-child(4) b{color:var(--teal)}
+.partners span:nth-child(3n+1){border-color:var(--teal-2);color:var(--teal)}
+.book .cover{background:linear-gradient(160deg,var(--teal),#0F4643)}
+.offer span{color:var(--teal)}
+.contact .eyebrow{color:#8FD8CF}
+.channel .ic{background:rgba(35,163,153,.22)}
+.float-wa{background:var(--teal-2)}
+.btn-ghost:hover{background:var(--teal);border-color:var(--teal);color:var(--paper)}
+
+/* bright saffron pop, very occasional */
+h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,transparent 90%);padding:0 .08em}
+:root:lang(fa) h2 em,:root:lang(ar) h2 em,:root:lang(zh) h2 em,:root:lang(ja) h2 em{background:none}
+.reels .reel:nth-child(2) .play{border-color:var(--pop);color:var(--pop)}
+.reach div:nth-child(3) b{color:#C7801A}
+.tag{box-shadow:0 0 0 3px rgba(242,169,59,.0)}
+.btn-primary:hover{box-shadow:0 0 0 3px var(--pop)}
+
+/* ===== hero v10: turquoise arch behind Farnaz, parallax, animated room logo ===== */
+.fa-accent{display:none!important}
+.hero-img{overflow:hidden}
+.hero-arch{position:absolute;left:11%;width:36%;top:25%;bottom:14.1%;border-radius:999px 999px 0 0;
+  background:radial-gradient(120% 70% at 50% 18%,#2FB3A8 0,var(--teal-2) 35%,var(--teal) 100%);
+  box-shadow:inset 0 -40px 60px -30px rgba(10,50,48,.45);transform:translate3d(calc(var(--mx,0)*-14px),calc(var(--my,0)*-8px),0);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.hero-arch::before{content:"";position:absolute;inset:-5.5% -9% 0;border:2px solid var(--teal);border-bottom:0;border-radius:999px 999px 0 0;opacity:.7}
+.hero-arch::after{content:"";position:absolute;left:50%;top:13%;width:44%;aspect-ratio:2/1;transform:translateX(-50%);border-radius:999px 999px 0 0;background:radial-gradient(circle at 50% 100%,rgba(242,169,59,.95) 0 38%,rgba(242,169,59,0) 39%),repeating-conic-gradient(from -90deg at 50% 100%,rgba(255,236,200,.55) 0 2deg,transparent 2deg 15deg);opacity:.9}
+.hero-cut{position:absolute;left:18.646%;top:39.92%;width:29.79%;height:auto;filter:drop-shadow(18px 10px 18px rgba(20,30,28,.35));transform:translate3d(calc(var(--mx,0)*8px),calc(var(--my,0)*4px),0);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.hero-wall .eyebrow{color:var(--teal)}
+.hero-wall h1 em{color:var(--wine)}
+.hero-wall .btn-solid{background:var(--teal);border-color:var(--teal)}
+.hero-wall .btn-solid:hover{background:var(--wine);border-color:var(--wine)}
+.hero-wall .tag{align-items:center}
+.hero-wall .tag .live{font:700 10px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:#E0464B;border-radius:4px;padding:4px 6px}
+.hero-wall .tag b{font-size:22px}
+
+/* the room logo */
+.hero-room{position:absolute;left:calc(var(--H)*.40);top:calc(var(--H)*.08);width:calc(var(--H)*.31);aspect-ratio:1/1;container-type:inline-size;z-index:1;
+  transform:translate3d(calc(var(--mx,0)*18px),calc(var(--my,0)*12px),0);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.hero-room::before{content:"";position:absolute;inset:-14%;background:radial-gradient(closest-side,rgba(255,246,230,.55),rgba(255,246,230,0));pointer-events:none}
+.room3d{--ink:#2B1517;--wine:#561C24;--t:10s;--W:78cqw;--D:53cqw;--H:48cqw;--bw:max(1.5px,.5cqw);
+  position:relative;width:100%;aspect-ratio:1/1;perspective:260cqw;perspective-origin:50% 30%;display:grid;place-items:center;direction:ltr}
+.room3d .scene{position:relative;width:0;height:0;transform-style:preserve-3d;animation:r3-turn var(--t) ease-in-out infinite}
+.room3d .face{position:absolute;left:0;top:0}
+.room3d .back{width:var(--W);height:var(--H);margin:calc(var(--H)/-2) 0 0 calc(var(--W)/-2);transform:translateZ(calc(var(--D)/-2))}
+.room3d .left{width:var(--D);height:var(--H);margin:calc(var(--H)/-2) 0 0 calc(var(--D)/-2);transform:translateX(calc(var(--W)/-2)) rotateY(90deg)}
+.room3d .floor{width:var(--W);height:var(--D);margin:calc(var(--D)/-2) 0 0 calc(var(--W)/-2);transform:translateY(calc(var(--H)/2)) rotateX(90deg)}
+.room3d .panel{position:absolute;inset:0;border:var(--bw) solid var(--ink);overflow:hidden;background:rgba(251,247,241,.18)}
+.room3d .left .panel,.room3d .back .panel{transform-origin:50% 100%;animation:r3-wall var(--t) cubic-bezier(.6,0,.2,1) infinite}
+.room3d .back .panel{animation-delay:.35s}
+.room3d .floor .panel{animation:r3-floor var(--t) cubic-bezier(.6,0,.2,1) infinite;background:rgba(220,237,232,.35)}
+.room3d .word{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;font-family:"DM Serif Display",Georgia,serif;font-weight:400;text-transform:uppercase;letter-spacing:-.03em;line-height:.78;color:var(--wine);white-space:nowrap}
+.room3d .word i{font-style:normal;display:inline-block;animation:r3-letter var(--t) cubic-bezier(.7,0,.2,1) infinite;animation-delay:calc(var(--i)*.07s)}
+.room3d .back .word{font-size:23cqw;padding-bottom:.6cqw}
+.room3d .left .word{font-size:15cqw;padding-bottom:.6cqw}
+.room3d .floor .word{font:italic 500 12.5cqw/1 "Bodoni Moda","Didot",Georgia,serif;letter-spacing:0;text-transform:none;color:var(--ink);align-items:center;animation:r3-type var(--t) steps(9,end) infinite}
+.room3d .rug{position:absolute;left:14%;right:14%;top:22%;bottom:22%;border-radius:50%;background:var(--mint);border:var(--bw) solid var(--teal);animation:r3-pop var(--t) ease infinite;animation-delay:.2s}
+.room3d .win{position:absolute;right:5cqw;top:4cqw;width:12cqw;height:17cqw;border:var(--bw) solid var(--teal);border-radius:6cqw 6cqw 0 0;background:linear-gradient(rgba(35,163,153,.18),rgba(35,163,153,.05));transform-origin:50% 100%;animation:r3-pop var(--t) ease infinite;animation-delay:.1s}
+.room3d .win::after{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:var(--bw) solid var(--teal)}
+.room3d .lamp{position:absolute;left:20%;top:0;width:8cqw;height:13cqw;animation:r3-drop var(--t) cubic-bezier(.3,1.4,.5,1) infinite}
+.room3d .lamp::before{content:"";position:absolute;left:50%;top:0;height:9cqw;border-left:max(1px,.3cqw) solid var(--ink)}
+.room3d .shade{position:absolute;left:0;right:0;top:9cqw;height:4cqw;border-radius:4cqw 4cqw 0 0;background:var(--pop);border:max(1px,.3cqw) solid var(--ink);transform-origin:50% -9cqw;animation:r3-swing 2.6s ease-in-out infinite}
+.room3d .frame{position:absolute;left:30%;top:16%;width:30%;height:28%;border:var(--bw) solid var(--ink);background:linear-gradient(135deg,rgba(242,169,59,.35),rgba(35,163,153,.3));animation:r3-pop var(--t) ease infinite;animation-delay:.3s}
+@keyframes r3-turn{0%{transform:rotateX(-22deg) rotateY(-60deg) translateY(0)}50%{transform:rotateX(-14deg) rotateY(-22deg) translateY(-2cqw)}100%{transform:rotateX(-22deg) rotateY(-60deg) translateY(0)}}
+@keyframes r3-floor{0%{transform:scale(0);opacity:0}8%{transform:scale(1);opacity:1}88%{transform:scale(1);opacity:1}96%,100%{transform:scale(0);opacity:0}}
+@keyframes r3-wall{0%,5%{transform:scaleY(0)}15%,84%{transform:scaleY(1)}92%,100%{transform:scaleY(0)}}
+@keyframes r3-letter{0%,16%{transform:translateY(115%)}23%,79%{transform:translateY(0)}85%,100%{transform:translateY(115%)}}
+@keyframes r3-type{0%,22%{clip-path:inset(0 100% 0 0)}32%,79%{clip-path:inset(0 0 0 0)}85%,100%{clip-path:inset(0 0 0 100%)}}
+@keyframes r3-pop{0%,25%{transform:scale(0);opacity:0}30%{transform:scale(1.15);opacity:1}33%,79%{transform:scale(1);opacity:1}84%,100%{transform:scale(0);opacity:0}}
+@keyframes r3-drop{0%,27%{transform:translateY(-110%)}34%,79%{transform:translateY(0)}84%,100%{transform:translateY(-110%)}}
+@keyframes r3-swing{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@media (prefers-reduced-motion:reduce){.room3d *{animation:none!important;clip-path:none!important}.room3d .scene{transform:rotateX(-20deg) rotateY(-40deg)}.hero-arch,.hero-cut,.hero-room{transform:none!important}}
+@media (max-width:1180px){.hero-room{left:calc(var(--H)*.39);width:calc(var(--H)*.28)}}
+@media (max-width:860px){
+  .hero-img{max-height:none;background-size:100% 100%;background-position:0 0}
+  .hero-room{left:44%;top:calc(133vw*.06);width:46%}
+}
+
+/* audience photos: polaroid collage + feed ribbon */
+#audience{overflow:hidden}
+.stats-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+@media (max-width:860px){.stats-head{grid-template-columns:1fr}}
+.stats-head .live{margin-top:14px}
+.aud-collage{position:relative;width:min(330px,80vw);height:250px;margin-inline-end:10px}
+.pola{position:absolute;margin:0;background:#fff;padding:10px 10px 38px;border-radius:4px;box-shadow:0 22px 40px -22px rgba(60,25,20,.55)}
+.pola img{display:block;width:100%;height:100%;object-fit:cover;border-radius:2px}
+.pola figcaption{position:absolute;left:0;right:0;bottom:9px;text-align:center;font:400 22px/1 var(--f-script);color:var(--wine)}
+:root:lang(fa) .pola figcaption,:root:lang(ar) .pola figcaption,:root:lang(zh) .pola figcaption,:root:lang(ja) .pola figcaption{font:500 14px/1.2 var(--f-body)}
+.pola-back{width:150px;height:200px;right:-6px;top:6px;transform:rotate(7deg);padding-bottom:10px}
+.pola-front{width:240px;height:240px;left:0;top:0;transform:rotate(-4deg);transition:transform .5s}
+.pola-front img{height:192px}
+.aud-collage:hover .pola-front{transform:rotate(-1deg) scale(1.03)}
+.pola-tape{position:absolute;left:92px;top:-12px;width:70px;height:22px;background:rgba(35,163,153,.55);transform:rotate(-8deg);border-radius:2px}
+.feed{margin:56px calc(50% - 50vw) 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.feed-track{display:flex;gap:18px;width:max-content;animation:feed-scroll 60s linear infinite;padding:6px 0 10px}
+.feed-card{position:relative;margin:0;width:220px;height:280px;flex:none;border-radius:110px 110px 18px 18px;overflow:hidden;box-shadow:0 18px 34px -24px rgba(60,25,20,.6)}
+.feed-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.feed-card:hover img{transform:scale(1.07)}
+.feed-card figcaption{position:absolute;left:12px;bottom:12px;background:rgba(251,247,241,.92);color:var(--ink);font:500 12px/1 var(--f-body);letter-spacing:.06em;padding:8px 12px;border-radius:999px}
+
+[dir="rtl"] .feed-track{animation-name:feed-scroll-rtl}
+@keyframes feed-scroll{to{transform:translateX(-50%)}}
+@keyframes feed-scroll-rtl{to{transform:translateX(50%)}}
+@media (prefers-reduced-motion:reduce){.feed-track{animation:none}.feed{overflow-x:auto}}
+@media (max-width:860px){.aud-collage{margin:10px auto 0;height:240px}.feed-card{width:170px;height:220px}}
+
+/* about: one tall photo, top to bottom */
+.about-grid{align-items:stretch}
+.about-tall{position:relative;height:100%;min-height:560px;border-radius:999px 999px 22px 22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(70,30,25,.45)}
+.about-tall img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.about-tall:hover img{transform:scale(1.04)}
+.about-tall::after{content:"";position:absolute;inset:12px;border:1.5px solid rgba(251,247,241,.7);border-radius:999px 999px 14px 14px;pointer-events:none}
+.about-photos{padding-bottom:0}
+@media (max-width:820px){.about-tall{min-height:0;aspect-ratio:3/4}}
+
+/* before / after v2: real photos, 6 rooms, tip cards */
+.ba-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,5vw,72px);align-items:end;margin-bottom:28px}
+.ba-head .lead{margin:0}
+.ba-tabs{margin:0 0 18px;gap:10px}
+.ba-tabs .chip{padding:11px 18px;font-size:14px;background:var(--paper);border-color:var(--line);color:var(--ink);transition:background .25s,color .25s,border-color .25s}
+.ba-tabs .chip:hover{border-color:var(--teal-2)}
+.ba{aspect-ratio:16/9;border-radius:26px;background:#d9d2c6}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;transition:opacity .35s}
+.ba.swap img{opacity:.0}
+.ba .lbl{font-weight:500;backdrop-filter:blur(6px)}
+.ba .lbl.r{background:var(--teal);color:#fff}
+.ba .handle-line{width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 18px rgba(0,0,0,.25)}
+.ba .knob{width:56px;height:56px;color:var(--teal)}
+.ba-note{margin:10px 2px 0;font-size:12px;color:var(--muted)}
+.tips-h{font:500 clamp(26px,3vw,36px)/1.15 var(--f-display);margin:56px 0 22px;color:var(--ink)}
+.tips-h em{font-family:var(--f-script);font-style:normal;font-size:1.2em;color:var(--wine)}
+:root:lang(fa) .tips-h em,:root:lang(ar) .tips-h em,:root:lang(zh) .tips-h em,:root:lang(ja) .tips-h em{font-family:inherit;font-size:1em}
+.tips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tip{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px 22px 24px;display:grid;gap:14px;align-content:start;transition:transform .35s,box-shadow .35s,border-color .35s}
+.tip:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(60,25,20,.5);border-color:var(--teal-2)}
+.tip svg{width:40px;height:40px;color:var(--teal)}
+.tip p{margin:0;font-size:16px;line-height:1.5;color:var(--ink)}
+.tip-n{position:absolute;top:18px;right:20px;font:400 30px/1 var(--f-num);color:var(--sand)}
+[dir="rtl"] .tip-n{right:auto;left:20px}
+.tip:nth-child(2){background:var(--mint)}
+.tip:nth-child(3){background:var(--teal);border-color:var(--teal)}
+.tip:nth-child(3) p,.tip:nth-child(3) svg{color:#fff}
+.tip:nth-child(3) .tip-n{color:rgba(255,255,255,.45)}
+@media (max-width:980px){.tips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.ba-head{grid-template-columns:1fr}.ba{aspect-ratio:4/3}.ba-tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter);scrollbar-width:none}.ba-tabs .chip{flex:none}}
+.ba-tabs .chip[aria-pressed="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+@media (max-width:480px){.tips{gap:10px}.tip{padding:18px 16px;border-radius:18px}.tip p{font-size:14px}.tip-n{font-size:22px;top:14px;right:14px}.tip svg{width:32px;height:32px}}
+
+/* topics v2: photo arches with pop-out cut-outs */
+.topics{gap:22px;perspective:1200px}
+.topic{border-radius:28px;padding:0 0 24px;overflow:visible;gap:0;outline:none;transform-style:preserve-3d;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s,border-color .5s}
+.topic:hover,.topic:focus-visible,.topic.is-live{box-shadow:0 34px 60px -36px rgba(60,25,20,.55);border-color:var(--teal-2)}
+.t-fig{position:relative;margin:0;aspect-ratio:3/4;transform-style:preserve-3d}
+.t-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform-origin:50% 100%;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s}
+.t-bg{clip-path:url(#archClip)}
+.t-cut{pointer-events:none;filter:drop-shadow(0 10px 10px rgba(40,20,10,.12));transform:translateZ(1px)}
+.t-ring{position:absolute;left:4.5%;right:4.5%;top:27%;bottom:0;border:1.5px solid var(--teal-2);border-bottom:0;border-radius:999px 999px 0 0;opacity:.35;transition:all .6s cubic-bezier(.2,.7,.2,1)}
+.topic:hover .t-bg,.topic:focus-visible .t-bg,.topic.is-live .t-bg{transform:scale(1.07);filter:brightness(.9) saturate(1.08) blur(1.2px)}
+.topic:hover .t-cut,.topic:focus-visible .t-cut,.topic.is-live .t-cut{transform:translateZ(40px) translateY(-2.5%) scale(1.08);filter:drop-shadow(0 22px 22px rgba(40,20,10,.28))}
+.topic:hover .t-ring,.topic:focus-visible .t-ring,.topic.is-live .t-ring{left:1.5%;right:1.5%;top:24%;opacity:1}
+.t-body{display:grid;gap:6px;padding:16px 20px 0}
+.topic h3{font-size:24px;transition:color .4s}
+.topic:hover h3,.topic.is-live h3{color:var(--teal)}
+.topic:nth-child(even){background:linear-gradient(180deg,var(--mint),var(--paper) 55%)}
+.topics .topic.reveal{transition-delay:calc(var(--d,0)*80ms)}
+@media (prefers-reduced-motion:reduce){.topic,.t-fig img,.t-ring{transition:none}.topic{transform:none}}
+@media (max-width:440px){.topic{border-radius:24px;padding-top:0}.topics{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.topic h3{font-size:18px}.topic p{font-size:12.5px}.t-body{padding:10px 10px 0}}
+
+/* book section */
+.book-sec{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 85% 10%,#6D2932 0,#4A161D 45%,#2E0D12 100%);color:#F5EDE2;padding-block:clamp(72px,10vw,130px)}
+.book-sec::before{content:"";position:absolute;right:-12%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;background:repeating-conic-gradient(from -90deg,rgba(201,164,100,.12) 0 1deg,transparent 1deg 9deg);-webkit-mask:radial-gradient(closest-side,#000 40%,transparent);mask:radial-gradient(closest-side,#000 40%,transparent);pointer-events:none;animation:sun-rot 80s linear infinite}
+@keyframes sun-rot{to{transform:rotate(360deg)}}
+.book-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,6vw,90px);align-items:center}
+.book-visual{position:relative}
+.book-mock{display:block;width:100%;border-radius:28px;box-shadow:0 50px 90px -40px rgba(0,0,0,.7);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.book-visual:hover .book-mock{transform:scale(1.02)}
+.book-cover3d{position:absolute;right:-5%;bottom:-8%;width:30%;perspective:900px}
+.book-cover3d img{display:block;width:100%;border-radius:3px 8px 8px 3px;box-shadow:inset 8px 0 0 rgba(0,0,0,.25),0 30px 50px -20px rgba(0,0,0,.75);transform:rotateY(-24deg) rotateX(4deg);transform-origin:left center;animation:book-float 6s ease-in-out infinite}
+.book-visual:hover .book-cover3d img{animation-play-state:paused;transform:rotateY(-6deg)}
+@keyframes book-float{50%{transform:rotateY(-16deg) rotateX(2deg) translateY(-10px)}}
+.book-badge{position:absolute;left:22px;top:22px;background:#C9A464;color:#2E0D12;font:600 11px/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;padding:9px 14px;border-radius:999px}
+.book-copy{display:grid;gap:18px}
+.book-sec .eyebrow{color:#C9A464}
+.book-sec h2{color:#F5EDE2;font-size:clamp(46px,6vw,84px);line-height:1}
+.book-sec h2 em{color:#E9C98A;background:none}
+.book-sub{font:italic 400 clamp(19px,2vw,24px)/1.3 var(--f-display);color:#E8D8C4;margin:-4px 0 4px}
+.book-copy > p:not(.eyebrow):not(.book-sub){color:#D9C7BA;max-width:52ch}
+.book-points{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.book-points li{border:1px solid rgba(233,201,138,.3);border-radius:18px;padding:16px 14px;display:grid;gap:4px;background:rgba(255,255,255,.04)}
+.book-points b{font:400 28px/1 var(--f-num);color:#E9C98A}
+.book-points span{font-size:13px;color:#D9C7BA;line-height:1.35}
+.book-sec .btn-solid{background:#C9A464;border-color:#C9A464;color:#2E0D12}
+.book-sec .btn-solid:hover{background:#E9C98A;border-color:#E9C98A}
+.book-sec .btn-ghost{color:#F5EDE2;border-color:rgba(245,237,226,.6)}
+.book-sec .btn-ghost:hover{background:#F5EDE2;color:#2E0D12;border-color:#F5EDE2}
+[dir="rtl"] .book-cover3d{right:auto;left:-5%}
+@media (max-width:900px){.book-grid{grid-template-columns:1fr}.book-cover3d{width:34%;right:-2%}.book-points{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.book-points b{font-size:22px}.book-points span{font-size:12px}.book-points li{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.book-sec::before,.book-cover3d img{animation:none}}
+
+/* topics v3: one colour for every card, empty-room arches, floating objects */
+.topics{counter-reset:tp}
+.topic,.topic:nth-child(even){background:var(--paper);border-color:var(--line)}
+.topic{position:relative;counter-increment:tp}
+.topic::before{content:"0" counter(tp);position:absolute;left:18px;top:14px;z-index:3;font:400 22px/1 var(--f-num);color:var(--sand)}
+.topic:hover,.topic:focus-visible{border-color:var(--teal-2);box-shadow:0 34px 60px -36px rgba(60,25,20,.5)}
+.topic:hover h3,.topic:focus-visible h3{color:var(--teal)}
+.t-ring{opacity:.45}
+.topic:hover .t-ring,.topic:focus-visible .t-ring{opacity:1}
+.t-bg{filter:none!important;transform:none}
+.topic:hover .t-bg,.topic:focus-visible .t-bg{transform:scale(1.03)}
+.t-cut{transform:none!important;filter:drop-shadow(0 14px 14px rgba(40,20,10,.22));transition:scale .7s cubic-bezier(.2,.7,.2,1),filter .7s;
+  animation:t-float 6s ease-in-out infinite;animation-delay:calc(var(--d,0)*-1.4s)}
+.topic:hover .t-cut,.topic:focus-visible .t-cut{scale:1.05;filter:drop-shadow(0 26px 22px rgba(40,20,10,.32))}
+@keyframes t-float{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.topic:nth-child(2) .t-cut{transform-origin:50% 0;animation:t-swing 5s ease-in-out infinite}
+@keyframes t-swing{0%,100%{rotate:-1.6deg}50%{rotate:1.6deg}}
+.topic:nth-child(4) .t-cut,.topic:nth-child(3) .t-cut,.topic:nth-child(8) .t-cut{transform-origin:50% 100%;animation:t-sway 7s ease-in-out infinite;animation-delay:calc(var(--d,0)*-1.4s)}
+@keyframes t-sway{0%,100%{rotate:-.8deg;translate:0 0}50%{rotate:.8deg;translate:0 -4px}}
+@media (prefers-reduced-motion:reduce){.t-cut{animation:none!important}}
+
+/* reels v2: compact cards with real post thumbnails */
+.reels{gap:14px;margin-top:40px}
+.reels .reel,.reels .reel.feature,.reels .reel:nth-child(2){display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;min-height:0;padding:12px 16px 12px 12px;border-radius:20px;background:var(--paper);color:var(--ink);border:1px solid var(--line);transition:transform .35s,box-shadow .35s,border-color .35s}
+.reels .reel:hover{transform:translateY(-3px);border-color:var(--teal-2);box-shadow:0 22px 40px -28px rgba(60,25,20,.5)}
+.reel-thumb{position:relative;display:block;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--linen)}
+.reel-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.reel:hover .reel-thumb img{transform:scale(1.06)}
+.reels .reel .play,.reels .reel:nth-child(2) .play{position:absolute;left:50%;top:50%;right:auto;transform:translate(-50%,-50%);width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:var(--teal);opacity:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.reel-info{display:grid;gap:6px;min-width:0}
+.reels .reel .views{font:400 clamp(30px,3vw,40px)/1 var(--f-num);color:var(--wine)}
+.reels .reel:nth-child(2) .views{color:var(--teal)}
+.reels .reel .views small{font-size:11px;color:var(--muted)}
+.reels .reel h3{font-size:18px;line-height:1.25;color:var(--ink)}
+.reel-link{font-size:12.5px;color:var(--teal);letter-spacing:.04em}
+[dir="rtl"] .reels .reel .play{left:50%;right:auto}
+@media (max-width:900px){.reels{grid-template-columns:1fr}}
+@media (max-width:560px){.reels .reel,.reels .reel.feature,.reels .reel:nth-child(2){grid-template-columns:78px 1fr;padding:10px 14px 10px 10px}.reels .reel h3{font-size:16px}}
+
+/* feed ribbon: one arch shape for every photo, never stops */
+.feed-card,.feed-card:nth-child(n){border-radius:110px 110px 18px 18px;margin-top:0;height:280px}
+.feed-track{animation-play-state:running!important}
+@media (max-width:860px){.feed-card,.feed-card:nth-child(n){height:220px;border-radius:85px 85px 16px 16px}}
+
+/* studio logo: built part by part */
+.lg{width:min(420px,80%);height:auto;display:block;margin-inline:auto;overflow:visible;cursor:pointer}
+.lg *{transform-box:fill-box}
+.lg-arch{stroke-dasharray:1;stroke-dashoffset:1}
+.lg-fill{transform-origin:50% 100%;transform:scaleY(0)}
+.lg-ray{stroke-dasharray:1;stroke-dashoffset:1}
+.lg-sunwrap{transform:translateY(90px)}
+.lg-sun{transform-origin:50% 100%}
+.lg-floor{opacity:0}
+.lg-tile,.lg-hor{stroke-dasharray:1;stroke-dashoffset:1}
+.lg-deco{transform-origin:50% 100%;transform:scaleY(0)}
+.lg-base{transform-origin:50% 50%;transform:scaleX(0)}
+.lg-name{fill-opacity:0;stroke-dasharray:1;stroke-dashoffset:1}
+.lg-int,.lg-by{opacity:0;transform:translateY(14px)}
+.lg-rule{stroke-dasharray:1;stroke-dashoffset:1}
+.lg.go .lg-base{animation:lg-sx .9s cubic-bezier(.7,0,.2,1) .1s forwards}
+.lg.go .lg-a1{animation:lg-draw 1.6s cubic-bezier(.6,0,.2,1) .5s forwards}
+.lg.go .lg-a2{animation:lg-draw 1.6s cubic-bezier(.6,0,.2,1) .75s forwards}
+.lg.go .lg-deco{animation:lg-sy .7s cubic-bezier(.3,1.4,.5,1) forwards;animation-delay:calc(1.1s + var(--i)*.12s)}
+.lg.go .lg-fill{animation:lg-sy 1s cubic-bezier(.7,0,.2,1) 1.9s forwards}
+.lg.go .lg-floor{animation:lg-fade .4s ease 2.6s forwards}
+.lg.go .lg-hor{animation:lg-draw .6s ease 2.7s forwards}
+.lg.go .lg-tile{animation:lg-draw .5s ease forwards;animation-delay:calc(2.8s + var(--i)*.06s)}
+.lg.go .lg-sunwrap{animation:lg-rise 1.6s cubic-bezier(.2,.7,.2,1) 3s forwards}
+.lg.go .lg-ray{animation:lg-draw .6s ease-out forwards,lg-glow 4s ease-in-out infinite;animation-delay:calc(3.9s + var(--i)*.07s),calc(5s + var(--i)*.2s)}
+.lg.go .lg-name{animation:lg-draw 1.8s ease-in-out 4.2s forwards,lg-fillin .9s ease 5.6s forwards}
+.lg.go .lg-r1,.lg.go .lg-r2{animation:lg-draw .8s cubic-bezier(.6,0,.2,1) 5.8s forwards}
+.lg.go .lg-int{animation:lg-up .8s ease 6s forwards}
+.lg.go .lg-by{animation:lg-up .8s ease 6.4s forwards}
+@keyframes lg-draw{to{stroke-dashoffset:0}}
+@keyframes lg-sx{to{transform:scaleX(1)}}
+@keyframes lg-sy{to{transform:scaleY(1)}}
+@keyframes lg-fade{to{opacity:1}}
+@keyframes lg-rise{to{transform:translateY(0)}}
+@keyframes lg-fillin{to{fill-opacity:1;stroke-width:0}}
+@keyframes lg-up{to{opacity:1;transform:translateY(0)}}
+@keyframes lg-glow{0%,100%{opacity:1}50%{opacity:.45}}
+@media (prefers-reduced-motion:reduce){.lg *{animation:none!important;transform:none!important;opacity:1!important;stroke-dashoffset:0!important;fill-opacity:1!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.2 20.5v-6.8h2.3l.4-2.7h-2.7V9.4c0-.8.3-1.3 1.4-1.3h1.4V5.7c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.4V11H8.4v2.7h2.2v6.8" fill="currentColor"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.7 16.9L2.4 21.6l4.8-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.700-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.600.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.3Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.8 14.6 4l3.4-.3.8 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.8 3.3-3.4-.3L12 22.2 9.4 20l-3.4.3-.8-3.3-3-1.7 1.3-3.2-1.3-3.2 3-1.7.8-3.3 3.4.3Z"/><path d="m8.2 12.2 2.6 2.6 5-5.2" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="f-en" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0l60 40M60 0L0 40" stroke="#C8102E" stroke-width="3"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="12"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="7"/></symbol>
+  <symbol id="f-fa" viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect width="60" height="13.3" fill="#239F40"/><rect y="26.7" width="60" height="13.3" fill="#DA0000"/><circle cx="30" cy="20" r="4" fill="none" stroke="#DA0000" stroke-width="1.4"/></symbol>
+  <symbol id="f-ar" viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect width="60" height="13.3" fill="#00732F"/><rect y="26.7" width="60" height="13.3" fill="#000"/><rect width="16" height="40" fill="#FF0000"/></symbol>
+  <symbol id="f-es" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/></symbol>
+  <symbol id="f-it" viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect width="20" height="40" fill="#009246"/><rect x="40" width="20" height="40" fill="#CE2B37"/></symbol>
+  <symbol id="f-zh" viewBox="0 0 60 40"><rect width="60" height="40" fill="#EE1C25"/><path d="M10 5l2.4 7.2h7.6l-6.1 4.5 2.3 7.2L10 19.4l-6.2 4.5 2.4-7.2L0 12.2h7.6z" fill="#FFFF00" transform="translate(2 2) scale(.8)"/><g fill="#FFFF00"><circle cx="21" cy="5" r="1.4"/><circle cx="24" cy="9" r="1.4"/><circle cx="24" cy="14" r="1.4"/><circle cx="21" cy="18" r="1.4"/></g></symbol>
+  <symbol id="f-ja" viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><circle cx="30" cy="20" r="11" fill="#BC002D"/></symbol>
+  <symbol id="f-de" viewBox="0 0 60 40"><rect width="60" height="40" fill="#FFCE00"/><rect width="60" height="13.3" fill="#000"/><rect y="13.3" width="60" height="13.4" fill="#DD0000"/></symbol>
+  <symbol id="f-fr" viewBox="0 0 60 40"><rect width="60" height="40" fill="#fff"/><rect width="20" height="40" fill="#002395"/><rect x="40" width="20" height="40" fill="#ED2939"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" dir="ltr" aria-label="Third Skin Interiors"><img class="mark" src="img/tsi-mark.svg" alt="" width="50" height="40"><span class="lw"><b>Third Skin</b><small>Interiors</small></span></a>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="navAbout">About</a></li>
+      <li><a href="#audience" data-i18n="navAudience">Audience</a></li>
+      <li><a href="#transform" data-i18n="navTransform">Before &amp; after</a></li>
+      <li><a href="#learn" data-i18n="navLearn">What she teaches</a></li>
+      <li><a href="#book" data-i18n="navBook">The book</a></li>
+      <li><a href="#collab" data-i18n="navCollab">Work with her</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+          <svg class="flag" id="langFlag"><use href="#f-en"/></svg><span id="langCode">EN</span>
+        </button>
+        <ul class="lang-menu" id="langMenu" hidden></ul>
+      </div>
+      <a class="btn btn-solid" href="#contact" data-i18n="navCta">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero hero-wall">
+  <div class="hero-stage">
+    <div class="hero-img" role="img" aria-label="Farnaz pointing at the wall" data-i18n-aria="altHero">
+      <span class="hero-arch" aria-hidden="true"></span>
+      <img class="hero-cut" src="img/farnaz-cut.png" alt="" aria-hidden="true">
+    </div>
+    <div class="hero-room"><div class="room3d" dir="ltr" role="img" aria-label="Animated logo: Third Skin Interiors drawn as a small room">
+      <div class="scene">
+        <div class="face floor"><div class="panel"><span class="rug"></span><div class="word type">interiors</div></div></div>
+        <div class="face left"><div class="panel"><span class="frame"></span><div class="word"><i style="--i:0">T</i><i style="--i:1">h</i><i style="--i:2">i</i><i style="--i:3">r</i><i style="--i:4">d</i></div></div></div>
+        <div class="face back"><div class="panel"><span class="win"></span><span class="lamp"><span class="shade"></span></span><div class="word"><i style="--i:5">S</i><i style="--i:6">k</i><i style="--i:7">i</i><i style="--i:8">n</i></div></div></div>
+      </div>
+    </div></div>
+    <div class="tag">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="live" data-i18n="liveChip">Live</span>
+      <span><b data-total>389,000</b><span data-i18n="heroTag">live followers</span></span>
+    </div>
+    <div class="hero-text">
+      <p class="eyebrow" data-i18n="heroEyebrow">Certified interior decorator · Dubai</p>
+      <h1 data-i18n="heroH1">Make your house feel like <em>home.</em></h1>
+      <p class="lead" data-i18n="heroLead">I'm Farnaz Sadeghian. For years I designed and staged homes across Dubai. Now I teach everyday families how to style the home they already have: smarter layouts, better buys, and rooms that feel warm to live in.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="https://www.instagram.com/decor.with.farnaz/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><span data-i18n="heroFollow">Follow on Instagram</span></a>
+        <a class="btn btn-ghost" href="#collab" data-i18n="heroBrands">Brand collaborations</a>
+      </div>
+      <div class="creds">
+        <span data-i18n="cred1">TAFE Australia certified</span>
+        <span data-i18n="cred2">50+ homes staged in Dubai</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="studio" class="brand">
+  <div class="wrap brand-grid">
+    <div class="reveal">
+      <svg class="studio-logo lg" viewBox="80 -10 740 850" role="img" aria-label="Third Skin Interiors by Farnaz Sadeghian">
+  <defs><clipPath id="lgInner"><path d="M300 520 V256.0 A150.0 150.0 0 0 1 600 256.0 V474 H300Z"/></clipPath></defs>
+  <path d="M236 520 V248.0 A214.0 214.0 0 0 1 664 248.0 V520" fill="none" stroke="#561C24" stroke-width="7" class="lg-arch lg-a1" pathLength="1"/><path d="M268 520 V252.0 A182.0 182.0 0 0 1 632 252.0 V520" fill="none" stroke="#561C24" stroke-width="5" class="lg-arch lg-a2" pathLength="1"/><path d="M300 520 V256.0 A150.0 150.0 0 0 1 600 256.0 V520" fill="#561C24" class="lg-fill"/>
+  <g clip-path="url(#lgInner)"><g class="lg-sunwrap"><line x1="450" y1="474" x2="316.9" y2="430.7" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:0"/><line x1="450" y1="474" x2="336.7" y2="391.7" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:1"/><line x1="450" y1="474" x2="367.7" y2="360.7" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:2"/><line x1="450" y1="474" x2="406.7" y2="340.9" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:3"/><line x1="450" y1="474" x2="450.0" y2="334.0" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:4"/><line x1="450" y1="474" x2="493.3" y2="340.9" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:5"/><line x1="450" y1="474" x2="532.3" y2="360.7" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:6"/><line x1="450" y1="474" x2="563.3" y2="391.7" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:7"/><line x1="450" y1="474" x2="583.1" y2="430.7" stroke="#C7B7A3" stroke-width="4.5" stroke-linecap="round" class="lg-ray" pathLength="1" style="--i:8"/><path d="M386 474 A64 64 0 0 1 514 474Z" fill="#C7B7A3" class="lg-sun"/></g></g>
+  <rect x="300" y="474" width="300" height="46" fill="#561C24" class="lg-floor"/><line x1="330" y1="474" x2="300" y2="520" stroke="#C7B7A3" stroke-width="3" opacity="0.9" class="lg-tile" pathLength="1" style="--i:0"/><line x1="370" y1="474" x2="350" y2="520" stroke="#C7B7A3" stroke-width="3" opacity="0.9" class="lg-tile" pathLength="1" style="--i:1"/><line x1="410" y1="474" x2="400" y2="520" stroke="#C7B7A3" stroke-width="3" opacity="0.9" class="lg-tile" pathLength="1" style="--i:2"/><line x1="450" y1="474" x2="450" y2="520" stroke="#C7B7A3" stroke-width="3" opacity="0.9" class="lg-tile" pathLength="1" style="--i:3"/><line x1="490" y1="474" x2="500" y2="520" stroke="#C7B7A3" stroke-width="3" opacity="0.9" class="lg-tile" pathLength="1" style="--i:4"/><line x1="530" y1="474" x2="550" y2="520" stroke="#C7B7A3" stroke-width="3" opacity="0.9" class="lg-tile" pathLength="1" style="--i:5"/><line x1="570" y1="474" x2="600" y2="520" stroke="#C7B7A3" stroke-width="3" opacity="0.9" class="lg-tile" pathLength="1" style="--i:6"/><line x1="300" y1="474" x2="600" y2="474" stroke="#C7B7A3" stroke-width="3.5" class="lg-hor" pathLength="1"/><line x1="210" y1="370" x2="210" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:0"/><line x1="192" y1="400" x2="192" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:1"/><line x1="174" y1="430" x2="174" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:2"/><line x1="156" y1="460" x2="156" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:3"/><line x1="690" y1="370" x2="690" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:0"/><line x1="708" y1="400" x2="708" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:1"/><line x1="726" y1="430" x2="726" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:2"/><line x1="744" y1="460" x2="744" y2="520" stroke="#561C24" stroke-width="4.5" stroke-linecap="round" class="lg-deco" style="--i:3"/><rect x="130" y="520" width="640" height="9" fill="#561C24" class="lg-base"/><path d="M187.44 680.0V679.04L191.376 678.08Q195.312 677.216 195.312 673.28V618.56H187.152Q183.6 618.56 182.064 620.432Q180.528 622.304 178.8 625.568L175.344 632.288H174.384L174.864 616.64H230.256L230.64 632.288H229.68L226.224 625.568Q224.59199999999998 622.304 223.05599999999998 620.432Q221.52 618.56 217.968 618.56H209.808V673.28Q209.808 677.216 213.744 678.08L217.68 679.04V680.0ZM240.528 680.0V679.04L242.448 678.272Q244.368 677.6 244.992 676.4480000000001Q245.61599999999999 675.296 245.61599999999999 673.472V623.264Q245.61599999999999 621.344 244.992 620.192Q244.368 619.04 242.448 618.368L240.528 617.6V616.64H264.912V617.6L263.28 618.272Q261.456 618.944 260.784 620.048Q260.112 621.152 260.112 623.072V646.4H283.056V623.072Q283.056 621.152 282.432 620.048Q281.808 618.944 279.888 618.272L278.15999999999997 617.6V616.64H302.64V617.6L300.72 618.368Q298.896 619.04 298.22400000000005 620.192Q297.552 621.344 297.552 623.264V673.472Q297.552 675.296 298.22400000000005 676.4480000000001Q298.896 677.6 300.72 678.272L302.64 679.04V680.0H278.15999999999997V679.04L279.888 678.464Q281.808 677.696 282.432 676.5920000000001Q283.056 675.488 283.056 673.568V648.32H260.112V673.568Q260.112 677.12 263.28 678.464L264.912 679.04V680.0ZM312.624 680.0V679.04L314.544 678.272Q316.464 677.6 317.08799999999997 676.4480000000001Q317.712 675.296 317.712 673.376V623.264Q317.712 621.344 317.13599999999997 620.192Q316.56 619.04 314.544 618.368L312.624 617.6V616.64H337.296V617.6L335.376 618.368Q333.456 619.04 332.832 620.192Q332.208 621.344 332.208 623.264V673.376Q332.208 675.296 332.832 676.4000000000001Q333.456 677.504 335.376 678.272L337.296 679.04V680.0ZM347.28000000000003 680.0V679.04L349.296 678.368Q351.216 677.696 351.79200000000003 676.5920000000001Q352.368 675.488 352.368 673.472V623.264Q352.368 621.344 351.84000000000003 620.24Q351.312 619.136 349.488 618.4639999999999L347.28000000000003 617.6V616.64H374.736Q386.064 616.64 392.112 620.912Q398.16 625.184 398.16 632.768Q398.16 636.992 394.992 641.216Q391.824 645.44 385.00800000000004 647.744L398.35200000000003 674.24Q399.216 675.872 400.32 676.88Q401.424 677.888 403.248 678.656L404.496 679.136V680.0H387.312L373.104 649.76H366.576V673.472Q366.576 675.296 367.15200000000004 676.4480000000001Q367.728 677.6 369.552 678.176L371.856 679.04V680.0ZM366.576 647.84H371.184Q378.096 647.84 381.168 644.144Q384.24 640.448 384.24 633.152Q384.24 625.76 381.36 622.16Q378.48 618.56 371.664 618.56H366.576ZM413.32800000000003 680.0V679.04L415.344 678.272Q418.416 677.024 418.416 673.376V623.264Q418.416 619.424 415.344 618.368L413.32800000000003 617.6V616.64H438.672Q448.848 616.64 456.192 620.432Q463.536 624.224 467.52 631.28Q471.504 638.336 471.504 648.224Q471.504 658.304 467.184 665.4079999999999Q462.86400000000003 672.512 455.136 676.256Q447.408 680.0 436.944 680.0ZM432.81600000000003 678.08H436.944Q443.856 678.08 448.08000000000004 675.344Q452.30400000000003 672.608 454.27200000000005 666.1279999999999Q456.24 659.648 456.24 648.32Q456.24 636.992 454.27200000000005 630.512Q452.30400000000003 624.032 448.17600000000004 621.296Q444.048 618.56 437.32800000000003 618.56H432.81600000000003ZM528.624 681.728Q523.344 681.728 517.8720000000001 680.432Q512.4 679.136 508.752 677.024L509.232 663.968H510.192L513.168 670.208Q514.5120000000001 672.896 516.048 674.96Q517.5840000000001 677.024 520.272 678.176Q522.192 679.136 523.9680000000001 679.472Q525.744 679.808 527.952 679.808Q533.808 679.808 537.216 676.64Q540.624 673.472 540.624 668.48Q540.624 663.776 538.3199999999999 661.136Q536.016 658.496 530.928 656.0L526.992 654.272Q518.736 650.624 514.08 645.8720000000001Q509.42400000000004 641.12 509.42400000000004 633.248Q509.42400000000004 627.584 512.352 623.4559999999999Q515.28 619.328 520.512 617.12Q525.744 614.912 532.7520000000001 614.912Q537.84 614.912 542.4000000000001 616.2560000000001Q546.96 617.6 550.32 619.904L549.744 631.424H548.784L544.848 624.224Q543.216 620.864 541.5840000000001 619.472Q539.952 618.08 537.84 617.504Q536.592 617.12 535.5360000000001 616.976Q534.48 616.832 532.848 616.832Q527.952 616.832 524.592 619.664Q521.232 622.496 521.232 627.296Q521.232 632.192 523.8240000000001 635.12Q526.416 638.048 531.408 640.352L535.8240000000001 642.272Q545.04 646.304 549.072 650.864Q553.104 655.424 553.104 662.624Q553.104 671.072 546.72 676.4Q540.336 681.728 528.624 681.728ZM563.76 680.0V679.04L565.7760000000001 678.272Q567.696 677.6 568.272 676.4480000000001Q568.8480000000001 675.296 568.8480000000001 673.472V623.264Q568.8480000000001 621.344 568.272 620.192Q567.696 619.04 565.7760000000001 618.368L563.76 617.6V616.64H587.664V617.6L585.552 618.4639999999999Q583.9200000000001 619.04 583.344 620.192Q582.768 621.344 582.768 623.36V673.568Q582.768 675.488 583.392 676.5440000000001Q584.0160000000001 677.6 585.84 678.272L587.664 679.04V680.0ZM599.184 680.0V679.04L600.432 678.656Q602.352 678.08 602.448 676.7360000000001Q602.544 675.392 601.296 673.664L582.864 647.456L607.152 622.688Q608.496 621.344 608.64 620.096Q608.784 618.848 606.768 618.176L605.136 617.6V616.64H619.152V617.6L616.6560000000001 618.368Q614.544 619.04 613.296 620.0Q612.048 620.96 610.416 622.592L593.232 640.16L615.792 673.088Q617.232 675.2 618.528 676.5440000000001Q619.8240000000001 677.888 622.224 678.656L623.568 679.04V680.0ZM632.304 680.0V679.04L634.224 678.272Q636.144 677.6 636.768 676.4480000000001Q637.392 675.296 637.392 673.376V623.264Q637.392 621.344 636.816 620.192Q636.24 619.04 634.224 618.368L632.304 617.6V616.64H656.976V617.6L655.056 618.368Q653.136 619.04 652.512 620.192Q651.888 621.344 651.888 623.264V673.376Q651.888 675.296 652.512 676.4000000000001Q653.136 677.504 655.056 678.272L656.976 679.04V680.0ZM668.208 680.0V679.04L671.376 678.08Q673.1039999999999 677.6 673.872 676.2080000000001Q674.64 674.816 674.64 672.896V626.72Q673.584 624.4159999999999 672.96 623.2639999999999Q672.336 622.112 671.568 621.296Q670.8 620.48 669.4559999999999 619.232L667.824 617.6V616.64H684.8159999999999L716.688 660.128V623.936Q716.688 622.016 716.064 620.48Q715.4399999999999 618.944 713.52 618.4639999999999L710.352 617.6V616.64H724.0799999999999V617.6L721.4879999999999 618.4639999999999Q719.76 619.04 719.376 620.48Q718.992 621.92 718.992 623.84V680.288H713.616L676.944 629.888V672.896Q676.944 674.816 677.52 676.1600000000001Q678.096 677.504 679.92 678.08L682.8 679.04V680.0Z" fill="#561C24"  class="lg-name" pathLength="1" stroke="#561C24" stroke-width="1.2"/><path d="M312.55392 739.52V720.032H315.75552V739.52ZM337.248 739.52V720.032H339.4752L340.4496 723.70688V739.52ZM350.7504 739.52 339.08544 724.29152 339.4752 720.032 351.14016 735.26048ZM350.7504 739.52 349.776 736.09568V720.032H352.9776V739.52ZM379.36992 739.52V720.5888H382.57152V739.52ZM373.0224 722.9552V720.032H388.91904V722.9552ZM408.96384 739.52V720.032H412.16544V739.52ZM411.1632 739.52V736.5968H422.07648V739.52ZM411.1632 730.97312V728.16128H421.12992V730.97312ZM411.1632 722.9552V720.032H421.93728V722.9552ZM444.8496 731.25152V728.60672H449.77728Q451.2528 728.60672 452.07408 727.84112Q452.89536 727.07552 452.89536 725.71136Q452.89536 724.4864 452.08799999999997 723.6512Q451.28064 722.816 449.80512 722.816H444.8496V720.032H449.94432Q451.78176 720.032 453.17376 720.76976Q454.56576 721.50752 455.33136 722.77424Q456.09696 724.04096 456.09696 725.65568Q456.09696 727.35392 455.33136 728.60672Q454.56576 729.85952 453.17376 730.55552Q451.78176 731.25152 449.94432 731.25152ZM442.65024 739.52V720.032H445.85184V739.52ZM453.3408 739.52 446.52 731.05664 449.49888 729.97088 457.37760000000003 739.52ZM477.39456 739.52V720.032H480.59616V739.52ZM511.05312 739.7984Q508.96512 739.7984 507.15552 739.0188800000001Q505.34592 738.23936 503.98176 736.8612800000001Q502.6176 735.4832 501.852 733.65968Q501.0864 731.83616 501.0864 729.74816Q501.0864 727.66016 501.852 725.8505600000001Q502.6176 724.04096 503.96784 722.6628800000001Q505.31808 721.2848 507.11376 720.5192Q508.90944 719.7536 510.99744 719.7536Q513.0854400000001 719.7536 514.88112 720.5192Q516.6768 721.2848 518.04096 722.6628800000001Q519.40512 724.04096 520.1707200000001 725.86448Q520.93632 727.688 520.93632 729.776Q520.93632 731.864 520.1707200000001 733.68752Q519.40512 735.51104 518.05488 736.8752Q516.70464 738.23936 514.90896 739.0188800000001Q513.11328 739.7984 511.05312 739.7984ZM510.99744 736.736Q512.97408 736.736 514.46352 735.84512Q515.95296 734.95424 516.8020799999999 733.3812800000001Q517.6512 731.80832 517.6512 729.74816Q517.6512 728.21696 517.164 726.9502399999999Q516.6768 725.6835199999999 515.78592 724.7508799999999Q514.89504 723.81824 513.684 723.3171199999999Q512.4729600000001 722.816 510.99744 722.816Q509.04864 722.816 507.55920000000003 723.6929600000001Q506.06976000000003 724.56992 505.22064 726.12896Q504.37152000000003 727.688 504.37152000000003 729.74816Q504.37152000000003 731.27936 504.85872 732.57392Q505.34592 733.86848 506.22288000000003 734.7872Q507.09984000000003 735.70592 508.3248 736.22096Q509.54976 736.736 510.99744 736.736ZM543.65376 731.25152V728.60672H548.58144Q550.05696 728.60672 550.87824 727.84112Q551.69952 727.07552 551.69952 725.71136Q551.69952 724.4864 550.89216 723.6512Q550.0848 722.816 548.60928 722.816H543.65376V720.032H548.74848Q550.58592 720.032 551.97792 720.76976Q553.36992 721.50752 554.13552 722.77424Q554.90112 724.04096 554.90112 725.65568Q554.90112 727.35392 554.13552 728.60672Q553.36992 729.85952 551.97792 730.55552Q550.58592 731.25152 548.74848 731.25152ZM541.4544000000001 739.52V720.032H544.6560000000001V739.52ZM552.1449600000001 739.52 545.32416 731.05664 548.30304 729.97088 556.18176 739.52ZM581.62752 739.7984Q579.3168000000001 739.7984 577.70208 738.9631999999999Q576.08736 738.1279999999999 574.80672 736.51328L576.97824 734.34176Q577.7856 735.51104 578.8992000000001 736.1652799999999Q580.0128000000001 736.81952 581.73888 736.81952Q583.3536 736.81952 584.3140800000001 736.1513600000001Q585.2745600000001 735.4832 585.2745600000001 734.3139199999999Q585.2745600000001 733.33952 584.77344 732.72704Q584.27232 732.11456 583.45104 731.71088Q582.62976 731.3072 581.6414400000001 730.98704Q580.6531200000001 730.66688 579.6648 730.2632Q578.6764800000001 729.85952 577.8552000000001 729.24704Q577.0339200000001 728.63456 576.5328000000001 727.6601599999999Q576.03168 726.68576 576.03168 725.1824Q576.03168 723.45632 576.8808 722.24528Q577.72992 721.03424 579.1776 720.39392Q580.6252800000001 719.7536 582.40704 719.7536Q584.3280000000001 719.7536 585.84528 720.50528Q587.36256 721.2569599999999 588.30912 722.42624L586.1376 724.59776Q585.3024 723.6512 584.3976 723.19184Q583.4928 722.73248 582.32352 722.73248Q580.87584 722.73248 580.05456 723.3171199999999Q579.23328 723.90176 579.23328 724.9596799999999Q579.23328 725.85056 579.7344 726.39344Q580.2355200000001 726.93632 581.0568000000001 727.31216Q581.8780800000001 727.688 582.8664000000001 728.02208Q583.85472 728.3561599999999 584.84304 728.77376Q585.83136 729.19136 586.65264 729.8456Q587.47392 730.49984 587.97504 731.52992Q588.47616 732.56 588.47616 734.1190399999999Q588.47616 736.736 586.6248 738.2672Q584.77344 739.7984 581.62752 739.7984Z" fill="#2B1517"  class="lg-int"/><line x1="172.5" y1="729.9" x2="290.4" y2="729.9" stroke="#561C24" stroke-width="2.6" class="lg-rule lg-r1" pathLength="1"/><line x1="609.6" y1="729.9" x2="727.5" y2="729.9" stroke="#561C24" stroke-width="2.6" class="lg-rule lg-r2" pathLength="1"/><path d="M293.76864 777.92V776.288H297.04895999999997Q297.91391999999996 776.288 298.3872 775.74944Q298.86048 775.21088 298.86048 774.5091199999999Q298.86048 774.03584 298.64832 773.62784Q298.43616 773.21984 298.02815999999996 772.97504Q297.62016 772.73024 297.04895999999997 772.73024H293.76864V771.0982399999999H296.77152Q297.50592 771.0982399999999 297.94656 770.7228799999999Q298.3872 770.3475199999999 298.3872 769.61312Q298.3872 768.8787199999999 297.94656 768.5033599999999Q297.50592 768.1279999999999 296.77152 768.1279999999999H293.76864V766.496H296.82048Q297.9792 766.496 298.74624 766.92032Q299.51328 767.3446399999999 299.88864 768.0137599999999Q300.264 768.68288 300.264 769.4499199999999Q300.264 770.3475199999999 299.76624000000004 771.03296Q299.26848 771.7184 298.30559999999997 772.1427199999999L298.45248 771.5552Q299.5296 771.9958399999999 300.13344 772.7955199999999Q300.73728 773.5952 300.73728 774.67232Q300.73728 775.5536 300.3048 776.288Q299.87232 777.0224 299.03184 777.4712Q298.19136 777.92 296.96736 777.92ZM292.47936 777.92V766.496H294.35616V777.92ZM313.54848 773.3503999999999 309.09312 766.496H311.26368L314.73984 771.9631999999999H313.728L317.20416 766.496H319.34208L314.85408 773.3503999999999ZM313.28736 777.92V772.17536H315.16416V777.92ZM338.89344 777.92V766.496H340.77024V777.92ZM340.18272 773.024V771.3104H345.99264V773.024ZM340.18272 768.2095999999999V766.496H346.27008V768.2095999999999ZM354.62592 777.92 359.32608 766.496H360.63168L365.2992 777.92H363.27552000000003L359.61984 768.66656H360.30528L356.61696 777.92ZM356.94336 775.7167999999999V774.0848H362.99808V775.7167999999999ZM375.56448 773.07296V771.52256H378.45312Q379.31808 771.52256 379.79952000000003 771.07376Q380.28096 770.62496 380.28096 769.8252799999999Q380.28096 769.1071999999999 379.80768 768.6175999999999Q379.33439999999996 768.1279999999999 378.46943999999996 768.1279999999999H375.56448V766.496H378.55104Q379.62816 766.496 380.44416 766.92848Q381.26016 767.36096 381.70896 768.1035199999999Q382.15776 768.8460799999999 382.15776 769.79264Q382.15776 770.78816 381.70896 771.5225599999999Q381.26016 772.2569599999999 380.44416 772.66496Q379.62816 773.07296 378.55104 773.07296ZM374.2752 777.92V766.496H376.152V777.92ZM380.54208 777.92 376.54368 772.95872 378.28992 772.32224 382.90848 777.92ZM391.86816 777.92V766.496H393.17376L393.74496 768.6502399999999V777.92ZM399.78336 777.92 392.94527999999997 768.9929599999999 393.17376 766.496 400.01184 775.42304ZM399.78336 777.92 399.21216 775.91264V766.496H401.08896V777.92ZM410.06496 777.92 414.76511999999997 766.496H416.07072L420.73823999999996 777.92H418.71456L415.05888 768.66656H415.74431999999996L412.056 777.92ZM412.38239999999996 775.7167999999999V774.0848H418.43712V775.7167999999999ZM429.0288 776.6143999999999 435.26304 767.8016H437.46623999999997L431.23199999999997 776.6143999999999ZM429.0288 777.92V776.6143999999999L430.64448 776.2063999999999H437.33567999999997V777.92ZM429.40416 768.2095999999999V766.496H437.46623999999997V767.8016L435.83423999999997 768.2095999999999ZM460.46112 778.0831999999999Q459.10655999999994 778.0831999999999 458.15999999999997 777.5935999999999Q457.21344 777.1039999999999 456.46272 776.15744L457.73567999999995 774.8844799999999Q458.20896 775.5699199999999 458.86176 775.95344Q459.51455999999996 776.33696 460.52639999999997 776.33696Q461.47295999999994 776.33696 462.03599999999994 775.9452799999999Q462.59903999999995 775.5536 462.59903999999995 774.86816Q462.59903999999995 774.29696 462.3052799999999 773.93792Q462.01151999999996 773.5788799999999 461.53008 773.34224Q461.04864 773.1056 460.46927999999997 772.91792Q459.88991999999996 772.73024 459.31055999999995 772.4936Q458.73119999999994 772.2569599999999 458.2497599999999 771.8979199999999Q457.76831999999996 771.53888 457.47456 770.96768Q457.1808 770.39648 457.1808 769.5151999999999Q457.1808 768.5033599999999 457.67855999999995 767.7934399999999Q458.17632 767.0835199999999 459.02495999999996 766.7081599999999Q459.87359999999995 766.3327999999999 460.91808 766.3327999999999Q462.04416 766.3327999999999 462.93359999999996 766.7734399999999Q463.82304 767.21408 464.37791999999996 767.8995199999999L463.10495999999995 769.17248Q462.61535999999995 768.6175999999999 462.08495999999997 768.34832Q461.55456 768.07904 460.86911999999995 768.07904Q460.02047999999996 768.07904 459.53904 768.42176Q459.0576 768.7644799999999 459.0576 769.38464Q459.0576 769.90688 459.35136 770.2251200000001Q459.64511999999996 770.54336 460.1265599999999 770.76368Q460.60799999999995 770.9839999999999 461.18735999999996 771.17984Q461.76671999999996 771.37568 462.34608 771.62048Q462.92544 771.86528 463.40688 772.2488Q463.88831999999996 772.6323199999999 464.1820799999999 773.2361599999999Q464.47583999999995 773.8399999999999 464.47583999999995 774.75392Q464.47583999999995 776.288 463.39055999999994 777.1856Q462.30528 778.0831999999999 460.46112 778.0831999999999ZM472.84799999999996 777.92 477.54815999999994 766.496H478.85375999999997L483.52127999999993 777.92H481.4975999999999L477.84191999999996 768.66656H478.52735999999993L474.83903999999995 777.92ZM475.16543999999993 775.7167999999999V774.0848H481.22015999999996V775.7167999999999ZM493.78655999999995 777.92V776.2063999999999H496.78943999999996Q497.9644799999999 776.2063999999999 498.8539199999999 775.70048Q499.74335999999994 775.1945599999999 500.2411199999999 774.2887999999999Q500.73887999999994 773.3830399999999 500.73887999999994 772.1916799999999Q500.73887999999994 771.0166399999999 500.23295999999993 770.1190399999999Q499.72703999999993 769.2214399999999 498.83759999999995 768.71552Q497.9481599999999 768.2095999999999 496.78943999999996 768.2095999999999H493.78655999999995V766.496H496.8383999999999Q498.0787199999999 766.496 499.13951999999995 766.92848Q500.2003199999999 767.36096 500.9918399999999 768.13616Q501.78335999999996 768.91136 502.22399999999993 769.94768Q502.66463999999996 770.9839999999999 502.66463999999996 772.208Q502.66463999999996 773.41568 502.22399999999993 774.46016Q501.78335999999996 775.50464 500.99999999999994 776.2798399999999Q500.2166399999999 777.05504 499.1558399999999 777.4875199999999Q498.0950399999999 777.92 496.87103999999994 777.92ZM492.49727999999993 777.92V766.496H494.37407999999994V777.92ZM511.9180799999999 777.92V766.496H513.7948799999999V777.92ZM513.2073599999999 777.92V776.2063999999999H519.6048V777.92ZM513.2073599999999 772.90976V771.26144H519.0499199999999V772.90976ZM513.2073599999999 768.2095999999999V766.496H519.5232V768.2095999999999ZM534.0479999999999 778.0831999999999Q532.8729599999999 778.0831999999999 531.8284799999999 777.6262399999999Q530.7839999999999 777.16928 530.00064 776.3614399999999Q529.21728 775.5536 528.76848 774.4846399999999Q528.31968 773.41568 528.31968 772.1916799999999Q528.31968 770.96768 528.76848 769.90688Q529.21728 768.8460799999999 530.0088 768.0382399999999Q530.8003199999999 767.2303999999999 531.8692799999999 766.7815999999999Q532.93824 766.3327999999999 534.17856 766.3327999999999Q535.5331199999999 766.3327999999999 536.69184 766.8550399999999Q537.85056 767.3772799999999 538.6339199999999 768.34016L537.36096 769.61312Q536.8550399999999 768.89504 536.0064 768.51152Q535.1577599999999 768.1279999999999 534.17856 768.1279999999999Q533.00352 768.1279999999999 532.11408 768.64208Q531.2246399999999 769.15616 530.7350399999999 770.07008Q530.2454399999999 770.9839999999999 530.2454399999999 772.1916799999999Q530.2454399999999 773.39936 530.7431999999999 774.3214399999999Q531.24096 775.24352 532.0896 775.76576Q532.93824 776.288 534.0153599999999 776.288Q535.1577599999999 776.288 535.98192 775.87184Q536.80608 775.4556799999999 537.2467199999999 774.6315199999999Q537.6873599999999 773.8073599999999 537.6873599999999 772.5996799999999L538.8624 773.44832H533.98272V771.7347199999999H539.6294399999999V771.9958399999999Q539.6294399999999 774.03584 538.9032 775.3904Q538.1769599999999 776.74496 536.92032 777.41408Q535.6636799999999 778.0831999999999 534.0479999999999 778.0831999999999ZM548.8339199999999 777.92V766.496H550.7107199999999V777.92ZM556.0963199999999 777.92V766.496H557.9731199999999V777.92ZM550.1231999999999 772.8607999999999V771.1472H556.5043199999999V772.8607999999999ZM567.7977599999999 777.92V766.496H569.6745599999999V777.92ZM578.6505599999999 777.92 583.35072 766.496H584.6563199999999L589.32384 777.92H587.30016L583.6444799999999 768.66656H584.32992L580.6415999999999 777.92ZM580.968 775.7167999999999V774.0848H587.0227199999999V775.7167999999999ZM598.29984 777.92V766.496H599.60544L600.17664 768.6502399999999V777.92ZM606.21504 777.92 599.37696 768.9929599999999 599.60544 766.496 606.44352 775.42304ZM606.21504 777.92 605.6438400000001 775.91264V766.496H607.5206400000001V777.92Z" fill="#2B1517" opacity="0.75" class="lg-by"/>
+</svg>
+    </div>
+    <div class="brand-copy reveal">
+      <p class="eyebrow" data-i18n="brandEyebrow">The studio</p>
+      <h2 data-i18n="brandH2">Every room tells <em>a story</em></h2>
+      <p class="lead" data-i18n="brandP">Interior decoration, architecture and everyday styling, explained simply. This is the world of Decor with Farnaz.</p>
+      <figure class="quote">
+        <blockquote data-i18n="quote">“Our first skin is the one we are born with. The second is our clothes. The third is our home.”</blockquote>
+        <figcaption><span data-i18n="quoteBy">After Friedensreich Hundertwasser, artist and architect, and his theory of the five skins</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="audience">
+  <div class="wrap">
+    <div class="stats-head reveal">
+      <div>
+        <p class="eyebrow" data-i18n="audEyebrow">The audience</p>
+        <h2 data-i18n="audH2">A community that <em>grows every minute</em></h2>
+        <span class="live"><span class="dot" style="width:8px;height:8px;border-radius:50%;background:#2F8F5B;display:inline-block;animation:pulse 2s infinite"></span><span data-i18n="audLive">Live follower estimate</span></span>
+      </div>
+      <div class="aud-collage" aria-hidden="false">
+        <figure class="pola pola-back"><img src="img/feed-wallart.jpg" alt="" loading="lazy"></figure>
+        <figure class="pola pola-front"><img src="img/farnaz-200k.jpg" alt="Farnaz celebrating 200K followers with balloons" data-i18n-alt="aud200kAlt" loading="lazy"><figcaption data-i18n="aud200k">The day we hit 200K</figcaption></figure>
+        <span class="pola-tape" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="platforms">
+      <article class="pcard reveal">
+        <div class="pcard-top">
+          <a class="handle" dir="ltr" href="https://www.instagram.com/decor.with.farnaz/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@decor.with.farnaz</a>
+          <span class="verified"><svg><use href="#i-check"/></svg><span data-i18n="verified">Verified</span></span>
+        </div>
+        <div>
+          <div class="count" data-count="ig">321,000</div>
+          <div class="count-label" data-i18n="igLabel">Instagram followers</div>
+        </div>
+        <div class="gain">
+          <span><b class="up" data-today="ig">+0</b> <span data-i18n="today">today</span></span>
+          <span><b>+45.8K</b> <span data-i18n="last30">last 30 days</span></span>
+          <span><b>23.5M</b> <span data-i18n="views30">views in 30 days</span></span>
+        </div>
+      </article>
+      <article class="pcard reveal">
+        <div class="pcard-top">
+          <a class="handle" dir="ltr" href="https://www.facebook.com/817038121486364" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Decor.with.farnaz</a>
+          <span class="verified"><svg><use href="#i-check"/></svg><span data-i18n="verified">Verified</span></span>
+        </div>
+        <div>
+          <div class="count" data-count="fb">68,000</div>
+          <div class="count-label" data-i18n="fbLabel">Facebook followers</div>
+        </div>
+        <div class="gain">
+          <span><b class="up" data-today="fb">+0</b> <span data-i18n="today">today</span></span>
+          <span><b>+14.2K</b> <span data-i18n="last28">last 28 days</span></span>
+          <span><b>11M</b> <span data-i18n="views28">views in 28 days</span></span>
+        </div>
+      </article>
+    </div>
+    <div class="reach reveal">
+      <div><b>29M</b><span data-i18n="reach1">people reached last month</span></div>
+      <div><b>40M</b><span data-i18n="reach2">reach in peak months</span></div>
+      <div><b>5.1M</b><span data-i18n="reach3">views on her most-watched reel</span></div>
+      <div><b data-i18n="reach4v">1 yr</b><span data-i18n="reach4">from first post to 389K followers</span></div>
+    </div>
+    <p class="note" data-i18n="audNote">Follower counts are a live estimate projected from the latest dashboard figures and 30-day growth rate. Reach and views from Meta professional dashboards, October 2026.</p>
+    <div class="feed" aria-label="Rooms from her reels">
+      <div class="feed-track"><figure class="feed-card"><img src="img/feed-corner.jpg" alt="" loading="lazy"><figcaption data-i18n="t3"></figcaption></figure><figure class="feed-card"><img src="img/feed-bathroom.jpg" alt="" loading="lazy"><figcaption data-i18n="t1"></figcaption></figure><figure class="feed-card"><img src="img/feed-colour.jpg" alt="" loading="lazy"><figcaption data-i18n="t5"></figcaption></figure><figure class="feed-card"><img src="img/feed-pillar.jpg" alt="" loading="lazy"><figcaption data-i18n="t4"></figcaption></figure><figure class="feed-card"><img src="img/feed-console.jpg" alt="" loading="lazy"><figcaption data-i18n="t6"></figcaption></figure><figure class="feed-card"><img src="img/feed-accessories.jpg" alt="" loading="lazy"><figcaption data-i18n="t8"></figcaption></figure><figure class="feed-card"><img src="img/feed-wallart.jpg" alt="" loading="lazy"><figcaption data-i18n="t3"></figcaption></figure><figure class="feed-card" aria-hidden="true"><img src="img/feed-corner.jpg" alt="" loading="lazy"><figcaption data-i18n="t3"></figcaption></figure><figure class="feed-card" aria-hidden="true"><img src="img/feed-bathroom.jpg" alt="" loading="lazy"><figcaption data-i18n="t1"></figcaption></figure><figure class="feed-card" aria-hidden="true"><img src="img/feed-colour.jpg" alt="" loading="lazy"><figcaption data-i18n="t5"></figcaption></figure><figure class="feed-card" aria-hidden="true"><img src="img/feed-pillar.jpg" alt="" loading="lazy"><figcaption data-i18n="t4"></figcaption></figure><figure class="feed-card" aria-hidden="true"><img src="img/feed-console.jpg" alt="" loading="lazy"><figcaption data-i18n="t6"></figcaption></figure><figure class="feed-card" aria-hidden="true"><img src="img/feed-accessories.jpg" alt="" loading="lazy"><figcaption data-i18n="t8"></figcaption></figure><figure class="feed-card" aria-hidden="true"><img src="img/feed-wallart.jpg" alt="" loading="lazy"><figcaption data-i18n="t3"></figcaption></figure></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photos reveal">
+      <div class="about-tall"><img src="img/farnaz-carpet.jpg" alt="Farnaz Sadeghian beside a large hand-knotted Persian carpet" data-i18n-alt="altCarpet" loading="lazy"></div>
+    </div>
+    <div class="about-copy reveal">
+      <p class="eyebrow" data-i18n="aboutEyebrow">About Farnaz Sadeghian</p>
+      <h2 data-i18n="aboutH2">A designer's eye, <em>made simple</em></h2>
+      <p class="script" data-i18n="aboutQuote">“A beautiful home is not about spending more. It's about knowing what to choose.”</p>
+      <p data-i18n="aboutP1">Farnaz has lived in Dubai for twelve years. She trained in interior decoration, earned her certification through TAFE in Australia, and spent the following years designing, consulting and staging real homes. More than fifty Dubai properties were staged by her, each one planned first in 3D.</p>
+      <p data-i18n="aboutP2">That hands-on experience is what her followers learn from today. Every tip is something she has tested in a real room: how to place a sofa in a long living room, how to hide an awkward pillar, what to buy and what to skip.</p>
+      <div class="facts">
+        <div><b>50+</b><span data-i18n="fact1">homes staged with 3D design</span></div>
+        <div><b data-i18n="fact2v">5–6 yrs</b><span data-i18n="fact2">professional practice</span></div>
+        <div><b data-i18n="fact3v">TAFE</b><span data-i18n="fact3">certified interior decorator, Australia</span></div>
+        <div><b data-i18n="fact4v">Mother of 3</b><span data-i18n="fact4">designing for real family life</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="transform">
+  <div class="wrap">
+    <div class="ba-head reveal">
+      <div>
+        <p class="eyebrow" data-i18n="baEyebrow">Before &amp; after</p>
+        <h2 data-i18n="baH2">Same room. <em>Different feeling.</em></h2>
+      </div>
+      <p class="lead" data-i18n="baLead">Most rooms don't need new walls. They need the right layout, light and a few well-chosen pieces. Drag the slider to see what styling changes.</p>
+    </div>
+    <div class="ba-tabs reveal" role="group">
+      <button class="chip" type="button" data-scene="living" aria-pressed="true" data-i18n="baLiving">Living room</button>
+      <button class="chip" type="button" data-scene="bedroom" aria-pressed="false" data-i18n="baBedroom">Bedroom</button>
+      <button class="chip" type="button" data-scene="kitchen" aria-pressed="false" data-i18n="baKitchen">Kitchen</button>
+      <button class="chip" type="button" data-scene="dining" aria-pressed="false" data-i18n="baDining">Dining room</button>
+      <button class="chip" type="button" data-scene="entry" aria-pressed="false" data-i18n="baEntry">Entrance</button>
+      <button class="chip" type="button" data-scene="kids" aria-pressed="false" data-i18n="baKids">Kids' room</button>
+    </div>
+    <div class="ba reveal" id="ba" dir="ltr" style="--pos:50%">
+      <img class="after" id="sceneAfter" src="img/ba-living-after.jpg" alt="" loading="lazy">
+      <img class="before" id="sceneBefore" src="img/ba-living-before.jpg" alt="" loading="lazy">
+      <span class="lbl l" data-i18n="baBefore">Before</span><span class="lbl r" data-i18n="baAfter">After</span>
+      <div class="handle-line"><div class="knob"><svg viewBox="0 0 24 24"><path d="m9 6-6 6 6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+      <label style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" for="baRange" data-i18n="baAria">Compare before and after</label>
+      <input type="range" id="baRange" min="0" max="100" value="50">
+    </div>
+    <p class="ba-note" data-i18n="baNote">Example rooms created to illustrate her method.</p>
+    <h3 class="tips-h reveal" data-i18n="baTipsH">Four moves behind every <em>after</em></h3>
+    <ol class="tips">
+      <li class="tip reveal"><span class="tip-n">01</span><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="14" width="30" height="16" rx="2"/><path d="M5 22h30M11 14v16M29 14v16"/></svg><p data-i18n="step1">Anchor the seating with a rug sized to the room.</p></li>
+      <li class="tip reveal"><span class="tip-n">02</span><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 4v8M12 20a8 8 0 0 1 16 0z"/><path d="M17 24a3 3 0 0 0 6 0M10 34h20"/></svg><p data-i18n="step2">Layer light: a pendant, a floor lamp, warm bulbs.</p></li>
+      <li class="tip reveal"><span class="tip-n">03</span><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="8" y="8" width="24" height="20" rx="1"/><path d="m11 25 6-7 5 5 3-3 4 5"/><circle cx="25" cy="14" r="2"/></svg><p data-i18n="step3">Turn an empty wall into a focal point.</p></li>
+      <li class="tip reveal"><span class="tip-n">04</span><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 34V18M20 22c-6 0-9-4-9-10 6 0 9 4 9 10zM20 18c0-6 3-10 9-10 0 6-3 10-9 10z"/><path d="M13 34h14"/></svg><p data-i18n="step4">Soften with textiles and something living.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="learn">
+  <div class="wrap">
+    <div class="learn-head reveal">
+      <div>
+        <p class="eyebrow" data-i18n="learnEyebrow">What she teaches</p>
+        <h2 data-i18n="learnH2">Small changes, <em>real rooms</em></h2>
+      </div>
+      <p class="lead" data-i18n="learnLead">Short, practical lessons in Persian with English subtitles. Each one solves a problem followers recognise in their own homes.</p>
+    </div>
+    <svg width="0" height="0" class="t-defs" aria-hidden="true" style="position:absolute"><clipPath id="archClip" clipPathUnits="objectBoundingBox"><path d="M0.07,1 V0.62 A0.43,0.3225 0 0 1 0.93,0.62 V1 Z"/></clipPath></svg>
+    <div class="topics">
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-layout.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-layout-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t1">Layout</h3><span class="fa fa-accent">چیدمان</span><p data-i18n="t1d">Where furniture goes in long, narrow or open rooms.</p></div>
+      </article>
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-lighting.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-lighting-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t2">Lighting</h3><span class="fa fa-accent">نورپردازی</span><p data-i18n="t2d">Layered, warm light that makes a room feel finished.</p></div>
+      </article>
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-gallery.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-gallery-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t3">Gallery walls</h3><span class="fa fa-accent">گالری وال</span><p data-i18n="t3d">Turning empty walls and corners into focal points.</p></div>
+      </article>
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-problem.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-problem-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t4">Problem spaces</h3><span class="fa fa-accent">ستون مزاحم</span><p data-i18n="t4d">Pillars, odd corners and doors that face the living room.</p></div>
+      </article>
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-colour.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-colour-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t5">Colour</h3><span class="fa fa-accent">رنگ</span><p data-i18n="t5d">Adding colour with confidence, and checks before you paint.</p></div>
+      </article>
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-buying.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-buying-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t6">Smart buying</h3><span class="fa fa-accent">خرید هوشمند</span><p data-i18n="t6d">What to buy, what to skip, and how to avoid matching sets.</p></div>
+      </article>
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-bedrooms.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-bedrooms-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t7">Bedrooms</h3><span class="fa fa-accent">اتاق خواب</span><p data-i18n="t7d">Calm bedrooms and shared rooms that work for children.</p></div>
+      </article>
+      <article class="topic reveal" tabindex="0">
+        <figure class="t-fig" aria-hidden="true"><span class="t-ring"></span><img class="t-bg" src="img/topic-accessories.webp" alt="" loading="lazy"><img class="t-cut" src="img/topic-accessories-cut.webp" alt="" loading="lazy"></figure>
+        <div class="t-body">
+        <h3 data-i18n="t8">Accessories</h3><span class="fa fa-accent">تاثیر اکسسوری</span><p data-i18n="t8d">The finishing pieces that make a room feel styled.</p></div>
+      </article>
+    </div>
+    <div class="reels">
+      <a class="reel reveal" href="https://www.instagram.com/decor.with.farnaz/reels/" target="_blank" rel="noopener">
+        <span class="reel-thumb"><img src="img/reel-1.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></span>
+        <span class="reel-info"><span class="views">5.1M<small data-i18n="views">views</small></span><h3 data-i18n="reel1">Corner gallery-wall idea</h3><span class="reel-link" data-i18n="reelWatch">Watch on Instagram</span></span>
+      </a>
+      <a class="reel reveal" href="https://www.instagram.com/decor.with.farnaz/reels/" target="_blank" rel="noopener">
+        <span class="reel-thumb"><img src="img/reel-2.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></span>
+        <span class="reel-info"><span class="views">4.5M<small data-i18n="views">views</small></span><h3 data-i18n="reel2">Is your bathroom door visible?</h3><span class="reel-link" data-i18n="reelWatch">Watch on Instagram</span></span>
+      </a>
+      <a class="reel reveal" href="https://www.instagram.com/decor.with.farnaz/reels/" target="_blank" rel="noopener">
+        <span class="reel-thumb"><img src="img/reel-3.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></span>
+        <span class="reel-info"><span class="views">762K<small data-i18n="views">views</small></span><h3 data-i18n="reel3">Styling a rectangular living room</h3><span class="reel-link" data-i18n="reelWatch">Watch on Instagram</span></span>
+      </a>
+    </div>
+    <p style="margin-top:28px;text-align:center"><a class="btn btn-ghost" href="https://www.instagram.com/decor.with.farnaz/reels/" target="_blank" rel="noopener"><span data-i18n="learnAll">Watch all reels</span> <svg><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<section id="book" class="book-sec">
+  <div class="wrap book-grid">
+    <div class="book-visual reveal">
+      <img class="book-mock" src="img/book-mockup.jpg" alt="Soul of the Room, the book by Farnaz Sadeghian, on a coffee table" data-i18n-alt="bookAlt" loading="lazy">
+      <div class="book-cover3d" aria-hidden="true"><img src="img/book-cover.jpg" alt="" loading="lazy"></div>
+      <span class="book-badge" data-i18n="bookBadge">Coming soon</span>
+    </div>
+    <div class="book-copy reveal">
+      <p class="eyebrow" data-i18n="bookEyebrow">Her book</p>
+      <h2><span data-i18n="bookTitle">Soul of the <em>Room</em></span></h2>
+      <p class="book-sub" data-i18n="bookSub">A Journey Through Interior Styles</p>
+      <p data-i18n="bookP2">Fifty interior styles, from Japandi to Art Deco, explained the way Farnaz teaches every day: where each style comes from, what defines it, and how to bring it into a real home without starting over.</p>
+      <ul class="book-points">
+        <li><b>50</b><span data-i18n="bookPt1">interior styles</span></li>
+        <li><b data-i18n="bookPt2v">Origins</b><span data-i18n="bookPt2">palettes, materials &amp; key pieces</span></li>
+        <li><b data-i18n="bookPt3v">At home</b><span data-i18n="bookPt3">how to mix styles in real rooms</span></li>
+      </ul>
+      <div class="hero-cta"><a class="btn btn-solid" href="#contact" data-i18n="bookCta">Join the launch list</a><a class="btn btn-ghost" href="#collab" data-i18n="bookCta2">Partner on the book</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="collab">
+  <div class="wrap collab-grid">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="collabEyebrow">Work with Farnaz</p>
+      <h2 data-i18n="collabH2">Partner with a voice <em>homeowners trust</em></h2>
+      <p class="lead" style="margin-top:18px" data-i18n="collabLead">Her followers come to learn before they buy. A recommendation from a certified decorator carries weight at exactly that moment.</p>
+      <div class="partners">
+        <span data-i18n="p1">Furniture &amp; decor</span><span data-i18n="p2">Lighting</span><span data-i18n="p3">Paint &amp; finishes</span><span data-i18n="p4">Rugs &amp; textiles</span><span data-i18n="p5">Flooring</span><span data-i18n="p6">Kitchen &amp; bath</span><span data-i18n="p7">Smart home</span><span data-i18n="p8">Real estate</span>
+      </div>
+    </div>
+    <div class="offers reveal">
+      <div class="offer"><h3 data-i18n="o1">Sponsored reels</h3><span data-i18n="o1t">Instagram · Facebook</span><p data-i18n="o1d">Your product shown in a real room, inside a lesson people save and share.</p></div>
+      <div class="offer"><h3 data-i18n="o2">Brand ambassador</h3><span data-i18n="o2t">Long term</span><p data-i18n="o2d">An ongoing partnership across a season of content, stories and launches.</p></div>
+      <div class="offer"><h3 data-i18n="o3">Showroom &amp; launch visits</h3><span data-i18n="o3t">Dubai · UAE</span><p data-i18n="o3d">On-site content from your store, showroom, project or event.</p></div>
+      <div class="offer"><h3 data-i18n="o4">Product edits</h3><span data-i18n="o4t">Stories · Guides</span><p data-i18n="o4d">Curated picks and styling guides that send followers straight to buy.</p></div>
+      <div class="offer"><h3 data-i18n="o5">Developer &amp; staging content</h3><span data-i18n="o5t">Real estate</span><p data-i18n="o5d">Styling stories for new homes, built on her experience staging 50+ properties.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <img class="contact-logo" src="img/tsi-badge-wine.svg" alt="Third Skin Interiors by Farnaz Sadeghian" width="220" height="253">
+      <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+      <h2 data-i18n="contactH2">Let's create <em>something beautiful</em></h2>
+      <p class="lead" style="margin-top:18px" data-i18n="contactLead">For collaborations, campaigns, events and media, send a message. Farnaz or her team will reply within two working days.</p>
+      <div class="channels">
+        <a class="channel" id="waLink" href="#" target="_blank" rel="noopener">
+          <span class="ic"><svg><use href="#i-wa"/></svg></span>
+          <span><small data-i18n="chWa">WhatsApp</small><b data-phone dir="ltr"></b></span>
+          <svg><use href="#i-arrow"/></svg>
+        </a>
+        <div class="channel">
+          <span class="ic"><svg><use href="#i-mail"/></svg></span>
+          <span><small data-i18n="chEmail">Email</small><b data-email dir="ltr"></b></span>
+          <button class="copy" type="button" data-copy="email" data-i18n="copy">Copy</button>
+        </div>
+        <a class="channel" href="https://www.instagram.com/decor_farnaz/" target="_blank" rel="noopener">
+          <span class="ic"><svg><use href="#i-ig"/></svg></span>
+          <span><small data-i18n="chIg">Collaborations on Instagram</small><b dir="ltr">@decor_farnaz</b></span>
+          <svg><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+    <form id="inquiry" novalidate class="reveal">
+      <h3 data-i18n="formH3">Send an inquiry</h3>
+      <div class="row">
+        <label for="f-name"><span data-i18n="fName">Name</span><input id="f-name" name="name" autocomplete="name" required></label>
+        <label for="f-company"><span data-i18n="fCompany">Company or brand</span><input id="f-company" name="company" autocomplete="organization"></label>
+      </div>
+      <div class="row">
+        <label for="f-email"><span data-i18n="fEmail">Email</span><input id="f-email" name="email" type="email" autocomplete="email" required dir="ltr"></label>
+        <label for="f-phone"><span data-i18n="fPhone">Phone / WhatsApp</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></label>
+      </div>
+      <label for="f-type"><span data-i18n="fType">Type of inquiry</span>
+        <select id="f-type" name="type">
+          <option value="Brand collaboration" data-i18n="opt1">Brand collaboration</option>
+          <option value="Sponsored content" data-i18n="opt2">Sponsored content</option>
+          <option value="Event or showroom visit" data-i18n="opt3">Event or showroom visit</option>
+          <option value="Media or interview" data-i18n="opt4">Media or interview</option>
+          <option value="Book" data-i18n="opt5">Book</option>
+          <option value="Other" data-i18n="opt6">Other</option>
+        </select>
+      </label>
+      <label for="f-msg"><span data-i18n="fMsg">Message</span><textarea id="f-msg" name="message" required data-i18n-ph="fMsgPh" placeholder="Tell us about your brand, timing and budget"></textarea></label>
+      <p class="err" id="formErr" role="alert"></p>
+      <button class="btn btn-solid" type="submit" style="justify-self:start"><span data-i18n="fSubmit">Send inquiry</span> <svg><use href="#i-arrow"/></svg></button>
+      <div class="sent" id="sent" hidden>
+        <h3 data-i18n="sentH3">Your message is ready</h3>
+        <p data-i18n="sentP">Send it on WhatsApp in one tap, or copy it into an email.</p>
+        <pre id="sentText" dir="auto"></pre>
+        <div class="acts">
+          <a class="btn btn-solid" id="sentWa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span data-i18n="sentWa">Send on WhatsApp</span></a>
+          <button class="btn btn-ghost" type="button" id="sentCopy" data-i18n="sentCopy">Copy message</button>
+          <button class="btn btn-ghost" type="button" id="sentEdit" data-i18n="sentEdit">Edit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="foot-logo" src="img/tsi-lockup.svg" alt="Third Skin Interiors by Farnaz Sadeghian" width="300" height="67">
+    <span>© <span id="yr">2026</span> <span dir="ltr">Third Skin Interiors by Farnaz Sadeghian</span> · <span dir="ltr">@decor.with.farnaz</span> · <span data-i18n="footerLoc">Dubai, UAE</span></span>
+    <span style="display:flex;gap:18px">
+      <a href="https://www.instagram.com/decor.with.farnaz/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/817038121486364" target="_blank" rel="noopener">Facebook</a>
+      <a href="#contact" data-i18n="contactEyebrow">Contact</a>
+    </span>
+  </div>
+</footer>
+
+<a class="float-wa" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+const I18N = {
+en: {
+  _name: "English", _dir: "ltr",
+  navAbout: "About", navAudience: "Audience", navTransform: "Before &amp; after", navLearn: "What she teaches", navCollab: "Work with her", navCta: "Get in touch",
+  altHero: "Farnaz pointing at a wall installation of metallic sculptures", altPortrait: "Portrait of Farnaz", altRugs: "Farnaz choosing rugs in a Dubai showroom",
+  heroTag: "live followers", liveChip: "Live", aud200k: "The day we hit 200K", aud200kAlt: "Farnaz and her daughters celebrating 200K followers",
+  heroEyebrow: "Certified interior decorator · Dubai",
+  heroH1: "Make your house feel like <em>home.</em>",
+  heroLead: "A beautiful home is not about a bigger budget. It is about knowing what to move, what to keep and what to skip. Certified decorator Farnaz Sadeghian shows how, one room at a time.",
+  heroFollow: "Follow on Instagram", heroBrands: "Brand collaborations",
+  cred1: "TAFE Australia certified", cred2: "50+ homes staged in Dubai", cred3: "Verified on Instagram &amp; Facebook",
+  audEyebrow: "The audience", audH2: "A community that <em>grows every minute</em>", audLive: "Live follower estimate",
+  verified: "Verified", igLabel: "Instagram followers", fbLabel: "Facebook followers",
+  today: "today", last30: "last 30 days", last28: "last 28 days", views30: "views in 30 days", views28: "views in 28 days",
+  reach1: "people reached last month", reach2: "reach in peak months", reach3: "views on her most-watched reel", reach4v: "1 yr", reach4: "from first post to 389K followers",
+  audNote: "Follower counts are a live estimate projected from the latest dashboard figures and 30-day growth rate. Reach and views from Meta professional dashboards, October 2026.",
+  altCarpet: "Farnaz Sadeghian beside a large hand-knotted Persian carpet", aboutEyebrow: "About Farnaz Sadeghian", aboutH2: "A designer's eye, <em>made simple</em>",
+  aboutQuote: "“Good design starts with how a family really lives.”",
+  aboutP1: "Farnaz Sadeghian is a certified interior decorator, trained through TAFE in Australia. Before focusing on education, she ran a Dubai practice in interior design, consultation and home staging, completing more than fifty staging projects, each one planned first in 3D.",
+  aboutP2: "Today she brings that professional method to a wide audience. Her lessons cover space planning, lighting, colour and smart purchasing, and every recommendation has been tested in real homes before it reaches her followers.",
+  fact1: "homes staged with 3D design", fact2v: "5–6 yrs", fact2: "professional practice", fact3v: "TAFE", fact3: "certified interior decorator, Australia", fact4v: "Mother of 3", fact4: "designing for real family life",
+  baKitchen: "Kitchen", baDining: "Dining room", baEntry: "Entrance", baKids: "Kids' room", baTipsH: "Four moves behind every <em>after</em>", baNote: "Example rooms created to illustrate her method.", navBook: "The book", bookAlt: "Soul of the Room, the book by Farnaz Sadeghian, on a coffee table", bookBadge: "Coming soon", bookEyebrow: "Her book", bookTitle: "Soul of the <em>Room</em>", bookSub: "A Journey Through Interior Styles", bookP2: "Fifty interior styles, from Japandi to Art Deco, explained the way Farnaz teaches every day: where each style comes from, what defines it, and how to bring it into a real home without starting over.", bookPt1: "interior styles", bookPt2v: "Origins", bookPt2: "palettes, materials &amp; key pieces", bookPt3v: "At home", bookPt3: "how to mix styles in real rooms", bookCta: "Join the launch list", bookCta2: "Partner on the book", reelWatch: "Watch on Instagram", baEyebrow: "Before &amp; after", baH2: "Same room. <em>Different feeling.</em>",
+  baLead: "Most rooms don't need new walls. They need the right layout, light and a few well-chosen pieces. Drag the slider to see what styling changes.",
+  step1: "Anchor the seating with a rug sized to the room.", step2: "Layer light: a pendant, a floor lamp, warm bulbs.", step3: "Turn an empty wall into a focal point.", step4: "Soften with textiles and something living.",
+  baBefore: "Before", baAfter: "After", baAria: "Compare before and after", baLiving: "Living room", baBedroom: "Bedroom",
+  learnEyebrow: "What she teaches", learnH2: "Small changes, <em>real rooms</em>",
+  learnLead: "Short, practical lessons in Persian with English subtitles. Each one solves a problem followers recognise in their own homes.",
+  t1: "Layout", t1d: "Where furniture goes in long, narrow or open rooms.",
+  t2: "Lighting", t2d: "Layered, warm light that makes a room feel finished.",
+  t3: "Gallery walls", t3d: "Turning empty walls and corners into focal points.",
+  t4: "Problem spaces", t4d: "Pillars, odd corners and doors that face the living room.",
+  t5: "Colour", t5d: "Adding colour with confidence, and checks before you paint.",
+  t6: "Smart buying", t6d: "What to buy, what to skip, and how to avoid matching sets.",
+  t7: "Bedrooms", t7d: "Calm bedrooms and shared rooms that work for children.",
+  t8: "Accessories", t8d: "The finishing pieces that make a room feel styled.",
+  views: "views", reel1: "Corner gallery-wall idea", reel2: "Is your bathroom door visible?", reel3: "Styling a rectangular living room", learnAll: "Watch all reels",
+  collabEyebrow: "Work with Farnaz", collabH2: "Partner with a voice <em>homeowners trust</em>",
+  collabLead: "Her followers come to learn before they buy. A recommendation from a certified decorator carries weight at exactly that moment.",
+  p1: "Furniture &amp; decor", p2: "Lighting", p3: "Paint &amp; finishes", p4: "Rugs &amp; textiles", p5: "Flooring", p6: "Kitchen &amp; bath", p7: "Smart home", p8: "Real estate",
+  bookCover: "The Art of Arrangement", bookH3: "Her book is on the way", bookP: "A practical guide to interior styles and how to arrange a home properly, written in the same clear voice as her reels.",
+  o1: "Sponsored reels", o1t: "Instagram · Facebook", o1d: "Your product shown in a real room, inside a lesson people save and share.",
+  o2: "Brand ambassador", o2t: "Long term", o2d: "An ongoing partnership across a season of content, stories and launches.",
+  o3: "Showroom &amp; launch visits", o3t: "Dubai · UAE", o3d: "On-site content from your store, showroom, project or event.",
+  o4: "Product edits", o4t: "Stories · Guides", o4d: "Curated picks and styling guides that send followers straight to buy.",
+  o5: "Developer &amp; staging content", o5t: "Real estate", o5d: "Styling stories for new homes, built on her experience staging 50+ properties.",
+  contactEyebrow: "Contact", contactH2: "Let's create <em>something beautiful</em>",
+  contactLead: "For collaborations, campaigns, events and media, send a message. Farnaz or her team will reply within two working days.",
+  chWa: "WhatsApp", chEmail: "Email", chIg: "Collaborations on Instagram", copy: "Copy", copied: "Copied",
+  formH3: "Send an inquiry", fName: "Name", fCompany: "Company or brand", fEmail: "Email", fPhone: "Phone / WhatsApp", fType: "Type of inquiry",
+  opt1: "Brand collaboration", opt2: "Sponsored content", opt3: "Event or showroom visit", opt4: "Media or interview", opt5: "Book", opt6: "Other",
+  fMsg: "Message", fMsgPh: "Tell us about your brand, timing and budget", fErr: "Please add your name, a valid email and a short message.", fSubmit: "Send inquiry",
+  sentH3: "Your message is ready", sentP: "Send it on WhatsApp in one tap, or copy it into an email.", sentWa: "Send on WhatsApp", sentCopy: "Copy message", sentEdit: "Edit",
+  waHello: "Hello Farnaz, I found your website and would like to talk about a collaboration.",
+  footerLoc: "Dubai, UAE",
+  brandEyebrow: "Third Skin Interiors", brandH2: "Your home is your <em>third skin</em>", brandP: "Interior decoration, architecture and everyday styling, explained simply. Third Skin Interiors is the studio of Farnaz Sadeghian, known online as Decor with Farnaz.", quote: "“Our first skin is the one we are born with. The second is our clothes. The third is our home.”", quoteBy: "After Friedensreich Hundertwasser, artist and architect, and his theory of the five skins"
+},
+
+fa: {
+  _name: "فارسی", _dir: "rtl",
+  navAbout: "درباره", navAudience: "مخاطبان", navTransform: "قبل و بعد", navLearn: "آموزش‌ها", navCollab: "همکاری", navCta: "تماس با ما",
+  altHero: "فرناز در کنار دیواری با مجسمه‌های فلزی", altPortrait: "پرتره‌ی فرناز", altRugs: "فرناز در حال انتخاب فرش در یک نمایشگاه در دبی",
+  heroTag: "دنبال‌کننده‌ی زنده", liveChip: "زنده", aud200k: "روزی که ۲۰۰ هزارتایی شدیم", aud200kAlt: "فرناز و دخترانش در جشن ۲۰۰ هزار دنبال‌کننده",
+  heroEyebrow: "دکوراتور داخلی دارای مدرک · دبی",
+  heroH1: "خونه‌ات رو به یک <em>خانه‌ی واقعی</em> تبدیل کن",
+  heroLead: "خانه‌ی زیبا به بودجه‌ی بیشتر نیست؛ به این است که بدانی چه چیزی را جابه‌جا کنی، چه چیزی را نگه داری و از چه چیزی بگذری. فرناز صادقیان، دکوراتور دارای مدرک، قدم به قدم و اتاق به اتاق نشانت می‌دهد.",
+  heroFollow: "دنبال کردن در اینستاگرام", heroBrands: "همکاری با برندها",
+  cred1: "دارای مدرک TAFE استرالیا", cred2: "بیش از ۵۰ پروژه‌ی استیجینگ در دبی", cred3: "تیک آبی در اینستاگرام و فیسبوک",
+  audEyebrow: "مخاطبان", audH2: "جامعه‌ای که <em>هر دقیقه بزرگ‌تر می‌شود</em>", audLive: "تخمین زنده‌ی دنبال‌کنندگان",
+  verified: "تأییدشده", igLabel: "دنبال‌کننده در اینستاگرام", fbLabel: "دنبال‌کننده در فیسبوک",
+  today: "امروز", last30: "در ۳۰ روز گذشته", last28: "در ۲۸ روز گذشته", views30: "بازدید در ۳۰ روز", views28: "بازدید در ۲۸ روز",
+  reach1: "نفر در ماه گذشته", reach2: "دسترسی در ماه‌های اوج", reach3: "بازدید پربیننده‌ترین ریلز", reach4v: "۱ سال", reach4: "از اولین پست تا ۳۸۹ هزار دنبال‌کننده",
+  audNote: "تعداد دنبال‌کنندگان تخمینی زنده بر اساس آخرین آمار داشبورد و نرخ رشد ۳۰ روزه است. آمار دسترسی و بازدید از داشبورد حرفه‌ای متا، اکتبر ۲۰۲۶.",
+  altCarpet: "فرناز صادقیان کنار یک فرش بزرگ دستباف ایرانی", aboutEyebrow: "درباره‌ی فرناز صادقیان", aboutH2: "نگاه یک طراح، <em>به زبان ساده</em>",
+  aboutQuote: "«طراحی خوب از شناخت سبک زندگی واقعی یک خانواده شروع می‌شود.»",
+  aboutP1: "فرناز صادقیان دکوراتور داخلی دارای مدرک از TAFE استرالیا است. او پیش از تمرکز بر آموزش، در دبی در زمینه‌ی طراحی داخلی، مشاوره و استیجینگ فعالیت حرفه‌ای داشت و بیش از پنجاه پروژه‌ی استیجینگ را با طراحی سه‌بعدی اجرا کرد.",
+  aboutP2: "امروز همان روش حرفه‌ای را با مخاطبانی گسترده به اشتراک می‌گذارد. آموزش‌های او چیدمان فضا، نورپردازی، رنگ و خرید هوشمند را در بر می‌گیرد و هر توصیه پیش از رسیدن به مخاطبان، در خانه‌های واقعی آزموده شده است.",
+  fact1: "خانه با طراحی سه‌بعدی", fact2v: "۵ تا ۶ سال", fact2: "سابقه‌ی حرفه‌ای", fact3v: "TAFE", fact3: "دکوراتور داخلی دارای مدرک، استرالیا", fact4v: "مادر ۳ فرزند", fact4: "طراحی برای زندگی واقعی خانواده",
+  baKitchen: "آشپزخانه", baDining: "ناهارخوری", baEntry: "ورودی", baKids: "اتاق کودک", baTipsH: "چهار حرکت پشت هر <em>بعد</em>", baNote: "اتاق‌های نمونه برای نمایش روش او ساخته شده‌اند.", navBook: "کتاب", bookAlt: "کتاب «روح اتاق» نوشته‌ی فرناز صادقیان روی میز", bookBadge: "به‌زودی", bookEyebrow: "کتاب او", bookTitle: "روح <em>اتاق</em>", bookSub: "سفری در میان سبک‌های دکوراسیون داخلی", bookP2: "پنجاه سبک دکوراسیون، از ژاپاندی تا آرت‌دکو، به همان زبانی که فرناز هر روز آموزش می‌دهد: هر سبک از کجا آمده، چه چیزی آن را تعریف می‌کند و چطور بدون شروع از صفر آن را به خانه‌ی واقعی بیاوریم.", bookPt1: "سبک دکوراسیون", bookPt2v: "ریشه‌ها", bookPt2: "پالت رنگ، متریال و قطعات کلیدی", bookPt3v: "در خانه", bookPt3: "ترکیب سبک‌ها در اتاق‌های واقعی", bookCta: "عضویت در فهرست انتشار", bookCta2: "همکاری در کتاب", reelWatch: "تماشا در اینستاگرام", baEyebrow: "قبل و بعد", baH2: "همان اتاق، <em>حسی دیگر</em>",
+  baLead: "بیشتر اتاق‌ها به دیوار جدید نیاز ندارند؛ به چیدمان درست، نور مناسب و چند وسیله‌ی خوش‌انتخاب نیاز دارند. اسلایدر را بکشید و تفاوت را ببینید.",
+  step1: "نشیمن را با فرشی هم‌اندازه‌ی اتاق متمرکز کنید.", step2: "نور را لایه‌لایه کنید: آویز، آباژور ایستاده و لامپ گرم.", step3: "یک دیوار خالی را به نقطه‌ی کانونی تبدیل کنید.", step4: "با پارچه و گیاه، فضا را نرم کنید.",
+  baBefore: "قبل", baAfter: "بعد", baAria: "مقایسه‌ی قبل و بعد", baLiving: "پذیرایی", baBedroom: "اتاق خواب",
+  learnEyebrow: "آموزش‌ها", learnH2: "تغییرات کوچک، <em>خانه‌های واقعی</em>",
+  learnLead: "آموزش‌های کوتاه و کاربردی به فارسی با زیرنویس انگلیسی. هرکدام مشکلی را حل می‌کند که در خانه‌ی خودتان هم می‌بینید.",
+  t1: "چیدمان", t1d: "جای درست مبلمان در اتاق‌های باریک، طولانی یا باز.",
+  t2: "نورپردازی", t2d: "نور گرم و لایه‌لایه که اتاق را کامل می‌کند.",
+  t3: "گالری وال", t3d: "تبدیل دیوارها و گوشه‌های خالی به نقطه‌ی کانونی.",
+  t4: "فضاهای مشکل‌دار", t4d: "ستون‌ها، گوشه‌های عجیب و دری که رو به پذیرایی است.",
+  t5: "رنگ", t5d: "رنگ را با اعتمادبه‌نفس اضافه کنید و قبل از رنگ‌کاری این‌ها را بدانید.",
+  t6: "خرید هوشمند", t6d: "چه بخریم، چه نخریم و چرا مبلمان ست نخریم.",
+  t7: "اتاق خواب", t7d: "اتاق خواب آرام و اتاق مشترک برای بچه‌ها.",
+  t8: "اکسسوری", t8d: "جزئیات نهایی که اتاق را کامل و شیک می‌کند.",
+  views: "بازدید", reel1: "ایده برای گوشه‌ی خونه", reel2: "درب سرویس بهداشتی به پذیرایی دید داره؟", reel3: "چیدمان سالن مستطیل", learnAll: "دیدن همه‌ی ریلزها",
+  collabEyebrow: "همکاری با فرناز", collabH2: "همکاری با صدایی که <em>خانواده‌ها به آن اعتماد دارند</em>",
+  collabLead: "دنبال‌کنندگانش قبل از خرید برای یادگرفتن می‌آیند. پیشنهاد یک دکوراتور حرفه‌ای درست در همین لحظه اثر دارد.",
+  p1: "مبلمان و دکور", p2: "روشنایی", p3: "رنگ و پوشش دیوار", p4: "فرش و پارچه", p5: "کفپوش", p6: "آشپزخانه و حمام", p7: "خانه‌ی هوشمند", p8: "املاک",
+  bookCover: "هنر چیدمان", bookH3: "کتابش در راه است", bookP: "راهنمایی کاربردی درباره‌ی سبک‌های دکوراسیون و چیدمان درست خانه، با همان زبان ساده‌ی ریلزهایش.",
+  o1: "ریلز تبلیغاتی", o1t: "اینستاگرام · فیسبوک", o1d: "محصول شما در یک اتاق واقعی، درون آموزشی که مردم ذخیره و ارسال می‌کنند.",
+  o2: "سفیر برند", o2t: "بلندمدت", o2d: "همکاری مستمر در یک فصل محتوا، استوری و رونمایی.",
+  o3: "بازدید از شوروم و رونمایی", o3t: "دبی · امارات", o3d: "تولید محتوا در فروشگاه، شوروم، پروژه یا رویداد شما.",
+  o4: "پیشنهاد محصولات", o4t: "استوری · راهنما", o4d: "انتخاب‌های گزیده و راهنمای چیدمان که مستقیم به خرید می‌رسد.",
+  o5: "محتوا برای سازنده‌ها و استیجینگ", o5t: "املاک", o5d: "داستان چیدمان خانه‌های نو، بر پایه‌ی تجربه‌ی استیجینگ بیش از ۵۰ ملک.",
+  contactEyebrow: "تماس", contactH2: "بیایید <em>چیزی زیبا</em> بسازیم",
+  contactLead: "برای همکاری، کمپین، رویداد و رسانه پیام بفرستید. فرناز یا تیمش ظرف دو روز کاری پاسخ می‌دهند.",
+  chWa: "واتساپ", chEmail: "ایمیل", chIg: "همکاری در اینستاگرام", copy: "کپی", copied: "کپی شد",
+  formH3: "ارسال درخواست", fName: "نام", fCompany: "شرکت یا برند", fEmail: "ایمیل", fPhone: "تلفن / واتساپ", fType: "نوع درخواست",
+  opt1: "همکاری با برند", opt2: "محتوای تبلیغاتی", opt3: "رویداد یا بازدید از شوروم", opt4: "رسانه یا مصاحبه", opt5: "کتاب", opt6: "سایر",
+  fMsg: "پیام", fMsgPh: "درباره‌ی برند، زمان‌بندی و بودجه بنویسید", fErr: "لطفاً نام، ایمیل معتبر و یک پیام کوتاه وارد کنید.", fSubmit: "ارسال درخواست",
+  sentH3: "پیام شما آماده است", sentP: "با یک لمس در واتساپ بفرستید یا آن را در ایمیل کپی کنید.", sentWa: "ارسال در واتساپ", sentCopy: "کپی پیام", sentEdit: "ویرایش",
+  waHello: "سلام فرناز جان، سایتت رو دیدم و می‌خواستم درباره‌ی همکاری صحبت کنیم.",
+  footerLoc: "دبی، امارات",
+  brandEyebrow: "تِرد اسکین اینتریرز", brandH2: "خانه، <em>پوست سوم</em> توست", brandP: "دکوراسیون داخلی، معماری و چیدمان روزمره، به زبان ساده. Third Skin Interiors استودیوی فرناز صادقیان است که در شبکه‌های اجتماعی با نام «دکور با فرناز» شناخته می‌شود.", quote: "«پوست اول، پوستی است که با آن به دنیا می‌آییم. پوست دوم، لباس ماست. پوست سوم، خانه‌ی ماست.»", quoteBy: "برگرفته از نظریه‌ی «پنج پوست» فریدنسرایش هوندرتواسر، هنرمند و معمار"
+},
+
+ar: {
+  _name: "العربية", _dir: "rtl",
+  navAbout: "نبذة", navAudience: "الجمهور", navTransform: "قبل وبعد", navLearn: "شو تعلّم", navCollab: "تعاون وياها", navCta: "تواصل معنا",
+  altHero: "فرناز تشير إلى عمل فني معدني على الجدار", altPortrait: "صورة فرناز", altRugs: "فرناز تختار السجاد في معرض بدبي",
+  heroTag: "متابع مباشر", liveChip: "مباشر", aud200k: "يوم وصلنا 200 ألف", aud200kAlt: "فرناز وبناتها يحتفلون بـ 200 ألف متابع",
+  heroEyebrow: "مصممة ديكور داخلي معتمدة · دبي",
+  heroH1: "خلّ بيتك يحسّسك إنه <em>بيت.</em>",
+  heroLead: "البيت الحلو ما يحتاج ميزانية أكبر، يحتاج تعرف شو تحرّك وشو تخلّي وشو تستغني عنه. فرناز صادقيان، مصممة الديكور المعتمدة، توريك الطريقة غرفة بغرفة.",
+  heroFollow: "تابعونا على إنستغرام", heroBrands: "تعاون مع العلامات التجارية",
+  cred1: "شهادة معتمدة من TAFE أستراليا", cred2: "أكثر من 50 بيت مجهّز في دبي", cred3: "حسابات موثّقة على إنستغرام وفيسبوك",
+  audEyebrow: "الجمهور", audH2: "مجتمع <em>يكبر كل دقيقة</em>", audLive: "تقدير مباشر للمتابعين",
+  verified: "موثّق", igLabel: "متابع على إنستغرام", fbLabel: "متابع على فيسبوك",
+  today: "اليوم", last30: "آخر 30 يوم", last28: "آخر 28 يوم", views30: "مشاهدة في 30 يوم", views28: "مشاهدة في 28 يوم",
+  reach1: "شخص وصلناله الشهر اللي طاف", reach2: "وصول في أقوى الشهور", reach3: "مشاهدة لأكثر ريل انشاف", reach4v: "سنة", reach4: "من أول بوست إلى 389 ألف متابع",
+  audNote: "أعداد المتابعين تقدير مباشر محسوب من آخر أرقام لوحة التحكم ومعدل النمو خلال 30 يوم. أرقام الوصول والمشاهدات من لوحات Meta الاحترافية، أكتوبر 2026.",
+  altCarpet: "فرناز صادقيان بجانب سجادة فارسية كبيرة مصنوعة يدويًا", aboutEyebrow: "عن فرناز صادقيان", aboutH2: "عين مصممة، <em>بأسلوب بسيط</em>",
+  aboutQuote: "«التصميم الناجح يبدأ من طريقة عيش العائلة الحقيقية.»",
+  aboutP1: "فرناز صادقيان مصممة ديكور داخلي معتمدة، تدرّبت عبر معهد TAFE في أستراليا. قبل أن تتفرّغ للتعليم، عملت في دبي في التصميم الداخلي والاستشارات وتجهيز البيوت، ونفّذت أكثر من خمسين مشروع تجهيز، كل واحد منها مخطط أولًا بتصميم ثلاثي الأبعاد.",
+  aboutP2: "اليوم تنقل هذا الأسلوب المهني إلى جمهور واسع. دروسها تغطي تخطيط المساحات والإضاءة والألوان والشراء الذكي، وكل نصيحة مجرّبة في بيوت حقيقية قبل أن تصل إلى متابعيها.",
+  fact1: "بيت مجهّز بتصميم ثلاثي الأبعاد", fact2v: "5–6 سنوات", fact2: "خبرة مهنية", fact3v: "TAFE", fact3: "مصممة ديكور معتمدة، أستراليا", fact4v: "أم لـ 3", fact4: "تصميم يناسب حياة العائلة",
+  baKitchen: "المطبخ", baDining: "غرفة الطعام", baEntry: "المدخل", baKids: "غرفة الأطفال", baTipsH: "أربع خطوات وراء كل <em>بعد</em>", baNote: "غرف نموذجية لتوضيح أسلوبها.", navBook: "الكتاب", bookAlt: "كتاب «روح الغرفة» لفرناز صادقيان على طاولة", bookBadge: "قريبًا", bookEyebrow: "كتابها", bookTitle: "روح <em>الغرفة</em>", bookSub: "رحلة عبر أنماط التصميم الداخلي", bookP2: "خمسون نمطًا للديكور الداخلي، من الجابندي إلى الآرت ديكو، بنفس أسلوب فرناز اليومي: من وين جاء كل نمط، شو اللي يميّزه، وكيف تجيبه لبيتك بدون ما تبدأ من الصفر.", bookPt1: "نمط ديكور", bookPt2v: "الأصول", bookPt2: "الألوان والخامات والقطع الأساسية", bookPt3v: "في البيت", bookPt3: "كيف تمزج الأنماط في غرف حقيقية", bookCta: "انضم لقائمة الإطلاق", bookCta2: "شراكة في الكتاب", reelWatch: "شاهد على إنستغرام", baEyebrow: "قبل وبعد", baH2: "نفس الغرفة، <em>إحساس ثاني</em>",
+  baLead: "أغلب الغرف ما تحتاج جدران جديدة. تحتاج توزيع صح وإضاءة وكم قطعة مختارة زين. حرّك الشريط وشوف الفرق.",
+  step1: "ثبّت الجلسة بسجادة على قد الغرفة.", step2: "نوّع الإضاءة: ثريا، أباجورة واقفة ولمبات دافية.", step3: "حوّل الجدار الفاضي لنقطة جذب.", step4: "نعّم المكان بالأقمشة والنباتات.",
+  baBefore: "قبل", baAfter: "بعد", baAria: "قارن بين قبل وبعد", baLiving: "الصالة", baBedroom: "غرفة النوم",
+  learnEyebrow: "شو تعلّم", learnH2: "تغييرات بسيطة، <em>غرف حقيقية</em>",
+  learnLead: "دروس قصيرة وعملية بالفارسي مع ترجمة إنجليزي. كل درس يحل مشكلة تشوفها في بيتك.",
+  t1: "التوزيع", t1d: "وين يروح الأثاث في الغرف الطويلة أو الضيقة أو المفتوحة.",
+  t2: "الإضاءة", t2d: "إضاءة دافية بطبقات تخلّي الغرفة كاملة.",
+  t3: "جدار الصور", t3d: "تحويل الجدران والزوايا الفاضية لنقطة جذب.",
+  t4: "المساحات الصعبة", t4d: "الأعمدة والزوايا الغريبة والأبواب المقابلة للصالة.",
+  t5: "الألوان", t5d: "أضف اللون بثقة، وأشياء لازم تعرفها قبل الصبغ.",
+  t6: "الشراء الذكي", t6d: "شو تشتري، شو تخلّي، وليش ما تشتري طقم كامل.",
+  t7: "غرف النوم", t7d: "غرف نوم هادية وغرف مشتركة تناسب الأطفال.",
+  t8: "الإكسسوارات", t8d: "اللمسات الأخيرة اللي تعطي الغرفة ستايل.",
+  views: "مشاهدة", reel1: "فكرة لزاوية البيت", reel2: "باب الحمام مبيّن من الصالة؟", reel3: "توزيع صالة مستطيلة", learnAll: "شوف كل الريلز",
+  collabEyebrow: "تعاون مع فرناز", collabH2: "شراكة مع صوت <em>تثق فيه العوايل</em>",
+  collabLead: "متابعينها يجون يتعلمون قبل لا يشترون. ونصيحة من مصممة معتمدة لها وزن في هاللحظة بالضبط.",
+  p1: "أثاث وديكور", p2: "إضاءة", p3: "صبغ وتشطيبات", p4: "سجاد وأقمشة", p5: "أرضيات", p6: "مطابخ وحمامات", p7: "البيت الذكي", p8: "عقارات",
+  bookCover: "فن التنسيق", bookH3: "كتابها في الطريق", bookP: "دليل عملي لأنماط الديكور وكيف تنسّق البيت صح، بنفس أسلوبها الواضح في الريلز.",
+  o1: "ريلز إعلانية", o1t: "إنستغرام · فيسبوك", o1d: "منتجك في غرفة حقيقية، داخل درس الناس يحفظونه ويشاركونه.",
+  o2: "سفيرة للعلامة", o2t: "طويل المدى", o2d: "شراكة مستمرة على موسم كامل من المحتوى والستوريز والإطلاقات.",
+  o3: "زيارات المعارض والإطلاقات", o3t: "دبي · الإمارات", o3d: "محتوى من محلك أو معرضك أو مشروعك أو فعاليتك.",
+  o4: "اختيارات المنتجات", o4t: "ستوريز · أدلة", o4d: "اختيارات منتقاة وأدلة تنسيق توصّل المتابع للشراء مباشرة.",
+  o5: "محتوى للمطورين والتجهيز", o5t: "عقارات", o5d: "قصص تنسيق للبيوت الجديدة مبنية على خبرتها في تجهيز أكثر من 50 عقار.",
+  contactEyebrow: "تواصل", contactH2: "خلّنا نسوي <em>شي حلو</em>",
+  contactLead: "للتعاون والحملات والفعاليات والإعلام، أرسل رسالة. فرناز أو فريقها بيردّون خلال يومين عمل.",
+  chWa: "واتساب", chEmail: "البريد الإلكتروني", chIg: "التعاون على إنستغرام", copy: "نسخ", copied: "تم النسخ",
+  formH3: "أرسل استفسار", fName: "الاسم", fCompany: "الشركة أو العلامة", fEmail: "البريد الإلكتروني", fPhone: "الهاتف / واتساب", fType: "نوع الاستفسار",
+  opt1: "تعاون مع علامة تجارية", opt2: "محتوى إعلاني", opt3: "فعالية أو زيارة معرض", opt4: "إعلام أو مقابلة", opt5: "الكتاب", opt6: "غير ذلك",
+  fMsg: "الرسالة", fMsgPh: "خبّرنا عن علامتك والموعد والميزانية", fErr: "لو سمحت اكتب اسمك وإيميل صحيح ورسالة قصيرة.", fSubmit: "أرسل الاستفسار",
+  sentH3: "رسالتك جاهزة", sentP: "أرسلها على واتساب بضغطة، أو انسخها في إيميل.", sentWa: "أرسل على واتساب", sentCopy: "انسخ الرسالة", sentEdit: "تعديل",
+  waHello: "مرحبا فرناز، شفت موقعك وحاب نتكلم عن تعاون.",
+  footerLoc: "دبي، الإمارات",
+  brandEyebrow: "ثيرد سكين إنتيريرز", brandH2: "بيتك هو <em>جلدك الثالث</em>", brandP: "ديكور داخلي، عمارة وتنسيق يومي، بأسلوب بسيط. Third Skin Interiors هو استوديو فرناز صادقيان، المعروفة على السوشيال ميديا باسم Decor with Farnaz.", quote: "«الجلد الأول هو الذي نولد به. الثاني ملابسنا. والثالث بيتنا.»", quoteBy: "مستوحى من نظرية «الجلود الخمسة» للفنان والمعماري فريدنسرايش هوندرتفاسر"
+},
+
+es: {
+  _name: "Español", _dir: "ltr",
+  navAbout: "Sobre ella", navAudience: "Audiencia", navTransform: "Antes y después", navLearn: "Qué enseña", navCollab: "Colabora", navCta: "Contactar",
+  altHero: "Farnaz señalando una instalación de esculturas metálicas en la pared", altPortrait: "Retrato de Farnaz", altRugs: "Farnaz eligiendo alfombras en una tienda de Dubái",
+  heroTag: "seguidores en directo", liveChip: "En vivo", aud200k: "El día que llegamos a 200K", aud200kAlt: "Farnaz y sus hijas celebrando 200K seguidores",
+  heroEyebrow: "Decoradora de interiores certificada · Dubái",
+  heroH1: "Haz que tu casa se sienta como un <em>hogar.</em>",
+  heroLead: "Un hogar bonito no depende de un presupuesto mayor, sino de saber qué mover, qué conservar y qué evitar. La decoradora certificada Farnaz Sadeghian te enseña cómo, habitación por habitación.",
+  heroFollow: "Seguir en Instagram", heroBrands: "Colaboraciones con marcas",
+  cred1: "Certificada por TAFE Australia", cred2: "Más de 50 viviendas preparadas en Dubái", cred3: "Verificada en Instagram y Facebook",
+  audEyebrow: "La audiencia", audH2: "Una comunidad que <em>crece cada minuto</em>", audLive: "Estimación de seguidores en vivo",
+  verified: "Verificada", igLabel: "Seguidores en Instagram", fbLabel: "Seguidores en Facebook",
+  today: "hoy", last30: "últimos 30 días", last28: "últimos 28 días", views30: "visualizaciones en 30 días", views28: "visualizaciones en 28 días",
+  reach1: "personas alcanzadas el mes pasado", reach2: "de alcance en los meses récord", reach3: "visualizaciones en su reel más visto", reach4v: "1 año", reach4: "del primer post a 389 mil seguidores",
+  audNote: "Los seguidores son una estimación en vivo basada en las últimas cifras del panel y el crecimiento de 30 días. Alcance y visualizaciones de los paneles profesionales de Meta, octubre de 2026.",
+  altCarpet: "Farnaz Sadeghian junto a una gran alfombra persa anudada a mano", aboutEyebrow: "Sobre Farnaz Sadeghian", aboutH2: "La mirada de una diseñadora, <em>fácil de entender</em>",
+  aboutQuote: "“El buen diseño empieza por cómo vive realmente una familia.”",
+  aboutP1: "Farnaz Sadeghian es decoradora de interiores certificada, formada en TAFE (Australia). Antes de dedicarse a la divulgación, dirigió en Dubái un estudio de interiorismo, asesoría y home staging, con más de cincuenta proyectos de staging, cada uno planificado primero en 3D.",
+  aboutP2: "Hoy lleva ese método profesional a un público amplio. Sus lecciones abarcan distribución, iluminación, color y compras inteligentes, y cada recomendación se ha probado en hogares reales antes de llegar a sus seguidores.",
+  fact1: "viviendas preparadas con diseño 3D", fact2v: "5–6 años", fact2: "de práctica profesional", fact3v: "TAFE", fact3: "decoradora certificada, Australia", fact4v: "Madre de 3", fact4: "diseña para la vida familiar real",
+  baKitchen: "Cocina", baDining: "Comedor", baEntry: "Recibidor", baKids: "Cuarto infantil", baTipsH: "Cuatro claves detrás de cada <em>después</em>", baNote: "Espacios de ejemplo creados para ilustrar su método.", navBook: "El libro", bookAlt: "El libro Soul of the Room de Farnaz Sadeghian sobre una mesa", bookBadge: "Próximamente", bookEyebrow: "Su libro", bookTitle: "Soul of the <em>Room</em>", bookSub: "Un viaje por los estilos de interiorismo", bookP2: "Cincuenta estilos de interiorismo, del japandi al art déco, explicados como Farnaz enseña cada día: de dónde viene cada estilo, qué lo define y cómo llevarlo a una casa real sin empezar de cero.", bookPt1: "estilos de interiorismo", bookPt2v: "Orígenes", bookPt2: "paletas, materiales y piezas clave", bookPt3v: "En casa", bookPt3: "cómo mezclar estilos en espacios reales", bookCta: "Únete a la lista de lanzamiento", bookCta2: "Colabora con el libro", reelWatch: "Ver en Instagram", baEyebrow: "Antes y después", baH2: "La misma habitación. <em>Otra sensación.</em>",
+  baLead: "La mayoría de las habitaciones no necesitan paredes nuevas. Necesitan la distribución correcta, buena luz y unas pocas piezas bien elegidas. Desliza para ver la diferencia.",
+  step1: "Ancla la zona de estar con una alfombra a la medida.", step2: "Combina luces: colgante, lámpara de pie y bombillas cálidas.", step3: "Convierte una pared vacía en punto focal.", step4: "Suaviza con textiles y algo de verde.",
+  baBefore: "Antes", baAfter: "Después", baAria: "Comparar antes y después", baLiving: "Salón", baBedroom: "Dormitorio",
+  learnEyebrow: "Qué enseña", learnH2: "Pequeños cambios, <em>casas reales</em>",
+  learnLead: "Lecciones breves y prácticas en persa con subtítulos en inglés. Cada una resuelve un problema que sus seguidores ven en su propia casa.",
+  t1: "Distribución", t1d: "Dónde va cada mueble en espacios largos, estrechos o abiertos.",
+  t2: "Iluminación", t2d: "Luz cálida por capas para un espacio acabado.",
+  t3: "Paredes de galería", t3d: "Paredes y rincones vacíos convertidos en protagonistas.",
+  t4: "Espacios difíciles", t4d: "Columnas, rincones raros y puertas que dan al salón.",
+  t5: "Color", t5d: "Añadir color con seguridad y qué revisar antes de pintar.",
+  t6: "Compra inteligente", t6d: "Qué comprar, qué evitar y por qué no comprar juegos completos.",
+  t7: "Dormitorios", t7d: "Dormitorios tranquilos y cuartos compartidos para niños.",
+  t8: "Accesorios", t8d: "Los toques finales que dan estilo a una habitación.",
+  views: "vistas", reel1: "Idea para una esquina", reel2: "¿Se ve la puerta del baño desde el salón?", reel3: "Cómo amueblar un salón rectangular", learnAll: "Ver todos los reels",
+  collabEyebrow: "Trabaja con Farnaz", collabH2: "Colabora con una voz <em>en la que confían los hogares</em>",
+  collabLead: "Sus seguidores vienen a aprender antes de comprar. La recomendación de una decoradora certificada pesa justo en ese momento.",
+  p1: "Muebles y decoración", p2: "Iluminación", p3: "Pintura y acabados", p4: "Alfombras y textiles", p5: "Suelos", p6: "Cocina y baño", p7: "Hogar inteligente", p8: "Inmobiliaria",
+  bookCover: "El arte de ordenar", bookH3: "Su libro está en camino", bookP: "Una guía práctica sobre estilos de interiorismo y cómo distribuir bien un hogar, con la misma voz clara de sus reels.",
+  o1: "Reels patrocinados", o1t: "Instagram · Facebook", o1d: "Tu producto en una habitación real, dentro de una lección que la gente guarda y comparte.",
+  o2: "Embajadora de marca", o2t: "Largo plazo", o2d: "Una colaboración continua durante toda una temporada de contenido y lanzamientos.",
+  o3: "Visitas a tiendas y lanzamientos", o3t: "Dubái · EAU", o3d: "Contenido desde tu tienda, showroom, proyecto o evento.",
+  o4: "Selecciones de producto", o4t: "Stories · Guías", o4d: "Selecciones y guías de estilo que llevan directamente a la compra.",
+  o5: "Contenido inmobiliario y de staging", o5t: "Inmobiliaria", o5d: "Historias de estilo para viviendas nuevas, basadas en más de 50 propiedades preparadas.",
+  contactEyebrow: "Contacto", contactH2: "Creemos <em>algo bonito</em>",
+  contactLead: "Para colaboraciones, campañas, eventos y prensa, envía un mensaje. Farnaz o su equipo responderán en dos días laborables.",
+  chWa: "WhatsApp", chEmail: "Correo", chIg: "Colaboraciones en Instagram", copy: "Copiar", copied: "Copiado",
+  formH3: "Enviar una consulta", fName: "Nombre", fCompany: "Empresa o marca", fEmail: "Correo", fPhone: "Teléfono / WhatsApp", fType: "Tipo de consulta",
+  opt1: "Colaboración de marca", opt2: "Contenido patrocinado", opt3: "Evento o visita a showroom", opt4: "Prensa o entrevista", opt5: "Libro", opt6: "Otro",
+  fMsg: "Mensaje", fMsgPh: "Cuéntanos sobre tu marca, plazos y presupuesto", fErr: "Añade tu nombre, un correo válido y un mensaje breve.", fSubmit: "Enviar consulta",
+  sentH3: "Tu mensaje está listo", sentP: "Envíalo por WhatsApp con un toque o cópialo en un correo.", sentWa: "Enviar por WhatsApp", sentCopy: "Copiar mensaje", sentEdit: "Editar",
+  waHello: "Hola Farnaz, vi tu web y me gustaría hablar de una colaboración.",
+  footerLoc: "Dubái, EAU",
+  brandEyebrow: "Third Skin Interiors", brandH2: "Tu hogar es tu <em>tercera piel</em>", brandP: "Decoración de interiores, arquitectura y estilo cotidiano, explicados de forma sencilla. Third Skin Interiors es el estudio de Farnaz Sadeghian, conocida en redes como Decor with Farnaz.", quote: "«Nuestra primera piel es aquella con la que nacemos. La segunda, nuestra ropa. La tercera, nuestro hogar.»", quoteBy: "Inspirado en la teoría de las cinco pieles de Friedensreich Hundertwasser, artista y arquitecto"
+},
+
+it: {
+  _name: "Italiano", _dir: "ltr",
+  navAbout: "Chi è", navAudience: "Pubblico", navTransform: "Prima e dopo", navLearn: "Cosa insegna", navCollab: "Collabora", navCta: "Contattaci",
+  altHero: "Farnaz indica un'installazione di sculture metalliche a parete", altPortrait: "Ritratto di Farnaz", altRugs: "Farnaz sceglie tappeti in uno showroom di Dubai",
+  heroTag: "follower in diretta", liveChip: "Live", aud200k: "Il giorno dei 200K", aud200kAlt: "Farnaz e le sue figlie festeggiano 200K follower",
+  heroEyebrow: "Interior decorator certificata · Dubai",
+  heroH1: "Fai sentire la tua casa come <em>casa.</em>",
+  heroLead: "Una bella casa non dipende da un budget più alto, ma dal sapere cosa spostare, cosa tenere e cosa evitare. La decoratrice certificata Farnaz Sadeghian ti mostra come, una stanza alla volta.",
+  heroFollow: "Segui su Instagram", heroBrands: "Collaborazioni con i brand",
+  cred1: "Certificata TAFE Australia", cred2: "Oltre 50 case allestite a Dubai", cred3: "Verificata su Instagram e Facebook",
+  audEyebrow: "Il pubblico", audH2: "Una community che <em>cresce ogni minuto</em>", audLive: "Stima live dei follower",
+  verified: "Verificata", igLabel: "Follower su Instagram", fbLabel: "Follower su Facebook",
+  today: "oggi", last30: "ultimi 30 giorni", last28: "ultimi 28 giorni", views30: "visualizzazioni in 30 giorni", views28: "visualizzazioni in 28 giorni",
+  reach1: "persone raggiunte il mese scorso", reach2: "di copertura nei mesi record", reach3: "visualizzazioni del reel più visto", reach4v: "1 anno", reach4: "dal primo post a 389 mila follower",
+  audNote: "Il numero di follower è una stima live basata sugli ultimi dati della dashboard e sulla crescita a 30 giorni. Copertura e visualizzazioni dalle dashboard professionali Meta, ottobre 2026.",
+  altCarpet: "Farnaz Sadeghian accanto a un grande tappeto persiano annodato a mano", aboutEyebrow: "Chi è Farnaz Sadeghian", aboutH2: "L'occhio di una designer, <em>reso semplice</em>",
+  aboutQuote: "“Il buon design parte da come vive davvero una famiglia.”",
+  aboutP1: "Farnaz Sadeghian è una interior decorator certificata, formata presso TAFE in Australia. Prima di dedicarsi alla divulgazione ha guidato a Dubai un'attività di interior design, consulenza e home staging, completando oltre cinquanta progetti di staging, ognuno pianificato prima in 3D.",
+  aboutP2: "Oggi porta questo metodo professionale a un pubblico ampio. Le sue lezioni trattano distribuzione degli spazi, illuminazione, colore e acquisti intelligenti, e ogni consiglio è stato provato in case reali prima di arrivare ai suoi follower.",
+  fact1: "case allestite con progetto 3D", fact2v: "5–6 anni", fact2: "di pratica professionale", fact3v: "TAFE", fact3: "decoratrice certificata, Australia", fact4v: "Mamma di 3", fact4: "progetta per la vera vita di famiglia",
+  baKitchen: "Cucina", baDining: "Sala da pranzo", baEntry: "Ingresso", baKids: "Cameretta", baTipsH: "Quattro mosse dietro ogni <em>dopo</em>", baNote: "Ambienti di esempio creati per illustrare il suo metodo.", navBook: "Il libro", bookAlt: "Il libro Soul of the Room di Farnaz Sadeghian su un tavolino", bookBadge: "In arrivo", bookEyebrow: "Il suo libro", bookTitle: "Soul of the <em>Room</em>", bookSub: "Un viaggio tra gli stili d'interni", bookP2: "Cinquanta stili d'interni, dal Japandi all'Art Déco, spiegati come Farnaz insegna ogni giorno: da dove nasce ogni stile, cosa lo definisce e come portarlo in una casa vera senza ricominciare da zero.", bookPt1: "stili d'interni", bookPt2v: "Origini", bookPt2: "palette, materiali e pezzi chiave", bookPt3v: "A casa", bookPt3: "come mescolare gli stili negli ambienti reali", bookCta: "Iscriviti alla lista di lancio", bookCta2: "Collabora al libro", reelWatch: "Guarda su Instagram", baEyebrow: "Prima e dopo", baH2: "Stessa stanza. <em>Un'altra atmosfera.</em>",
+  baLead: "Quasi nessuna stanza ha bisogno di muri nuovi. Servono la giusta disposizione, la luce e pochi pezzi ben scelti. Trascina il cursore per vedere la differenza.",
+  step1: "Ancora la zona living con un tappeto della giusta misura.", step2: "Sovrapponi le luci: sospensione, lampada da terra, luce calda.", step3: "Trasforma una parete vuota in un punto focale.", step4: "Ammorbidisci con tessuti e un po' di verde.",
+  baBefore: "Prima", baAfter: "Dopo", baAria: "Confronta prima e dopo", baLiving: "Soggiorno", baBedroom: "Camera da letto",
+  learnEyebrow: "Cosa insegna", learnH2: "Piccoli cambiamenti, <em>case vere</em>",
+  learnLead: "Lezioni brevi e pratiche in persiano con sottotitoli in inglese. Ognuna risolve un problema che i follower ritrovano nella propria casa.",
+  t1: "Disposizione", t1d: "Dove mettere i mobili in stanze lunghe, strette o open space.",
+  t2: "Illuminazione", t2d: "Luce calda a strati per una stanza finita.",
+  t3: "Gallery wall", t3d: "Pareti e angoli vuoti trasformati in protagonisti.",
+  t4: "Spazi difficili", t4d: "Pilastri, angoli strani e porte che danno sul soggiorno.",
+  t5: "Colore", t5d: "Aggiungere colore con sicurezza e cosa sapere prima di dipingere.",
+  t6: "Acquisti intelligenti", t6d: "Cosa comprare, cosa evitare e perché non comprare set coordinati.",
+  t7: "Camere da letto", t7d: "Camere rilassanti e stanze condivise per bambini.",
+  t8: "Accessori", t8d: "I dettagli finali che danno stile a una stanza.",
+  views: "visualizzazioni", reel1: "Idea per un angolo di casa", reel2: "La porta del bagno si vede dal soggiorno?", reel3: "Arredare un soggiorno rettangolare", learnAll: "Guarda tutti i reel",
+  collabEyebrow: "Lavora con Farnaz", collabH2: "Collabora con una voce <em>di cui le famiglie si fidano</em>",
+  collabLead: "I suoi follower vengono a imparare prima di comprare. Il consiglio di una decoratrice certificata conta proprio in quel momento.",
+  p1: "Arredo e decor", p2: "Illuminazione", p3: "Pitture e finiture", p4: "Tappeti e tessili", p5: "Pavimenti", p6: "Cucina e bagno", p7: "Smart home", p8: "Immobiliare",
+  bookCover: "L'arte di disporre", bookH3: "Il suo libro sta arrivando", bookP: "Una guida pratica agli stili d'interni e a come arredare bene una casa, con la stessa voce chiara dei suoi reel.",
+  o1: "Reel sponsorizzati", o1t: "Instagram · Facebook", o1d: "Il tuo prodotto in una stanza vera, dentro una lezione che le persone salvano e condividono.",
+  o2: "Brand ambassador", o2t: "Lungo termine", o2d: "Una collaborazione continuativa per un'intera stagione di contenuti e lanci.",
+  o3: "Visite in showroom e lanci", o3t: "Dubai · EAU", o3d: "Contenuti dal tuo negozio, showroom, progetto o evento.",
+  o4: "Selezioni di prodotti", o4t: "Stories · Guide", o4d: "Selezioni e guide di stile che portano direttamente all'acquisto.",
+  o5: "Contenuti per costruttori e home staging", o5t: "Immobiliare", o5d: "Storie di styling per case nuove, basate su oltre 50 immobili allestiti.",
+  contactEyebrow: "Contatti", contactH2: "Creiamo <em>qualcosa di bello</em>",
+  contactLead: "Per collaborazioni, campagne, eventi e media, scrivi un messaggio. Farnaz o il suo team risponderanno entro due giorni lavorativi.",
+  chWa: "WhatsApp", chEmail: "Email", chIg: "Collaborazioni su Instagram", copy: "Copia", copied: "Copiato",
+  formH3: "Invia una richiesta", fName: "Nome", fCompany: "Azienda o brand", fEmail: "Email", fPhone: "Telefono / WhatsApp", fType: "Tipo di richiesta",
+  opt1: "Collaborazione con brand", opt2: "Contenuto sponsorizzato", opt3: "Evento o visita in showroom", opt4: "Media o intervista", opt5: "Libro", opt6: "Altro",
+  fMsg: "Messaggio", fMsgPh: "Raccontaci del tuo brand, tempi e budget", fErr: "Inserisci nome, un'email valida e un breve messaggio.", fSubmit: "Invia richiesta",
+  sentH3: "Il tuo messaggio è pronto", sentP: "Invialo su WhatsApp con un tocco o copialo in un'email.", sentWa: "Invia su WhatsApp", sentCopy: "Copia messaggio", sentEdit: "Modifica",
+  waHello: "Ciao Farnaz, ho visto il tuo sito e vorrei parlare di una collaborazione.",
+  footerLoc: "Dubai, EAU",
+  brandEyebrow: "Third Skin Interiors", brandH2: "La casa è la tua <em>terza pelle</em>", brandP: "Interior decoration, architettura e stile quotidiano, spiegati in modo semplice. Third Skin Interiors è lo studio di Farnaz Sadeghian, conosciuta online come Decor with Farnaz.", quote: "«La prima pelle è quella con cui nasciamo. La seconda sono i vestiti. La terza è la casa.»", quoteBy: "Ispirato alla teoria delle cinque pelli di Friedensreich Hundertwasser, artista e architetto"
+},
+
+zh: {
+  _name: "中文", _dir: "ltr",
+  navAbout: "关于", navAudience: "粉丝", navTransform: "改造前后", navLearn: "教学内容", navCollab: "商务合作", navCta: "联系我们",
+  altHero: "Farnaz 指向墙上的金属雕塑装置", altPortrait: "Farnaz 肖像", altRugs: "Farnaz 在迪拜展厅挑选地毯",
+  heroTag: "位实时粉丝", liveChip: "实时", aud200k: "突破 20 万粉丝的那天", aud200kAlt: "Farnaz 和女儿们庆祝 20 万粉丝",
+  heroEyebrow: "认证室内软装设计师 · 迪拜",
+  heroH1: "让房子真正成为<em>家</em>",
+  heroLead: "美好的家不在于更多的预算，而在于知道该挪动什么、保留什么、舍弃什么。认证软装设计师 Farnaz Sadeghian 带你一个房间一个房间地实现。",
+  heroFollow: "在 Instagram 关注", heroBrands: "品牌合作",
+  cred1: "澳大利亚 TAFE 认证", cred2: "在迪拜完成 50+ 套样板布置", cred3: "Instagram 与 Facebook 官方认证",
+  audEyebrow: "粉丝群体", audH2: "一个<em>每分钟都在壮大</em>的社区", audLive: "实时粉丝估算",
+  verified: "已认证", igLabel: "Instagram 粉丝", fbLabel: "Facebook 粉丝",
+  today: "今日", last30: "近 30 天", last28: "近 28 天", views30: "30 天播放量", views28: "28 天播放量",
+  reach1: "上月触达人数", reach2: "高峰月份触达", reach3: "最热视频播放量", reach4v: "1 年", reach4: "从第一条帖子到 38.9 万粉丝",
+  audNote: "粉丝数为实时估算，基于最新后台数据和 30 天增长率。触达与播放数据来自 Meta 专业后台，2026 年 10 月。",
+  altCarpet: "Farnaz Sadeghian 站在一幅巨大的手工波斯地毯旁", aboutEyebrow: "关于 Farnaz Sadeghian", aboutH2: "设计师的眼光，<em>简单易懂</em>",
+  aboutQuote: "“好的设计，始于了解一个家庭真实的生活方式。”",
+  aboutP1: "Farnaz Sadeghian 是经澳大利亚 TAFE 培训认证的室内软装设计师。在专注于家居教育之前，她在迪拜从事室内设计、咨询与房屋软装布置，完成了五十多个样板布置项目，每一个都先以 3D 方案规划。",
+  aboutP2: "如今，她把这套专业方法分享给更广泛的观众。课程涵盖空间规划、灯光、色彩和理性购物，每一条建议在分享之前都已在真实的家中经过验证。",
+  fact1: "套住宅 3D 设计布置", fact2v: "5–6 年", fact2: "专业经验", fact3v: "TAFE", fact3: "澳大利亚认证室内软装设计师", fact4v: "三个孩子的妈妈", fact4: "为真实的家庭生活而设计",
+  baKitchen: "厨房", baDining: "餐厅", baEntry: "玄关", baKids: "儿童房", baTipsH: "每个<em>改造后</em>背后的四个关键", baNote: "示例房间，用于展示她的方法。", navBook: "新书", bookAlt: "Farnaz Sadeghian 的新书《Soul of the Room》放在茶几上", bookBadge: "即将出版", bookEyebrow: "她的新书", bookTitle: "Soul of the <em>Room</em>", bookSub: "室内风格之旅", bookP2: "五十种室内风格，从日式北欧到装饰艺术，以 Farnaz 每天教学的方式讲解：每种风格的来源、核心特征，以及如何在不推倒重来的情况下把它带进真实的家。", bookPt1: "种室内风格", bookPt2v: "起源", bookPt2: "色彩、材质与关键单品", bookPt3v: "居家", bookPt3: "如何在真实空间中混搭风格", bookCta: "加入首发名单", bookCta2: "合作出版", reelWatch: "在 Instagram 观看", baEyebrow: "改造前后", baH2: "同一个房间，<em>不一样的感觉</em>",
+  baLead: "大多数房间不需要新墙，只需要正确的布局、灯光和几件精选单品。拖动滑块，看看软装带来的变化。",
+  step1: "用尺寸合适的地毯稳住会客区。", step2: "层次照明：吊灯、落地灯与暖光灯泡。", step3: "把空白墙面变成视觉焦点。", step4: "用织物和绿植让空间更柔和。",
+  baBefore: "改造前", baAfter: "改造后", baAria: "对比改造前后", baLiving: "客厅", baBedroom: "卧室",
+  learnEyebrow: "教学内容", learnH2: "小改变，<em>真实的家</em>",
+  learnLead: "简短实用的波斯语课程，配英文字幕。每一课都解决粉丝在自己家中遇到的问题。",
+  t1: "布局", t1d: "狭长、狭窄或开放空间里家具该怎么摆。",
+  t2: "照明", t2d: "温暖的层次照明，让房间更完整。",
+  t3: "照片墙", t3d: "把空墙和角落变成视觉焦点。",
+  t4: "难题空间", t4d: "柱子、奇怪的角落和正对客厅的门。",
+  t5: "色彩", t5d: "自信地运用色彩，刷墙前要知道的事。",
+  t6: "聪明购物", t6d: "该买什么、不该买什么，以及为何不买成套家具。",
+  t7: "卧室", t7d: "宁静的卧室与适合孩子的共享房间。",
+  t8: "饰品", t8d: "让房间更有风格的点睛之笔。",
+  views: "次播放", reel1: "家中角落的创意", reel2: "卫生间门正对客厅？", reel3: "长方形客厅布置", learnAll: "观看全部视频",
+  collabEyebrow: "与 Farnaz 合作", collabH2: "与<em>家庭信赖</em>的声音合作",
+  collabLead: "她的粉丝在购买前来学习。认证设计师的推荐，在这一刻最有分量。",
+  p1: "家具与家居", p2: "灯具", p3: "涂料与饰面", p4: "地毯与布艺", p5: "地板", p6: "厨卫", p7: "智能家居", p8: "房地产",
+  bookCover: "布置的艺术", bookH3: "她的新书即将面世", bookP: "一本关于室内风格与如何正确布置家的实用指南，延续她视频中清晰的表达方式。",
+  o1: "赞助视频", o1t: "Instagram · Facebook", o1d: "您的产品出现在真实房间里，融入粉丝收藏和转发的课程中。",
+  o2: "品牌大使", o2t: "长期合作", o2d: "贯穿整季内容、快拍和新品发布的持续合作。",
+  o3: "展厅与发布会探访", o3t: "迪拜 · 阿联酋", o3d: "在您的门店、展厅、项目或活动现场拍摄内容。",
+  o4: "好物推荐", o4t: "快拍 · 指南", o4d: "精选推荐和搭配指南，直接引导购买。",
+  o5: "开发商与样板间内容", o5t: "房地产", o5d: "基于 50+ 套房产布置经验的新房软装故事。",
+  contactEyebrow: "联系", contactH2: "一起创造<em>美好</em>",
+  contactLead: "合作、广告活动、活动邀约及媒体采访，请留言。Farnaz 或其团队将在两个工作日内回复。",
+  chWa: "WhatsApp", chEmail: "邮箱", chIg: "Instagram 合作账号", copy: "复制", copied: "已复制",
+  formH3: "发送咨询", fName: "姓名", fCompany: "公司或品牌", fEmail: "邮箱", fPhone: "电话 / WhatsApp", fType: "咨询类型",
+  opt1: "品牌合作", opt2: "赞助内容", opt3: "活动或展厅探访", opt4: "媒体或采访", opt5: "图书", opt6: "其他",
+  fMsg: "留言", fMsgPh: "请介绍您的品牌、时间安排和预算", fErr: "请填写姓名、有效邮箱和简短留言。", fSubmit: "发送咨询",
+  sentH3: "您的消息已准备好", sentP: "一键通过 WhatsApp 发送，或复制到邮件中。", sentWa: "通过 WhatsApp 发送", sentCopy: "复制消息", sentEdit: "修改",
+  waHello: "您好 Farnaz，我看到了您的网站，想和您聊聊合作。",
+  footerLoc: "阿联酋迪拜",
+  brandEyebrow: "Third Skin Interiors", brandH2: "家，是你的<em>第三层皮肤</em>", brandP: "室内软装、建筑与日常布置，简单易懂。Third Skin Interiors 是 Farnaz Sadeghian 的工作室，她在社交媒体上以 Decor with Farnaz 为人熟知。", quote: "“第一层皮肤是与生俱来的肌肤，第二层是衣服，第三层是我们的家。”", quoteBy: "源自艺术家、建筑师百水先生（Hundertwasser）的“五层皮肤”理论"
+},
+
+ja: {
+  _name: "日本語", _dir: "ltr",
+  navAbout: "プロフィール", navAudience: "フォロワー", navTransform: "ビフォーアフター", navLearn: "レッスン内容", navCollab: "コラボ", navCta: "お問い合わせ",
+  altHero: "壁の金属彫刻を指さすFarnaz", altPortrait: "Farnazのポートレート", altRugs: "ドバイのショールームでラグを選ぶFarnaz",
+  heroTag: "人のライブフォロワー", liveChip: "ライブ", aud200k: "フォロワー20万人達成の日", aud200kAlt: "20万フォロワーを祝うFarnazと娘たち",
+  heroEyebrow: "認定インテリアデコレーター · ドバイ",
+  heroH1: "家を、心地よい<em>わが家</em>に。",
+  heroLead: "素敵な家に必要なのは、大きな予算ではありません。何を動かし、何を残し、何を手放すかを知ること。認定デコレーターのFarnaz Sadeghianが、一部屋ずつその方法をお伝えします。",
+  heroFollow: "Instagramでフォロー", heroBrands: "ブランドコラボ",
+  cred1: "オーストラリアTAFE認定", cred2: "ドバイで50件以上のホームステージング", cred3: "Instagram・Facebook認証済み",
+  audEyebrow: "フォロワー", audH2: "<em>毎分成長する</em>コミュニティ", audLive: "フォロワー数のライブ推定",
+  verified: "認証済み", igLabel: "Instagramフォロワー", fbLabel: "Facebookフォロワー",
+  today: "今日", last30: "過去30日", last28: "過去28日", views30: "30日間の再生数", views28: "28日間の再生数",
+  reach1: "先月のリーチ人数", reach2: "ピーク月のリーチ", reach3: "最多再生リールの再生数", reach4v: "1年", reach4: "初投稿から38.9万フォロワーまで",
+  audNote: "フォロワー数は最新のダッシュボード数値と30日間の伸び率から算出したライブ推定です。リーチと再生数はMetaプロフェッショナルダッシュボードより（2026年10月）。",
+  altCarpet: "大きな手織りのペルシャ絨毯の前に立つFarnaz Sadeghian", aboutEyebrow: "Farnaz Sadeghianについて", aboutH2: "デザイナーの視点を、<em>わかりやすく</em>",
+  aboutQuote: "「良いデザインは、家族の本当の暮らし方を知ることから始まります。」",
+  aboutP1: "Farnaz Sadeghianは、オーストラリアのTAFEで学んだ認定インテリアデコレーターです。発信活動に専念する前は、ドバイでインテリアデザイン、コンサルティング、ホームステージングを手がけ、50件以上のステージングを、すべて3Dで計画してから実施してきました。",
+  aboutP2: "現在はそのプロの手法を多くの人に届けています。レッスンでは空間計画、照明、色、賢い買い物を扱い、すべてのアドバイスは実際の住まいで検証済みです。",
+  fact1: "件の3Dデザインによるステージング", fact2v: "5〜6年", fact2: "の実務経験", fact3v: "TAFE", fact3: "オーストラリア認定インテリアデコレーター", fact4v: "3児の母", fact4: "リアルな家族の暮らしのためのデザイン",
+  baKitchen: "キッチン", baDining: "ダイニング", baEntry: "玄関", baKids: "子ども部屋", baTipsH: "すべての<em>アフター</em>を支える4つのポイント", baNote: "手法を説明するために作成した例の部屋です。", navBook: "書籍", bookAlt: "テーブルに置かれたFarnaz Sadeghianの書籍『Soul of the Room』", bookBadge: "近日刊行", bookEyebrow: "著書", bookTitle: "Soul of the <em>Room</em>", bookSub: "インテリアスタイルをめぐる旅", bookP2: "ジャパンディからアールデコまで、50のインテリアスタイルを、Farnazが毎日伝えている言葉で解説。それぞれのスタイルの由来、特徴、そして一からやり直さずに実際の住まいへ取り入れる方法。", bookPt1: "のインテリアスタイル", bookPt2v: "ルーツ", bookPt2: "配色・素材・キーアイテム", bookPt3v: "暮らしに", bookPt3: "実際の部屋でのスタイルの組み合わせ方", bookCta: "刊行のお知らせを受け取る", bookCta2: "書籍でのコラボ", reelWatch: "Instagramで見る", baEyebrow: "ビフォーアフター", baH2: "同じ部屋で、<em>違う心地よさ</em>",
+  baLead: "ほとんどの部屋に新しい壁は要りません。必要なのは正しいレイアウト、照明、そして厳選したいくつかのアイテム。スライダーを動かして違いを見てください。",
+  step1: "部屋に合ったサイズのラグで座る場所を決める。", step2: "照明を重ねる：ペンダント、フロアランプ、暖色の電球。", step3: "何もない壁をフォーカルポイントに。", step4: "ファブリックとグリーンで柔らかさを。",
+  baBefore: "ビフォー", baAfter: "アフター", baAria: "ビフォーとアフターを比較", baLiving: "リビング", baBedroom: "ベッドルーム",
+  learnEyebrow: "レッスン内容", learnH2: "小さな変化で、<em>リアルな部屋</em>を",
+  learnLead: "ペルシャ語・英語字幕つきの短く実践的なレッスン。どれも自宅で思い当たる悩みを解決します。",
+  t1: "レイアウト", t1d: "細長い部屋、狭い部屋、オープンな部屋の家具配置。",
+  t2: "照明", t2d: "部屋を完成させる、温かく重ねた光。",
+  t3: "ギャラリーウォール", t3d: "空いた壁や角をフォーカルポイントに。",
+  t4: "難しい空間", t4d: "柱、変わった角、リビングに面したドア。",
+  t5: "カラー", t5d: "自信を持って色を足す方法と、塗る前のチェック。",
+  t6: "賢い買い物", t6d: "買うもの、避けるもの、セット家具を選ばない理由。",
+  t7: "ベッドルーム", t7d: "落ち着く寝室と、子ども部屋の共有アイデア。",
+  t8: "アクセサリー", t8d: "部屋をおしゃれに仕上げる最後のひと工夫。",
+  views: "回再生", reel1: "部屋の角のアイデア", reel2: "トイレのドアがリビングから見える？", reel3: "長方形リビングのレイアウト", learnAll: "すべてのリールを見る",
+  collabEyebrow: "Farnazとコラボ", collabH2: "<em>家族が信頼する</em>声とパートナーに",
+  collabLead: "フォロワーは買う前に学びに来ます。認定デコレーターのおすすめは、まさにその瞬間に響きます。",
+  p1: "家具・インテリア", p2: "照明", p3: "塗料・仕上げ材", p4: "ラグ・ファブリック", p5: "床材", p6: "キッチン・バス", p7: "スマートホーム", p8: "不動産",
+  bookCover: "配置の美学", bookH3: "著書を準備中", bookP: "インテリアスタイルと住まいの正しい整え方をまとめた実践ガイド。リールと同じわかりやすい語り口で。",
+  o1: "スポンサードリール", o1t: "Instagram · Facebook", o1d: "保存・シェアされるレッスンの中で、実際の部屋に商品を紹介。",
+  o2: "ブランドアンバサダー", o2t: "長期", o2d: "コンテンツ、ストーリーズ、新商品発表を通じた継続的なパートナーシップ。",
+  o3: "ショールーム・発表会訪問", o3t: "ドバイ · UAE", o3d: "店舗、ショールーム、プロジェクト、イベントからのコンテンツ。",
+  o4: "おすすめ商品紹介", o4t: "ストーリーズ · ガイド", o4d: "購入に直結する厳選アイテムとスタイリングガイド。",
+  o5: "デベロッパー・ステージング向けコンテンツ", o5t: "不動産", o5d: "50件以上のステージング経験を生かした新築住宅のスタイリングストーリー。",
+  contactEyebrow: "お問い合わせ", contactH2: "一緒に<em>美しいもの</em>を",
+  contactLead: "コラボ、キャンペーン、イベント、メディアのご依頼はメッセージをお送りください。Farnazまたはチームが2営業日以内にご返信します。",
+  chWa: "WhatsApp", chEmail: "メール", chIg: "Instagramのコラボ窓口", copy: "コピー", copied: "コピーしました",
+  formH3: "お問い合わせを送る", fName: "お名前", fCompany: "会社・ブランド名", fEmail: "メール", fPhone: "電話 / WhatsApp", fType: "お問い合わせの種類",
+  opt1: "ブランドコラボ", opt2: "スポンサードコンテンツ", opt3: "イベント・ショールーム訪問", opt4: "メディア・取材", opt5: "書籍", opt6: "その他",
+  fMsg: "メッセージ", fMsgPh: "ブランド、時期、ご予算についてお聞かせください", fErr: "お名前、正しいメールアドレス、短いメッセージを入力してください。", fSubmit: "送信する",
+  sentH3: "メッセージの準備ができました", sentP: "ワンタップでWhatsApp送信、またはメールにコピーしてください。", sentWa: "WhatsAppで送る", sentCopy: "メッセージをコピー", sentEdit: "編集",
+  waHello: "こんにちは、Farnazさん。ウェブサイトを拝見し、コラボについてご相談したく連絡しました。",
+  footerLoc: "UAE・ドバイ",
+  brandEyebrow: "Third Skin Interiors", brandH2: "住まいは<em>第三の皮膚</em>", brandP: "インテリア、建築、毎日のスタイリングをわかりやすく。Third Skin Interiors は、SNS では Decor with Farnaz として知られる Farnaz Sadeghian のスタジオです。", quote: "「第一の皮膚は生まれ持った肌。第二は衣服。第三は住まい。」", quoteBy: "芸術家・建築家フンデルトヴァッサーの「五つの皮膚」理論より"
+},
+
+de: {
+  _name: "Deutsch", _dir: "ltr",
+  navAbout: "Über sie", navAudience: "Community", navTransform: "Vorher &amp; nachher", navLearn: "Was sie zeigt", navCollab: "Zusammenarbeit", navCta: "Kontakt",
+  altHero: "Farnaz zeigt auf eine Wandinstallation aus Metallskulpturen", altPortrait: "Porträt von Farnaz", altRugs: "Farnaz wählt Teppiche in einem Showroom in Dubai",
+  heroTag: "Live-Follower", liveChip: "Live", aud200k: "Der Tag der 200K", aud200kAlt: "Farnaz und ihre Töchter feiern 200K Follower",
+  heroEyebrow: "Zertifizierte Innendekorateurin · Dubai",
+  heroH1: "Damit sich dein Haus wie ein <em>Zuhause</em> anfühlt.",
+  heroLead: "Ein schönes Zuhause braucht kein größeres Budget, sondern das Wissen, was man umstellt, was bleibt und worauf man verzichtet. Die zertifizierte Dekorateurin Farnaz Sadeghian zeigt, wie es geht – Raum für Raum.",
+  heroFollow: "Auf Instagram folgen", heroBrands: "Markenkooperationen",
+  cred1: "Zertifiziert durch TAFE Australien", cred2: "50+ Home-Staging-Projekte in Dubai", cred3: "Verifiziert auf Instagram &amp; Facebook",
+  audEyebrow: "Die Community", audH2: "Eine Community, die <em>jede Minute wächst</em>", audLive: "Live-Schätzung der Follower",
+  verified: "Verifiziert", igLabel: "Follower auf Instagram", fbLabel: "Follower auf Facebook",
+  today: "heute", last30: "letzte 30 Tage", last28: "letzte 28 Tage", views30: "Aufrufe in 30 Tagen", views28: "Aufrufe in 28 Tagen",
+  reach1: "erreichte Personen im letzten Monat", reach2: "Reichweite in Spitzenmonaten", reach3: "Aufrufe ihres meistgesehenen Reels", reach4v: "1 Jahr", reach4: "vom ersten Post bis 389.000 Follower",
+  audNote: "Die Followerzahlen sind eine Live-Schätzung auf Basis der letzten Dashboard-Werte und des 30-Tage-Wachstums. Reichweite und Aufrufe aus den Meta-Profi-Dashboards, Oktober 2026.",
+  altCarpet: "Farnaz Sadeghian neben einem großen handgeknüpften Perserteppich", aboutEyebrow: "Über Farnaz Sadeghian", aboutH2: "Der Blick einer Designerin, <em>einfach erklärt</em>",
+  aboutQuote: "„Gutes Design beginnt damit, wie eine Familie wirklich lebt.“",
+  aboutP1: "Farnaz Sadeghian ist zertifizierte Innendekorateurin, ausgebildet über TAFE in Australien. Bevor sie sich der Wissensvermittlung widmete, führte sie in Dubai eine Praxis für Innengestaltung, Beratung und Home Staging und realisierte über fünfzig Staging-Projekte, jedes zuerst in 3D geplant.",
+  aboutP2: "Heute bringt sie diese professionelle Methode einem breiten Publikum näher. Ihre Lektionen behandeln Raumplanung, Licht, Farbe und kluges Einkaufen, und jede Empfehlung wurde in echten Wohnungen erprobt, bevor sie ihre Follower erreicht.",
+  fact1: "Wohnungen mit 3D-Planung eingerichtet", fact2v: "5–6 Jahre", fact2: "Berufserfahrung", fact3v: "TAFE", fact3: "zertifizierte Dekorateurin, Australien", fact4v: "Mutter von 3", fact4: "gestaltet für echtes Familienleben",
+  baKitchen: "Küche", baDining: "Esszimmer", baEntry: "Eingang", baKids: "Kinderzimmer", baTipsH: "Vier Schritte hinter jedem <em>Nachher</em>", baNote: "Beispielräume zur Veranschaulichung ihrer Methode.", navBook: "Das Buch", bookAlt: "Das Buch Soul of the Room von Farnaz Sadeghian auf einem Couchtisch", bookBadge: "Demnächst", bookEyebrow: "Ihr Buch", bookTitle: "Soul of the <em>Room</em>", bookSub: "Eine Reise durch die Einrichtungsstile", bookP2: "Fünfzig Einrichtungsstile, von Japandi bis Art déco, so erklärt, wie Farnaz jeden Tag unterrichtet: woher jeder Stil kommt, was ihn ausmacht und wie man ihn in ein echtes Zuhause bringt, ohne bei null anzufangen.", bookPt1: "Einrichtungsstile", bookPt2v: "Ursprünge", bookPt2: "Farben, Materialien &amp; Schlüsselstücke", bookPt3v: "Zuhause", bookPt3: "Stile in echten Räumen kombinieren", bookCta: "Auf die Launch-Liste", bookCta2: "Partner des Buches werden", reelWatch: "Auf Instagram ansehen", baEyebrow: "Vorher &amp; nachher", baH2: "Gleicher Raum. <em>Anderes Gefühl.</em>",
+  baLead: "Die meisten Räume brauchen keine neuen Wände, sondern die richtige Aufteilung, Licht und ein paar gut gewählte Stücke. Zieh den Regler und sieh den Unterschied.",
+  step1: "Den Sitzbereich mit einem passend großen Teppich verankern.", step2: "Licht schichten: Pendelleuchte, Stehlampe, warmes Licht.", step3: "Eine leere Wand zum Blickfang machen.", step4: "Mit Textilien und Pflanzen weicher gestalten.",
+  baBefore: "Vorher", baAfter: "Nachher", baAria: "Vorher und nachher vergleichen", baLiving: "Wohnzimmer", baBedroom: "Schlafzimmer",
+  learnEyebrow: "Was sie zeigt", learnH2: "Kleine Änderungen, <em>echte Räume</em>",
+  learnLead: "Kurze, praktische Lektionen auf Persisch mit englischen Untertiteln. Jede löst ein Problem, das Follower aus dem eigenen Zuhause kennen.",
+  t1: "Raumaufteilung", t1d: "Wohin die Möbel in langen, schmalen oder offenen Räumen gehören.",
+  t2: "Licht", t2d: "Warmes, geschichtetes Licht, das einen Raum vollendet.",
+  t3: "Bilderwände", t3d: "Leere Wände und Ecken als Blickfang.",
+  t4: "Schwierige Räume", t4d: "Säulen, seltsame Ecken und Türen zum Wohnzimmer.",
+  t5: "Farbe", t5d: "Farbe mit Mut einsetzen und was man vor dem Streichen prüft.",
+  t6: "Klug einkaufen", t6d: "Was man kauft, was nicht, und warum keine Komplett-Sets.",
+  t7: "Schlafzimmer", t7d: "Ruhige Schlafzimmer und geteilte Kinderzimmer.",
+  t8: "Accessoires", t8d: "Die letzten Details, die einen Raum stilvoll machen.",
+  views: "Aufrufe", reel1: "Idee für eine Zimmerecke", reel2: "Sieht man die Badtür vom Wohnzimmer?", reel3: "Ein rechteckiges Wohnzimmer einrichten", learnAll: "Alle Reels ansehen",
+  collabEyebrow: "Mit Farnaz arbeiten", collabH2: "Partner einer Stimme, <em>der Familien vertrauen</em>",
+  collabLead: "Ihre Follower kommen, um vor dem Kauf zu lernen. Die Empfehlung einer zertifizierten Dekorateurin zählt genau in diesem Moment.",
+  p1: "Möbel &amp; Deko", p2: "Leuchten", p3: "Farben &amp; Oberflächen", p4: "Teppiche &amp; Textilien", p5: "Bodenbeläge", p6: "Küche &amp; Bad", p7: "Smart Home", p8: "Immobilien",
+  bookCover: "Die Kunst des Einrichtens", bookH3: "Ihr Buch erscheint bald", bookP: "Ein praktischer Leitfaden zu Einrichtungsstilen und der richtigen Raumgestaltung, in der klaren Sprache ihrer Reels.",
+  o1: "Gesponserte Reels", o1t: "Instagram · Facebook", o1d: "Dein Produkt in einem echten Raum, mitten in einer Lektion, die gespeichert und geteilt wird.",
+  o2: "Markenbotschafterin", o2t: "Langfristig", o2d: "Eine laufende Partnerschaft über eine ganze Saison mit Content, Stories und Launches.",
+  o3: "Showroom- &amp; Launch-Besuche", o3t: "Dubai · VAE", o3d: "Content aus deinem Geschäft, Showroom, Projekt oder Event.",
+  o4: "Produktauswahl", o4t: "Stories · Guides", o4d: "Kuratierte Empfehlungen und Styling-Guides, die direkt zum Kauf führen.",
+  o5: "Content für Bauträger &amp; Home Staging", o5t: "Immobilien", o5d: "Styling-Geschichten für neue Wohnungen, basierend auf über 50 eingerichteten Objekten.",
+  contactEyebrow: "Kontakt", contactH2: "Lass uns <em>etwas Schönes</em> schaffen",
+  contactLead: "Für Kooperationen, Kampagnen, Events und Presse schreib eine Nachricht. Farnaz oder ihr Team antworten innerhalb von zwei Werktagen.",
+  chWa: "WhatsApp", chEmail: "E-Mail", chIg: "Kooperationen auf Instagram", copy: "Kopieren", copied: "Kopiert",
+  formH3: "Anfrage senden", fName: "Name", fCompany: "Firma oder Marke", fEmail: "E-Mail", fPhone: "Telefon / WhatsApp", fType: "Art der Anfrage",
+  opt1: "Markenkooperation", opt2: "Gesponserter Content", opt3: "Event oder Showroom-Besuch", opt4: "Presse oder Interview", opt5: "Buch", opt6: "Sonstiges",
+  fMsg: "Nachricht", fMsgPh: "Erzähl uns von deiner Marke, dem Zeitplan und Budget", fErr: "Bitte gib deinen Namen, eine gültige E-Mail und eine kurze Nachricht ein.", fSubmit: "Anfrage senden",
+  sentH3: "Deine Nachricht ist bereit", sentP: "Mit einem Tipp per WhatsApp senden oder in eine E-Mail kopieren.", sentWa: "Per WhatsApp senden", sentCopy: "Nachricht kopieren", sentEdit: "Bearbeiten",
+  waHello: "Hallo Farnaz, ich habe deine Website gesehen und würde gern über eine Zusammenarbeit sprechen.",
+  footerLoc: "Dubai, VAE",
+  brandEyebrow: "Third Skin Interiors", brandH2: "Dein Zuhause ist deine <em>dritte Haut</em>", brandP: "Innendekoration, Architektur und Styling für jeden Tag, einfach erklärt. Third Skin Interiors ist das Studio von Farnaz Sadeghian, online bekannt als Decor with Farnaz.", quote: "„Unsere erste Haut ist die, mit der wir geboren werden. Die zweite ist unsere Kleidung. Die dritte ist unser Zuhause.“", quoteBy: "Nach Friedensreich Hundertwassers Lehre von den fünf Häuten, Künstler und Architekt"
+},
+
+fr: {
+  _name: "Français", _dir: "ltr",
+  navAbout: "À propos", navAudience: "Audience", navTransform: "Avant / après", navLearn: "Ce qu'elle enseigne", navCollab: "Collaborer", navCta: "Contact",
+  altHero: "Farnaz désignant une installation murale de sculptures métalliques", altPortrait: "Portrait de Farnaz", altRugs: "Farnaz choisissant des tapis dans un showroom à Dubaï",
+  heroTag: "abonnés en direct", liveChip: "En direct", aud200k: "Le jour des 200K", aud200kAlt: "Farnaz et ses filles fêtent 200K abonnés",
+  heroEyebrow: "Décoratrice d'intérieur certifiée · Dubaï",
+  heroH1: "Faites de votre maison un vrai <em>chez-soi.</em>",
+  heroLead: "Une belle maison ne dépend pas d'un plus gros budget, mais de savoir quoi déplacer, quoi garder et à quoi renoncer. La décoratrice certifiée Farnaz Sadeghian vous montre comment, pièce par pièce.",
+  heroFollow: "Suivre sur Instagram", heroBrands: "Collaborations de marque",
+  cred1: "Certifiée TAFE Australie", cred2: "Plus de 50 home stagings à Dubaï", cred3: "Certifiée sur Instagram et Facebook",
+  audEyebrow: "L'audience", audH2: "Une communauté qui <em>grandit chaque minute</em>", audLive: "Estimation des abonnés en direct",
+  verified: "Certifiée", igLabel: "Abonnés Instagram", fbLabel: "Abonnés Facebook",
+  today: "aujourd'hui", last30: "30 derniers jours", last28: "28 derniers jours", views30: "vues en 30 jours", views28: "vues en 28 jours",
+  reach1: "personnes touchées le mois dernier", reach2: "de portée les meilleurs mois", reach3: "vues sur son reel le plus vu", reach4v: "1 an", reach4: "du premier post à 389 000 abonnés",
+  audNote: "Le nombre d'abonnés est une estimation en direct fondée sur les derniers chiffres du tableau de bord et la croissance sur 30 jours. Portée et vues issues des tableaux de bord professionnels Meta, octobre 2026.",
+  altCarpet: "Farnaz Sadeghian à côté d'un grand tapis persan noué à la main", aboutEyebrow: "À propos de Farnaz Sadeghian", aboutH2: "Le regard d'une designer, <em>en toute simplicité</em>",
+  aboutQuote: "« Un bon design commence par la façon dont une famille vit vraiment. »",
+  aboutP1: "Farnaz Sadeghian est décoratrice d'intérieur certifiée, formée par TAFE en Australie. Avant de se consacrer à la transmission, elle a dirigé à Dubaï une activité de design intérieur, de conseil et de home staging, avec plus de cinquante projets de staging, chacun conçu d'abord en 3D.",
+  aboutP2: "Aujourd'hui, elle partage cette méthode professionnelle avec un large public. Ses leçons couvrent l'aménagement, l'éclairage, la couleur et les achats malins, et chaque conseil a été testé dans de vraies maisons avant d'arriver à ses abonnés.",
+  fact1: "logements mis en scène avec conception 3D", fact2v: "5–6 ans", fact2: "de pratique professionnelle", fact3v: "TAFE", fact3: "décoratrice certifiée, Australie", fact4v: "Maman de 3", fact4: "conçoit pour la vraie vie de famille",
+  baKitchen: "Cuisine", baDining: "Salle à manger", baEntry: "Entrée", baKids: "Chambre d'enfant", baTipsH: "Quatre gestes derrière chaque <em>après</em>", baNote: "Pièces d'exemple créées pour illustrer sa méthode.", navBook: "Le livre", bookAlt: "Le livre Soul of the Room de Farnaz Sadeghian sur une table basse", bookBadge: "Bientôt", bookEyebrow: "Son livre", bookTitle: "Soul of the <em>Room</em>", bookSub: "Un voyage à travers les styles d'intérieur", bookP2: "Cinquante styles d'intérieur, du japandi à l'Art déco, expliqués comme Farnaz les enseigne chaque jour : d'où vient chaque style, ce qui le définit et comment l'adopter chez soi sans tout recommencer.", bookPt1: "styles d'intérieur", bookPt2v: "Origines", bookPt2: "palettes, matières et pièces clés", bookPt3v: "Chez soi", bookPt3: "mixer les styles dans de vraies pièces", bookCta: "Rejoindre la liste de lancement", bookCta2: "Devenir partenaire du livre", reelWatch: "Voir sur Instagram", baEyebrow: "Avant / après", baH2: "La même pièce. <em>Une autre ambiance.</em>",
+  baLead: "La plupart des pièces n'ont pas besoin de nouveaux murs, mais du bon agencement, de la bonne lumière et de quelques pièces bien choisies. Faites glisser pour voir la différence.",
+  step1: "Ancrez le coin salon avec un tapis à la bonne taille.", step2: "Superposez les lumières : suspension, lampadaire, ampoules chaudes.", step3: "Faites d'un mur vide un point focal.", step4: "Adoucissez avec des textiles et du végétal.",
+  baBefore: "Avant", baAfter: "Après", baAria: "Comparer avant et après", baLiving: "Salon", baBedroom: "Chambre",
+  learnEyebrow: "Ce qu'elle enseigne", learnH2: "Petits changements, <em>vraies pièces</em>",
+  learnLead: "Des leçons courtes et pratiques en persan, sous-titrées en anglais. Chacune règle un problème que ses abonnés retrouvent chez eux.",
+  t1: "Agencement", t1d: "Où placer les meubles dans une pièce longue, étroite ou ouverte.",
+  t2: "Éclairage", t2d: "Une lumière chaude et superposée qui finit la pièce.",
+  t3: "Murs de cadres", t3d: "Des murs et des coins vides devenus points focaux.",
+  t4: "Espaces difficiles", t4d: "Piliers, coins biscornus et portes face au salon.",
+  t5: "Couleur", t5d: "Oser la couleur et savoir quoi vérifier avant de peindre.",
+  t6: "Acheter malin", t6d: "Quoi acheter, quoi éviter, et pourquoi fuir les ensembles assortis.",
+  t7: "Chambres", t7d: "Des chambres apaisantes et des chambres partagées pour enfants.",
+  t8: "Accessoires", t8d: "Les touches finales qui donnent du style à une pièce.",
+  views: "vues", reel1: "Une idée pour un coin de la maison", reel2: "La porte des toilettes se voit-elle du salon ?", reel3: "Aménager un salon rectangulaire", learnAll: "Voir tous les reels",
+  collabEyebrow: "Travailler avec Farnaz", collabH2: "Associez-vous à une voix <em>en qui les familles ont confiance</em>",
+  collabLead: "Ses abonnés viennent apprendre avant d'acheter. La recommandation d'une décoratrice certifiée compte précisément à ce moment-là.",
+  p1: "Mobilier &amp; déco", p2: "Luminaires", p3: "Peintures &amp; finitions", p4: "Tapis &amp; textiles", p5: "Revêtements de sol", p6: "Cuisine &amp; bain", p7: "Maison connectée", p8: "Immobilier",
+  bookCover: "L'art d'agencer", bookH3: "Son livre arrive bientôt", bookP: "Un guide pratique des styles d'intérieur et de l'art d'aménager une maison, avec la même clarté que ses reels.",
+  o1: "Reels sponsorisés", o1t: "Instagram · Facebook", o1d: "Votre produit dans une vraie pièce, au cœur d'une leçon que l'on enregistre et partage.",
+  o2: "Ambassadrice de marque", o2t: "Long terme", o2d: "Un partenariat suivi sur toute une saison de contenus, stories et lancements.",
+  o3: "Visites de showroom &amp; lancements", o3t: "Dubaï · EAU", o3d: "Du contenu tourné dans votre boutique, showroom, projet ou événement.",
+  o4: "Sélections produits", o4t: "Stories · Guides", o4d: "Des sélections et des guides déco qui mènent directement à l'achat.",
+  o5: "Contenu promoteurs &amp; home staging", o5t: "Immobilier", o5d: "Des histoires déco pour logements neufs, fondées sur plus de 50 biens mis en scène.",
+  contactEyebrow: "Contact", contactH2: "Créons <em>quelque chose de beau</em>",
+  contactLead: "Pour les collaborations, campagnes, événements et médias, envoyez un message. Farnaz ou son équipe répondra sous deux jours ouvrés.",
+  chWa: "WhatsApp", chEmail: "E-mail", chIg: "Collaborations sur Instagram", copy: "Copier", copied: "Copié",
+  formH3: "Envoyer une demande", fName: "Nom", fCompany: "Entreprise ou marque", fEmail: "E-mail", fPhone: "Téléphone / WhatsApp", fType: "Type de demande",
+  opt1: "Collaboration de marque", opt2: "Contenu sponsorisé", opt3: "Événement ou visite de showroom", opt4: "Média ou interview", opt5: "Livre", opt6: "Autre",
+  fMsg: "Message", fMsgPh: "Parlez-nous de votre marque, du calendrier et du budget", fErr: "Merci d'indiquer votre nom, un e-mail valide et un court message.", fSubmit: "Envoyer la demande",
+  sentH3: "Votre message est prêt", sentP: "Envoyez-le sur WhatsApp en un geste ou copiez-le dans un e-mail.", sentWa: "Envoyer sur WhatsApp", sentCopy: "Copier le message", sentEdit: "Modifier",
+  waHello: "Bonjour Farnaz, j'ai vu votre site et j'aimerais parler d'une collaboration.",
+  footerLoc: "Dubaï, EAU",
+  brandEyebrow: "Third Skin Interiors", brandH2: "Votre maison est votre <em>troisième peau</em>", brandP: "Décoration d'intérieur, architecture et style au quotidien, expliqués simplement. Third Skin Interiors est le studio de Farnaz Sadeghian, connue en ligne sous le nom de Decor with Farnaz.", quote: "« Notre première peau est celle avec laquelle nous naissons. La deuxième, nos vêtements. La troisième, notre maison. »", quoteBy: "D'après la théorie des cinq peaux de Friedensreich Hundertwasser, artiste et architecte"
+}
+};
+
+
+/* ===== Edit these details ===== */
+const CONFIG = {
+  whatsapp: "971521235012",              // Farnaz's WhatsApp, digits only with country code
+  whatsappDisplay: "+971 52 123 5012",   // how the number is shown
+  email: "decorwithfarnaz@gmail.com",    // Farnaz's email (swap for a domain email later)
+  formEndpoint: "",                      // optional: Formspree URL so inquiries also arrive by email
+  stats: {                               // latest dashboard figures, used for the live estimate
+    asOf: "2026-10-04T12:00:00+04:00",
+    ig: { followers: 321000, gainPerDay: 45800 / 30 },
+    fb: { followers: 68000,  gainPerDay: 14212 / 28 }
+  }
+};
+/* ============================== */
+
+document.documentElement.classList.add('js');
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+/* ---------- language ---------- */
+const LANGS = ['en', 'fa', 'ar', 'es', 'it', 'zh', 'ja', 'de', 'fr'];
+const NUM_LOCALE = { en: 'en-US', fa: 'fa-IR', ar: 'ar-AE', es: 'es-ES', it: 'it-IT', zh: 'zh-CN', ja: 'ja-JP', de: 'de-DE', fr: 'fr-FR' };
+const TZ_LANG = {
+  'Asia/Tehran': 'fa', 'Asia/Kabul': 'fa',
+  'Asia/Dubai': 'ar', 'Asia/Muscat': 'ar', 'Asia/Qatar': 'ar', 'Asia/Bahrain': 'ar', 'Asia/Kuwait': 'ar', 'Asia/Riyadh': 'ar', 'Asia/Baghdad': 'ar',
+  'Europe/Madrid': 'es', 'Atlantic/Canary': 'es', 'America/Mexico_City': 'es', 'America/Bogota': 'es', 'America/Lima': 'es', 'America/Santiago': 'es', 'America/Argentina/Buenos_Aires': 'es', 'America/Caracas': 'es',
+  'Europe/Rome': 'it', 'Europe/Vatican': 'it', 'Europe/San_Marino': 'it',
+  'Asia/Shanghai': 'zh', 'Asia/Chongqing': 'zh', 'Asia/Hong_Kong': 'zh', 'Asia/Macau': 'zh', 'Asia/Taipei': 'zh',
+  'Asia/Tokyo': 'ja',
+  'Europe/Berlin': 'de', 'Europe/Vienna': 'de', 'Europe/Zurich': 'de', 'Europe/Busingen': 'de',
+  'Europe/Paris': 'fr', 'Europe/Monaco': 'fr', 'Europe/Brussels': 'fr', 'America/Montreal': 'fr', 'Africa/Casablanca': 'fr'
+};
+let LANG = 'en';
+const t = k => (I18N[LANG] && I18N[LANG][k]) ?? I18N.en[k] ?? '';
+const nf = n => Math.floor(n).toLocaleString(NUM_LOCALE[LANG]);
+
+function detectLang() {
+  const hash = location.hash.slice(1).toLowerCase();
+  if (LANGS.includes(hash)) return hash;
+  try { const saved = localStorage.getItem('dwf-lang'); if (LANGS.includes(saved)) return saved; } catch {}
+  for (const l of navigator.languages || [navigator.language || 'en']) {
+    const base = String(l).toLowerCase().split('-')[0];
+    if (base !== 'en' && LANGS.includes(base)) return base;
+  }
+  try { const tz = Intl.DateTimeFormat().resolvedOptions().timeZone; if (TZ_LANG[tz]) return TZ_LANG[tz]; } catch {}
+  return 'en';
+}
+
+function applyLang(lang, save) {
+  LANG = LANGS.includes(lang) ? lang : 'en';
+  const root = document.documentElement;
+  root.lang = LANG; root.dir = I18N[LANG]._dir;
+  $$('[data-i18n]').forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+  $$('[data-i18n-ph]').forEach(el => el.placeholder = t(el.dataset.i18nPh));
+  $$('[data-i18n-alt]').forEach(el => el.alt = t(el.dataset.i18nAlt));
+  $$('[data-i18n-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
+  $('#langFlag use').setAttribute('href', '#f-' + LANG);
+  $('#langCode').textContent = LANG.toUpperCase();
+  $$('#langMenu button').forEach(b => b.setAttribute('aria-current', b.dataset.lang === LANG));
+  $('#langBtn').setAttribute('aria-label', I18N[LANG]._name);
+  setWhatsApp();
+  if (save) { try { localStorage.setItem('dwf-lang', LANG); } catch {} }
+}
+
+// build the flag menu
+const menu = $('#langMenu'), langBtn = $('#langBtn');
+LANGS.forEach(l => {
+  const li = document.createElement('li');
+  li.innerHTML = `<button type="button" data-lang="${l}" lang="${l}"><svg class="flag"><use href="#f-${l}"/></svg><span>${I18N[l]._name}</span></button>`;
+  menu.appendChild(li);
+});
+function toggleMenu(open) { menu.hidden = !open; langBtn.setAttribute('aria-expanded', open); }
+langBtn.addEventListener('click', e => { e.stopPropagation(); toggleMenu(menu.hidden); });
+menu.addEventListener('click', e => { const b = e.target.closest('button[data-lang]'); if (!b) return; applyLang(b.dataset.lang, true); toggleMenu(false); langBtn.focus(); });
+document.addEventListener('click', e => { if (!e.target.closest('.lang')) toggleMenu(false); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleMenu(false); });
+
+/* ---------- nav ---------- */
+const nav = $('#nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8), { passive: true });
+
+/* ---------- contact ---------- */
+const waBase = 'https://wa.me/' + CONFIG.whatsapp;
+function setWhatsApp() {
+  const href = waBase + '?text=' + encodeURIComponent(t('waHello'));
+  $('#waLink').href = href; $('#floatWa').href = href;
+}
+$$('[data-phone]').forEach(e => e.textContent = CONFIG.whatsappDisplay);
+$$('[data-email]').forEach(e => e.textContent = CONFIG.email);
+$('#yr').textContent = new Date().getFullYear();
+
+async function copyText(text, btn, fallbackEl) {
+  const key = btn.dataset.i18n;
+  try { await navigator.clipboard.writeText(text); btn.textContent = t('copied'); }
+  catch { const r = document.createRange(); r.selectNodeContents(fallbackEl); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+  setTimeout(() => { btn.innerHTML = t(key); }, 1800);
+}
+$$('[data-copy="email"]').forEach(b => b.addEventListener('click', () => copyText(CONFIG.email, b, $('[data-email]'))));
+
+/* ---------- live follower estimate ---------- */
+const t0 = new Date(CONFIG.stats.asOf).getTime();
+const startOfToday = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d.getTime(); };
+const estimate = p => CONFIG.stats[p].followers + CONFIG.stats[p].gainPerDay * Math.max(0, (Date.now() - t0) / 864e5);
+const shown = { ig: CONFIG.stats.ig.followers - 1500, fb: CONFIG.stats.fb.followers - 500 };
+function renderCounts() {
+  ['ig', 'fb'].forEach(p => {
+    const target = estimate(p);
+    shown[p] += (target - shown[p]) * 0.06;
+    if (Math.abs(target - shown[p]) < 1) shown[p] = target;
+    $$(`[data-count="${p}"]`).forEach(e => e.textContent = nf(shown[p]));
+    const today = CONFIG.stats[p].gainPerDay * Math.min(1, (Date.now() - startOfToday()) / 864e5);
+    $$(`[data-today="${p}"]`).forEach(e => e.textContent = '+' + nf(today));
+  });
+  $$('[data-total]').forEach(e => e.textContent = nf(shown.ig + shown.fb) + ' ');
+  requestAnimationFrame(renderCounts);
+}
+
+/* ---------- reveal on scroll ---------- */
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('pending'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' }) : null;
+$$('.reveal').forEach(el => { if (io && el.getBoundingClientRect().top > innerHeight) { el.classList.add('pending'); io.observe(el); } });
+
+/* ---------- before / after ---------- */
+function setScene(name) {
+  const ba = $('#ba'); ba.classList.add('swap');
+  const a = new Image(), bf = new Image(); let n = 0;
+  const done = () => { if (++n < 2) return; $('#sceneAfter').src = a.src; $('#sceneBefore').src = bf.src; requestAnimationFrame(() => ba.classList.remove('swap')); };
+  a.onload = bf.onload = a.onerror = bf.onerror = done;
+  a.src = 'img/ba-' + name + '-after.jpg'; bf.src = 'img/ba-' + name + '-before.jpg';
+  $$('.chip[data-scene]').forEach(c => c.setAttribute('aria-pressed', c.dataset.scene === name));
+}
+$$('.chip[data-scene]').forEach(c => c.addEventListener('click', () => setScene(c.dataset.scene)));
+setScene('living');
+$$('.chip[data-scene]').forEach(c => c.addEventListener('pointerenter', () => { new Image().src = 'img/ba-' + c.dataset.scene + '-after.jpg'; new Image().src = 'img/ba-' + c.dataset.scene + '-before.jpg'; }, { once: true }));
+const ba = $('#ba'), range = $('#baRange');
+range.addEventListener('input', () => ba.style.setProperty('--pos', range.value + '%'));
+
+/* ---------- inquiry form ---------- */
+const form = $('#inquiry'), sent = $('#sent');
+let lastMsg = '';
+const formParts = () => $$('#inquiry > :not(#sent)');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(form));
+  if (!d.name.trim() || !/^\S+@\S+\.\S+$/.test(d.email) || !d.message.trim()) { $('#formErr').textContent = t('fErr'); return; }
+  $('#formErr').textContent = '';
+  lastMsg = `Hello Farnaz,\n\nInquiry: ${d.type}\nName: ${d.name}${d.company ? '\nCompany: ' + d.company : ''}\nEmail: ${d.email}${d.phone ? '\nPhone: ' + d.phone : ''}\nLanguage: ${I18N[LANG]._name}\n\n${d.message}`;
+  if (CONFIG.formEndpoint) { try { await fetch(CONFIG.formEndpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) }); } catch {} }
+  $('#sentText').textContent = lastMsg;
+  $('#sentWa').href = waBase + '?text=' + encodeURIComponent(lastMsg);
+  formParts().forEach(el => el.hidden = true);
+  sent.hidden = false;
+});
+$('#sentCopy').addEventListener('click', e => copyText(lastMsg, e.currentTarget, $('#sentText')));
+$('#sentEdit').addEventListener('click', () => { sent.hidden = true; formParts().forEach(el => el.hidden = false); });
+
+/* ---------- hero parallax ---------- */
+const stage = $('.hero-stage');
+if (stage && matchMedia('(hover:hover) and (prefers-reduced-motion:no-preference)').matches) {
+  stage.addEventListener('pointermove', e => {
+    const r = stage.getBoundingClientRect();
+    stage.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 2 - 1).toFixed(3));
+    stage.style.setProperty('--my', ((e.clientY - r.top) / r.height * 2 - 1).toFixed(3));
+  });
+  stage.addEventListener('pointerleave', () => { stage.style.setProperty('--mx', 0); stage.style.setProperty('--my', 0); });
+}
+
+/* ---------- topic cards: tilt + live highlight ---------- */
+$$('.topic').forEach((c, i) => {
+  c.style.setProperty('--d', i % 4);
+  c.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    const r = c.getBoundingClientRect();
+    c.style.setProperty('--ry', (((e.clientX - r.left) / r.width - .5) * 10).toFixed(2) + 'deg');
+    c.style.setProperty('--rx', ((.5 - (e.clientY - r.top) / r.height) * 8).toFixed(2) + 'deg');
+  });
+  c.addEventListener('pointerleave', () => { c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
+});
+
+/* ---------- studio logo build animation ---------- */
+const lg = $('.lg');
+if (lg) {
+  const play = () => { lg.classList.remove('go'); void lg.getBoundingClientRect(); lg.classList.add('go'); };
+  if ('IntersectionObserver' in window) {
+    const lo = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { play(); lo.disconnect(); } }), { threshold: .45 });
+    lo.observe(lg);
+  } else lg.classList.add('go');
+  lg.addEventListener('click', play);
+}
+
+/* ---------- start ---------- */
+applyLang(detectLang(), false);
+addEventListener('hashchange', () => { const h = location.hash.slice(1).toLowerCase(); if (LANGS.includes(h)) applyLang(h, true); });
+renderCounts();
+
+if ('serviceWorker' in navigator && location.protocol === 'https:') { addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {})); }
+</script>
+</body>
+</html>
