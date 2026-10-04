@@ -1850,6 +1850,18 @@ Object.assign(I18N.ja, {"gHome": "住まいのために", "gBrand": "ブラン�
 Object.assign(I18N.de, {"gHome": "Für Ihr Zuhause", "gBrand": "Für Marken", "s1": "Interior-Design-Beratung", "s1t": "Vor Ort · Online", "s1d": "Eine Sitzung bei Ihnen zu Hause oder per Video: Grundriss, Farbe, Licht und was sich lohnt, mit einem klaren schriftlichen Plan.", "s2": "3D-Design &amp; Visualisierung", "s2t": "Vorher sehen", "s2d": "Sehen Sie Ihren Raum realistisch in 3D, bevor Sie etwas ausgeben, mit Möbeln, Oberflächen und Licht im Maßstab.", "s3": "Komplette Innenprojekte", "s3t": "Dubai · VAE", "s3d": "Von der Idee bis zum letzten Kissen: Design, Einkauf, Styling und Home-Staging für Wohnungen, Villen und Musterwohnungen.", "enq": "Anfragen"});
 Object.assign(I18N.fr, {"gHome": "Pour votre intérieur", "gBrand": "Pour les marques", "s1": "Conseil en décoration intérieure", "s1t": "Sur place · En ligne", "s1d": "Une séance chez vous ou en visio : agencement, couleurs, lumière et quoi acheter, avec un plan écrit clair.", "s2": "Conception &amp; visualisation 3D", "s2t": "Voir avant", "s2d": "Visualisez votre pièce en 3D réaliste avant de dépenser quoi que ce soit, mobilier, finitions et éclairage à l'échelle.", "s3": "Projets d'intérieur complets", "s3t": "Dubaï · EAU", "s3d": "De l'idée au dernier coussin : conception, achats, stylisme et home staging pour appartements, villas et logements témoins.", "enq": "Demander"});
 
+/* home-service placeholder */
+Object.assign(I18N.en, {"fMsgPhHome": "Tell us about your home, the rooms you want to change and your timing"});
+Object.assign(I18N.fa, {"fMsgPhHome": "درباره‌ی خانه‌تان، اتاق‌هایی که می‌خواهید تغییر کنند و زمان‌بندی بنویسید"});
+Object.assign(I18N.ar, {"fMsgPhHome": "أخبرنا عن منزلك والغرف التي تريد تغييرها والتوقيت المناسب"});
+Object.assign(I18N.ru, {"fMsgPhHome": "Расскажите о доме, какие комнаты хотите изменить и в какие сроки"});
+Object.assign(I18N.es, {"fMsgPhHome": "Cuéntanos sobre tu casa, qué estancias quieres cambiar y tus plazos"});
+Object.assign(I18N.it, {"fMsgPhHome": "Raccontaci della tua casa, quali stanze vuoi cambiare e i tempi"});
+Object.assign(I18N.zh, {"fMsgPhHome": "介绍一下你的家、想改造的房间和时间安排"});
+Object.assign(I18N.ja, {"fMsgPhHome": "お住まいのこと、変えたいお部屋、ご希望の時期を教えてください"});
+Object.assign(I18N.de, {"fMsgPhHome": "Erzählen Sie uns von Ihrem Zuhause, welche Räume Sie verändern möchten und Ihrem Zeitrahmen"});
+Object.assign(I18N.fr, {"fMsgPhHome": "Parlez-nous de votre logement, des pièces à transformer et de votre calendrier"});
+
 
 /* ===== Edit these details ===== */
 const CONFIG = {
@@ -2078,8 +2090,12 @@ $('#partnerBook').addEventListener('click', e => {
   form.classList.add('flash'); setTimeout(() => form.classList.remove('flash'), 1600);
 });
 $('#f-msg').addEventListener('input', e => { e.target.dataset.auto = '0'; });
+const HOME_TYPES = ['Interior design consultation', '3D design', 'Interior project'];
+function syncPlaceholder() { $('#f-msg').placeholder = t(HOME_TYPES.includes($('#f-type').value) ? 'fMsgPhHome' : 'fMsgPh'); }
+$('#f-type').addEventListener('change', syncPlaceholder);
+addEventListener('langchange', syncPlaceholder);
 $$('button.offer[data-type]').forEach(o => o.addEventListener('click', () => {
-  $('#f-type').value = o.dataset.type;
+  $('#f-type').value = o.dataset.type; syncPlaceholder();
   const msg = $('#f-msg'); if (msg.dataset.auto === '1') { msg.value = ''; msg.dataset.auto = '0'; }
   sent.hidden = true; formParts().forEach(el => el.hidden = false);
   $('#contact').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth', block: 'start' });
