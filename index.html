@@ -791,6 +791,18 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
 .facts .fx-post.fx-hide{opacity:0;transform:scale(.3)}
 .facts .fx-blip{animation:fx-blip .7s ease both;color:var(--teal)}
 @keyframes fx-blip{0%{opacity:0;transform:scale(1.7)}25%{opacity:1;transform:scale(1)}40%{opacity:.15}55%{opacity:1}70%{opacity:.25}85%,100%{opacity:1;transform:scale(1)}}
+/* book v3: transparent mock-ups, green modern cover */
+.book-visual{min-height:clamp(320px,38vw,560px)}
+.book-open{display:block;width:92%;margin-top:6%;filter:drop-shadow(0 40px 40px rgba(0,0,0,.35));transform:rotate(-2deg);animation:bk-open 9s ease-in-out infinite;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.book-closed{position:absolute;right:-2%;bottom:-6%;width:44%;filter:drop-shadow(0 30px 34px rgba(0,0,0,.45));animation:bk-float 6s ease-in-out infinite;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.book-visual:hover .book-closed{animation-play-state:paused;transform:translateY(-14px) rotate(2deg) scale(1.03)}
+.book-visual:hover .book-open{transform:rotate(-1deg) scale(1.02)}
+@keyframes bk-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(1.5deg)}}
+@keyframes bk-open{0%,100%{translate:0 0}50%{translate:0 -6px}}
+.book-badge{left:2%;top:0;z-index:2}
+[dir="rtl"] .book-closed{right:auto;left:-2%}
+@media (max-width:900px){.book-closed{width:40%;right:0;bottom:-4%}}
+@media (prefers-reduced-motion:reduce){.book-open,.book-closed{animation:none}}
 </style>
 
 </head>
@@ -1102,8 +1114,8 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
 <section id="book" class="book-sec">
   <div class="wrap book-grid">
     <div class="book-visual reveal">
-      <img class="book-mock" src="img/book-mockup.jpg" alt="Soul of the Room, the book by Farnaz Sadeghian, on a coffee table" data-i18n-alt="bookAlt" loading="lazy">
-      <div class="book-cover3d" aria-hidden="true"><img src="img/book-cover.jpg" alt="" loading="lazy"></div>
+      <img class="book-open" src="img/book-open.webp" alt="Soul of the Room, the book by Farnaz Sadeghian, open on the Japandi chapter" data-i18n-alt="bookAlt" loading="lazy">
+      <img class="book-closed" src="img/book-closed.webp" alt="" aria-hidden="true" loading="lazy">
       <span class="book-badge" data-i18n="bookBadge">Coming soon</span>
     </div>
     <div class="book-copy reveal">
