@@ -803,6 +803,37 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
 [dir="rtl"] .book-closed{right:auto;left:-2%}
 @media (max-width:900px){.book-closed{width:40%;right:0;bottom:-4%}}
 @media (prefers-reduced-motion:reduce){.book-open,.book-closed{animation:none}}
+/* launch-list dialog */
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.launch{border:0;padding:0;border-radius:28px;width:min(520px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;background:#FBF6EE;color:var(--ink);box-shadow:0 40px 90px -30px rgba(30,8,12,.6)}
+.launch::backdrop{background:rgba(30,10,14,.55);backdrop-filter:blur(4px)}
+.launch[open]{animation:dlg-in .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes dlg-in{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.launch-close-f{position:absolute;top:12px;right:12px;margin:0;z-index:2}
+[dir=rtl] .launch-close-f{right:auto;left:12px}
+.launch-x{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;font:400 24px/1 var(--f-body);cursor:pointer;color:var(--ink)}
+.launch-body,.launch-done{padding:34px clamp(22px,5vw,40px) 30px;display:grid;gap:12px}
+.launch-book{width:92px;justify-self:start;margin:-6px 0 4px;filter:drop-shadow(0 14px 16px rgba(0,0,0,.3));animation:bk-float 6s ease-in-out infinite}
+.launch h3{font:500 clamp(26px,4vw,32px)/1.12 var(--f-display);margin:0}
+.launch h3 em{font-style:italic;color:var(--wine)}
+.launch-p{color:var(--muted);font-size:15px;margin:0 0 6px}
+#launchF{display:grid;gap:12px}
+#launchF label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+#launchF input{font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+#launchF input:focus{outline:2px solid var(--teal-2);outline-offset:1px;border-color:transparent}
+#launchF .btn{justify-self:stretch;justify-content:center}
+.launch-note{font-size:12px;color:var(--muted);margin:0;text-align:center}
+.launch-done{justify-items:center;text-align:center;padding-top:46px}
+.launch-tick{width:72px;height:72px;border-radius:50%;background:var(--teal);display:grid;place-items:center;animation:geo-pop .5s cubic-bezier(.3,1.6,.5,1)}
+.launch-tick svg{width:36px;height:36px;fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:30;stroke-dashoffset:30;animation:tick 0.5s .25s ease forwards}
+@keyframes tick{to{stroke-dashoffset:0}}
+.btn[disabled]{opacity:.6;pointer-events:none}
+#inquiry.flash{animation:form-flash 1.6s ease}
+@keyframes form-flash{0%,100%{box-shadow:0 0 0 0 rgba(201,164,100,0)}25%{box-shadow:0 0 0 6px rgba(201,164,100,.55)}}
+.sent.ok h3::before{content:"✓ ";color:var(--teal)}
+#launchErr a{color:var(--teal);font-weight:600}
+.launch form{background:none!important;padding:0!important;border:0!important;box-shadow:none!important;border-radius:0!important;min-height:0}
+.launch-close-f{display:block;width:auto}
 </style>
 
 </head>
@@ -1128,7 +1159,7 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
         <li><b data-i18n="bookPt2v">Origins</b><span data-i18n="bookPt2">palettes, materials &amp; key pieces</span></li>
         <li><b data-i18n="bookPt3v">At home</b><span data-i18n="bookPt3">how to mix styles in real rooms</span></li>
       </ul>
-      <div class="hero-cta"><a class="btn btn-solid" href="#contact" data-i18n="bookCta">Join the launch list</a><a class="btn btn-ghost" href="#collab" data-i18n="bookCta2">Partner on the book</a></div>
+      <div class="hero-cta"><button class="btn btn-solid" type="button" id="launchOpen" data-i18n="bookCta">Join the launch list</button><a class="btn btn-ghost" href="#contact" id="partnerBook" data-i18n="bookCta2">Partner on the book</a></div>
     </div>
   </div>
 </section>
@@ -1188,6 +1219,7 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
         <label for="f-email"><span data-i18n="fEmail">Email</span><input id="f-email" name="email" type="email" autocomplete="email" required dir="ltr"></label>
         <label for="f-phone"><span data-i18n="fPhone">Phone / WhatsApp</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></label>
       </div>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label for="f-type"><span data-i18n="fType">Type of inquiry</span>
         <select id="f-type" name="type">
           <option value="Brand collaboration" data-i18n="opt1">Brand collaboration</option>
@@ -1202,8 +1234,8 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
       <p class="err" id="formErr" role="alert"></p>
       <button class="btn btn-solid" type="submit" style="justify-self:start"><span data-i18n="fSubmit">Send inquiry</span> <svg><use href="#i-arrow"/></svg></button>
       <div class="sent" id="sent" hidden>
-        <h3 data-i18n="sentH3">Your message is ready</h3>
-        <p data-i18n="sentP">Send it on WhatsApp in one tap, or copy it into an email.</p>
+        <h3 id="sentH3" data-i18n="sentH3">Your message is ready</h3>
+        <p id="sentP" data-i18n="sentP">Send it on WhatsApp in one tap, or copy it into an email.</p>
         <pre id="sentText" dir="auto"></pre>
         <div class="acts">
           <a class="btn btn-solid" id="sentWa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span data-i18n="sentWa">Send on WhatsApp</span></a>
@@ -1215,6 +1247,30 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
   </div>
 </section>
 </main>
+
+<dialog class="launch" id="launchDlg" aria-labelledby="launchH">
+  <form method="dialog" class="launch-close-f"><button class="launch-x" type="submit" data-i18n-aria="lClose" aria-label="Close">&times;</button></form>
+  <div class="launch-body" id="launchForm">
+    <img class="launch-book" src="img/book-closed.webp" alt="" aria-hidden="true">
+    <p class="eyebrow" data-i18n="bookEyebrow">Her book</p>
+    <h3 id="launchH" data-i18n="lH">Be first to read <em>Soul of the Room</em></h3>
+    <p class="launch-p" data-i18n="lP">Leave your email and Farnaz will tell you the day the book launches, with a first look inside.</p>
+    <form id="launchF" novalidate>
+      <label><span data-i18n="fName">Name</span><input name="name" autocomplete="name" required></label>
+      <label><span data-i18n="fEmail">Email</span><input name="email" type="email" autocomplete="email" required dir="ltr"></label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="err" id="launchErr" role="alert"></p>
+      <button class="btn btn-solid" type="submit"><span data-i18n="lBtn">Join the list</span></button>
+      <p class="launch-note" data-i18n="lNote">No spam. One email when the book is out.</p>
+    </form>
+  </div>
+  <div class="launch-done" id="launchDone" hidden>
+    <span class="launch-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></svg></span>
+    <h3 data-i18n="lOkH">You're on the list</h3>
+    <p data-i18n="lOkP">Thank you. You'll hear from Farnaz as soon as Soul of the Room is ready.</p>
+    <a class="btn btn-ghost" href="https://www.instagram.com/decor.with.farnaz/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><span data-i18n="heroFollow">Follow on Instagram</span></a>
+  </div>
+</dialog>
 
 <footer>
   <div class="wrap">
@@ -1738,13 +1794,25 @@ fr: {
 };
 I18N.ru = {"_name": "Русский", "_dir": "ltr", "navAbout": "О Фарназ", "navAudience": "Аудитория", "navTransform": "До и после", "navLearn": "Чему она учит", "navCollab": "Сотрудничество", "navCta": "Связаться", "altHero": "Фарназ указывает на стену с металлическими скульптурами", "altPortrait": "Портрет Фарназ", "altRugs": "Фарназ выбирает ковры в шоуруме Дубая", "heroTag": "подписчиков онлайн", "liveChip": "Live", "aud200k": "День, когда нас стало 200K", "aud200kAlt": "Фарназ с дочерьми празднует 200 тысяч подписчиков", "heroEyebrow": "Сертифицированный декоратор интерьера · Дубай", "heroH1": "Пусть ваш дом станет <em>родным.</em>", "heroLead": "Красивый дом — это не больший бюджет, а умение понять, что передвинуть, что оставить и от чего отказаться. Сертифицированный декоратор Фарназ Садегиан показывает, как это сделать, комната за комнатой.", "heroFollow": "Подписаться в Instagram", "heroBrands": "Сотрудничество с брендами", "cred1": "Сертификат TAFE, Австралия", "cred2": "50+ проектов хоум-стейджинга в Дубае", "cred3": "Подтверждённые аккаунты Instagram и Facebook", "audEyebrow": "Аудитория", "audH2": "Сообщество, которое <em>растёт каждую минуту</em>", "audLive": "Подписчики в реальном времени (оценка)", "verified": "Подтверждён", "igLabel": "подписчиков в Instagram", "fbLabel": "подписчиков в Facebook", "today": "сегодня", "last30": "за 30 дней", "last28": "за 28 дней", "views30": "просмотров за 30 дней", "views28": "просмотров за 28 дней", "reach1": "охват за прошлый месяц", "reach2": "охват в пиковые месяцы", "reach3": "просмотров самого популярного рилса", "reach4v": "1 год", "reach4": "от первого поста до 389K подписчиков", "audNote": "Число подписчиков — оценка в реальном времени на основе последних данных и темпа роста за 30 дней. Охват и просмотры — из профессиональной панели Meta, октябрь 2026.", "altCarpet": "Фарназ Садегиан рядом с большим персидским ковром ручной работы", "aboutEyebrow": "О Фарназ Садегиан", "aboutH2": "Взгляд дизайнера — <em>просто о сложном</em>", "aboutQuote": "«Хороший дизайн начинается с того, как семья живёт на самом деле».", "aboutP1": "Фарназ Садегиан — сертифицированный декоратор интерьера, прошедшая обучение в TAFE (Австралия). До того как сосредоточиться на обучении, она вела в Дубае практику дизайна интерьера, консультаций и хоум-стейджинга и реализовала более пятидесяти проектов, каждый из которых сначала планировался в 3D.", "aboutP2": "Сегодня она делится этим профессиональным подходом с широкой аудиторией. Её уроки посвящены планировке, освещению, цвету и разумным покупкам, а каждая рекомендация проверена в реальных домах.", "fact1": "домов оформлено с 3D-проектом", "fact2v": "6 лет", "fact2": "профессиональной практики", "fact3v": "TAFE", "fact3": "сертифицированный декоратор, Австралия", "fact4v": "Мама троих детей", "fact4": "дизайн для реальной семейной жизни", "baKitchen": "Кухня", "baDining": "Столовая", "baEntry": "Прихожая", "baKids": "Детская", "baTipsH": "Четыре шага к каждому <em>«после»</em>", "baNote": "Примеры комнат созданы для иллюстрации её метода.", "navBook": "Книга", "bookAlt": "Книга Фарназ Садегиан «Soul of the Room» на кофейном столике", "bookBadge": "Скоро", "bookEyebrow": "Её книга", "bookTitle": "Soul of the <em>Room</em>", "bookSub": "Путешествие по стилям интерьера", "bookP2": "Пятьдесят стилей интерьера — от джапанди до ар-деко — объяснены так, как Фарназ учит каждый день: откуда пришёл стиль, что его определяет и как перенести его в настоящий дом, не начиная с нуля.", "bookPt1": "стилей интерьера", "bookPt2v": "Истоки", "bookPt2": "палитры, материалы и ключевые предметы", "bookPt3v": "Дома", "bookPt3": "как сочетать стили в реальных комнатах", "bookCta": "Узнать о выходе первым", "bookCta2": "Стать партнёром книги", "reelWatch": "Смотреть в Instagram", "geoEyebrow": "Где её подписчики", "geoH": "Одно сообщество, <em>много стран</em>", "geoSub": "Нажмите на регион, чтобы увидеть его долю.", "geoIran": "Иран и Центральная Азия", "geoIranSub": "Иран · Афганистан · Таджикистан · Узбекистан", "geoGcc": "ОАЭ", "geoUs": "США", "geoEu": "Европа", "geoOther": "Остальной мир", "geoNote": "Примерное распределение аудитории по регионам.", "baEyebrow": "До и после", "baH2": "Та же комната. <em>Другое настроение.</em>", "baLead": "Большинству комнат не нужны новые стены. Им нужна правильная планировка, свет и несколько удачно подобранных вещей. Передвиньте ползунок, чтобы увидеть, что меняет стайлинг.", "step1": "Объедините зону отдыха ковром подходящего размера.", "step2": "Многоуровневый свет: подвесной светильник, торшер, тёплые лампы.", "step3": "Превратите пустую стену в акцент.", "step4": "Добавьте текстиль и что-то живое.", "baBefore": "До", "baAfter": "После", "baAria": "Сравнить до и после", "baLiving": "Гостиная", "baBedroom": "Спальня", "learnEyebrow": "Чему она учит", "learnH2": "Небольшие изменения, <em>настоящие комнаты</em>", "learnLead": "Короткие практичные уроки на персидском с английскими субтитрами. Каждый решает проблему, которую подписчики узнают у себя дома.", "t1": "Планировка", "t1d": "Как расставить мебель в длинных, узких и открытых комнатах.", "t2": "Освещение", "t2d": "Многоуровневый тёплый свет, завершающий интерьер.", "t3": "Галерейные стены", "t3d": "Как превратить пустые стены и углы в акцент.", "t4": "Сложные зоны", "t4d": "Колонны, неудобные углы и двери, выходящие в гостиную.", "t5": "Цвет", "t5d": "Смелое использование цвета и проверка перед покраской.", "t6": "Умные покупки", "t6d": "Что купить, что пропустить и почему не стоит брать комплекты.", "t7": "Спальни", "t7d": "Спокойные спальни и общие детские комнаты.", "t8": "Аксессуары", "t8d": "Детали, которые завершают образ комнаты.", "views": "просмотров", "reel1": "Идея галерейной стены в углу", "reel2": "Видна ли дверь в санузел?", "reel3": "Как оформить прямоугольную гостиную", "learnAll": "Все рилсы", "collabEyebrow": "Сотрудничество с Фарназ", "collabH2": "Партнёрство с голосом, <em>которому доверяют</em>", "collabLead": "Её подписчики приходят учиться перед покупкой. Рекомендация сертифицированного декоратора имеет вес именно в этот момент.", "p1": "Мебель и декор", "p2": "Освещение", "p3": "Краски и отделка", "p4": "Ковры и текстиль", "p5": "Напольные покрытия", "p6": "Кухня и ванная", "p7": "Умный дом", "p8": "Недвижимость", "bookCover": "Soul of the Room", "bookH3": "Её книга скоро выйдет", "bookP": "Практическое руководство по стилям интерьера и обустройству дома.", "o1": "Спонсорские рилсы", "o1t": "Instagram · Facebook", "o1d": "Ваш продукт в настоящей комнате, внутри урока, который сохраняют и пересылают.", "o2": "Амбассадор бренда", "o2t": "Долгосрочно", "o2d": "Постоянное партнёрство на целый сезон контента, сторис и запусков.", "o3": "Визиты в шоурумы и запуски", "o3t": "Дубай · ОАЭ", "o3d": "Съёмка в вашем магазине, шоуруме, проекте или на мероприятии.", "o4": "Подборки товаров", "o4t": "Сторис · Гиды", "o4d": "Подборки и гиды по стилю, ведущие подписчиков прямо к покупке.", "o5": "Контент для застройщиков и стейджинга", "o5t": "Недвижимость", "o5d": "Истории стайлинга новых домов на основе опыта более 50 проектов стейджинга.", "contactEyebrow": "Контакты", "contactH2": "Давайте создадим <em>что-то красивое</em>", "contactLead": "По вопросам сотрудничества, кампаний, мероприятий и СМИ напишите сообщение. Фарназ или её команда ответит в течение двух рабочих дней.", "chWa": "WhatsApp", "chEmail": "Почта", "chIg": "Сотрудничество в Instagram", "copy": "Копировать", "copied": "Скопировано", "formH3": "Отправить запрос", "fName": "Имя", "fCompany": "Компания или бренд", "fEmail": "Почта", "fPhone": "Телефон / WhatsApp", "fType": "Тип запроса", "opt1": "Сотрудничество с брендом", "opt2": "Спонсорский контент", "opt3": "Мероприятие или визит в шоурум", "opt4": "СМИ или интервью", "opt5": "Книга", "opt6": "Другое", "fMsg": "Сообщение", "fMsgPh": "Расскажите о бренде, сроках и бюджете", "fErr": "Укажите имя, корректную почту и короткое сообщение.", "fSubmit": "Отправить запрос", "sentH3": "Ваше сообщение готово", "sentP": "Отправьте его в WhatsApp одним нажатием или скопируйте в письмо.", "sentWa": "Отправить в WhatsApp", "sentCopy": "Копировать сообщение", "sentEdit": "Изменить", "waHello": "Здравствуйте, Фарназ! Я нашёл(ла) ваш сайт и хотел(а) бы обсудить сотрудничество.", "footerLoc": "Дубай, ОАЭ", "brandEyebrow": "Third Skin Interiors", "brandH2": "Ваш дом — ваша <em>третья кожа</em>", "brandP": "Декор интерьера, архитектура и повседневный стайлинг — простым языком. Third Skin Interiors — студия Фарназ Садегиан, известной в сети как Decor with Farnaz.", "quote": "«Первая кожа — та, с которой мы рождаемся. Вторая — наша одежда. Третья — наш дом».", "quoteBy": "По мотивам Фриденсрайха Хундертвассера, художника и архитектора, и его теории пяти кож"};
 
+/* launch list + form delivery strings */
+Object.assign(I18N.en, {"lH": "Be first to read <em>Soul of the Room</em>", "lP": "Leave your email and Farnaz will tell you the day the book launches, with a first look inside.", "lBtn": "Join the list", "lNote": "No spam. One email when the book is out.", "lOkH": "You're on the list", "lOkP": "Thank you. You'll hear from Farnaz as soon as Soul of the Room is ready.", "lErr": "Please add your name and a valid email.", "lFail": "We couldn't connect just now. Please try again, or message Farnaz on WhatsApp.", "lClose": "Close", "lSending": "Sending…", "partnerMsg": "Hello Farnaz, I'd like to talk about partnering on Soul of the Room (launch, featured brand or gifting).", "sentOkH3": "Message sent", "sentOkP": "Thank you. Farnaz or her team will reply within two working days. For a faster answer, you can also send it on WhatsApp."});
+Object.assign(I18N.fa, {"lH": "اولین خواننده‌ی <em>روح اتاق</em> باشید", "lP": "ایمیل‌تان را بگذارید تا فرناز روز انتشار کتاب، همراه با نگاهی به داخل آن، به شما خبر بدهد.", "lBtn": "عضویت در فهرست", "lNote": "بدون تبلیغ. فقط یک ایمیل وقتی کتاب منتشر شد.", "lOkH": "شما در فهرست هستید", "lOkP": "سپاس. به‌محض آماده شدن «روح اتاق»، از فرناز خبر می‌گیرید.", "lErr": "لطفاً نام و یک ایمیل معتبر وارد کنید.", "lFail": "الان ارتباط برقرار نشد. دوباره امتحان کنید یا در واتساپ به فرناز پیام بدهید.", "lClose": "بستن", "lSending": "در حال ارسال…", "partnerMsg": "سلام فرناز، می‌خواهم درباره‌ی همکاری در کتاب «روح اتاق» (رونمایی، معرفی برند یا هدیه) صحبت کنم.", "sentOkH3": "پیام ارسال شد", "sentOkP": "سپاس. فرناز یا تیمش ظرف دو روز کاری پاسخ می‌دهند. برای پاسخ سریع‌تر می‌توانید در واتساپ هم بفرستید."});
+Object.assign(I18N.ar, {"lH": "كن أول من يقرأ <em>روح الغرفة</em>", "lP": "اترك بريدك الإلكتروني وستخبرك فرناز بيوم صدور الكتاب، مع لمحة أولى من داخله.", "lBtn": "انضم إلى القائمة", "lNote": "بلا رسائل مزعجة. رسالة واحدة عند صدور الكتاب.", "lOkH": "أنت الآن في القائمة", "lOkP": "شكرًا لك. ستصلك رسالة من فرناز فور جاهزية «روح الغرفة».", "lErr": "يرجى إدخال اسمك وبريد إلكتروني صحيح.", "lFail": "تعذّر الاتصال الآن. حاول مجددًا أو راسل فرناز على واتساب.", "lClose": "إغلاق", "lSending": "جارٍ الإرسال…", "partnerMsg": "مرحبًا فرناز، أود التحدث عن شراكة في كتاب «روح الغرفة» (الإطلاق أو علامة مميزة أو الهدايا).", "sentOkH3": "تم إرسال الرسالة", "sentOkP": "شكرًا لك. سترد فرناز أو فريقها خلال يومي عمل. للرد الأسرع يمكنك الإرسال عبر واتساب أيضًا."});
+Object.assign(I18N.ru, {"lH": "Прочитайте <em>«Душу комнаты»</em> первыми", "lP": "Оставьте email, и Фарназ сообщит вам о дне выхода книги и покажет первые страницы.", "lBtn": "Записаться", "lNote": "Без спама. Одно письмо, когда книга выйдет.", "lOkH": "Вы в списке", "lOkP": "Спасибо. Фарназ напишет вам, как только «Душа комнаты» будет готова.", "lErr": "Пожалуйста, укажите имя и корректный email.", "lFail": "Не удалось отправить. Попробуйте ещё раз или напишите Фарназ в WhatsApp.", "lClose": "Закрыть", "lSending": "Отправка…", "partnerMsg": "Здравствуйте, Фарназ! Хочу обсудить партнёрство по книге «Душа комнаты» (запуск, бренд-партнёр или подарки).", "sentOkH3": "Сообщение отправлено", "sentOkP": "Спасибо. Фарназ или её команда ответят в течение двух рабочих дней. Для быстрого ответа можно также отправить его в WhatsApp."});
+Object.assign(I18N.es, {"lH": "Sé de los primeros en leer <em>Soul of the Room</em>", "lP": "Deja tu email y Farnaz te avisará el día del lanzamiento, con un primer vistazo al interior.", "lBtn": "Unirme a la lista", "lNote": "Sin spam. Un solo email cuando salga el libro.", "lOkH": "Ya estás en la lista", "lOkP": "Gracias. Farnaz te escribirá en cuanto Soul of the Room esté listo.", "lErr": "Añade tu nombre y un email válido.", "lFail": "No hemos podido conectar. Inténtalo de nuevo o escribe a Farnaz por WhatsApp.", "lClose": "Cerrar", "lSending": "Enviando…", "partnerMsg": "Hola Farnaz, me gustaría hablar de colaborar en Soul of the Room (lanzamiento, marca destacada o regalos).", "sentOkH3": "Mensaje enviado", "sentOkP": "Gracias. Farnaz o su equipo responderán en dos días laborables. Para una respuesta más rápida, también puedes enviarlo por WhatsApp."});
+Object.assign(I18N.it, {"lH": "Leggi per primo <em>Soul of the Room</em>", "lP": "Lascia la tua email e Farnaz ti avviserà il giorno dell'uscita, con un primo sguardo all'interno.", "lBtn": "Entra nella lista", "lNote": "Niente spam. Una sola email quando il libro esce.", "lOkH": "Sei nella lista", "lOkP": "Grazie. Farnaz ti scriverà appena Soul of the Room sarà pronto.", "lErr": "Inserisci il tuo nome e un'email valida.", "lFail": "Connessione non riuscita. Riprova o scrivi a Farnaz su WhatsApp.", "lClose": "Chiudi", "lSending": "Invio…", "partnerMsg": "Ciao Farnaz, vorrei parlare di una collaborazione su Soul of the Room (lancio, brand in evidenza o omaggi).", "sentOkH3": "Messaggio inviato", "sentOkP": "Grazie. Farnaz o il suo team risponderanno entro due giorni lavorativi. Per una risposta più veloce puoi inviarlo anche su WhatsApp."});
+Object.assign(I18N.zh, {"lH": "抢先阅读<em>《房间之魂》</em>", "lP": "留下邮箱，新书上市当天 Farnaz 会通知你，并附上内页抢先看。", "lBtn": "加入名单", "lNote": "不发垃圾邮件，新书出版时只发一封邮件。", "lOkH": "你已加入名单", "lOkP": "谢谢！《房间之魂》一准备好，Farnaz 就会通知你。", "lErr": "请填写姓名和有效的邮箱。", "lFail": "暂时无法连接，请重试，或通过 WhatsApp 联系 Farnaz。", "lClose": "关闭", "lSending": "发送中…", "partnerMsg": "你好 Farnaz，我想洽谈《房间之魂》的合作（新书发布、品牌合作或赠品）。", "sentOkH3": "消息已发送", "sentOkP": "谢谢！Farnaz 或她的团队会在两个工作日内回复。想更快得到回复，也可以通过 WhatsApp 发送。"});
+Object.assign(I18N.ja, {"lH": "<em>『Soul of the Room』</em>をいち早く", "lP": "メールアドレスを登録すると、発売日に Farnaz から中身のプレビューと一緒にお知らせが届きます。", "lBtn": "リストに登録", "lNote": "迷惑メールは送りません。発売時に一通だけお送りします。", "lOkH": "登録が完了しました", "lOkP": "ありがとうございます。『Soul of the Room』の準備ができ次第、Farnaz からご連絡します。", "lErr": "お名前と正しいメールアドレスを入力してください。", "lFail": "接続できませんでした。もう一度お試しいただくか、WhatsApp で Farnaz にご連絡ください。", "lClose": "閉じる", "lSending": "送信中…", "partnerMsg": "Farnaz さん、こんにちは。『Soul of the Room』でのパートナーシップ（ローンチ、ブランド掲載、ギフト）についてご相談したいです。", "sentOkH3": "メッセージを送信しました", "sentOkP": "ありがとうございます。2営業日以内に Farnaz またはチームから返信します。お急ぎの場合は WhatsApp でも送れます。"});
+Object.assign(I18N.de, {"lH": "Lies <em>Soul of the Room</em> als Erste:r", "lP": "Hinterlasse deine E-Mail und Farnaz sagt dir, wann das Buch erscheint, mit einem ersten Blick hinein.", "lBtn": "Auf die Liste", "lNote": "Kein Spam. Eine E-Mail, wenn das Buch erscheint.", "lOkH": "Du bist auf der Liste", "lOkP": "Danke! Du hörst von Farnaz, sobald Soul of the Room fertig ist.", "lErr": "Bitte gib deinen Namen und eine gültige E-Mail an.", "lFail": "Gerade keine Verbindung. Bitte versuche es erneut oder schreib Farnaz auf WhatsApp.", "lClose": "Schließen", "lSending": "Wird gesendet…", "partnerMsg": "Hallo Farnaz, ich möchte über eine Partnerschaft für Soul of the Room sprechen (Launch, Featured Brand oder Gifting).", "sentOkH3": "Nachricht gesendet", "sentOkP": "Danke! Farnaz oder ihr Team antworten innerhalb von zwei Werktagen. Für eine schnellere Antwort kannst du sie auch per WhatsApp senden."});
+Object.assign(I18N.fr, {"lH": "Lisez <em>Soul of the Room</em> en avant-première", "lP": "Laissez votre email et Farnaz vous préviendra le jour de la sortie, avec un premier aperçu des pages.", "lBtn": "Rejoindre la liste", "lNote": "Pas de spam. Un seul email à la sortie du livre.", "lOkH": "Vous êtes sur la liste", "lOkP": "Merci. Farnaz vous écrira dès que Soul of the Room sera prêt.", "lErr": "Merci d'indiquer votre nom et un email valide.", "lFail": "Connexion impossible pour le moment. Réessayez ou écrivez à Farnaz sur WhatsApp.", "lClose": "Fermer", "lSending": "Envoi…", "partnerMsg": "Bonjour Farnaz, j'aimerais parler d'un partenariat autour de Soul of the Room (lancement, marque mise en avant ou cadeaux).", "sentOkH3": "Message envoyé", "sentOkP": "Merci. Farnaz ou son équipe répondront sous deux jours ouvrés. Pour une réponse plus rapide, vous pouvez aussi l'envoyer sur WhatsApp."});
+
 
 /* ===== Edit these details ===== */
 const CONFIG = {
   whatsapp: "971521235012",              // Farnaz's WhatsApp, digits only with country code
   whatsappDisplay: "+971 52 123 5012",   // how the number is shown
   email: "decorwithfarnaz@gmail.com",    // Farnaz's email (swap for a domain email later)
-  formEndpoint: "",                      // optional: Formspree URL so inquiries also arrive by email
+  formEndpoint: "https://formsubmit.co/ajax/decorwithfarnaz@gmail.com", // inquiries + launch-list sign-ups arrive here by email (FormSubmit: click "Activate" in the first email once)
   stats: {                               // latest dashboard figures, used for the live estimate
     asOf: "2026-10-04T12:00:00+04:00",
     ig: { followers: 321000, gainPerDay: 45800 / 30 },
@@ -1893,6 +1961,23 @@ $$('.chip[data-scene]').forEach(c => c.addEventListener('pointerenter', () => { 
 const ba = $('#ba'), range = $('#baRange');
 range.addEventListener('input', () => ba.style.setProperty('--pos', range.value + '%'));
 
+/* ---------- email delivery (FormSubmit) ---------- */
+async function deliver(fields, subject) {
+  if (!CONFIG.formEndpoint) return false;
+  if (fields._honey) return true;                                   // bot filled the hidden field: pretend success, send nothing
+  const body = { ...fields, _subject: subject, _template: 'table', _captcha: 'false', Language: I18N[LANG]._name, Page: location.href };
+  delete body._honey;
+  try {
+    const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 15000);
+    const r = await fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body), signal: ctl.signal });
+    clearTimeout(to);
+    const j = await r.json().catch(() => ({}));
+    return r.ok && String(j.success) === 'true';
+  } catch { return false; }
+}
+const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(v).trim());
+function busy(btn, on) { if (!btn) return; if (on) { btn.dataset.label = btn.innerHTML; btn.textContent = t('lSending'); btn.disabled = true; } else { if (btn.dataset.label) btn.innerHTML = btn.dataset.label; btn.disabled = false; } }
+
 /* ---------- inquiry form ---------- */
 const form = $('#inquiry'), sent = $('#sent');
 let lastMsg = '';
@@ -1900,17 +1985,55 @@ const formParts = () => $$('#inquiry > :not(#sent)');
 form.addEventListener('submit', async e => {
   e.preventDefault();
   const d = Object.fromEntries(new FormData(form));
-  if (!d.name.trim() || !/^\S+@\S+\.\S+$/.test(d.email) || !d.message.trim()) { $('#formErr').textContent = t('fErr'); return; }
+  if (!d.name.trim() || !validEmail(d.email) || !d.message.trim()) { $('#formErr').textContent = t('fErr'); return; }
   $('#formErr').textContent = '';
   lastMsg = `Hello Farnaz,\n\nInquiry: ${d.type}\nName: ${d.name}${d.company ? '\nCompany: ' + d.company : ''}\nEmail: ${d.email}${d.phone ? '\nPhone: ' + d.phone : ''}\nLanguage: ${I18N[LANG]._name}\n\n${d.message}`;
-  if (CONFIG.formEndpoint) { try { await fetch(CONFIG.formEndpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) }); } catch {} }
+  const btn = form.querySelector('button[type="submit"]'); busy(btn, true);
+  const ok = await deliver({ Name: d.name, Company: d.company, Email: d.email, Phone: d.phone, Inquiry: d.type, Message: d.message, _replyto: d.email, _honey: d._honey }, `New inquiry: ${d.type} · ${d.name}`);
+  busy(btn, false);
+  $('#sentH3').textContent = t(ok ? 'sentOkH3' : 'sentH3'); $('#sentP').textContent = t(ok ? 'sentOkP' : 'sentP');
+  sent.classList.toggle('ok', ok);
   $('#sentText').textContent = lastMsg;
   $('#sentWa').href = waBase + '?text=' + encodeURIComponent(lastMsg);
   formParts().forEach(el => el.hidden = true);
   sent.hidden = false;
+  if (ok) form.reset();
 });
 $('#sentCopy').addEventListener('click', e => copyText(lastMsg, e.currentTarget, $('#sentText')));
 $('#sentEdit').addEventListener('click', () => { sent.hidden = true; formParts().forEach(el => el.hidden = false); });
+
+/* ---------- book: launch list + partner shortcut ---------- */
+const dlg = $('#launchDlg'), lf = $('#launchF');
+$('#launchOpen').addEventListener('click', () => {
+  $('#launchForm').hidden = false; $('#launchDone').hidden = true; $('#launchErr').textContent = '';
+  if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  setTimeout(() => lf.elements.name.focus(), 60);
+});
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });           // click on the backdrop closes it
+lf.addEventListener('submit', async e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(lf)), err = $('#launchErr');
+  if (!d.name.trim() || !validEmail(d.email)) { err.textContent = t('lErr'); return; }
+  err.textContent = ''; const btn = lf.querySelector('button[type="submit"]'); busy(btn, true);
+  const ok = await deliver({ Name: d.name, Email: d.email, List: 'Soul of the Room · launch list', _replyto: d.email, _honey: d._honey }, `Book launch list: ${d.name}`);
+  busy(btn, false);
+  if (ok) { lf.reset(); $('#launchForm').hidden = true; $('#launchDone').hidden = false; }
+  else {
+    const wa = waBase + '?text=' + encodeURIComponent(`Hello Farnaz, please add me to the Soul of the Room launch list.\nName: ${d.name}\nEmail: ${d.email}`);
+    err.innerHTML = `${t('lFail')} <a href="${wa}" target="_blank" rel="noopener">WhatsApp →</a>`;
+  }
+});
+$('#partnerBook').addEventListener('click', e => {
+  e.preventDefault();
+  const sel = $('#f-type'), msg = $('#f-msg');
+  sel.value = 'Book';
+  if (!msg.value.trim() || msg.dataset.auto === '1') { msg.value = t('partnerMsg'); msg.dataset.auto = '1'; }
+  sent.hidden = true; formParts().forEach(el => el.hidden = false);
+  $('#contact').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  setTimeout(() => $('#f-name').focus({ preventScroll: true }), 700);
+  form.classList.add('flash'); setTimeout(() => form.classList.remove('flash'), 1600);
+});
+$('#f-msg').addEventListener('input', e => { e.target.dataset.auto = '0'; });
 
 /* ---------- hero parallax ---------- */
 const stage = $('.hero-stage');
