@@ -669,21 +669,40 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
 .geo-sub{font-size:14px;color:var(--muted);max-width:28ch;text-align:end}
 .geo-map{margin-top:18px}
 .geo-map svg{display:block;width:100%;height:auto;overflow:visible}
-.geo-dots circle{fill:#A3927F;opacity:0;transform-box:fill-box;transform-origin:center;transition:fill .5s,opacity .5s,transform .5s}
-.geo.go .geo-dots circle{opacity:.6;transition:fill .5s,opacity .9s ease var(--d),transform .5s}
-.geo-map svg[data-active] .geo-dots circle{opacity:.4}
-.geo-map svg[data-active="i"] circle[data-r="i"],.geo-map svg[data-active="g"] circle[data-r="g"],.geo-map svg[data-active="u"] circle[data-r="u"],.geo-map svg[data-active="e"] circle[data-r="e"],.geo-map svg[data-active="o"] circle[data-r="o"]{fill:var(--ac);opacity:1;transform:scale(1.35)}
-.geo-pin{cursor:pointer;opacity:0;transform:translateY(-30px);transition:opacity .5s,transform .7s cubic-bezier(.3,1.5,.5,1);transition-delay:calc(1.2s + var(--k)*.22s)}
-.geo.go .geo-pin{opacity:1;transform:none}
 .geo-pin .spot{fill:var(--c);stroke:#fff;stroke-width:3}
-.geo-pin .pulse{fill:var(--c);opacity:.4;transform-box:fill-box;transform-origin:center;animation:geo-pulse 2.2s ease-out infinite;animation-delay:calc(var(--k)*.4s)}
-.geo-pin .lead{stroke:var(--c);stroke-width:2;stroke-dasharray:4 4;fill:none}
-.geo-pin .bub rect{fill:var(--c);filter:drop-shadow(0 8px 10px rgba(40,20,10,.25));transition:transform .4s}
-.geo-pin .bub{transform-box:fill-box}
 .geo-pin .pc{fill:#fff;font:400 24px/1 var(--f-num)}
-.geo-pin.on .bub rect{stroke:#fff;stroke-width:3}
-.geo-pin.on .pulse{animation-duration:1.1s}
 @keyframes geo-pulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(3.4);opacity:0}}
+.geo-dots{opacity:0;transition:opacity .6s ease}
+.geo.go .geo-dots{opacity:1}
+.geo-dots circle{fill:#CDBFAE;transform-box:fill-box;transform-origin:center}
+.geo-dots g{transition:opacity .35s ease}
+.geo-dots g.fill circle{animation:geo-fill .5s cubic-bezier(.3,1.6,.5,1) both}
+.geo-dots g.static circle{animation:none;fill:var(--c)}
+@keyframes geo-fill{0%{fill:#CDBFAE;transform:scale(1)}45%{fill:var(--c);transform:scale(1.22)}100%{fill:var(--c);transform:scale(1)}}
+.geo-map svg[data-active] .geo-dots g:not(.x){opacity:.28}
+.geo-map svg[data-active="i"] .geo-dots g[data-r="i"],.geo-map svg[data-active="g"] .geo-dots g[data-r="g"],.geo-map svg[data-active="u"] .geo-dots g[data-r="u"],.geo-map svg[data-active="e"] .geo-dots g[data-r="e"],.geo-map svg[data-active="o"] .geo-dots g[data-r="o"]{opacity:1}
+.geo-arcs path{fill:none;stroke:var(--c);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:.75}
+.geo-arcs path.fly{animation:geo-arc .55s cubic-bezier(.5,0,.3,1) forwards}
+@keyframes geo-arc{to{stroke-dashoffset:0}}
+.geo-map svg[data-active] .geo-arcs path{opacity:.2;transition:opacity .35s}
+.geo-pin{cursor:pointer;opacity:0;transition:opacity .35s ease}
+.geo-pin.in{opacity:1}
+.geo-pin .spot{transform-box:fill-box;transform-origin:center;transform:scale(0)}
+.geo-pin.in .spot{animation:geo-pop .5s cubic-bezier(.3,1.6,.5,1) forwards}
+.geo-pin .pulse{fill:var(--c);opacity:0;transform-box:fill-box;transform-origin:center}
+.geo-pin.in .pulse{animation:geo-pulse 1.4s ease-out .2s 2}
+.geo-pin.on .pulse{animation:geo-pulse 1.4s ease-out infinite}
+.geo-pin .lead{stroke:var(--c);stroke-width:1.6;stroke-dasharray:1;stroke-dashoffset:1;fill:none}
+.geo-pin.in .lead{animation:geo-arc .4s ease .15s forwards}
+.geo-pin .bub-in{transform-box:fill-box;transform-origin:50% 100%;transform:scale(0)}
+.geo-pin.in .bub-in{animation:geo-pop .55s cubic-bezier(.3,1.5,.5,1) .3s forwards}
+.geo-pin .bub rect{fill:var(--c);filter:drop-shadow(0 8px 10px rgba(40,20,10,.22))}
+.geo-pin.on .bub rect{stroke:#fff;stroke-width:3}
+.geo-map svg[data-active] .geo-pin:not(.on){opacity:.35}
+@keyframes geo-pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+.geo-item{opacity:.45;transition:opacity .4s,transform .4s,border-color .3s,box-shadow .3s,background .3s}
+.geo-item.in{opacity:1}
+@media (prefers-reduced-motion:reduce){.geo-dots,.geo-item{opacity:1!important;transition:none}.geo-arcs path{stroke-dashoffset:0}.geo-pin .spot,.geo-pin .bub-in{transform:none}.geo-pin .lead{stroke-dashoffset:0}.geo-pin .pulse{animation:none!important}}
 .geo-legend{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:22px}
 .geo-item{position:relative;display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:10px;row-gap:4px;text-align:start;padding:14px 16px 16px;border-radius:18px;border:1px solid var(--line);background:var(--cream);cursor:pointer;font:inherit;color:var(--ink);transition:border-color .3s,background .3s,transform .3s}
 .geo-item .gi-dot{width:12px;height:12px;border-radius:50%;background:var(--c);grid-row:1}
@@ -693,7 +712,6 @@ h2 em{background:linear-gradient(transparent 78%,rgba(242,169,59,.55) 78% 90%,tr
 .geo-item s{display:block;height:100%;width:var(--w,0%);max-width:100%;background:var(--c);border-radius:4px;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
 .geo-item[aria-selected="true"]{border-color:var(--c);background:var(--paper);transform:translateY(-3px);box-shadow:0 16px 30px -22px rgba(60,25,20,.5)}
 @media (max-width:760px){.geo-head{grid-template-columns:1fr}.geo-sub{text-align:start}.geo-legend{grid-template-columns:repeat(2,minmax(0,1fr))}.geo-legend .geo-item:last-child{grid-column:1/-1}.geo-pin .bub,.geo-pin .lead{display:none}.geo-pin .spot{r:11}.geo-pin .pulse{r:11}.geo-dots circle{r:3.6}.geo-map{margin-inline:-8px}}
-@media (prefers-reduced-motion:reduce){.geo-dots circle,.geo-pin{transition:none!important;opacity:.6}.geo-pin{opacity:1;transform:none}.geo-pin .pulse{animation:none}}
 .geo-note{font-size:12px;color:var(--muted);margin-top:14px}
 .geo-item .gi-sub{grid-column:1/-1;font-style:normal;font-size:11.5px;line-height:1.35;color:var(--muted);opacity:.85;margin-top:-2px}
 :root:lang(ru) h1 em,:root:lang(ru) h2 em,:root:lang(ru) h3 em{font-family:var(--f-display);font-style:italic;font-size:1em}
@@ -1911,40 +1929,61 @@ const GEO_DOTS = "160,0,o;189,0,o;203,0,o;232,0,o;240,0,o;247,0,o;254,0,o;269,0,
 (function () {
   const svg = $('#geoSvg'); if (!svg) return;
   const NS = 'http://www.w3.org/2000/svg', gD = svg.querySelector('.geo-dots'), gP = svg.querySelector('.geo-pins');
-  const COL = { i: '#561C24', g: '#1C6E69', u: '#E0962E', e: '#23A399', o: '#9C8B78' };
+  const COL = { i: '#561C24', g: '#1C6E69', u: '#E0962E', e: '#23A399', o: '#B9A48C' };
   const PINS = { u: [196, 109, 196, 18], e: [497, 81, 452, -12], i: [637, 119, 600, 22], g: [621, 150, 718, 74] };
+  const HOME = [621, 150];                                   // Dubai: everything starts here
+  const SPEED = .32;                                         // ripple speed, map units per ms
+  // play order: [region, start time ms, ripple origin]
+  const PLAN = [['g', 250, HOME], ['i', 950, PINS.i], ['e', 1500, PINS.e], ['u', 2150, PINS.u], ['o', 3000, HOME]];
+  const groups = {};
+  ['o', 'u', 'e', 'i', 'g'].forEach(r => { const g = document.createElementNS(NS, 'g'); g.dataset.r = r; g.style.setProperty('--c', COL[r]); gD.appendChild(g); groups[r] = g; });
+  const dots = { i: [], g: [], u: [], e: [], o: [] };
   GEO_DOTS.split(';').forEach(s => { const [x, y, r] = s.split(','); const c = document.createElementNS(NS, 'circle');
-    c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', 3.1); c.dataset.r = r; c.style.setProperty('--d', (x / 1000 * 1.2).toFixed(2) + 's'); gD.appendChild(c); });
+    c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', 2.7); groups[r].appendChild(c); dots[r].push(c); });
   const items = $$('.geo-item'); const pct = {}; items.forEach(b => pct[b.dataset.r] = +b.querySelector('b').dataset.pct);
   items.forEach(b => b.style.setProperty('--c', COL[b.dataset.r]));
+  // flight lines from Dubai
+  const gA = document.createElementNS(NS, 'g'); gA.setAttribute('class', 'geo-arcs'); gD.after(gA);
+  const arcs = {};
+  ['i', 'e', 'u'].forEach(r => { const [x, y] = PINS[r], [hx, hy] = HOME, mx = (x + hx) / 2, my = Math.min(y, hy) - Math.abs(x - hx) * .28 - 12;
+    const p = document.createElementNS(NS, 'path'); p.setAttribute('d', `M${hx} ${hy} Q${mx} ${my} ${x} ${y}`); p.setAttribute('pathLength', '1');
+    p.style.setProperty('--c', COL[r]); gA.appendChild(p); arcs[r] = p; });
   Object.entries(PINS).forEach(([r, [x, y, hx, hy]], k) => {
     const g = document.createElementNS(NS, 'g'); g.setAttribute('class', 'geo-pin'); g.dataset.r = r; g.style.setProperty('--c', COL[r]); g.style.setProperty('--k', k);
-    g.innerHTML = `<circle class="pulse" cx="${x}" cy="${y}" r="7"/><circle class="spot" cx="${x}" cy="${y}" r="6"/><path class="lead" d="M${x} ${y} L${hx} ${hy + 30}"/>` +
-      `<g class="bub" transform="translate(${hx} ${hy})"><rect x="-46" y="-6" width="92" height="44" rx="22"/><text class="pc" x="0" y="25" text-anchor="middle">0%</text></g>`;
-    g.addEventListener('click', () => pick(r, true)); g.addEventListener('mouseenter', () => pick(r, true));
+    g.innerHTML = `<circle class="pulse" cx="${x}" cy="${y}" r="7"/><circle class="spot" cx="${x}" cy="${y}" r="6"/><path class="lead" pathLength="1" d="M${x} ${y} L${hx} ${hy + 30}"/>` +
+      `<g class="bub" transform="translate(${hx} ${hy})"><g class="bub-in"><rect x="-46" y="-6" width="92" height="44" rx="22"/><text class="pc" x="0" y="25" text-anchor="middle">0%</text></g></g>`;
+    g.addEventListener('click', () => pick(r)); g.addEventListener('mouseenter', () => pick(r)); g.addEventListener('mouseleave', () => pick(null));
     gP.appendChild(g);
   });
-  let cur = null, timer = null, hold = 0, started = false;
-  function pick(r, user) {
-    cur = r; if (user) hold = Date.now();
-    svg.dataset.active = r; svg.style.setProperty('--ac', COL[r]);
+  function pick(r) {
+    if (r) svg.dataset.active = r; else delete svg.dataset.active;
     items.forEach(b => b.setAttribute('aria-selected', b.dataset.r === r));
     $$('.geo-pin', svg).forEach(p => p.classList.toggle('on', p.dataset.r === r));
   }
-  items.forEach(b => { b.addEventListener('click', () => pick(b.dataset.r, true)); b.addEventListener('mouseenter', () => pick(b.dataset.r, true)); });
+  items.forEach(b => { b.addEventListener('click', () => pick(b.dataset.r)); b.addEventListener('mouseenter', () => pick(b.dataset.r)); b.addEventListener('mouseleave', () => pick(null)); });
   function count(el, to, dur) { const t0 = performance.now(); (function f(t) { const k = Math.min(1, (t - t0) / dur), v = Math.round(to * (1 - Math.pow(1 - k, 3)));
     el.textContent = nf(v) + '%'; if (k < 1) requestAnimationFrame(f); })(t0); }
-  function start() {
-    if (started) return; started = true; svg.closest('.geo').classList.add('go');
-    setTimeout(() => {
-      items.forEach((b, k) => setTimeout(() => { count(b.querySelector('b'), pct[b.dataset.r], 1400); b.style.setProperty('--w', pct[b.dataset.r] * 2.6 + '%'); }, k * 180));
-      $$('.geo-pin', svg).forEach((p, k) => setTimeout(() => count(p.querySelector('.pc'), pct[p.dataset.r], 1400), 500 + k * 220));
-    }, 900);
-    const order = ['i', 'g', 'u', 'e', 'o']; let n = 0;
-    setTimeout(() => { pick(order[0]); timer = setInterval(() => { if (Date.now() - hold < 7000) return; n = (order.indexOf(cur) + 1) % order.length; pick(order[n]); }, 2600); }, 2600);
+  const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function fill(r, origin) {
+    const [ox, oy] = origin;
+    dots[r].forEach(c => { const d = Math.hypot(c.cx.baseVal.value - ox, c.cy.baseVal.value - oy); c.style.animationDelay = (d / SPEED).toFixed(0) + 'ms'; });
+    groups[r].classList.add('fill');
+    const pin = $(`.geo-pin[data-r="${r}"]`, svg); const reach = Math.max(...dots[r].map(c => Math.hypot(c.cx.baseVal.value - ox, c.cy.baseVal.value - oy))) / SPEED;
+    const done = Math.min(reach, 700);
+    setTimeout(() => { if (pin) { pin.classList.add('in'); count(pin.querySelector('.pc'), pct[r], 900); }
+      const it = items.find(b => b.dataset.r === r); if (it) { it.classList.add('in'); count(it.querySelector('b'), pct[r], 900); it.style.setProperty('--w', pct[r] * 2.6 + '%'); } }, done);
   }
-  if ('IntersectionObserver' in window) { const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { start(); o.disconnect(); } }), { threshold: .3 }); o.observe(svg); } else start();
-  window.addEventListener('langchange', () => {});
+  let started = false;
+  function start() {
+    if (started) return; started = true; const geo = svg.closest('.geo'); geo.classList.add('go');
+    if (reduce) { PLAN.forEach(([r]) => { groups[r].classList.add('fill', 'static'); }); $$('.geo-pin', svg).forEach(p => { p.classList.add('in'); p.querySelector('.pc').textContent = pct[p.dataset.r] + '%'; });
+      items.forEach(b => { b.classList.add('in'); b.querySelector('b').textContent = pct[b.dataset.r] + '%'; b.style.setProperty('--w', pct[b.dataset.r] * 2.6 + '%'); }); return; }
+    PLAN.forEach(([r, t, o]) => {
+      if (arcs[r]) setTimeout(() => arcs[r].classList.add('fly'), t - 450);
+      setTimeout(() => fill(r, o), t);
+    });
+  }
+  if ('IntersectionObserver' in window) { const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { start(); o.disconnect(); } }), { threshold: .35 }); o.observe(svg); } else start();
 })();
 
 /* ---------- start ---------- */
