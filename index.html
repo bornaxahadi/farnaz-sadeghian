@@ -854,6 +854,9 @@ button.offer.svc h3::before{content:"";display:inline-block;width:9px;height:9px
 @media (max-width:600px){button.offer{grid-template-columns:1fr}button.offer p{padding-inline-end:0;padding-bottom:22px}button.offer span{justify-self:start}}
 button.offer::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:1px;background:var(--line)}
 .offers{border-top:0}
+footer .credit{flex-basis:100%;margin:6px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.06em;color:var(--muted);text-align:center}
+footer .credit b{font-weight:600;color:var(--wine);letter-spacing:.08em}
+@media (max-width:760px){footer{padding-bottom:96px}}
 </style>
 
 </head>
@@ -1313,6 +1316,7 @@ button.offer::after{content:"";position:absolute;left:14px;right:14px;bottom:0;h
       <a href="https://www.facebook.com/817038121486364" target="_blank" rel="noopener">Facebook</a>
       <a href="#contact" data-i18n="contactEyebrow">Contact</a>
     </span>
+    <p class="credit"><span data-i18n="credit">Website designed &amp; developed by</span> <b dir="ltr">Borna Ahadi</b></p>
   </div>
 </footer>
 
@@ -1861,6 +1865,18 @@ Object.assign(I18N.zh, {"fMsgPhHome": "介绍一下你的家、想改造的房�
 Object.assign(I18N.ja, {"fMsgPhHome": "お住まいのこと、変えたいお部屋、ご希望の時期を教えてください"});
 Object.assign(I18N.de, {"fMsgPhHome": "Erzählen Sie uns von Ihrem Zuhause, welche Räume Sie verändern möchten und Ihrem Zeitrahmen"});
 Object.assign(I18N.fr, {"fMsgPhHome": "Parlez-nous de votre logement, des pièces à transformer et de votre calendrier"});
+
+/* footer credit */
+Object.assign(I18N.en, {"credit": "Website designed &amp; developed by"});
+Object.assign(I18N.fa, {"credit": "طراحی و توسعه‌ی وب‌سایت:"});
+Object.assign(I18N.ar, {"credit": "تصميم وتطوير الموقع:"});
+Object.assign(I18N.ru, {"credit": "Дизайн и разработка сайта:"});
+Object.assign(I18N.es, {"credit": "Web diseñada y desarrollada por"});
+Object.assign(I18N.it, {"credit": "Sito progettato e sviluppato da"});
+Object.assign(I18N.zh, {"credit": "网站设计与开发："});
+Object.assign(I18N.ja, {"credit": "ウェブサイト デザイン・開発："});
+Object.assign(I18N.de, {"credit": "Website gestaltet &amp; entwickelt von"});
+Object.assign(I18N.fr, {"credit": "Site conçu et développé par"});
 
 
 /* ===== Edit these details ===== */
