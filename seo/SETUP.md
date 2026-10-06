@@ -3,7 +3,7 @@
 The agent can only report what it can see. Each tool below needs a one-time
 setup by the owner. Tick the box when done and add any IDs.
 
-## 1. Google Search Console  [ ] not done
+## 1. Google Search Console  [~] ownership file added (google963066ade0abd581.html); add sitemap + weekly exports
 Shows which searches bring people, and your ranking.
 1. https://search.google.com/search-console -> Add property -> Domain
    -> thirdskin.online (verify via a DNS TXT record at your domain provider).

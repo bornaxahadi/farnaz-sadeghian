@@ -7,3 +7,4 @@
 | 2026-10-06 | Scope changed to English page only | .claude/agents/seo-agent.md, seo/ |
 | 2026-10-06 | Full autonomy: agent publishes directly to main, no approvals | .claude/agents/seo-agent.md, seo/SETUP.md |
 | 2026-10-06 | Added daily health + speed check and auto-fix | seo/TASKS.md, .claude/agents/seo-agent.md |
+| 2026-10-06 | Agent files published to main; noted Search Console verification file | .claude/, seo/ |
