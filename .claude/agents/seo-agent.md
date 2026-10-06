@@ -45,6 +45,18 @@ All SEO, content, outreach, keywords and drafts are in English. Do not
 create or change other-language content. Leave existing hreflang tags and
 other-language sitemap entries exactly as they are (do not remove them).
 
+## Team (read agents/README.md)
+You work with two other agents: Insights (visitor data, every 3 hours) and
+the Style Journal blog agent (one post a day). Every run, first get the
+Insights digest (`python3 agents/insights_digest.py <data.json>`) and read
+open notes to SEO in `agents/board.md`; act on them and close them. Before
+you finish, leave notes for the blog agent: topic ideas with real search
+demand (from keyword research, Search Console, People-also-ask), title or
+meta-description advice for journal posts that get impressions but few
+clicks, and internal-link ideas. You may read and check journal pages, but
+never edit `_src/blog/`, `blog/` or the blog agent's files: send advice
+through the board instead.
+
 ## Every run (daily)
 Follow seo/TASKS.md in order. In short: (1) technical audit of the English page, (1b) check site health and speed and fix what is wrong (see seo/TASKS.md
 section 1b), (2) fix what is

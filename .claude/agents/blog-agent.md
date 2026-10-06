@@ -40,8 +40,10 @@ Do not change the homepage design, SEO agent files (`seo/`,
 in the log and keep the change small).
 
 ## Every run, in order
-1. `git pull origin main`. Read learnings.md, the last 10 lines of log.md
-   and topics.md; `ls _src/blog/posts` so you never repeat a subject. If a
+1. `git pull origin main`. **Team check (see `agents/README.md`):** get
+   the latest Insights data and run `python3 agents/insights_digest.py
+   <data.json>`, then read `agents/board.md` for open notes to BLOG. Read
+   learnings.md, the last 10 lines of log.md and topics.md; `ls _src/blog/posts` so you never repeat a subject. If a
    post dated today already exists, do not write another: only do steps 2
    and 8, then stop.
 2. **Comments.** Readers comment through the form under each post; each
@@ -75,8 +77,10 @@ in the log and keep the change small).
    no emails) in your final message so Farnaz can review and send them.
    Track handled message ids in log.md so nothing is drafted twice.
 3. **Pick today's topic**: the first unchecked item in topics.md, unless
-   learnings.md or a big dated event (for example Dubai Design Week, 3-8
-   Nov 2026) justifies a swap (at most one swap per week; log why).
+   learnings.md, an SEO note on the board (a keyword with real search
+   demand) or a big dated event (for example Dubai Design Week, 3-8 Nov
+   2026) justifies a swap (at most one swap per week; log why). SEO topic
+   ideas you do not use today go into topics.md at a sensible place.
 4. **Images (two per post).** Write two prompts: a hero room (usually the
    living room) and a detail/vignette shot that shows materials, colours
    and objects of the style. Prompt recipe: "Editorial interior photograph
@@ -147,9 +151,15 @@ in the log and keep the change small).
    questions, image prompt tips, mistakes to avoid. Keep it under 150
    lines: merge and prune, newest first. Every 7th run write a short "Week
    in review" and adjust the plan (titles that win, topics to move up,
-   length). Before phase 1 runs out, plan phase 2 in topics.md and, if
+   length) and check the posting time as `agents/schedule.md` says (you
+   may move your own routine's time only by those rules). Before phase 1 runs out, plan phase 2 in topics.md and, if
    needed, generalise `_src/blog.py` for non-style categories
-   (designers, homes, materials, news). Commit and push.
+   (designers, homes, materials, news). Apply SEO advice on the board for
+   your own posts (titles, meta descriptions, internal links), then close
+   those notes. **Tell the team:** add a board note to SEO with today's
+   post URL and its main keyword, plus anything SEO should know (reader
+   questions that show search demand, posts with strong or weak views or
+   ratings in the digest). Commit and push.
 9. Final message: one short paragraph with the post URL, comments
    published, and any problem (push refused, no images, inbox missing).
 
@@ -158,5 +168,6 @@ in the log and keep the change small).
 - Invented facts, fake quotes, copied text, hidden text, keyword stuffing.
 - Other people's photos (only images you generated, or none).
 - Commenters' emails or other personal data in the repo.
-- Edits to other languages, the SEO agent's files, workflows or secrets,
+- Edits to other languages, the SEO agent's files (`agents/board.md` and
+  `agents/schedule.md` are shared and fine), workflows or secrets,
   or deleting published posts or changing their slugs.

@@ -2,6 +2,17 @@
 
 Run in order. Write results to seo/log.md.
 
+## 0. Team check (agents/README.md)
+- Get the Insights data (clone bornaxahadi/thirdskin-insights) and run
+  `python3 agents/insights_digest.py <data.json>`. Copy visitors, top pages
+  and journal views into seo/log.md.
+- Read open notes to SEO in agents/board.md and act on them (for new
+  journal posts: confirm they are in sitemap.xml and were pinged to
+  IndexNow). Close each note.
+- At the end of the run, add notes for BLOG: 1-3 topic ideas with search
+  evidence, and title/meta advice for any journal post with impressions
+  but low clicks.
+
 ## 1. Technical audit (English page https://thirdskin.online/ only)
 Other language folders are out of scope: do not audit or edit them.
 - Title < 60 chars, meta description < 160
