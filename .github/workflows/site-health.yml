@@ -1,0 +1,37 @@
+name: Daily site health and speed
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # 06:00 Dubai, before the SEO agent runs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-health
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check live site and run Lighthouse
+        id: health
+        run: python3 .github/scripts/health.py
+        continue-on-error: true
+      - name: Save results to the repo
+        run: |
+          git config user.name "site-health-bot"
+          git config user.email "site-health-bot@users.noreply.github.com"
+          git add seo/data/health-latest.md seo/data/health-latest.json seo/data/health-history.csv
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "Daily site health and speed report"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break || sleep 5; done
+      - name: Fail loudly if the site is unhealthy (GitHub emails the owner)
+        if: steps.health.outcome == 'failure'
+        run: |
+          echo "Site health check failed. See seo/data/health-latest.md"
+          exit 1

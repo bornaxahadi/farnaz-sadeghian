@@ -16,18 +16,31 @@ Other language folders are out of scope: do not audit or edit them.
   that the live page matches the repo
 
 ## 1b. Website health and speed (every day)
+SOURCE OF TRUTH: your sandbox usually cannot reach thirdskin.online, so do NOT
+rely on WebFetch/curl for the live site or PageSpeed. A GitHub Action
+(.github/workflows/site-health.yml) checks the live site and runs Lighthouse
+every day at 06:00 Dubai and commits the results to:
+- seo/data/health-latest.md   (read this first; human-readable)
+- seo/data/health-latest.json (details)
+- seo/data/health-history.csv (trend: is speed getting better or worse?)
+Read them, copy the key numbers into seo/log.md, and act on anything wrong
+(non-200 URL, performance below 90, LCP over 2.5 s, CLS over 0.1, failed
+audits listed). If health-latest.md is missing or older than 2 days, the
+Action is broken: note it in the log and read .github/workflows/site-health.yml
+and recent Actions runs (GitHub tools) to find out why, then fix it.
 Health (live site, https://thirdskin.online/):
 - HTTP 200 for /, /sitemap.xml, /robots.txt, /llms.txt, /manifest.webmanifest,
   /sw.js, /media-kit.pdf; HTTPS valid; no redirect loops; CNAME intact
+  (the Action already tests these URLs)
 - Every <img>, <script>, <link> and internal #anchor on the English page
   resolves (no 404s); no JavaScript errors in app.js logic you can see
 - Structured data and HTML still parse after yesterday's changes
 Speed:
-- Run Google PageSpeed Insights (mobile + desktop):
-  https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://thirdskin.online/&strategy=mobile
-  Record performance score, LCP, CLS, INP/TBT, page weight in seo/log.md
-- Known heavy files (fix first): img/third-skin-animated-logo.gif (~1.8 MB),
-  JPG images that have WebP twins, index.html (~190 KB)
+- Use the Lighthouse numbers in seo/data/health-latest.md (mobile + desktop).
+  Record performance score, LCP, CLS, TBT, page weight in seo/log.md
+- Heavy files to look at: JPG images that have WebP twins, index.html
+  (~190 KB). img/third-skin-animated-logo.gif (~1.8 MB) is unused: it does not
+  slow visitors, so leave it unless the owner removes it.
 Fix automatically when something is wrong:
 - Convert/resize oversized images to WebP (keep the original file name base,
   update references, keep the old file until the new one is verified live)

@@ -54,9 +54,11 @@ email signup, (5) find 3-5 new real-traffic opportunities and draft posts
 
 ## Health and speed
 Every day check the live site is up and fast (broken links/images, HTTP
-status, PageSpeed Insights score, image weight). If anything is wrong, fix
-it yourself and verify, or revert if it made things worse. Details in
-seo/TASKS.md section 1b.
+status, Lighthouse score, image weight). Your sandbox cannot reach the live
+site, so read the results of the daily GitHub Action in
+seo/data/health-latest.md (and health-history.csv for the trend). If
+anything is wrong, fix it yourself, or revert if it made things worse.
+Details in seo/TASKS.md section 1b.
 
 ## Autonomy: decide and publish yourself
 The owner wants a fully automatic agent. Do not ask questions and do not
