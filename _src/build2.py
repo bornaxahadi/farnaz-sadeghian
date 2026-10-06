@@ -109,7 +109,8 @@ def headmeta(lang, prefix):
     ogalts = '\n'.join(f'<meta property="og:locale:alternate" content="{OG_LOCALE[l]}">' for l in LANGS if l != lang)
     geo = ("<script>(function(){try{if(location.hash||localStorage.getItem('dwf-lang'))return;"
            "if(Intl.DateTimeFormat().resolvedOptions().timeZone==='Asia/Tehran')location.replace('fa/'+location.search)}catch(e){}})()</script>\n") if lang == 'en' else ''
-    return geo + f'''<title>{title}</title>
+    return geo + f'''<meta name="msvalidate.01" content="1018AD3EBC6FFB01FED16CB0AD633B59">
+<title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="author" content="Farnaz Sadeghian">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -376,3 +377,5 @@ ul{padding-inline-start:22px} li{margin:4px 0}
 '''
 os.makedirs('dist/privacy', exist_ok=True)
 open('dist/privacy/index.html', 'w').write(PRIVACY)
+
+open('dist/BingSiteAuth.xml','w').write('<?xml version="1.0"?>\n<users>\n\t<user>1018AD3EBC6FFB01FED16CB0AD633B59</user>\n</users>')
