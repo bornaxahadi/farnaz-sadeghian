@@ -525,3 +525,12 @@ renderCounts();
   }, { rootMargin: '200px' });
   io2.observe(box.closest('footer') || box);
 })();
+
+/* ---------- analytics: which parts of the page people reach (for the Insights site map) ---------- */
+(function sectionViews() {
+  if (!('IntersectionObserver' in window)) return;
+  const seen = new Set(), map = [['.hero', 'hero'], ['#studio', 'studio'], ['#audience', 'audience'], ['#about', 'about'], ['#transform', 'transform'], ['#learn', 'learn'], ['#book', 'book'], ['#collab', 'collab'], ['#faq', 'faq'], ['#contact', 'contact'], ['footer', 'footer']];
+  const so = new IntersectionObserver(es => es.forEach(e => { const k = e.target.dataset.sec; if (e.isIntersecting && !seen.has(k)) { seen.add(k); so.unobserve(e.target); track('sec_' + k, { section: k }); } }), { rootMargin: '-45% 0px -45% 0px' });
+  const fo = new IntersectionObserver(es => es.forEach(e => { if (e.intersectionRatio >= .5 && !seen.has('footer')) { seen.add('footer'); fo.disconnect(); track('sec_footer', { section: 'footer' }); } }), { threshold: .5 });
+  map.forEach(([s, k]) => { const el = document.querySelector(s); if (el) { el.dataset.sec = k; (k === 'footer' ? fo : so).observe(el); } });
+})();
