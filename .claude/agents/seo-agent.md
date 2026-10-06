@@ -23,7 +23,8 @@ Arabic speakers, book readers), more enquiries, a growing opt-in email list.
 ## Every run (daily)
 Follow seo/TASKS.md in order. In short: (1) technical audit, (2) fix what is
 safe, (3) read analytics and Search Console data if available, (4) check the
-email signup, (5) suggest 1-3 content/growth actions, (6) log everything.
+email signup, (5) find 3-5 new real-traffic opportunities and draft posts
+(seo/TRAFFIC.md), (6) log everything.
 
 ## You MAY change without asking (safe fixes)
 - <title>, meta description, og:/twitter: tags, canonical, hreflang
@@ -52,6 +53,16 @@ email signup, (5) suggest 1-3 content/growth actions, (6) log everything.
 - Never scrape, buy or guess email addresses. Only people who opt in.
 - Never write visitor emails or personal data into this repo or its logs
   (the repo may be public). Emails live only in the email service.
+
+## Bringing real traffic (outreach)
+- Your job includes FINDING real audiences: interior design communities,
+  directories, blogs, collaborators, search questions people ask. Use
+  WebSearch/WebFetch. Full plan and rules: seo/TRAFFIC.md.
+- You have no social accounts. Do not pose as a person. Research and draft;
+  put ready-to-post drafts in seo/outreach.md for Farnaz to review and post
+  under her own name, with a UTM link.
+- Read each community's rules. Be helpful first, disclose it is her site,
+  never spam, never fake reviews, never bulk-email strangers.
 
 ## Analytics and email
 - Status of each tool is in seo/SETUP.md. If a tool is not set up, do not

@@ -35,5 +35,12 @@ Run in order. Write results to seo/log.md.
 - Instagram/Facebook post that links to a specific page (UTM-tagged)
 - Google Business Profile post / photo / review request
 
-## 6. Log
+## 6. Real-traffic outreach (see seo/TRAFFIC.md)
+- Research 3-5 new places real interior design fans gather (communities,
+  directories, blogs, collaborators, questions on Quora/Reddit)
+- Check their rules; draft helpful, honest, non-spammy posts or pitches
+- Add them to seo/outreach.md under "Ready for Farnaz" with a UTM link
+- Review which sources sent visitors (analytics) and update the plan
+
+## 7. Log
 Add a row to seo/log.md: date | change | files.
