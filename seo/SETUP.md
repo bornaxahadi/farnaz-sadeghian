@@ -17,16 +17,16 @@ setup by the owner. Tick the box when done and add any IDs.
 - Microsoft Clarity (heatmaps): [ ] owner must sign in once at clarity.microsoft.com; then put the project id in _src/app.part CONFIG.clarityId and rebuild.
 - Export a weekly CSV into seo/data/ (or share dashboard numbers).
 
-## 3. Email list  [ ] not done
-Recommended: Brevo, MailerLite or Buttondown (free tiers, hosted form
-endpoint, handle unsubscribe + legal). The existing contact form
-(formEndpoint in index.html) is NOT a newsletter list.
-- Service chosen: ________   Form URL: ________
-- Signup form must include: consent checkbox, privacy link, English page
-- A privacy page is needed (what you collect, why, how to unsubscribe).
-  Visitors from the EU (GDPR) and UAE (PDPL) are covered by this.
-- Idea for more signups: free PDF, e.g. "5 mistakes that make a room look
-  smaller" or a chapter of "Soul of the Room".
+## 3. Email list  [~] working, upgrade optional
+- Now: the "Join the launch list" form on every language page collects name + email with a REQUIRED consent checkbox
+  (records "opted in on <date> (<language>)") and a link to the privacy page https://thirdskin.online/privacy/.
+  Sign-ups arrive in Farnaz's inbox through FormSubmit (same service as the inquiry form). FormSubmit must be
+  activated for thirdskin.online once (click "Activate Form" in its email). GA4 event: sign_up.
+- Upgrade later (owner signs up once, free): MailerLite or Brevo for a real newsletter with unsubscribe links.
+  When a form/endpoint URL exists, write it here; the agent then points the launch form at it.
+- Service chosen: FormSubmit (interim)   Form URL: https://formsubmit.co/ajax/2b4ca41127912ca3bbac2accd0ee54b0
+- Privacy page: [x] https://thirdskin.online/privacy/ (English; source in _src/build2.py, PRIVACY)
+- Lead-magnet idea: free PDF, e.g. "5 mistakes that make a room look smaller" or a chapter of "Soul of the Room".
 
 ## 4. Google Business Profile  [ ] not done
 Biggest local-SEO win for "interior designer Dubai". Same name, phone, city
