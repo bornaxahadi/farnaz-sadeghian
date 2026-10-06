@@ -6,12 +6,15 @@ import json, re, os, shutil, subprocess, html, datetime
 SITE = 'https://thirdskin.online/'
 LANGS = ['en', 'fa', 'ar', 'ru', 'es', 'it', 'zh', 'ja', 'de', 'fr']
 OG_LOCALE = {'en': 'en_US', 'fa': 'fa_IR', 'ar': 'ar_AE', 'ru': 'ru_RU', 'es': 'es_ES', 'it': 'it_IT', 'zh': 'zh_CN', 'ja': 'ja_JP', 'de': 'de_DE', 'fr': 'fr_FR'}
-CACHE = 'tsi-v38'
+CACHE = 'tsi-v39'
 TODAY = datetime.date.today().isoformat()
 
 # ---------- sources ----------
 head = open('head.part').read()
 body = open('body.part').read()
+import blog
+BLOG_HOME, BLOG_SM, BLOG_POSTS = blog.build(SITE)
+body = body.replace('@@BLOGCARDS@@', BLOG_HOME)
 app = open('app.part').read().replace('SCENES_HERE', open('scenes.part').read())
 i18n_src = open('i18n.js').read()
 subprocess.run(['node', '-e', """
@@ -178,6 +181,7 @@ def relink(s, prefix):
     s = re.sub(r'''(["'(])(img|fonts)/''', r'\1' + prefix + r'\2/', s)
     s = s.replace('href="media-kit.pdf"', 'href="' + prefix + 'media-kit.pdf"')
     s = s.replace('href="privacy/"', 'href="' + prefix + 'privacy/"')
+    s = re.sub(r'''(["' ])blog/''', r'\1' + prefix + 'blog/', s)
     return s
 
 os.makedirs('dist', exist_ok=True)
@@ -193,7 +197,7 @@ for lang in LANGS:
             '<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">\n'
             + head_min.replace('<!--HEADMETA-->', headmeta(lang, prefix)).replace('<!--FONTS-->', font_loader(lang)) + '</head>\n<body>\n'
             + prerender(body_min, lang) + '\n<script>' + js + '</script>\n<script>(function(){var go=function(){var s=document.createElement("script");s.src="' + prefix + 'app.js?v=' + APPV + '";document.body.appendChild(s)};var later=function(){requestAnimationFrame(function(){setTimeout(go,60)})};if(document.readyState==="complete")later();else addEventListener("load",later,{once:true})})()</script>\n</body>\n</html>\n')
-    page = relink(page, prefix)
+    page = relink(page.replace('@@READ@@', t(lang, 'blogRead')), prefix)
     out = 'dist/index.html' if lang == 'en' else f'dist/{lang}/index.html'
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w').write(page)
@@ -215,7 +219,7 @@ shutil.rmtree('dist/img', ignore_errors=True); os.makedirs('dist/img')
 for f in sorted(used):
     src = 'img/' + f if os.path.exists('img/' + f) else 'img-src/' + f
     if os.path.exists(src): shutil.copy(src, 'dist/img/' + f)
-    else: print('missing image', f)
+    elif not os.path.exists('blog/img/' + f): print('missing image', f)
 shutil.rmtree('dist/fonts', ignore_errors=True); shutil.copytree('fonts', 'dist/fonts', ignore=shutil.ignore_patterns('*.css'))
 
 # ---------- manifest, service worker ----------
@@ -263,7 +267,7 @@ urls += f'''
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>'''
-open('dist/sitemap.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">{urls}\n</urlset>\n')
+open('dist/sitemap.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">{urls}{BLOG_SM}\n</urlset>\n')
 open('dist/robots.txt', 'w').write(f"""# Everyone is welcome, search engines and AI assistants alike
 User-agent: *
 Allow: /
