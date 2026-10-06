@@ -23,4 +23,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://bornaxahadi.github.io/farnaz-sadeghian/sitemap.xml
+Sitemap: https://thirdskin.online/sitemap.xml
