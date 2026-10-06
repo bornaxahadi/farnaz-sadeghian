@@ -300,4 +300,10 @@
     <image:image><image:loc>https://thirdskin.online/img/feed-bathroom.webp</image:loc></image:image>
     <image:image><image:loc>https://thirdskin.online/img/book-open.webp</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://thirdskin.online/privacy/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
