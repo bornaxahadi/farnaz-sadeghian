@@ -901,5 +901,26 @@ html:not(.cv-off) main>section:not(.hero),html:not(.cv-off) footer{content-visib
 .launch .consent{display:flex!important;flex-direction:row!important;gap:10px;align-items:flex-start;font:400 13px/1.45 var(--f-body)!important;text-transform:none!important;letter-spacing:0!important;color:var(--muted)!important;text-align:start;margin:4px 0 2px;cursor:pointer}
 .launch .consent input{width:18px!important;height:18px!important;min-height:0!important;padding:0!important;border-radius:4px!important;flex:none;margin:1px 0 0!important;accent-color:var(--wine)}
 .launch .consent a{color:var(--wine)}
+.chart{position:relative;border-radius:16px;padding:12px 14px 10px;background:radial-gradient(120% 140% at 100% 0%,#3a1c22 0%,#1d0f12 55%,#160a0d 100%);color:#e9f7f5;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 14px 30px -18px rgba(20,6,9,.7);overflow:hidden;--neon:#3fe0d0;--neon-a:rgba(63,224,208,.32)}
+.chart[data-p="fb"]{--neon:#ff8fa3;--neon-a:rgba(255,143,163,.30)}
+.ch-head{display:flex;justify-content:space-between;align-items:center;font:500 11px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:rgba(233,247,245,.62);margin-bottom:8px}
+.ch-pct{font:700 12px/1 var(--f-body);letter-spacing:.02em;color:var(--neon);background:rgba(255,255,255,.06);border:1px solid var(--neon-a);border-radius:999px;padding:5px 9px;text-shadow:0 0 10px var(--neon-a)}
+.ch-plot{position:relative;height:clamp(86px,9vw,112px)}
+.ch-plot svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ch-grid path{stroke:rgba(255,255,255,.07);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:2 4}
+.ch-s1{stop-color:var(--neon);stop-opacity:.38}.ch-s2{stop-color:var(--neon);stop-opacity:0}
+.ch-area{opacity:0;transition:opacity 1.2s ease 1.2s}
+.ch-glow{fill:none;stroke:var(--neon);stroke-width:9;opacity:.16;vector-effect:non-scaling-stroke;stroke-linecap:round}
+.ch-line{fill:none;stroke:var(--neon);stroke-width:2.4;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s cubic-bezier(.3,0,.2,1) .2s}
+.ch-dot{position:absolute;right:-5px;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 3px rgba(255,255,255,.12),0 0 14px 2px var(--neon);opacity:0;transition:opacity .4s 2.3s}
+.ch-dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--neon);opacity:0}
+.ch-scan{position:absolute;top:0;bottom:0;left:0;width:38%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07) 80%,var(--neon-a) 99%,transparent);opacity:0;transform:translateX(-100%);pointer-events:none}
+.ch-axis{display:flex;justify-content:space-between;margin-top:7px;font:500 10.5px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:rgba(233,247,245,.5)}
+.pcard.go .ch-area{opacity:1}.pcard.go .ch-line{stroke-dashoffset:0}.pcard.go .ch-dot{opacity:1}
+.pcard.go .ch-dot::after{animation:ch-ping 2.2s ease-out 2.6s infinite}
+.pcard.go .ch-scan{animation:ch-scan 5.5s cubic-bezier(.45,0,.55,1) 2.8s infinite}
+@keyframes ch-ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.2);opacity:0}}
+@keyframes ch-scan{0%{transform:translateX(-100%);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(265%);opacity:0}}
+@media (prefers-reduced-motion:reduce){.ch-scan,.ch-dot::after{animation:none!important;display:none}}
 </style>
 
