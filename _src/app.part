@@ -493,3 +493,35 @@ document.readyState === 'complete' ? goReady() : addEventListener('load', goRead
 { const L0 = detectLang(); applyLang(L0, false, L0 === PAGE_LANG && !document.documentElement.dataset.noRoute); }
 addEventListener('hashchange', () => { const h = location.hash.slice(1).toLowerCase(); if (LANGS.includes(h)) { if (document.documentElement.dataset.noRoute) applyLang(h, true); else if (h !== PAGE_LANG) location.href = langUrl(h); } });
 renderCounts();
+
+
+/* ---------- footer: tiny live stats ticker (data from the Third Skin Insights dashboard) ---------- */
+(function footStats() {
+  const box = document.getElementById('fstats'), track = document.getElementById('fsTrack');
+  if (!box || !('IntersectionObserver' in window) || document.documentElement.dataset.noRoute) return;
+  const flagOf = cc => (cc && /^[A-Za-z]{2}$/.test(cc)) ? String.fromCodePoint(...[...cc.toUpperCase()].map(c => 0x1F1E6 + c.charCodeAt(0) - 65)) : '';
+  const nf = n => Number(n || 0).toLocaleString(PAGE_LANG === 'fa' ? 'fa-IR' : PAGE_LANG === 'ar' ? 'ar-AE' : 'en-US');
+  const short = n => n >= 1e3 ? nf(Math.round(n / 1e3)) + 'K' : nf(n);
+  const io2 = new IntersectionObserver(async es => {
+    if (!es.some(e => e.isIntersecting)) return; io2.disconnect();
+    try {
+      const D = await (await fetch('https://bornaxahadi.github.io/thirdskin-insights/data.json', { cache: 'no-cache' })).json();
+      const P = D.periods || {}, td = (P.today || {}).totals || {}, m = (P.d30 || {}).totals || {}, rt = D.realtime || {};
+      const items = [];
+      if (rt.active > 0) items.push(`<span class="fs-live"></span>${nf(rt.active)} ${t('fsOnline')}`);
+      if (td.activeUsers != null) items.push(`${nf(td.activeUsers)} ${t('fsToday')}`);
+      if (m.activeUsers != null) items.push(`${nf(m.activeUsers)} ${t('fs30')}`);
+      if (m.screenPageViews != null) items.push(`${nf(m.screenPageViews)} ${t('fsViews')}`);
+      const cs = ((P.d30 || {}).countries || []).filter(c => c.countryId), tot = cs.reduce((x, c) => x + (+c.activeUsers || 0), 0) || 1;
+      cs.slice(0, 6).forEach(c => items.push(`${flagOf(c.countryId)} ${c.country} ${Math.round(c.activeUsers / tot * 100)}%`));
+      const dv = (P.d30 || {}).devices || [], dt = dv.reduce((x, d) => x + (+d.activeUsers || 0), 0), mob = dv.find(d => d.deviceCategory === 'mobile');
+      if (mob && dt) items.push(`📱 ${Math.round(mob.activeUsers / dt * 100)}% ${t('fsMobile')}`);
+      const s = D.social || {}; if (s.total) items.push(`${short(s.total)} ${t('fsFollowers')}`);
+      if (items.length < 2) return;
+      const row = items.map(x => `<span class="fs-i">${x}</span>`).join('<span class="fs-sep">·</span>');
+      track.innerHTML = `<span class="fs-run">${row}<span class="fs-sep">·</span></span><span class="fs-run" aria-hidden="true">${row}<span class="fs-sep">·</span></span>`;
+      box.hidden = false;
+    } catch (e) { /* stats are optional */ }
+  }, { rootMargin: '200px' });
+  io2.observe(box.closest('footer') || box);
+})();

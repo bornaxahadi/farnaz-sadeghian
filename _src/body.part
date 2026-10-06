@@ -476,6 +476,7 @@
       <a href="privacy/" data-i18n="privacy">Privacy policy</a>
     </span>
     <p class="credit"><span data-i18n="credit">Website designed &amp; developed by</span> <b dir="ltr">Borna Ahadi</b></p>
+    <div class="fstats" id="fstats" aria-label="Live website statistics" hidden><div class="fs-track" id="fsTrack"></div></div>
   </div>
 </footer>
 
