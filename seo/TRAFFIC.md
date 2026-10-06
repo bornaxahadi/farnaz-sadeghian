@@ -20,7 +20,7 @@ visitors (use UTM links, see below) and drop what does not work.
    accounts, or "I found this great designer" posts.
 4. Never copy-paste the same message into many places.
 5. Never email strangers in bulk. Personal one-to-one collaboration pitches only.
-6. Persian/Arabic audiences: write natively; flag machine translations for review.
+6. English only: all drafts, pitches and posts are written in English.
 
 ## UTM links (so analytics shows what works)
 https://thirdskin.online/?utm_source=SOURCE&utm_medium=MEDIUM&utm_campaign=CAMPAIGN
@@ -43,8 +43,7 @@ Example: ...?utm_source=houzz&utm_medium=profile&utm_campaign=dubai-listing
 - Reddit: r/interiordesign, r/DIYUAE or Dubai subs, r/Dubai (check rules)
 - Facebook groups: Dubai expat/home groups, interior design groups
 - Quora: answer real questions on decorating, Dubai, Persian style
-- Telegram/Instagram Persian decor communities and Iranian decor
-  magazines/blogs (e.g. Otag, Pooyano, Decoboom: pitch guest articles)
+- English-language interior design blogs and magazines (pitch guest articles)
 - LinkedIn: post project case studies, connect with developers and brokers
 
 ### C. Collaborations (biggest long-term traffic)
@@ -60,7 +59,7 @@ Example: ...?utm_source=houzz&utm_medium=profile&utm_campaign=dubai-listing
 - "Dubai apartment layout guides" with 3D plans
 - "50 interior styles" series from the book, one page per style
 - Before/after case studies (already have images in /img)
-- Persian-language and Arabic-language guides (little competition)
+- English guides aimed at Dubai/UAE expats and homeowners
 
 ## Tracking
 Weekly add a row to seo/log.md: source | visits | signups | enquiries.

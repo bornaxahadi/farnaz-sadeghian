@@ -16,7 +16,7 @@ Pick ONE. Recommended: Plausible or Cloudflare Web Analytics (simple, no
 cookie banner needed). Or Google Analytics 4 (free, needs cookie consent for
 EU visitors).
 - Tool chosen: ________   Site ID: ________
-- Agent will ask your approval before adding the script to all 10 pages.
+- Agent will ask your approval before adding the script to the English page.
 - Export a weekly CSV into seo/data/ (or share dashboard numbers).
 
 ## 3. Email list  [ ] not done
@@ -24,7 +24,7 @@ Recommended: Brevo, MailerLite or Buttondown (free tiers, hosted form
 endpoint, handle unsubscribe + legal). The existing contact form
 (formEndpoint in index.html) is NOT a newsletter list.
 - Service chosen: ________   Form URL: ________
-- Signup form must include: consent checkbox, privacy link, all 10 languages
+- Signup form must include: consent checkbox, privacy link, English page
 - A privacy page is needed (what you collect, why, how to unsubscribe).
   Visitors from the EU (GDPR) and UAE (PDPL) are covered by this.
 - Idea for more signups: free PDF, e.g. "5 mistakes that make a room look

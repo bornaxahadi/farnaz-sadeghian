@@ -2,17 +2,18 @@
 
 Run in order. Write results to seo/log.md.
 
-## 1. Technical audit (all 10 languages)
-- Title < 60 chars, meta description < 160, unique per language
-- canonical, hreflang (10 + x-default), html lang/dir (rtl for fa, ar)
+## 1. Technical audit (English page https://thirdskin.online/ only)
+Other language folders are out of scope: do not audit or edit them.
+- Title < 60 chars, meta description < 160
+- canonical, html lang="en" (leave existing hreflang tags untouched)
 - og:* and twitter:* tags, og-image exists
 - One H1, logical H2/H3
 - Images: alt text, width/height, WebP, lazy-loading
 - JSON-LD valid and matches visible text
-- sitemap.xml URLs all exist; update lastmod only for pages changed today
+- sitemap.xml: update lastmod only for the English URL when it changed
 - robots.txt allows crawlers; llms.txt facts match the site
-- Live check: WebFetch https://thirdskin.online/ and each language page,
-  confirm HTTP 200 and that the live page matches the repo
+- Live check: WebFetch https://thirdskin.online/, confirm HTTP 200 and
+  that the live page matches the repo
 
 ## 2. Fix safe items (see "MAY change" in the agent file)
 
@@ -23,7 +24,7 @@ Run in order. Write results to seo/log.md.
   low click-through rate -> rewrite title/description
 
 ## 4. Email signup
-- Confirm the signup form exists in every language page and has consent
+- Confirm the signup form exists on the English page and has consent
   checkbox and privacy link
 - Report signup count if the owner supplied it
 - Suggest one improvement (placement, lead magnet, wording)
