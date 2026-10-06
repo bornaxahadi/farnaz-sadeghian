@@ -16,7 +16,7 @@ Pick ONE. Recommended: Plausible or Cloudflare Web Analytics (simple, no
 cookie banner needed). Or Google Analytics 4 (free, needs cookie consent for
 EU visitors).
 - Tool chosen: ________   Site ID: ________
-- Agent will ask your approval before adding the script to the English page.
+- Once the Site ID is filled in here, the agent adds the script to the English page itself.
 - Export a weekly CSV into seo/data/ (or share dashboard numbers).
 
 ## 3. Email list  [ ] not done
