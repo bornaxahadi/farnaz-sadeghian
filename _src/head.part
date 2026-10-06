@@ -220,6 +220,7 @@ footer a{text-decoration:none}
 .js .reveal.pending{opacity:.001;transform:translateY(24px)}
 
 /* language menu */
+.nav-jr{display:none}@media (max-width:1180px){.nav-links{gap:20px}.nav-links .nl-opt{display:none}}@media (max-width:1060px){.nav-links{gap:14px}.nav-links a{font-size:13px;letter-spacing:.03em}.nav-links .nl-opt2{display:none}}@media (max-width:860px){.nav-jr{display:inline-flex;align-items:center;padding:8px 14px;border:1px solid rgba(86,28,36,.25);border-radius:999px;font-size:13px;letter-spacing:.04em;color:var(--wine);text-decoration:none;white-space:nowrap}}
 .nav-right{display:flex;align-items:center;gap:10px}
 .lang{position:relative}
 .lang-btn{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font:400 13px/1 var(--f-body);color:var(--ink);cursor:pointer}
