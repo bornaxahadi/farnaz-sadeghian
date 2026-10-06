@@ -2,7 +2,7 @@
 /* ===== Edit these details ===== */
 const CONFIG = {
   gaId: "G-MZWRKFNXNN",
-  clarityId: "",                          // Microsoft Clarity project id (heatmaps & recordings)                  // Google Analytics 4 (property "Third Skin Interiors - thirdskin.online")
+  clarityId: "yteq8bnfw0",                          // Microsoft Clarity project id (heatmaps & recordings)                  // Google Analytics 4 (property "Third Skin Interiors - thirdskin.online")
   whatsapp: "971521235012",              // Farnaz's WhatsApp, digits only with country code
   whatsappDisplay: "+971 52 123 5012",   // how the number is shown
   email: "decorwithfarnaz@gmail.com",    // Farnaz's email (swap for a domain email later)
