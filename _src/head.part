@@ -898,5 +898,8 @@ html:not(.cv-off) main>section:not(.hero),html:not(.cv-off) footer{content-visib
 .ck button{font:500 13px/1 var(--f-body);border-radius:999px;padding:9px 16px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink)}
 .ck .ck-ok{background:var(--wine);border-color:var(--wine);color:#fff}
 @media (max-width:520px){.ck{left:12px;right:84px;bottom:12px;max-width:none}[dir="rtl"] .ck{left:84px;right:12px}}
+.launch .consent{display:flex!important;flex-direction:row!important;gap:10px;align-items:flex-start;font:400 13px/1.45 var(--f-body)!important;text-transform:none!important;letter-spacing:0!important;color:var(--muted)!important;text-align:start;margin:4px 0 2px;cursor:pointer}
+.launch .consent input{width:18px!important;height:18px!important;min-height:0!important;padding:0!important;border-radius:4px!important;flex:none;margin:1px 0 0!important;accent-color:var(--wine)}
+.launch .consent a{color:var(--wine)}
 </style>
 

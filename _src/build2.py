@@ -176,6 +176,7 @@ def relink(s, prefix):
     if not prefix: return s
     s = re.sub(r'''(["'(])(img|fonts)/''', r'\1' + prefix + r'\2/', s)
     s = s.replace('href="media-kit.pdf"', 'href="' + prefix + 'media-kit.pdf"')
+    s = s.replace('href="privacy/"', 'href="' + prefix + 'privacy/"')
     return s
 
 os.makedirs('dist', exist_ok=True)
@@ -254,6 +255,13 @@ urls = ''.join(f'''
     <priority>{"1.0" if l == "en" else "0.8"}</priority>{alt_links()}
     <image:image><image:loc>{SITE}img/og-image.jpg</image:loc></image:image>{img_entries(l)}
   </url>''' for l in LANGS)
+urls += f'''
+  <url>
+    <loc>{SITE}privacy/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>'''
 open('dist/sitemap.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">{urls}\n</urlset>\n')
 open('dist/robots.txt', 'w').write(f"""# Everyone is welcome, search engines and AI assistants alike
 User-agent: *
@@ -327,3 +335,44 @@ print('done', len(used), 'images')
 open('dist/CNAME','w').write('thirdskin.online\n')
 open('dist/google963066ade0abd581.html','w').write('google-site-verification: google963066ade0abd581.html')
 open('dist/1498d818f79a545bad7ebe2081055ab2.txt','w').write('1498d818f79a545bad7ebe2081055ab2')
+
+# ---------- privacy page (English) ----------
+PRIVACY = '''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy | Third Skin Interiors</title>
+<meta name="description" content="How thirdskin.online (Farnaz Sadeghian, Third Skin Interiors, Dubai) handles contact messages, email sign-ups, analytics and cookies.">
+<link rel="canonical" href="https://thirdskin.online/privacy/"><meta name="robots" content="index, follow">
+<link rel="icon" href="../img/icon.svg" type="image/svg+xml">
+<style>
+:root{--cream:#F5EDE2;--ink:#2B1517;--muted:#6B5A57;--wine:#6D2932;--line:#E3D5C6}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.7 "Avenir Next","Segoe UI",system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:48px 20px 80px}
+a{color:var(--wine)} h1{font:500 40px/1.15 Georgia,serif;margin:0 0 6px} h2{font:500 22px/1.3 Georgia,serif;margin:34px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin-bottom:28px} .back{display:inline-block;margin-bottom:28px;text-decoration:none;font-size:14px}
+ul{padding-inline-start:22px} li{margin:4px 0}
+</style></head><body><main>
+<a class="back" href="../">&larr; thirdskin.online</a>
+<h1>Privacy policy</h1>
+<p class="meta">Third Skin Interiors by Farnaz Sadeghian · Dubai, UAE · Last updated 6 October 2026</p>
+<p>This page explains what information this website collects, why, and what you can do about it. We keep it simple: we only collect what we need to answer you and to understand how the site is used. We never sell your data.</p>
+<h2>Who we are</h2>
+<p>This website is run by Farnaz Sadeghian (Third Skin Interiors, Decor with Farnaz), Dubai, United Arab Emirates. Contact: <a href="mailto:decorwithfarnaz@gmail.com">decorwithfarnaz@gmail.com</a>.</p>
+<h2>Messages you send us</h2>
+<p>When you use the inquiry form, we receive your name, email and message, and the company and phone number if you add them. The form is delivered to our email inbox by the FormSubmit service. We use these details only to reply to you and to work on your request. If the form cannot be sent, the site lets you send the same text by WhatsApp or copy it; WhatsApp is run by Meta under its own privacy policy.</p>
+<h2>Book launch list</h2>
+<p>If you join the <em>Soul of the Room</em> launch list, we receive your name and email, and we record that you ticked the consent box and when. We use it only to tell you about the book and Farnaz's news. Every email lets you unsubscribe, or you can write to us and we will remove you.</p>
+<h2>Analytics and cookies</h2>
+<ul>
+<li><b>Google Analytics 4</b> helps us see how many people visit, from which countries, and which parts of the site they use (for example page views, clicks on WhatsApp or the media kit, and forms sent). It uses cookies. We do not use advertising or ad-personalisation cookies.</li>
+<li>Visitors in Europe are asked first: analytics cookies are only used if you press <b>Accept</b>. You can change your choice by clearing this site's data in your browser.</li>
+<li>We may also use <b>Microsoft Clarity</b> to see anonymous heatmaps of where people tap and scroll, under the same consent rules.</li>
+<li>The site stores small settings in your browser (your language choice and your cookie choice). These are not shared with anyone.</li>
+</ul>
+<h2>Hosting</h2>
+<p>The site is hosted on GitHub Pages, which may keep technical logs (such as IP addresses) for security, under GitHub's privacy statement.</p>
+<h2>Your choices</h2>
+<p>You can ask us what information we hold about you, ask us to correct or delete it, or unsubscribe at any time by emailing <a href="mailto:decorwithfarnaz@gmail.com">decorwithfarnaz@gmail.com</a>.</p>
+</main></body></html>
+'''
+os.makedirs('dist/privacy', exist_ok=True)
+open('dist/privacy/index.html', 'w').write(PRIVACY)

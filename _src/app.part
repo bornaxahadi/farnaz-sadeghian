@@ -278,8 +278,9 @@ lf.addEventListener('submit', async e => {
   e.preventDefault();
   const d = Object.fromEntries(new FormData(lf)), err = $('#launchErr');
   if (!d.name.trim() || !validEmail(d.email)) { err.textContent = t('lErr'); return; }
+  if (!d.consent) { err.textContent = t('lConsentErr'); return; }
   err.textContent = ''; const btn = lf.querySelector('button[type="submit"]'); busy(btn, true);
-  const ok = await deliver({ Name: d.name, Email: d.email, List: 'Soul of the Room · launch list', _replyto: d.email, _honey: d._honey }, `Book launch list: ${d.name}`); track(ok ? 'sign_up' : 'sign_up_fallback', { method: 'book_launch_list' });
+  const ok = await deliver({ Name: d.name, Email: d.email, List: 'Soul of the Room · launch list', Consent: 'Yes – opted in on ' + new Date().toISOString().slice(0, 10) + ' (' + LANG + ')', _replyto: d.email, _honey: d._honey }, `Book launch list: ${d.name}`); track(ok ? 'sign_up' : 'sign_up_fallback', { method: 'book_launch_list' });
   busy(btn, false);
   if (ok) { lf.reset(); $('#launchForm').hidden = true; $('#launchDone').hidden = false; }
   else {

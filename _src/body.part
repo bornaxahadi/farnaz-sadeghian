@@ -448,10 +448,11 @@
     <form id="launchF" novalidate>
       <label><span data-i18n="fName">Name</span><input name="name" autocomplete="name" required></label>
       <label><span data-i18n="fEmail">Email</span><input name="email" type="email" autocomplete="email" required dir="ltr"></label>
+      <label class="consent"><input type="checkbox" name="consent" value="yes" required><span><span data-i18n="lConsent">I agree to get emails from Farnaz about the book and new decor ideas. I can unsubscribe at any time.</span> <a href="privacy/" target="_blank" data-i18n="privacy">Privacy policy</a></span></label>
       <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="err" id="launchErr" role="alert"></p>
       <button class="btn btn-solid" type="submit"><span data-i18n="lBtn">Join the list</span></button>
-      <p class="launch-note" data-i18n="lNote">No spam. One email when the book is out.</p>
+      <p class="launch-note" data-i18n="lNote">No spam. Unsubscribe anytime.</p>
     </form>
   </div>
   <div class="launch-done" id="launchDone" hidden>
@@ -470,6 +471,7 @@
       <a href="https://www.instagram.com/decor.with.farnaz/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/817038121486364" target="_blank" rel="noopener">Facebook</a>
       <a href="#contact" data-i18n="contactEyebrow">Contact</a>
+      <a href="privacy/" data-i18n="privacy">Privacy policy</a>
     </span>
     <p class="credit"><span data-i18n="credit">Website designed &amp; developed by</span> <b dir="ltr">Borna Ahadi</b></p>
   </div>
