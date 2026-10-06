@@ -10,9 +10,9 @@ the same subject twice: check the published list in blog/ first.
 Series numbering ("No. 01" ...) follows publication order.
 
 - [x] 2026-10-06 persian-interior-style (Persian, published by hand)
-- [ ] Scandinavian
-- [ ] Japandi
-- [ ] Moroccan
+- [x] 2026-10-06 scandinavian-interior-style (Scandinavian, extra launch post)
+- [x] 2026-10-06 japandi-interior-style (Japandi, extra launch post)
+- [x] 2026-10-06 moroccan-interior-style (Moroccan, extra launch post)
 - [ ] Mid-century modern
 - [ ] Modern
 - [ ] Contemporary

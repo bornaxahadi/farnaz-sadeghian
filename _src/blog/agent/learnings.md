@@ -8,6 +8,15 @@
   (names/text containing "test", sent from bornaxahadi@gmail.com).
 - Images: Higgsfield gpt_image_2 via the Composio workbench (about 2
   credits each). Grok image generation is blocked on this account.
+  Higgsfield free plan: only ONE job at a time (submit one, wait, then the
+  next) and it ran OUT OF CREDITS on 6 Oct 2026. If it says "Out of
+  credits", use the fallback: `mcp__Figma__generate_image` (planKey
+  `team::1685251187745843425`, model `gpt-image-2.5-sunburst`, 1536x1024),
+  then download its asset URL in the workbench (expires in 7 days), crop
+  and push to blog-assets like the Higgsfield files. Uses Figma AI credits.
+- Workbench: the kernel is shared with other sessions, so prefix your
+  globals `tsj_`; calls over ~60s time out client-side, so run long work in
+  a background thread and poll.
 
 Newest first. Keep under 150 lines. Facts the agent learned from data,
 readers and its own runs. Merge and prune; do not just append.

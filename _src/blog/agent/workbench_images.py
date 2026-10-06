@@ -47,24 +47,25 @@ def _variants(im, name):
     return out
 
 def generate(prompts):
-    """prompts: {image_name: prompt}. Returns {image_name: result_url}."""
-    names = list(prompts)
-    reqs = [{'index': i, 'params': {'model': 'gpt_image_2', 'prompt': prompts[n], 'aspect_ratio': '3:2',
-                                    'quality': 'medium', 'resolution': '2k', 'use_unlim': False}} for i, n in enumerate(names)]
-    r, e = run_composio_tool('HIGGSFIELD_MCP_GENERATE_IMAGE_BATCH', {'requests': reqs})
-    if e:
-        raise RuntimeError(e)
-    jobs = [{'index': j['index'], 'job_id': j['job_id']} for j in r['data']['jobs']]
-    for _ in range(10):                  # ~150 s max; call generate again in a new cell if it times out
-        r, e = run_composio_tool('HIGGSFIELD_MCP_JOBS_WAIT', {'jobs': jobs, 'timeout_seconds': 15})
-        if e:
-            raise RuntimeError(e)
-        if r['data'].get('all_terminal'):
-            break
+    """prompts: {image_name: prompt}. Returns {image_name: result_url}.
+    One job at a time: the Higgsfield free plan rejects concurrent jobs."""
     urls = {}
-    for j in r['data']['jobs']:
-        if j.get('status') == 'completed' and j.get('result_url'):
-            urls[names[j['index']]] = j['result_url']
+    for name, prompt in prompts.items():
+        req = [{'index': 0, 'params': {'model': 'gpt_image_2', 'prompt': prompt, 'aspect_ratio': '3:2',
+                                       'quality': 'medium', 'resolution': '2k', 'use_unlim': False}}]
+        r, e = run_composio_tool('HIGGSFIELD_MCP_GENERATE_IMAGE_BATCH', {'requests': req})
+        if e:
+            raise RuntimeError(e)        # "Out of credits" -> use the Figma fallback in learnings.md
+        jobs = [{'index': j['index'], 'job_id': j['job_id']} for j in r['data']['jobs']]
+        for _ in range(8):               # ~120 s per image; if the cell times out, run it in a thread and poll
+            r, e = run_composio_tool('HIGGSFIELD_MCP_JOBS_WAIT', {'jobs': jobs, 'timeout_seconds': 15})
+            if e:
+                raise RuntimeError(e)
+            if r['data'].get('all_terminal'):
+                break
+        for j in r['data']['jobs']:
+            if j.get('status') == 'completed' and j.get('result_url'):
+                urls[name] = j['result_url']
     return urls
 
 def make_post_images(prompts, message='Journal images'):

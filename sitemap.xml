@@ -307,8 +307,20 @@
     <priority>0.3</priority>
   </url>
   <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thirdskin.online/blog/scandinavian-interior-style/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://thirdskin.online/blog/img/scandinavian-interior-style-living-room-1536.webp</image:loc><image:title>Bright Scandinavian living room with pale oak floor, white walls, grey linen sofa with a wool throw, round birch coffee table, paper pendant lamp and green plants</image:title></image:image>
+    <image:image><image:loc>https://thirdskin.online/blog/img/scandinavian-interior-style-details-1536.webp</image:loc><image:title>Scandinavian decor details on a light oak sideboard: white ceramic vase with dried grasses, linen napkins, brass candle holder and a framed line print</image:title></image:image>
+  </url>
   <url><loc>https://thirdskin.online/blog/persian-interior-style/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority>
     <image:image><image:loc>https://thirdskin.online/blog/img/persian-interior-style-living-room-1536.webp</image:loc><image:title>Modern Persian-style living room with a red and indigo Persian rug, kilim cushions, a carved walnut side table, turquoise ceramics and an arched plaster niche</image:title></image:image>
     <image:image><image:loc>https://thirdskin.online/blog/img/persian-interior-style-details-1536.webp</image:loc><image:title>Persian decor details: turquoise geometric tiles, a brass tea tray, a folded kilim, pomegranates in a painted bowl and a carved wooden lattice screen</image:title></image:image>
+  </url>
+  <url><loc>https://thirdskin.online/blog/moroccan-interior-style/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://thirdskin.online/blog/img/moroccan-interior-style-living-room-1536.webp</image:loc><image:title>Modern Moroccan living room with a low banquette and patterned cushions, Beni Ourain rug, carved wooden arch, green zellige tile wall, brass lanterns and a mint tea tray</image:title></image:image>
+    <image:image><image:loc>https://thirdskin.online/blog/img/moroccan-interior-style-details-1536.webp</image:loc><image:title>Moroccan decor details: green and white zellige tiles, a pierced brass lantern, a silver teapot with painted tea glasses, colourful woven cushions and a carved cedar screen</image:title></image:image>
+  </url>
+  <url><loc>https://thirdskin.online/blog/japandi-interior-style/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://thirdskin.online/blog/img/japandi-interior-style-living-room-1536.webp</image:loc><image:title>Calm Japandi living room with a low oatmeal linen sofa, dark oak coffee table, paper lantern lamp, shoji-style screen, stone vase with a branch and limewashed walls</image:title></image:image>
+    <image:image><image:loc>https://thirdskin.online/blog/img/japandi-interior-style-details-1536.webp</image:loc><image:title>Japandi details: walnut tray with a handmade ceramic tea set, small bonsai, folded linen and a stone bowl on a light oak bench against a clay plaster wall</image:title></image:image>
   </url>
 </urlset>

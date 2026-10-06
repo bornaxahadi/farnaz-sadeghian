@@ -90,6 +90,7 @@ in the log and keep the change small).
    the full contents of `_src/blog/agent/workbench_images.py` as one cell,
    then a second cell:
    `files, failed = make_post_images({"<name1>": "<prompt1>", "<name2>": "<prompt2>"}, message="Journal images: <slug>")`.
+   If Higgsfield is out of credits, follow the Figma fallback in learnings.md (Setup).
    Then locally: `git fetch origin blog-assets:refs/remotes/origin/blog-assets`
    and copy each file: `git show origin/blog-assets:incoming/<file> > _src/blog/img/<file>`
    and the same into `blog/img/`. LOOK at the 800px versions with Read
