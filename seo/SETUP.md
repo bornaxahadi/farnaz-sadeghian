@@ -3,20 +3,18 @@
 The agent can only report what it can see. Each tool below needs a one-time
 setup by the owner. Tick the box when done and add any IDs.
 
-## 1. Google Search Console  [~] ownership file added (google963066ade0abd581.html); add sitemap + weekly exports
-Shows which searches bring people, and your ranking.
-1. https://search.google.com/search-console -> Add property -> Domain
-   -> thirdskin.online (verify via a DNS TXT record at your domain provider).
-2. Submit https://thirdskin.online/sitemap.xml
-3. Each week: Performance -> Export -> save CSV into seo/data/ (no personal data).
-Also do Bing Webmaster Tools (can import from Search Console).
+## 1. Google Search Console  [x] done (6 Oct 2026)
+- URL-prefix property https://thirdskin.online/ verified with google963066ade0abd581.html (keep that file forever).
+- sitemap.xml submitted; indexing requested for the homepage.
+- Each week (owner): Performance -> Export -> save CSV into seo/data/ (no personal data).
+- Bing Webmaster Tools: [ ] owner must sign in once at bing.com/webmasters, then import from Search Console.
+- IndexNow: [x] key file 1498d818f79a545bad7ebe2081055ab2.txt is live; all URLs submitted 6 Oct 2026 (Bing, Yandex accepted).
 
-## 2. Visitor analytics  [ ] not done
-Pick ONE. Recommended: Plausible or Cloudflare Web Analytics (simple, no
-cookie banner needed). Or Google Analytics 4 (free, needs cookie consent for
-EU visitors).
-- Tool chosen: ________   Site ID: ________
-- Once the Site ID is filled in here, the agent adds the script to the English page itself.
+## 2. Visitor analytics  [x] done (6 Oct 2026)
+- Tool chosen: Google Analytics 4   Property: "Third Skin Interiors - thirdskin.online" (557594788)   Measurement ID: G-MZWRKFNXNN
+- Loads after the first scroll/tap or 5 s (no speed cost). Google Consent Mode v2: Europe-timezone visitors see a small Accept/Decline banner; others are measured without ad cookies.
+- Events: generate_lead (inquiry sent), sign_up (book list), whatsapp_click, instagram_click, facebook_click, media_kit_download, email_click, language_switch.
+- Microsoft Clarity (heatmaps): [ ] owner must sign in once at clarity.microsoft.com; then put the project id in _src/app.part CONFIG.clarityId and rebuild.
 - Export a weekly CSV into seo/data/ (or share dashboard numbers).
 
 ## 3. Email list  [ ] not done

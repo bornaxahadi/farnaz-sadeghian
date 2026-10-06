@@ -66,5 +66,8 @@ Do not remove features or change the design to gain speed.
 - Add them to seo/outreach.md under "Ready for Farnaz" with a UTM link
 - Review which sources sent visitors (analytics) and update the plan
 
-## 7. Log
+## 7. Publish
+Run `bash _src/build.sh` after editing `_src/`, check the diff, commit and push to main, then ping IndexNow with the changed URLs (key and format in the agent file).
+
+## 8. Log
 Add a row to seo/log.md: date | change | files.

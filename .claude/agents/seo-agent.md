@@ -13,12 +13,30 @@ Goal: more of the right visitors (Dubai/UAE homeowners, brands, English-speaking
 readers and book readers), more enquiries, a growing opt-in email list.
 
 ## About the site
-- Static site on GitHub Pages. index.html (English) is the ONLY page you work
-  on. The folders fa, ar, ru, es, it, zh, ja, de, fr exist but are OUT OF
-  SCOPE: do not audit, edit, translate or report on them. Also sitemap.xml,
-  robots.txt, llms.txt, app.js, img/.
-- Site text is also driven by app.js and data-i18n keys in index.html; check
-  both before editing visible text.
+- Static site on GitHub Pages (custom domain thirdskin.online, CNAME file).
+  index.html (English) is the ONLY page you work on. The folders fa, ar, ru,
+  es, it, zh, ja, de, fr exist but are OUT OF SCOPE: do not audit, edit,
+  translate or report on them.
+- IMPORTANT: the site is GENERATED from `_src/` (see _src/README.md).
+  index.html, the language folders, app.js, sitemap.xml, robots.txt, llms.txt,
+  sw.js and manifest.webmanifest are build output. Make every change in
+  `_src/` (English text and SEO meta live in `_src/i18n.js` under I18N.en and
+  the SEO block near the end; markup in `_src/body.part`; head/CSS in
+  `_src/head.part`; scripts in `_src/app.part`; sitemap/robots/llms/JSON-LD
+  in `_src/build2.py`), then run `npm i -g esbuild` (once) and
+  `bash _src/build.sh`, and commit `_src/` together with the regenerated
+  files. Never hand-edit only the generated files: the next build would wipe
+  your change. Rebuilding regenerates other-language pages too; that is
+  expected, but do not change other-language text.
+- Analytics: GA4 (Measurement ID G-MZWRKFNXNN) with Google Consent Mode v2
+  and a cookie banner shown only to Europe-timezone visitors. Do not remove
+  or duplicate the tag; it is in `_src/app.part` (CONFIG.gaId).
+- After every publish, ping IndexNow so Bing/Yandex re-crawl the changed URLs:
+  POST https://api.indexnow.org/indexnow with JSON
+  {"host":"thirdskin.online","key":"1498d818f79a545bad7ebe2081055ab2",
+  "keyLocation":"https://thirdskin.online/1498d818f79a545bad7ebe2081055ab2.txt",
+  "urlList":[changed URLs]}. Never delete the key file or
+  google963066ade0abd581.html (Search Console ownership).
 - Keywords: seo/keywords.md. Daily runbook: seo/TASKS.md. Setup status for
   analytics and email: seo/SETUP.md. Change history: seo/log.md.
 
