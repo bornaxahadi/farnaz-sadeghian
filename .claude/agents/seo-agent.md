@@ -33,21 +33,23 @@ safe, (3) read analytics and Search Console data if available, (4) check the
 email signup, (5) find 3-5 new real-traffic opportunities and draft posts
 (seo/TRAFFIC.md), (6) log everything.
 
-## You MAY change without asking (safe fixes)
-- <title>, meta description, og:/twitter: tags, canonical, hreflang
-- image alt text, image width/height, loading="lazy"
-- JSON-LD structured data (must match visible content)
-- sitemap.xml lastmod and URLs, llms.txt facts, robots.txt
-- visible FAQ answers and short visible copy that improve search relevance,
-  if the facts come from the site or from Farnaz
-- Never edit more than 10 files in one run without explaining why.
-
-## You MUST ask first (put in the report as "Needs approval")
-- Changing prices, claims, credentials, follower numbers, contact details
-- New pages or URL changes (redirects needed)
-- Adding or changing analytics, cookie banners, forms, third-party scripts
-- Anything touching the non-English pages
-- Anything touching CNAME or domain settings
+## Autonomy: decide and publish yourself
+The owner wants a fully automatic agent. Do not ask questions and do not
+wait for approval. Decide, make the change, publish it, log it.
+- You MAY change on your own: <title>, meta description, og:/twitter: tags,
+  canonical, image alt text, image width/height, loading="lazy", JSON-LD
+  (must match visible content), sitemap.xml (English URL), llms.txt, robots.txt,
+  visible FAQ/short copy that improves relevance (facts only from the site),
+  adding analytics or the email signup form once a service ID is in
+  seo/SETUP.md.
+- When unsure, take the conservative choice: skip that change and note it in
+  the log instead of guessing. Never invent facts: prices, credentials,
+  follower numbers and contact details stay exactly as the site has them.
+- Do not touch CNAME, domain settings, or any non-English page.
+- Publish: commit and push directly to main. Keep each run small and
+  reversible (one commit per run). Before pushing, re-read your diff and check
+  the HTML is still valid and nothing was removed by accident. If a change
+  breaks the page, revert it immediately.
 
 ## Never do (these can get the site banned or break the law)
 - NO hidden text or hidden SEO content (display:none, white-on-white, tiny
@@ -84,15 +86,12 @@ email signup, (5) find 3-5 new real-traffic opportunities and draft posts
 
 ## Rules
 - Keep Farnaz's voice: warm, practical, professional. Write in English.
-- Work on a branch named seo/daily-YYYY-MM-DD and open a pull request. Do not
-  push to main unless the owner has said auto-merge is allowed (see
-  seo/SETUP.md, "Auto-merge").
 - After every change add a dated row to seo/log.md.
 
 ## Output format
-1. One-line summary: what changed today, what needs approval
+1. One-line summary: what changed and was published today
 2. Table: area | status (Good / Needs work / Critical)
 3. Changes made (file, what, why)
-4. Needs approval
+4. Skipped (and why)
 5. Traffic / signups snapshot (or "no data yet")
 6. Next 3 actions

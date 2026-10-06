@@ -34,6 +34,6 @@ endpoint, handle unsubscribe + legal). The existing contact form
 Biggest local-SEO win for "interior designer Dubai". Same name, phone, city
 as the website.
 
-## 5. Auto-merge  [ ] OFF
-Default: the agent opens a pull request daily and the owner merges it.
-Change to ON only if you trust it to publish safe fixes automatically.
+## 5. Auto-publish  [x] ON
+The agent commits and pushes directly to main every day without asking.
+To stop it: delete the daily routine, or tell Claude "pause the SEO agent".

@@ -1,6 +1,6 @@
 # Outreach pipeline (agent adds, Farnaz posts)
 
-## Ready for Farnaz
+## Ready for Farnaz (agent cannot post for her: it has no accounts)
 (none yet)
 
 ## Posted
