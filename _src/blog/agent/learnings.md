@@ -1,9 +1,11 @@
 # Journal learnings (read first every run, update last)
 
 ## Setup
-- Comment inbox: NOT CONNECTED YET. Comments go by FormSubmit email to the
-  site inbox; once that Gmail is connected in Composio, write its Composio
-  account id here (e.g. `gmail_xxx`).
+- Comment inbox: Composio Gmail account `gmail_accite-tailor`
+  (decorwithfarnaz@gmail.com, connected 6 Oct 2026). FormSubmit sends both
+  blog comments ("New blog comment: ...") and site inquiries ("New inquiry: ...")
+  there. Ignore messages from before 6 Oct 2026 and test messages
+  (names/text containing "test", sent from bornaxahadi@gmail.com).
 - Images: Higgsfield gpt_image_2 via the Composio workbench (about 2
   credits each). Grok image generation is blocked on this account.
 
