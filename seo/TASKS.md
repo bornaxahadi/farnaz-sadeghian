@@ -51,6 +51,28 @@ Fix automatically when something is wrong:
 - If a fix makes things worse (score drops, page breaks), revert it at once
 Do not remove features or change the design to gain speed.
 
+## 1c. Live followers (Instagram + Facebook), every day
+Your sandbox cannot reach Instagram/Facebook. The daily GitHub Action
+(.github/scripts/followers.py) reads the live counts, rejects implausible
+numbers (more than 10% from what the site shows), and updates CONFIG.stats in
+app.js and _src/app.part (the counter every language page uses). Results:
+- seo/data/followers-latest.md / .json   (read first)
+- seo/data/followers-history.csv         (trend)
+Your job each day:
+1. Read followers-latest.md. Log both numbers and the result in seo/log.md.
+2. Verify app.js and _src/app.part show the same numbers as the report
+   (and asOf is recent). If the Action found a count but did not patch, patch
+   both files yourself.
+3. Keep the English static texts in step. Whenever the total (IG + FB)
+   moves by 2% or more from the number written in the text, update the
+   rounded total in the English page text: index.html and I18N.en in
+   _src/i18n.js ("389K followers", "390,000 followers", JSON-LD/FAQ), and
+   llms.txt (IG count, FB count, total). Round to the nearest thousand in
+   long text, nearest K in short text. Do not touch other languages.
+4. If "NOT UPDATED" for 3 days in a row: the public page is blocked. Say so
+   in the log and remind in seo/SETUP.md section 6 (Meta token). Do NOT guess
+   or invent a number, and never project/estimate growth.
+
 ## 2. Fix safe items (see "MAY change" in the agent file)
 
 ## 3. Search and visitor data (if set up, see seo/SETUP.md)

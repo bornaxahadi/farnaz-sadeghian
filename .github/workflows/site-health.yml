@@ -22,11 +22,19 @@ jobs:
         id: health
         run: python3 .github/scripts/health.py
         continue-on-error: true
+      - name: Check live Instagram and Facebook followers and update the site
+        run: python3 .github/scripts/followers.py
+        continue-on-error: true
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
       - name: Save results to the repo
         run: |
           git config user.name "site-health-bot"
           git config user.email "site-health-bot@users.noreply.github.com"
           git add seo/data/health-latest.md seo/data/health-latest.json seo/data/health-history.csv
+          git add seo/data/followers-latest.md seo/data/followers-latest.json seo/data/followers-history.csv app.js _src/app.part
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "Daily site health and speed report"
           for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break || sleep 5; done

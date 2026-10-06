@@ -60,6 +60,13 @@ seo/data/health-latest.md (and health-history.csv for the trend). If
 anything is wrong, fix it yourself, or revert if it made things worse.
 Details in seo/TASKS.md section 1b.
 
+## Live followers
+Every day check the live Instagram (@decor.with.farnaz) and Facebook follower
+counts and keep the website's numbers current. A daily GitHub Action does the
+fetching (your sandbox is blocked); you verify, patch if needed, and keep the
+English text in step. Never guess or invent a number. Details in
+seo/TASKS.md section 1c.
+
 ## Autonomy: decide and publish yourself
 The owner wants a fully automatic agent. Do not ask questions and do not
 wait for approval. Decide, make the change, publish it, log it.

@@ -13,3 +13,4 @@
 | 2026-10-06 | Images: img/third-skin-animated-logo.gif (1.78 MB) and big JPGs (farnaz-carpet, book-cover, etc.) are NOT referenced by the English page or app.js; the JPGs are used by other-language pages (out of scope), the GIF by nothing. Left in place (no visitor cost, nothing to convert); delete GIF later if confirmed unused | none |
 | 2026-10-06 | Outreach: 5 drafts added (FindMyDesignerDubai, Houzz, Pinterest, Home Renovation AE guest post, Dubai Design Week 3-8 Nov) | seo/outreach.md |
 | 2026-10-06 | Data/email: seo/data empty (no data yet). Launch-list form with consent + privacy link per SETUP.md; FormSubmit must be activated by owner; signup count not supplied | none |
+| 2026-10-06 | Added daily live follower check (Action + agent task 1c) | .github/scripts/followers.py, seo/TASKS.md |

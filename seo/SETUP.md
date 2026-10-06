@@ -35,3 +35,15 @@ as the website.
 ## 5. Auto-publish  [x] ON
 The agent commits and pushes directly to main every day without asking.
 To stop it: delete the daily routine, or tell Claude "pause the SEO agent".
+
+## 6. Live follower counts (Instagram + Facebook)  [~] works from public pages, fragile
+A daily GitHub Action reads the public profile pages. Instagram/Facebook
+sometimes hide the count from servers (login wall), so some days may say
+"NOT UPDATED". For exact, reliable numbers use Meta's official API (free):
+1. Instagram must be a Business/Creator account linked to the Facebook page.
+2. developers.facebook.com -> create an app -> get a long-lived access token
+   with instagram_basic + pages_read_engagement.
+3. In GitHub: repo Settings -> Secrets and variables -> Actions -> add
+   META_ACCESS_TOKEN, IG_USER_ID (Instagram business account id),
+   FB_PAGE_ID (817038121486364).
+The Action uses the API automatically once those secrets exist.
