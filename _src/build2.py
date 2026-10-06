@@ -334,6 +334,10 @@ open('dist/llms.txt', 'w').write(f"""# Third Skin Interiors · Farnaz Sadeghian
 - [日本語]({SITE}ja/)
 - [Deutsch]({SITE}de/)
 - [Français]({SITE}fr/)
+
+## Style Journal
+- [Style Journal: a new interior style guide by Farnaz every day]({SITE}blog/)
+- [RSS feed]({SITE}blog/feed.xml)
 """)
 open('dist/.nojekyll', 'w').write('')
 print('done', len(used), 'images')
@@ -366,6 +370,8 @@ ul{padding-inline-start:22px} li{margin:4px 0}
 <p>When you use the inquiry form, we receive your name, email and message, and the company and phone number if you add them. The form is delivered to our email inbox by the FormSubmit service. We use these details only to reply to you and to work on your request. If the form cannot be sent, the site lets you send the same text by WhatsApp or copy it; WhatsApp is run by Meta under its own privacy policy.</p>
 <h2>Book launch list</h2>
 <p>If you join the <em>Soul of the Room</em> launch list, we receive your name and email, and we record that you ticked the consent box and when. We use it only to tell you about the book and Farnaz's news. Every email lets you unsubscribe, or you can write to us and we will remove you.</p>
+<h2>Journal comments</h2>
+<p>If you comment on an article in our Style Journal, we receive your name, email and comment by email through FormSubmit. Comments are checked before they appear. Only your first name, the date and your comment are published, with our reply; your email is never shown or published. To have a comment removed, write to us.</p>
 <h2>Analytics and cookies</h2>
 <ul>
 <li><b>Google Analytics 4</b> helps us see how many people visit, from which countries, and which parts of the site they use (for example page views, clicks on WhatsApp or the media kit, and forms sent). It uses cookies. We do not use advertising or ad-personalisation cookies.</li>

@@ -1,0 +1,42 @@
+name: Ping search engines for new journal posts
+
+on:
+  push:
+    branches: [main]
+    paths: ['blog/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Wait for GitHub Pages to deploy
+        run: sleep 90
+      - name: Send changed journal URLs to IndexNow (Bing, Yandex, Seznam, Naver)
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, urllib.request
+          changed = subprocess.run(['git', 'diff', '--name-only', 'HEAD~1', 'HEAD', '--', 'blog'],
+                                   capture_output=True, text=True).stdout.split()
+          urls = {'https://thirdskin.online/blog/'}
+          for f in changed:
+              parts = f.split('/')
+              if len(parts) == 3 and parts[2] == 'index.html':
+                  urls.add(f'https://thirdskin.online/blog/{parts[1]}/')
+          body = json.dumps({"host": "thirdskin.online", "key": "1498d818f79a545bad7ebe2081055ab2",
+                             "keyLocation": "https://thirdskin.online/1498d818f79a545bad7ebe2081055ab2.txt",
+                             "urlList": sorted(urls)}).encode()
+          req = urllib.request.Request('https://api.indexnow.org/indexnow', data=body,
+                                       headers={'Content-Type': 'application/json; charset=utf-8'})
+          try:
+              print('IndexNow', urllib.request.urlopen(req, timeout=30).status, sorted(urls))
+          except Exception as e:
+              print('IndexNow failed (not fatal):', e)
+          PY

@@ -53,3 +53,7 @@ Soul of the Room: A Journey Through Interior Styles is Farnaz's upcoming book on
 - [日本語](https://thirdskin.online/ja/)
 - [Deutsch](https://thirdskin.online/de/)
 - [Français](https://thirdskin.online/fr/)
+
+## Style Journal
+- [Style Journal: a new interior style guide by Farnaz every day](https://thirdskin.online/blog/)
+- [RSS feed](https://thirdskin.online/blog/feed.xml)

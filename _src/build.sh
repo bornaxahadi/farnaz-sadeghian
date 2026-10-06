@@ -9,6 +9,8 @@ mkdir -p "$W/fonts" "$W/dist"
 cp "$REPO"/fonts/*.woff2 "$W/fonts/" && cp "$REPO/_src/fonts.css" "$W/fonts/fonts.css"
 cp -r "$REPO/img" "$W/img"
 cp "$REPO/media-kit.pdf" "$W/dist/"
+# journal (blog): builder + post sources + images
+cp "$REPO/_src/blog.py" "$W/" && cp -r "$REPO/_src/blog" "$W/blog"
 ( cd "$W" && python3 build2.py )
 # copy the generated site over the repo root (never deletes anything else in the repo)
 cp -r "$W"/dist/. "$REPO"/
