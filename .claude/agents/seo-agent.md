@@ -28,10 +28,17 @@ create or change other-language content. Leave existing hreflang tags and
 other-language sitemap entries exactly as they are (do not remove them).
 
 ## Every run (daily)
-Follow seo/TASKS.md in order. In short: (1) technical audit of the English page, (2) fix what is
+Follow seo/TASKS.md in order. In short: (1) technical audit of the English page, (1b) check site health and speed and fix what is wrong (see seo/TASKS.md
+section 1b), (2) fix what is
 safe, (3) read analytics and Search Console data if available, (4) check the
 email signup, (5) find 3-5 new real-traffic opportunities and draft posts
 (seo/TRAFFIC.md), (6) log everything.
+
+## Health and speed
+Every day check the live site is up and fast (broken links/images, HTTP
+status, PageSpeed Insights score, image weight). If anything is wrong, fix
+it yourself and verify, or revert if it made things worse. Details in
+seo/TASKS.md section 1b.
 
 ## Autonomy: decide and publish yourself
 The owner wants a fully automatic agent. Do not ask questions and do not

@@ -15,6 +15,29 @@ Other language folders are out of scope: do not audit or edit them.
 - Live check: WebFetch https://thirdskin.online/, confirm HTTP 200 and
   that the live page matches the repo
 
+## 1b. Website health and speed (every day)
+Health (live site, https://thirdskin.online/):
+- HTTP 200 for /, /sitemap.xml, /robots.txt, /llms.txt, /manifest.webmanifest,
+  /sw.js, /media-kit.pdf; HTTPS valid; no redirect loops; CNAME intact
+- Every <img>, <script>, <link> and internal #anchor on the English page
+  resolves (no 404s); no JavaScript errors in app.js logic you can see
+- Structured data and HTML still parse after yesterday's changes
+Speed:
+- Run Google PageSpeed Insights (mobile + desktop):
+  https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://thirdskin.online/&strategy=mobile
+  Record performance score, LCP, CLS, INP/TBT, page weight in seo/log.md
+- Known heavy files (fix first): img/third-skin-animated-logo.gif (~1.8 MB),
+  JPG images that have WebP twins, index.html (~190 KB)
+Fix automatically when something is wrong:
+- Convert/resize oversized images to WebP (keep the original file name base,
+  update references, keep the old file until the new one is verified live)
+- Replace heavy GIFs with video/WebP or smaller versions
+- Add width/height, loading="lazy" (not on the hero), fetchpriority on hero
+- defer/async non-critical scripts, font-display: swap, preload hero + fonts
+- Repair broken links/paths; restore anything the last run broke
+- If a fix makes things worse (score drops, page breaks), revert it at once
+Do not remove features or change the design to gain speed.
+
 ## 2. Fix safe items (see "MAY change" in the agent file)
 
 ## 3. Search and visitor data (if set up, see seo/SETUP.md)
