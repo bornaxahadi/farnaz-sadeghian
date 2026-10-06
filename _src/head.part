@@ -934,7 +934,7 @@ html:not(.cv-off) main>section:not(.hero),html:not(.cv-off) footer{content-visib
 [dir="rtl"] .fs-track{animation-name:fs-move-rtl}
 @keyframes fs-move-rtl{from{transform:translateX(0)}to{transform:translateX(50%)}}
 @media (prefers-reduced-motion:reduce){.fs-track{animation:none;flex-wrap:wrap;width:auto}.fs-run[aria-hidden]{display:none}}
-.journal{padding-block:clamp(72px,9vw,120px)}
+.journal{padding-block:clamp(72px,9vw,120px)}#about+.journal{padding-top:clamp(16px,3vw,40px)}
 .jr-head{display:grid;gap:18px;align-items:end;margin-bottom:38px}@media(min-width:900px){.jr-head{grid-template-columns:1fr 1fr}}
 .jr-grid{display:grid;gap:24px;grid-template-columns:1fr}
 @media(min-width:620px){.jr-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:960px){.jr-grid{grid-template-columns:repeat(3,1fr)}}

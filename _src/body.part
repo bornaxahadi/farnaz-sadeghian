@@ -102,18 +102,6 @@
   </div>
 </section>
 
-<section id="journal" class="journal">
-  <div class="wrap">
-    <div class="jr-head reveal">
-      <div><p class="eyebrow" data-i18n="blogEyebrow">Style journal</p>
-      <h2 data-i18n="blogH2">One interior style, <em>every day</em></h2></div>
-      <p class="lead" data-i18n="blogLead">Short guides by Farnaz on a different home style each day: where it comes from, what defines it, and how to use it in a real home.</p>
-    </div>
-    <div class="jr-grid reveal">@@BLOGCARDS@@</div>
-    <p class="jr-all"><a class="btn btn-ghost" href="blog/"><span data-i18n="blogAll">All articles</span> <svg><use href="#i-arrow"/></svg></a></p>
-  </div>
-</section>
-
 <section class="band" id="audience">
   <div class="wrap">
     <div class="stats-head reveal">
@@ -209,6 +197,18 @@
         <div><b data-i18n="fact4v">Mother of 3</b><span data-i18n="fact4">designing for real family life</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="journal" class="journal">
+  <div class="wrap">
+    <div class="jr-head reveal">
+      <div><p class="eyebrow" data-i18n="blogEyebrow">Style journal</p>
+      <h2 data-i18n="blogH2">One interior style, <em>every day</em></h2></div>
+      <p class="lead" data-i18n="blogLead">Short guides by Farnaz on a different home style each day: where it comes from, what defines it, and how to use it in a real home.</p>
+    </div>
+    <div class="jr-grid reveal">@@BLOGCARDS@@</div>
+    <p class="jr-all"><a class="btn btn-ghost" href="blog/"><span data-i18n="blogAll">All articles</span> <svg><use href="#i-arrow"/></svg></a></p>
   </div>
 </section>
 
