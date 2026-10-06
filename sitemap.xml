@@ -306,4 +306,9 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thirdskin.online/blog/persian-interior-style/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://thirdskin.online/blog/img/persian-interior-style-living-room-1536.webp</image:loc><image:title>Modern Persian-style living room with a red and indigo Persian rug, kilim cushions, a carved walnut side table, turquoise ceramics and an arched plaster niche</image:title></image:image>
+    <image:image><image:loc>https://thirdskin.online/blog/img/persian-interior-style-details-1536.webp</image:loc><image:title>Persian decor details: turquoise geometric tiles, a brass tea tray, a folded kilim, pomegranates in a painted bowl and a carved wooden lattice screen</image:title></image:image>
+  </url>
 </urlset>
