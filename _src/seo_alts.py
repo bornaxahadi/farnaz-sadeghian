@@ -6,8 +6,8 @@ LANGS = ['en', 'fa', 'ar', 'ru', 'es', 'it', 'zh', 'ja', 'de', 'fr']
 T = {
 'en': dict(
   metaTitle='Interior Designer & Decorator in Dubai · Farnaz Sadeghian | Third Skin Interiors',
-  metaDesc='Certified interior decorator in Dubai. Interior design consultation, 3D room design and home styling for apartments and villas, from Farnaz Sadeghian of Decor with Farnaz (390K followers).',
-  metaKeywords='interior designer Dubai, interior decorator Dubai, interior design consultation Dubai, home styling Dubai, apartment interior design Dubai, villa interior design Dubai, 3D interior design Dubai, Persian interior designer Dubai, Farnaz Sadeghian, Decor with Farnaz, Third Skin Interiors',
+  metaDesc='Certified interior decorator & stylist in Dubai: interior design consultations, 3D room design and home styling for apartments and villas, by Farnaz Sadeghian.',
+  metaKeywords='interior designer Dubai, interior decorator Dubai, interior stylist Dubai, interior design Dubai, interior design consultation, home interior design Dubai, residential interior design Dubai, villa interior design Dubai, apartment interior design, 3D room design, Persian interior designer Dubai, Farnaz Sadeghian, Decor with Farnaz, Third Skin Interiors',
   altHeroImg='Farnaz Sadeghian, certified interior decorator in Dubai',
   wallart='Gallery wall with framed art above a sofa – home decor idea',
   corner='Styled living room corner with armchair and lamp',
