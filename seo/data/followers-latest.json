@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-06T12:58:07+04:00",
+  "results": {
+    "ig": {
+      "site_now": 322000,
+      "found": null,
+      "source": null,
+      "notes": [
+        "public page had no follower count (login wall or changed layout)"
+      ],
+      "status": "NOT UPDATED - could not read live count",
+      "files": []
+    },
+    "fb": {
+      "site_now": 68000,
+      "found": null,
+      "source": null,
+      "notes": [
+        "public page failed: HTTP Error 400: Bad Request"
+      ],
+      "status": "NOT UPDATED - could not read live count",
+      "files": []
+    }
+  }
+}
