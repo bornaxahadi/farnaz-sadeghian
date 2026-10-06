@@ -102,6 +102,18 @@
   </div>
 </section>
 
+<section id="journal" class="journal">
+  <div class="wrap">
+    <div class="jr-head reveal">
+      <div><p class="eyebrow" data-i18n="blogEyebrow">Style journal</p>
+      <h2 data-i18n="blogH2">One interior style, <em>every day</em></h2></div>
+      <p class="lead" data-i18n="blogLead">Short guides by Farnaz on a different home style each day: where it comes from, what defines it, and how to use it in a real home.</p>
+    </div>
+    <div class="jr-grid reveal">@@BLOGCARDS@@</div>
+    <p class="jr-all"><a class="btn btn-ghost" href="blog/"><span data-i18n="blogAll">All articles</span> <svg><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
 <section class="band" id="audience">
   <div class="wrap">
     <div class="stats-head reveal">
@@ -325,18 +337,6 @@
       </ul>
       <div class="hero-cta"><button class="btn btn-solid" type="button" id="launchOpen" data-i18n="bookCta">Join the launch list</button><a class="btn btn-ghost" href="#contact" id="partnerBook" data-i18n="bookCta2">Partner on the book</a></div>
     </div>
-  </div>
-</section>
-
-<section id="journal" class="journal">
-  <div class="wrap">
-    <div class="jr-head reveal">
-      <div><p class="eyebrow" data-i18n="blogEyebrow">Style journal</p>
-      <h2 data-i18n="blogH2">One interior style, <em>every day</em></h2></div>
-      <p class="lead" data-i18n="blogLead">Short guides by Farnaz on a different home style each day: where it comes from, what defines it, and how to use it in a real home.</p>
-    </div>
-    <div class="jr-grid reveal">@@BLOGCARDS@@</div>
-    <p class="jr-all"><a class="btn btn-ghost" href="blog/"><span data-i18n="blogAll">All articles</span> <svg><use href="#i-arrow"/></svg></a></p>
   </div>
 </section>
 
