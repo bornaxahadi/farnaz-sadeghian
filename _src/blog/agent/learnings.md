@@ -14,6 +14,10 @@
   `team::1685251187745843425`, model `gpt-image-2.5-sunburst`, 1536x1024),
   then download its asset URL in the workbench (expires in 7 days), crop
   and push to blog-assets like the Higgsfield files. Uses Figma AI credits.
+- Workbench image saving: on 7 Oct 2026 the workbench's PIL could not save WebP
+  ("unsupported image mode"). Workaround that works: push the raw PNG to
+  blog-assets as `incoming/<name>-src.png`, fetch it locally and make the
+  4 sizes with local Pillow (supports WebP).
 - Workbench: the kernel is shared with other sessions, so prefix your
   globals `tsj_`; calls over ~60s time out client-side, so run long work in
   a background thread and poll.
@@ -35,9 +39,16 @@ readers and its own runs. Merge and prune; do not just append.
   photos, FAQ, further reading. Keep that quality bar.
 
 ## What worked
+- 7 Oct: SEO agent asked for short title tags (seoTitle <= 38 chars, as
+  " | Third Skin Interiors" adds 22) and metaDesc 150-155 chars. Pattern now:
+  seoTitle "<Style> Interior Style Guide" / "<Style> Interior Design".
+- First Insights digest (7 Oct): 39 visitors in 30 days, journal views tiny
+  (moroccan 3, scandinavian 2, persian 1), traffic is direct + Instagram,
+  Google not yet. Ratings 4.0 (persian, scandinavian). Too early to judge.
 
 ## What to avoid
 
 ## Reader questions (topic ideas)
+- First comment 6 Oct (Scandinavian): a short thank-you, no question yet.
 
 ## Week in review

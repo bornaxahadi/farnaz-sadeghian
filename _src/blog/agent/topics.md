@@ -13,7 +13,8 @@ Series numbering ("No. 01" ...) follows publication order.
 - [x] 2026-10-06 scandinavian-interior-style (Scandinavian, extra launch post)
 - [x] 2026-10-06 japandi-interior-style (Japandi, extra launch post)
 - [x] 2026-10-06 moroccan-interior-style (Moroccan, extra launch post)
-- [ ] Mid-century modern
+- [x] 2026-10-07 mid-century-modern-interior-style (Mid-century modern)
+- [ ] Japandi vs Scandinavian (comparison; moved up 7 Oct as this week's swap: SEO board note, competitors rank comparison pages, both guides already live)
 - [ ] Modern
 - [ ] Contemporary
 - [ ] Minimalist
@@ -89,7 +90,6 @@ Series numbering ("No. 01" ...) follows publication order.
 - [ ] Modern classic
 - [ ] Neo-deco
 - [ ] Dark academia
-- [ ] Japandi vs Scandinavian (comparison)
 - [ ] Soft minimalism
 - [ ] Warm minimalism
 - [ ] Modern Mediterranean
