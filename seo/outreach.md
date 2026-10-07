@@ -33,6 +33,31 @@ Added 2026-10-06. Check each site's current terms before submitting. Use the UTM
 
 Reddit note: the search tool could not read subreddit rules (r/dubai, r/DubaiHousing). Farnaz should read each sidebar first; if self-promotion is banned, only answer questions helpfully and keep the site in her profile.
 
+Added 2026-10-07. Check each site's current terms before submitting.
+
+6. Instagram: link each Style Journal article (her strongest channel; Instagram already sends visitors)
+   - Put the newest article in the link-in-bio and share it in a story with a link sticker. One article a week is enough.
+   - Story text idea: "New on my Style Journal: Japandi, the calm warm minimal look. 5 things that define it."
+   - Link: https://thirdskin.online/blog/japandi-interior-style/?utm_source=instagram&utm_medium=story&utm_campaign=journal
+
+7. Pinterest pins for every journal article (extends item 3)
+   - Each article has two photos. Make one vertical pin per article (1000x1500) titled with the main keyword, for example "Moroccan interior style: zellige, lanterns and spice colours", linking to the article.
+   - Link: https://thirdskin.online/blog/moroccan-interior-style/?utm_source=pinterest&utm_medium=pin&utm_campaign=journal
+
+8. Style Curator (Australian interior magazine; welcomes original articles from design experts; Farnaz trained at TAFE Australia)
+   - Rules (https://stylecurator.com.au/about-us/writing-for-style-curator/): original articles only, 300-1,500 words, at least 4 high-quality images (1200px+) with credits, 50-word bio. Pitch editor@stylecurator.com.au one-to-one.
+   - Use photos of her own real projects, not the AI images from the journal.
+   - Pitch draft: "Hello, I'm Farnaz Sadeghian, a TAFE-certified interior decorator now based in Dubai (thirdskin.online). I'd love to write an original piece for Style Curator: 'Persian warmth in a modern apartment: rugs, colour and light without the museum look', with photos from my own projects. Happy to adapt the angle to your readers."
+   - Link in bio: https://thirdskin.online/?utm_source=stylecurator&utm_medium=guest-post&utm_campaign=persian-style
+
+9. Clutch.co, Dubai interior design category (https://clutch.co/ae/agencies/design/interior/dubai)
+   - A free business profile on a well-ranked list page. Check whether a free listing is still offered and only use verified client reviews.
+   - Link: https://thirdskin.online/?utm_source=clutch&utm_medium=directory&utm_campaign=listing
+
+10. Answer "Japandi vs Scandinavian" questions on Quora or r/InteriorDesign
+   - Write a full, helpful answer (3 differences: colour temperature, wood tones, how much decoration) and disclose that the link is her own article. Read each community's self-promotion rules first.
+   - Link: https://thirdskin.online/blog/japandi-interior-style/?utm_source=quora&utm_medium=answer&utm_campaign=japandi
+
 ## Posted
 (none yet)
 
