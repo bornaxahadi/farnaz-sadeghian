@@ -306,8 +306,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://thirdskin.online/blog/scandinavian-interior-style/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority>
+  <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-07</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thirdskin.online/blog/mid-century-modern-interior-style/</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://thirdskin.online/blog/img/mid-century-modern-interior-style-living-room-1536.webp</image:loc><image:title>Mid-century modern living room with a mustard tufted sofa on tapered legs, walnut sideboard, moulded plywood lounge chair, slatted teak wall, sputnik pendant and a white pedestal dining table</image:title></image:image>
+    <image:image><image:loc>https://thirdskin.online/blog/img/mid-century-modern-interior-style-details-1536.webp</image:loc><image:title>Mid-century modern details: walnut credenza with tambour doors, ceramic table lamp, amber glass vase, brass starburst clock, leather lounge chair and a geometric rug</image:title></image:image>
+  </url>
+  <url><loc>https://thirdskin.online/blog/scandinavian-interior-style/</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority>
     <image:image><image:loc>https://thirdskin.online/blog/img/scandinavian-interior-style-living-room-1536.webp</image:loc><image:title>Bright Scandinavian living room with pale oak floor, white walls, grey linen sofa with a wool throw, round birch coffee table, paper pendant lamp and green plants</image:title></image:image>
     <image:image><image:loc>https://thirdskin.online/blog/img/scandinavian-interior-style-details-1536.webp</image:loc><image:title>Scandinavian decor details on a light oak sideboard: white ceramic vase with dried grasses, linen napkins, brass candle holder and a framed line print</image:title></image:image>
   </url>
