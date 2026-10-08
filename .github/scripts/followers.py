@@ -104,22 +104,6 @@ def fetch(platform, url, id_env):
     return None, None, notes
 
 
-def patch(platform, value):
-    changed = []
-    for path, pat, rep in [
-        ("app.js", platform + r":\{followers:[0-9.e+]+,", f"{platform}:{{followers:{value},"),
-        ("_src/app.part", platform + r": \{ followers: [0-9]+,", f"{platform}: {{ followers: {value},"),
-    ]:
-        if not os.path.exists(path):
-            continue
-        s = open(path, encoding="utf-8").read()
-        s2 = re.sub(pat, rep, s, count=1)
-        if s2 != s:
-            open(path, "w", encoding="utf-8").write(s2)
-            changed.append(path)
-    return changed
-
-
 def save_reading(platform, value, source):
     new = not os.path.exists(READINGS)
     with open(READINGS, "a", newline="") as f:
@@ -144,27 +128,27 @@ def gain_per_day(platform):
     return max(0, round((rows[-1][1] - rows[0][1]) / days))
 
 
-def patch_gain(platform, gain):
-    for path, pat, rep in [
-        ("app.js", r"(" + platform + r":\{followers:[0-9.e+]+,gainPerDay:)[0-9.e+]+", r"\g<1>" + str(gain)),
-        ("_src/app.part", r"(" + platform + r": \{ followers: [0-9]+, +gainPerDay: )[0-9]+", r"\g<1>" + str(gain)),
-    ]:
-        if os.path.exists(path):
-            s = open(path, encoding="utf-8").read()
-            open(path, "w", encoding="utf-8").write(re.sub(pat, rep, s, count=1))
-
-
-def patch_asof():
+def patch(platform, value, gain):
+    """Write one platform's real count, its measured gainPerDay and its own asOf time."""
     stamp = now.strftime("%Y-%m-%dT%H:%M:%S+04:00")
-    for path, pat, rep in [("app.js", r'asOf:"[^"]*"', f'asOf:"{stamp}"'),
-                           ("_src/app.part", r'asOf: "[^"]*"', f'asOf: "{stamp}"')]:
-        if os.path.exists(path):
-            s = open(path, encoding="utf-8").read()
-            open(path, "w", encoding="utf-8").write(re.sub(pat, rep, s, count=1))
+    changed = []
+    for path, pat, rep in [
+        ("app.js", platform + r':\{followers:[0-9.e+]+,gainPerDay:([0-9.e+]+),asOf:"[^"]*"\}',
+         lambda m: f'{platform}:{{followers:{value},gainPerDay:{m.group(1) if gain is None else gain},asOf:"{stamp}"}}'),
+        ("_src/app.part", platform + r': \{ followers: [0-9]+, +gainPerDay: ([0-9]+), asOf: "[^"]*" \}',
+         lambda m: f'{platform}: {{ followers: {value}, gainPerDay: {m.group(1) if gain is None else gain}, asOf: "{stamp}" }}'),
+    ]:
+        if not os.path.exists(path):
+            continue
+        s = open(path, encoding="utf-8").read()
+        s2 = re.sub(pat, rep, s, count=1)
+        if s2 != s:
+            open(path, "w", encoding="utf-8").write(s2)
+            changed.append(path)
+    return changed
 
 
 results = {}
-any_change = False
 for platform, url, id_env in [("ig", IG_URL, "IG_USER_ID"), ("fb", FB_URL, "FB_PAGE_ID")]:
     cur = current_value(platform)
     val, source, notes = fetch(platform, url, id_env)
@@ -173,23 +157,17 @@ for platform, url, id_env in [("ig", IG_URL, "IG_USER_ID"), ("fb", FB_URL, "FB_P
         r["status"] = "NOT UPDATED - could not read live count"
     elif cur and abs(val - cur) / cur > MAX_JUMP:
         r["status"] = f"REJECTED - {val} is more than {int(MAX_JUMP*100)}% away from site value {cur}"
-    elif val == cur:
-        r["status"] = "unchanged"
-        save_reading(platform, val, source)
     else:
+        # every accepted reading (even an unchanged one) re-anchors this platform's estimate
         save_reading(platform, val, source)
-        r["files"] = patch(platform, val)
-        r["status"] = f"UPDATED {cur} -> {val}" if r["files"] else "NOT UPDATED - could not find CONFIG.stats to patch"
-        any_change = any_change or bool(r["files"])
+        g = gain_per_day(platform)
+        r["gain_per_day"] = g
+        r["files"] = patch(platform, val, g)
+        if not r["files"]:
+            r["status"] = "NOT UPDATED - could not find CONFIG.stats to patch"
+        else:
+            r["status"] = "unchanged" if val == cur else f"UPDATED {cur} -> {val}"
     results[platform] = r
-
-if any_change:
-    patch_asof()
-    for p in ("ig", "fb"):
-        g = gain_per_day(p)
-        if g is not None and results[p]["files"]:
-            patch_gain(p, g)
-            results[p]["gain_per_day"] = g
 
 os.makedirs(OUT, exist_ok=True)
 report = {"checked_at": now.isoformat(timespec="seconds"), "results": results}
