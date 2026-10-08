@@ -1,4 +1,4 @@
-# Live followers - 2026-10-07 06:05 Dubai
+# Live followers - 2026-10-08 06:05 Dubai
 
 | Platform | On site before | Live count found | Source | Result |
 |---|---|---|---|---|
@@ -6,7 +6,7 @@
 | Facebook | 68000 | None | None | NOT UPDATED - could not read live count |
 
 Notes:
-- ig: public page had no follower count (login wall or changed layout)
+- ig: public page failed: HTTP Error 429: Too Many Requests
 - fb: public page failed: HTTP Error 400: Bad Request
 
 To make this reliable, add repo secrets META_ACCESS_TOKEN, IG_USER_ID, FB_PAGE_ID (see seo/SETUP.md, section 6).

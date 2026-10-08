@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-07T06:05:24+04:00",
+  "checked_at": "2026-10-08T06:05:12+04:00",
   "results": {
     "ig": {
       "site_now": 322000,
       "found": null,
       "source": null,
       "notes": [
-        "public page had no follower count (login wall or changed layout)"
+        "public page failed: HTTP Error 429: Too Many Requests"
       ],
       "status": "NOT UPDATED - could not read live count",
       "files": []
