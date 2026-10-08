@@ -38,10 +38,17 @@ setup by the owner. Tick the box when done and add any IDs.
 The agent commits and pushes directly to main every day without asking.
 To stop it: delete the daily routine, or tell Claude "pause the SEO agent".
 
-## 6. Live follower counts (Instagram + Facebook)  [!] BLOCKED: public pages gave no count 6, 7 and 8 Oct 2026. The site keeps showing 322K + 68K until the Meta token below is added
-A daily GitHub Action reads the public profile pages. Instagram/Facebook
-sometimes hide the count from servers (login wall), so some days may say
-"NOT UPDATED". For exact, reliable numbers use Meta's official API (free):
+## 6. Live follower counts (Instagram + Facebook)
+Two things keep the numbers on the site current:
+- A daily Claude routine (10:20 Dubai) reads the public Instagram count through
+  vidIQ (5 vidIQ credits a day) and runs `.github/scripts/followers.py --ig <count> --source vidiq`.
+  This works today without any Meta setup.
+- The "Live follower counts" GitHub Action runs every 6 hours. Instagram and
+  Facebook block GitHub's servers from public pages most of the time, so it
+  only becomes reliable (and Facebook only updates at all) once the Meta token below is added.
+Between checks the counter grows by the real measured daily growth
+(seo/data/followers-readings.csv), so it keeps moving.
+For exact numbers on both platforms use Meta's official API (free):
 1. Instagram must be a Business/Creator account linked to the Facebook page.
 2. developers.facebook.com -> create an app -> get a long-lived access token
    with instagram_basic + pages_read_engagement.
