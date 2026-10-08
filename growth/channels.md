@@ -7,6 +7,7 @@ Visits = sessions in the last 30 days from the Insights digest, by utm_source.
 | Account | Use | Approved by owner |
 |---|---|---|
 | Gmail decorwithfarnaz (Composio) | create pitch DRAFTS only, never send | yes (same rule as blog agent inquiries) |
+| small-business plugin `seo-ai-visibility` | monthly search/AI visibility test (needs no connector) | yes (installed by owner 2026-10-08) |
 | Pinterest | auto-pin Journal articles | NO: the connected Pinterest is a personal account, not Farnaz's. Pins stay drafts until the owner approves an account here |
 
 ## Channels
@@ -27,7 +28,9 @@ Visits = sessions in the last 30 days from the Insights digest, by utm_source.
 | Homeadore | project feature | homeadore | drafted | | 0 | real projects only |
 | Expat.com Dubai forum | forum | expat-com | drafted | | 0 | |
 | Dubai Design Week (3-8 Nov) | event content | instagram | drafted | | 0 | |
-| yournewsite.world | found | yournewsite.world | found | | 1 | unknown referrer, check if real |
+| Yellow Pages UAE | directory | yellowpages-uae | idea | | 0 | top result for Dubai decorator searches (8 Oct); check if a free listing exists |
+| yournewsite.world | found | Yellow Pages UAE | directory | yellowpages-uae | idea | | 0 | top result for Dubai decorator searches (8 Oct); check if a free listing exists |
+| yournewsite.world | found | | 1 | unknown referrer, check if real |
 
 ## Rejected
 | Place | Why | Date |
