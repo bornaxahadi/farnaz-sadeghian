@@ -53,7 +53,8 @@ in the log and keep the change small).
    set and connected in Composio, fetch those emails since the last run
    (GMAIL_FETCH_EMAILS, query `subject:"New blog comment" newer_than:3d`;
    skip ones already in a post's `comments`). For each real comment add to
-   that post's JSON `comments` list:
+   that post's JSON `comments` list (the owner confirmed on 8 Oct 2026:
+   publish real comments directly, no approval needed):
    `{"name": first name only, "date": "YYYY-MM-DD", "text": the comment
    (trimmed, max 600 chars), "reply": your reply}` and set
    `"updated": today` on the post. Never store the email address.
