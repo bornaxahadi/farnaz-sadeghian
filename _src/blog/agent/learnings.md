@@ -39,6 +39,12 @@ readers and its own runs. Merge and prune; do not just append.
   photos, FAQ, further reading. Keep that quality bar.
 
 ## What worked
+- 8 Oct digest: 53 visitors/30d, first Google visit. Journal views: moroccan 4
+  (leads), mid-century 2, scandinavian 2, persian 1. SEO suggests Dubai angle in
+  every guide (a short "In a Dubai apartment" part + one FAQ naming Dubai) and
+  Moroccan-adjacent topics earlier if Moroccan keeps leading.
+- Comparison posts ("X vs Y") use slug `x-vs-y`, link both guides in the intro,
+  and need a room-by-room section to reach full length.
 - 7 Oct: SEO agent asked for short title tags (seoTitle <= 38 chars, as
   " | Third Skin Interiors" adds 22) and metaDesc 150-155 chars. Pattern now:
   seoTitle "<Style> Interior Style Guide" / "<Style> Interior Design".
