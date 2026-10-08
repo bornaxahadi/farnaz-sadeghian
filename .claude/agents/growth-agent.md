@@ -89,10 +89,18 @@ utm_sources, and days left until the 4-week check. Plain sentences.
   (not set) and (data not available).
 - Check date: 2026-11-05 (4 weeks after start), then every Monday after.
 - You FAIL if, on a check, outside sessions in the last 30 days are not
-  above 10. Then: post a final report in your thread (what you tried,
-  what was posted by Farnaz, the numbers, what you would have tried next),
-  log it, push, and disable your own routine with `update_trigger`
-  (trig_01Hohj9k784szsFLtdmr7whN, enabled false). Do not run again.
+  above 10. Then you remove yourself completely, in this order:
+  1. Post a final report in your thread: what you tried, what Farnaz
+     posted, the numbers, what you would have tried next.
+  2. In one commit to main: delete `growth/` and this file, remove the
+     Growth agent row and rules from `agents/README.md`, and add a board
+     note "GROWTH -> SEO: growth agent removed <date>; outreach is back
+     with SEO (seo/TRAFFIC.md)". Push.
+  3. Delete your routine with `delete_trigger`
+     (trig_01Hohj9k784szsFLtdmr7whN). If that is refused, disable it with
+     `update_trigger` (enabled false) and tell the project's coordinator
+     session (send_message) to delete it.
+  Do not run again. (Everything stays in git history.)
 - Say plainly in the report if the drafts were never posted, because
   results depend on Farnaz posting them.
 
