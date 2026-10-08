@@ -1,17 +1,17 @@
 {
-  "checked_at": "2026-10-08T16:41:49+04:00",
+  "checked_at": "2026-10-09T03:00:13+04:00",
   "results": {
     "ig": {
-      "site_now": 322000,
-      "found": 323300,
+      "site_now": 323300,
+      "found": 323500,
       "source": "vidiq",
       "notes": [],
-      "status": "UPDATED 322000 -> 323300",
+      "status": "UPDATED 323300 -> 323500",
       "files": [
         "app.js",
         "_src/app.part"
       ],
-      "gain_per_day": 570
+      "gain_per_day": 554
     },
     "fb": {
       "site_now": 68000,

@@ -1,8 +1,8 @@
-# Live followers - 2026-10-08 16:41 Dubai
+# Live followers - 2026-10-09 03:00 Dubai
 
 | Platform | On site before | Live count found | Source | Result |
 |---|---|---|---|---|
-| Instagram | 322000 | 323300 | vidiq | UPDATED 322000 -> 323300 |
+| Instagram | 323300 | 323500 | vidiq | UPDATED 323300 -> 323500 |
 | Facebook | 68000 | None | None | NOT UPDATED - could not read live count |
 
 Notes:
