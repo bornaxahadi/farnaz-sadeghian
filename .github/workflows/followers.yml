@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "site-health-bot"
           git config user.email "site-health-bot@users.noreply.github.com"
-          git add seo/data/followers-latest.md seo/data/followers-latest.json seo/data/followers-history.csv seo/data/followers-readings.csv app.js _src/app.part
+          git add seo/data/followers-latest.md seo/data/followers-latest.json seo/data/followers-history.csv seo/data/followers-readings.csv app.js _src/app.part _src/body.part '*.html' '*/index.html'
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "Live follower counts"
           for i in 1 2 3; do

@@ -16,7 +16,7 @@ the number currently on the site), and only then patches CONFIG.stats in
 app.js and _src/app.part. Never writes anything else. Exit code is always 0
 so a blocked platform never breaks the workflow; the report says what happened.
 """
-import argparse, csv, datetime, json, os, re, sys, urllib.request, urllib.error
+import argparse, csv, datetime, glob, hashlib, json, os, re, sys, urllib.request, urllib.error
 
 IG_URL = "https://www.instagram.com/decor.with.farnaz/"
 FB_URL = "https://www.facebook.com/817038121486364"
@@ -168,6 +168,24 @@ for platform, url, id_env in [("ig", IG_URL, "IG_USER_ID"), ("fb", FB_URL, "FB_P
         else:
             r["status"] = "unchanged" if val == cur else f"UPDATED {cur} -> {val}"
     results[platform] = r
+
+def refresh_html():
+    """Pages load app.js?v=<hash>; bump the hash so browsers fetch the new numbers at once,
+    and update the number shown before app.js runs."""
+    v = hashlib.md5(open("app.js", "rb").read()).hexdigest()[:8]
+    js = open("app.js", encoding="utf-8").read()
+    counts = {p: int(float(re.search(p + r":\{followers:([0-9.e+]+)", js).group(1))) for p in ("ig", "fb")}
+    for path in glob.glob("*.html") + glob.glob("*/index.html") + ["_src/body.part"]:
+        s = open(path, encoding="utf-8").read()
+        s2 = re.sub(r"app\.js\?v=[0-9a-f]+", "app.js?v=" + v, s)
+        for p, n in counts.items():
+            s2 = re.sub(r'(data-count="' + p + r'">)[0-9,]+', r"\g<1>" + f"{n:,}", s2)
+        if s2 != s:
+            open(path, "w", encoding="utf-8").write(s2)
+
+
+if any(r["files"] for r in results.values()):
+    refresh_html()
 
 os.makedirs(OUT, exist_ok=True)
 report = {"checked_at": now.isoformat(timespec="seconds"), "results": results}
