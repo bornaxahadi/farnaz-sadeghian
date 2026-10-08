@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """Daily live follower check (Instagram + Facebook) for thirdskin.online.
 
-Runs on GitHub Actions. For each platform it tries, in order:
+Runs on GitHub Actions (every 6 hours) and from the daily Claude routine.
+For each platform it tries, in order:
+  0. a count passed on the command line (--ig 323300 --source vidiq), used by
+     the Claude routine, which reads the public profile through vidIQ
   1. Meta Graph API (official, exact) if META_ACCESS_TOKEN + the account id env var are set
-  2. the public profile page's og:description ("322K Followers, ...")
+  2. Instagram's public profile JSON (web_profile_info), Instagram only
+  3. the public profile page's og:description ("322K Followers, ...")
+Every real count is saved to seo/data/followers-readings.csv, and gainPerDay
+on the site is the real average daily growth between the oldest and newest
+reading of the last 30 days, so the counter keeps moving between checks.
 It rejects numbers that look wrong (unparseable, or more than 10% away from
 the number currently on the site), and only then patches CONFIG.stats in
 app.js and _src/app.part. Never writes anything else. Exit code is always 0
 so a blocked platform never breaks the workflow; the report says what happened.
 """
-import csv, datetime, json, os, re, sys, urllib.request, urllib.error
+import argparse, csv, datetime, json, os, re, sys, urllib.request, urllib.error
 
 IG_URL = "https://www.instagram.com/decor.with.farnaz/"
 FB_URL = "https://www.facebook.com/817038121486364"
@@ -20,8 +27,16 @@ OUT = "seo/data"
 now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=4)))  # Dubai
 
 
-def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"})
+ap = argparse.ArgumentParser()
+ap.add_argument("--ig", type=int, help="Instagram count read elsewhere (e.g. vidIQ)")
+ap.add_argument("--fb", type=int, help="Facebook count read elsewhere")
+ap.add_argument("--source", default="manual", help="where --ig/--fb came from")
+args = ap.parse_args()
+READINGS = f"{OUT}/followers-readings.csv"
+
+
+def get(url, headers=None):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9", **(headers or {})})
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.read().decode("utf-8", "replace")
 
@@ -51,6 +66,12 @@ def from_graph(obj_id):
     return int(d["followers_count"])
 
 
+def from_ig_json():
+    d = json.loads(get("https://i.instagram.com/api/v1/users/web_profile_info/?username=decor.with.farnaz",
+                       {"x-ig-app-id": "936619743392459"}))
+    return int(d["data"]["user"]["edge_followed_by"]["count"])
+
+
 def current_value(platform):
     js = open("app.js", encoding="utf-8").read()
     m = re.search(platform + r":\{followers:([0-9.e+]+)", js)
@@ -59,12 +80,20 @@ def current_value(platform):
 
 def fetch(platform, url, id_env):
     notes = []
+    given = getattr(args, platform)
+    if given:
+        return given, args.source, notes
     try:
         v = from_graph(os.environ.get(id_env))
         if v:
             return v, "graph-api", notes
     except Exception as e:
         notes.append(f"graph api failed: {str(e)[:80]}")
+    if platform == "ig":
+        try:
+            return from_ig_json(), "public-json", notes
+        except Exception as e:
+            notes.append(f"public json failed: {str(e)[:80]}")
     try:
         v = from_meta(get(url))
         if v:
@@ -91,6 +120,40 @@ def patch(platform, value):
     return changed
 
 
+def save_reading(platform, value, source):
+    new = not os.path.exists(READINGS)
+    with open(READINGS, "a", newline="") as f:
+        w = csv.writer(f)
+        if new:
+            w.writerow(["time", "platform", "followers", "source"])
+        w.writerow([now.isoformat(timespec="seconds"), platform, value, source])
+
+
+def gain_per_day(platform):
+    """Real average daily growth between the oldest and newest reading of the last 30 days."""
+    if not os.path.exists(READINGS):
+        return None
+    rows = [(datetime.datetime.fromisoformat(r["time"]), int(r["followers"]))
+            for r in csv.DictReader(open(READINGS)) if r["platform"] == platform]
+    rows = sorted(r for r in rows if (now - r[0]).days <= 30)
+    if len(rows) < 2:
+        return None
+    days = (rows[-1][0] - rows[0][0]).total_seconds() / 864e2
+    if days < 1:
+        return None
+    return max(0, round((rows[-1][1] - rows[0][1]) / days))
+
+
+def patch_gain(platform, gain):
+    for path, pat, rep in [
+        ("app.js", r"(" + platform + r":\{followers:[0-9.e+]+,gainPerDay:)[0-9.e+]+", r"\g<1>" + str(gain)),
+        ("_src/app.part", r"(" + platform + r": \{ followers: [0-9]+, +gainPerDay: )[0-9]+", r"\g<1>" + str(gain)),
+    ]:
+        if os.path.exists(path):
+            s = open(path, encoding="utf-8").read()
+            open(path, "w", encoding="utf-8").write(re.sub(pat, rep, s, count=1))
+
+
 def patch_asof():
     stamp = now.strftime("%Y-%m-%dT%H:%M:%S+04:00")
     for path, pat, rep in [("app.js", r'asOf:"[^"]*"', f'asOf:"{stamp}"'),
@@ -112,7 +175,9 @@ for platform, url, id_env in [("ig", IG_URL, "IG_USER_ID"), ("fb", FB_URL, "FB_P
         r["status"] = f"REJECTED - {val} is more than {int(MAX_JUMP*100)}% away from site value {cur}"
     elif val == cur:
         r["status"] = "unchanged"
+        save_reading(platform, val, source)
     else:
+        save_reading(platform, val, source)
         r["files"] = patch(platform, val)
         r["status"] = f"UPDATED {cur} -> {val}" if r["files"] else "NOT UPDATED - could not find CONFIG.stats to patch"
         any_change = any_change or bool(r["files"])
@@ -120,6 +185,11 @@ for platform, url, id_env in [("ig", IG_URL, "IG_USER_ID"), ("fb", FB_URL, "FB_P
 
 if any_change:
     patch_asof()
+    for p in ("ig", "fb"):
+        g = gain_per_day(p)
+        if g is not None and results[p]["files"]:
+            patch_gain(p, g)
+            results[p]["gain_per_day"] = g
 
 os.makedirs(OUT, exist_ok=True)
 report = {"checked_at": now.isoformat(timespec="seconds"), "results": results}

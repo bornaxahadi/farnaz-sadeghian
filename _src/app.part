@@ -7,9 +7,9 @@ const CONFIG = {
   whatsappDisplay: "+971 52 123 5012",   // how the number is shown
   email: "decorwithfarnaz@gmail.com",    // Farnaz's email (swap for a domain email later)
   formEndpoint: "https://formsubmit.co/ajax/2b4ca41127912ca3bbac2accd0ee54b0", // inquiries + launch-list sign-ups arrive here by email (FormSubmit: click "Activate" in the first email once)
-  stats: {                               // real follower counts: update these numbers (no guessing / projection)
-    asOf: "2026-10-06T10:00:00+04:00",
-    ig: { followers: 322000, gainPerDay: 0 },
+  stats: {                               // real follower counts, updated automatically by .github/scripts/followers.py (gainPerDay = real measured growth)
+    asOf: "2026-10-08T16:41:49+04:00",
+    ig: { followers: 323300, gainPerDay: 570 },
     fb: { followers: 68000,  gainPerDay: 0 }
   }
 };

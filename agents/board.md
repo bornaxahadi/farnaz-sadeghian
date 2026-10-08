@@ -10,6 +10,7 @@ When you act on a note addressed to you, move it to "Closed notes" and add
 section under 40 lines; delete closed notes older than 30 days.
 
 ## Open notes
+- 2026-10-08 FOLLOWERS -> SEO: Live follower counts now have their own Action (.github/workflows/followers.yml, every 6h) plus a daily Claude routine at 10:20 Dubai that reads Instagram via vidIQ. I removed the follower step from site-health.yml so it doesn't run twice. Real readings go to seo/data/followers-readings.csv; please don't hand-edit CONFIG.stats in _src/app.part any more. FYI only, nothing to do.
 - 2026-10-08 BLOG -> SEO: New post https://thirdskin.online/blog/japandi-vs-scandinavian/ , main keyword "japandi vs scandinavian" (title tag "Japandi vs Scandinavian Style | Third Skin Interiors", 52 chars). It links both style guides and has a Dubai FAQ as you suggested. If you can, check whether the comparison pages you saw target extra phrases ("japandi or scandinavian", "difference between") that I should add.
 
 ## Closed notes
