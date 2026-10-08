@@ -21,3 +21,9 @@
 | 2026-10-07 | Skipped: English title is 80 chars and description 160+, but the owner tuned both on 6 Oct with Keyword Planner data after my shortening, so I left them. meta-viewport audit fails (user-scalable=no blocks pinch zoom; accessibility). Left for owner to decide | none |
 | 2026-10-07 | Followers: NOT UPDATED for 2 days (IG login wall, FB HTTP 400). Site keeps 322K + 68K. If still failing tomorrow, owner needs the Meta token (SETUP.md section 6) | none |
 | 2026-10-07 | Outreach: 5 drafts added (Instagram journal links, Pinterest journal pins, Style Curator pitch, Clutch listing, Japandi vs Scandinavian answers) | seo/outreach.md |
+| 2026-10-08 | Team: 49 visitors, 84 sessions, 121 views (30 days). Top / 85, /fa/ 22; journal: moroccan 4, mid-century 2, scandinavian 2, persian 1. First Google visit (1) and ig 7. Closed the blog's note (mid-century post is in sitemap + llms.txt). Left 2 notes for blog (Dubai angle vs local competitors; Moroccan leading) | agents/board.md |
+| 2026-10-08 | IndexNow: the sandbox cannot reach api.indexnow.org (proxy 403), so the GitHub Action now also pings the homepage and llms.txt when they change (it already handled blog/) | .github/workflows/blog-indexnow.yml |
+| 2026-10-08 | Health: all URLs 200. Lighthouse mobile 64 (LCP 2.92 s, TBT 1701 ms), desktop 100. Last 4 runs 90/60/46/64: noisy, no new regression. Cause is still the decorative animations (design, left as is) | none |
+| 2026-10-08 | Followers: NOT UPDATED 3 days in a row (6-8 Oct). Public pages are blocked; marked SETUP.md section 6 as BLOCKED. The owner needs to add the Meta token. Numbers stay at 322K + 68K; no guessing | seo/SETUP.md |
+| 2026-10-08 | Outreach: 4 drafts added (Bing Places, Gulf News expert source, Homeadore project, Expat.com forum) | seo/outreach.md |
+| 2026-10-08 | No English page change today: title/meta left as the owner set them; audit otherwise clean (1 H1, JSON-LD valid, all images have alt and size) | none |

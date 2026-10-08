@@ -1,9 +1,9 @@
-name: Ping search engines for new journal posts
+name: Ping search engines for new journal posts and homepage changes
 
 on:
   push:
     branches: [main]
-    paths: ['blog/**']
+    paths: ['blog/**', 'index.html', 'llms.txt']
   workflow_dispatch:
 
 permissions:
@@ -19,13 +19,16 @@ jobs:
           fetch-depth: 2
       - name: Wait for GitHub Pages to deploy
         run: sleep 90
-      - name: Send changed journal URLs to IndexNow (Bing, Yandex, Seznam, Naver)
+      - name: Send changed journal and homepage URLs to IndexNow (Bing, Yandex, Seznam, Naver)
         run: |
           python3 - <<'PY'
           import json, subprocess, urllib.request
-          changed = subprocess.run(['git', 'diff', '--name-only', 'HEAD~1', 'HEAD', '--', 'blog'],
+          changed = subprocess.run(['git', 'diff', '--name-only', 'HEAD~1', 'HEAD', '--', 'blog', 'index.html', 'llms.txt'],
                                    capture_output=True, text=True).stdout.split()
-          urls = {'https://thirdskin.online/blog/'}
+          urls = set()
+          if 'index.html' in changed: urls.add('https://thirdskin.online/')
+          if 'llms.txt' in changed: urls.add('https://thirdskin.online/llms.txt')
+          if any(f.startswith('blog/') for f in changed): urls.add('https://thirdskin.online/blog/')
           for f in changed:
               parts = f.split('/')
               if len(parts) == 3 and parts[2] == 'index.html':

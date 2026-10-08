@@ -58,6 +58,24 @@ Added 2026-10-07. Check each site's current terms before submitting.
    - Write a full, helpful answer (3 differences: colour temperature, wood tones, how much decoration) and disclose that the link is her own article. Read each community's self-promotion rules first.
    - Link: https://thirdskin.online/blog/japandi-interior-style/?utm_source=quora&utm_medium=answer&utm_campaign=japandi
 
+Added 2026-10-08. Check each site's current terms before submitting.
+
+11. Bing Places for Business (free; can import the Google Business Profile once that is verified)
+   - Where: https://www.bingplaces.com (sign in, import from Google or add manually). Same name, address area, phone and hours as the website.
+   - Link: https://thirdskin.online/?utm_source=bing&utm_medium=local&utm_campaign=bing-places
+
+12. Expert comment pitch to Gulf News home and interiors writers (for example Mei Hakim, https://gulfnews.com/author/by-mei-hakim)
+   - One-to-one email offering to be a source, not an advert. Draft: "Hello, I'm Farnaz Sadeghian, a certified interior decorator in Dubai (Decor with Farnaz). If you are writing about making rented Dubai apartments feel like home, styling for the heat and light, or this year's interior trends, I'm happy to give practical quotes and photos of my own projects."
+   - Link: https://thirdskin.online/?utm_source=gulfnews&utm_medium=pr&utm_campaign=expert-source
+
+13. Submit a finished real project to Homeadore (https://homeadore.com publishes apartment projects, including Dubai ones)
+   - Only real projects with professional photos and the client's permission. Include credits and a short description.
+   - Link: https://thirdskin.online/?utm_source=homeadore&utm_medium=feature&utm_campaign=project
+
+14. Expat.com Dubai forum (https://www.expat.com/en/forum/middle-east/united-arab-emirates/dubai/)
+   - Newcomers ask about furnishing and decorating apartments. Answer helpfully, link only where the rules allow, and keep the website in the profile.
+   - Link: https://thirdskin.online/blog/?utm_source=expat-com&utm_medium=forum&utm_campaign=journal
+
 ## Posted
 (none yet)
 

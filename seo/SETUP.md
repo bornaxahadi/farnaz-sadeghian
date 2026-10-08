@@ -38,7 +38,7 @@ setup by the owner. Tick the box when done and add any IDs.
 The agent commits and pushes directly to main every day without asking.
 To stop it: delete the daily routine, or tell Claude "pause the SEO agent".
 
-## 6. Live follower counts (Instagram + Facebook)  [~] works from public pages, fragile
+## 6. Live follower counts (Instagram + Facebook)  [!] BLOCKED: public pages gave no count 6, 7 and 8 Oct 2026. The site keeps showing 322K + 68K until the Meta token below is added
 A daily GitHub Action reads the public profile pages. Instagram/Facebook
 sometimes hide the count from servers (login wall), so some days may say
 "NOT UPDATED". For exact, reliable numbers use Meta's official API (free):
