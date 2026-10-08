@@ -62,8 +62,9 @@ Gmail DRAFT in decorwithfarnaz (never send). Note "Gmail draft created
   should post this week.
 
 ## 7. Shut-off check (from 2026-11-05, Mondays)
-Follow "Shut-off rule" in the agent file. If you fail, do step 8, then post
-the final report and disable your routine.
+Follow "Shut-off rule" in the agent file. If you fail, skip step 8 and
+remove yourself exactly as that rule says (report, delete files, delete
+routine).
 
 ## 8. Finish
 - Update `growth/learnings.md` (what you learnt today, or "no change").
