@@ -9,7 +9,7 @@ const CONFIG = {
   formEndpoint: "https://formsubmit.co/ajax/2b4ca41127912ca3bbac2accd0ee54b0", // inquiries + launch-list sign-ups arrive here by email (FormSubmit: click "Activate" in the first email once)
   stats: {                               // real follower counts, updated automatically by .github/scripts/followers.py (gainPerDay = real measured growth)
     ig: { followers: 323500, gainPerDay: 553, asOf: "2026-10-09T03:03:36+04:00" },
-    fb: { followers: 68000,  gainPerDay: 0, asOf: "2026-10-06T10:00:00+04:00" }
+    fb: { followers: 70000, gainPerDay: 738, asOf: "2026-10-09T03:04:14+04:00" }
   }
 };
 /* ---------- analytics (GA4, loaded late so it never slows the page) ---------- */

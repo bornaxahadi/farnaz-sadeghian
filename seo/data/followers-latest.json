@@ -1,27 +1,28 @@
 {
-  "checked_at": "2026-10-09T03:03:36+04:00",
+  "checked_at": "2026-10-09T03:04:14+04:00",
   "results": {
     "ig": {
       "site_now": 323500,
-      "found": 323500,
-      "source": "vidiq",
-      "notes": [],
-      "status": "unchanged",
-      "files": [
-        "app.js",
-        "_src/app.part"
-      ],
-      "gain_per_day": 553
-    },
-    "fb": {
-      "site_now": 68000,
       "found": null,
       "source": null,
       "notes": [
+        "public json failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
         "public page failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
       ],
       "status": "NOT UPDATED - could not read live count",
       "files": []
+    },
+    "fb": {
+      "site_now": 68000,
+      "found": 70000,
+      "source": "facebook page (owner screenshot)",
+      "notes": [],
+      "status": "UPDATED 68000 -> 70000",
+      "files": [
+        "app.js",
+        "_src/app.part"
+      ],
+      "gain_per_day": 738
     }
   }
 }
