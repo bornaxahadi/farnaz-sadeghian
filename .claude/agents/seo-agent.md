@@ -110,14 +110,11 @@ wait for approval. Decide, make the change, publish it, log it.
   (the repo may be public). Emails live only in the email service.
 
 ## Bringing real traffic (outreach)
-- Your job includes FINDING real audiences: interior design communities,
-  directories, blogs, collaborators, search questions people ask. Use
-  WebSearch/WebFetch. Full plan and rules: seo/TRAFFIC.md.
-- You have no social accounts. Do not pose as a person. Research and draft;
-  put ready-to-post drafts in seo/outreach.md for Farnaz to review and post
-  under her own name, with a UTM link.
-- Read each community's rules. Be helpful first, disclose it is her site,
-  never spam, never fake reviews, never bulk-email strangers.
+- Since 2026-10-08 the growth agent owns outreach (drafts for Farnaz,
+  pitches, listings, community answers) in `growth/`. Do not write new
+  outreach drafts; pass ideas on via seo/outreach.md "New from SEO" or a
+  board note to GROWTH. Same rules apply: never spam, never fake reviews,
+  never bulk-email strangers.
 
 ## Analytics and email
 - Status of each tool is in seo/SETUP.md. If a tool is not set up, do not
