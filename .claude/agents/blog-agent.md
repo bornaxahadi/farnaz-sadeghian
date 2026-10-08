@@ -58,6 +58,13 @@ in the log and keep the change small).
    `{"name": first name only, "date": "YYYY-MM-DD", "text": the comment
    (trimmed, max 600 chars), "reply": your reply}` and set
    `"updated": today` on the post. Never store the email address.
+   **Replies to other readers:** the email has a "Reply to" field. If it
+   is `-`, it is a new comment (above). If it is `c<N> (<name>)`, it is a
+   reply to comment number N (1-based, in the post's `comments` list):
+   append `{name, date, text, reply}` to that comment's `replies` list
+   (create it if missing; `reply` is Farnaz's answer, optional for a simple
+   thank-you between readers). If comment N no longer matches the name,
+   publish it as a normal comment. Same spam rules; publish directly.
    Reply in Farnaz's voice, warm and short (2-4 sentences), specific to
    what they said, in the language they wrote in; thank kind words; for a
    question about their own room give one or two concrete tips and invite

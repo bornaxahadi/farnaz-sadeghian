@@ -112,7 +112,7 @@ h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.15;color:var
 .stars button.on,.stars button.hov{color:var(--gold)}.stars button:hover{transform:scale(1.15)}
 .rate small{display:block;color:var(--muted);font-size:14px}
 .comments{margin-top:40px}.comments h2{font-size:26px;margin:0 0 4px}
-.cm{border-top:1px solid var(--line);padding:16px 0}.cm b{font-weight:500}.cm time{color:var(--muted);font-size:13px;margin-inline-start:8px}.cm p{margin:6px 0 0}
+.cm{border-top:1px solid var(--line);padding:16px 0}.cm .cm{margin-inline-start:22px;padding-bottom:4px}.cm .cm.fz b{color:var(--wine)}.cm-r{background:none;border:0;padding:6px 0 0;font:500 13px/1 var(--f-body);letter-spacing:.04em;color:var(--wine);cursor:pointer}.cm-r:hover{text-decoration:underline}.replying{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--muted)}.replying[hidden]{display:none}.replying button{background:none;border:0;color:var(--wine);cursor:pointer;font:inherit;text-decoration:underline;padding:0}.cm b{font-weight:500}.cm time{color:var(--muted);font-size:13px;margin-inline-start:8px}.cm p{margin:6px 0 0}
 .cform{display:grid;gap:12px;margin-top:18px}.cform .row2{display:grid;gap:12px}@media(min-width:620px){.cform .row2{grid-template-columns:1fr 1fr}}
 .cform input,.cform textarea{width:100%;font:400 16px/1.5 var(--f-body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
 .cform input:focus,.cform textarea:focus{outline:2px solid color-mix(in srgb,var(--wine) 35%,transparent);border-color:var(--wine)}
@@ -245,11 +245,13 @@ paint(mine,'on');if(mine)$('#rateMsg').textContent='Thank you, you rated this '+
 stars.forEach(function(b,i){b.onmouseenter=function(){paint(i+1,'hov')};b.onmouseleave=function(){paint(0,'hov')};
 b.onclick=function(){if(mine)return;mine=i+1;try{localStorage.setItem(key,mine)}catch(e){}paint(mine,'on');track('blog_rating',{value:mine,post_slug:slug});$('#rateMsg').textContent='Thank you, you rated this '+mine+' / 5'}});
 fetch('INSIGHTS',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){var x=((d.blog||{})[slug]);if(x&&x.count){$('#rateAvg').textContent='★ '+x.avg.toFixed(1)+' average from '+x.count+(x.count>1?' ratings':' rating')}}).catch(function(){});
-// comment form (moderated: sent to Farnaz by email, published after approval)
-var f=$('#cform');if(f)f.onsubmit=function(e){e.preventDefault();if(f.company.value)return;var b=f.querySelector('button');b.disabled=true;b.textContent='Sending…';
-fetch('FORM',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({_subject:'New blog comment: '+document.title,_template:'table',_captcha:'false',Article:location.href,Name:f.name.value,Email:f.email.value,Comment:f.comment.value})})
-.then(function(r){if(!r.ok)throw 0;f.innerHTML='<p class="ok">Thank you! Your comment was sent and will appear here after Farnaz approves it.</p>';track('blog_comment',{post_slug:slug})})
-.catch(function(){b.disabled=false;b.textContent='Post comment';$('#cErr').textContent='Sorry, it could not be sent. Please try again or message us on WhatsApp.'})};
+// comment form (sent by email; the daily journal run publishes real comments and replies)
+var rp=$('#replying');document.querySelectorAll('.cm-r').forEach(function(x){x.onclick=function(){var f=$('#cform');f.replyto.value=x.dataset.cid+' ('+x.dataset.name+')';$('#replyingTo').textContent='Replying to '+x.dataset.name;rp.hidden=false;f.querySelector('button[type=submit]').textContent='Post reply';f.scrollIntoView({behavior:'smooth',block:'center'});f.comment.focus({preventScroll:true})}});
+var rc=$('#replyCancel');if(rc)rc.onclick=function(){var f=$('#cform');f.replyto.value='';rp.hidden=true;f.querySelector('button[type=submit]').textContent='Post comment'};
+var f=$('#cform');if(f)f.onsubmit=function(e){e.preventDefault();if(f.company.value)return;var b=f.querySelector('button[type=submit]');b.disabled=true;b.textContent='Sending…';
+fetch('FORM',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({_subject:'New blog comment: '+document.title,_template:'table',_captcha:'false',Article:location.href,'Reply to':f.replyto.value||'-',Name:f.name.value,Email:f.email.value,Comment:f.comment.value})})
+.then(function(r){if(!r.ok)throw 0;var isR=!!f.replyto.value;f.innerHTML='<p class="ok">Thank you! Your '+(isR?'reply':'comment')+' was sent and will appear here within a day.</p>';track('blog_comment',{post_slug:slug,reply:isR})})
+.catch(function(){b.disabled=false;b.textContent=f.replyto.value?'Post reply':'Post comment';$('#cErr').textContent='Sorry, it could not be sent. Please try again or message us on WhatsApp.'})};
 // share
 var cp=$('#copyLink');if(cp)cp.onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){cp.textContent='Link copied'}).catch(function(){prompt('Copy this link',location.href)})};
 document.querySelectorAll('.share a').forEach(function(a){a.addEventListener('click',function(){track('share',{method:a.dataset.m,content_type:'article',item_id:slug})})});
@@ -285,8 +287,13 @@ def post_page(p, posts, SITE):
              f'<meta property="article:section" content="Interior styles">' + ''.join(f'<meta property="article:tag" content="{esc(t)}">' for t in p.get('tags', []))
              + f'<link rel="preload" as="image" href="{imgbase}{p["image"]}-800.webp" imagesrcset="{srcset(imgbase, p["image"])}" imagesizes="(min-width:1200px) 1180px, 100vw">')
     comments = p.get('comments', [])
-    cm_html = ''.join(f'<div class="cm"><b>{esc(c["name"])}</b><time datetime="{c["date"]}">{c["date"]}</time><p>{esc(c["text"])}</p>'
-                      + (f'<div class="cm" style="margin-left:22px"><b>Farnaz</b><p>{esc(c["reply"])}</p></div>' if c.get('reply') else '') + '</div>' for c in comments)
+    fz = lambda c: f'<div class="cm fz"><b>Farnaz</b><p>{esc(c["reply"])}</p></div>' if c.get('reply') else ''
+    def one(c, cid):
+        subs = ''.join(f'<div class="cm"><b>{esc(r["name"])}</b><time datetime="{r["date"]}">{r["date"]}</time><p>{esc(r["text"])}</p>{fz(r)}</div>' for r in c.get('replies', []))
+        return (f'<div class="cm" id="{cid}"><b>{esc(c["name"])}</b><time datetime="{c["date"]}">{c["date"]}</time><p>{esc(c["text"])}</p>{fz(c)}{subs}'
+                f'<button type="button" class="cm-r" data-cid="{cid}" data-name="{esc(c["name"])}">Reply</button></div>')
+    cm_html = ''.join(one(c, f'c{i}') for i, c in enumerate(comments, 1))
+    n_comments = len(comments) + sum(len(c.get('replies', [])) for c in comments)
     enc = lambda s: re.sub(r'[^A-Za-z0-9._~-]', lambda m: ''.join('%%%02X' % b for b in m.group(0).encode()), s)
     faq = ('<section class="faq" aria-labelledby="faqh"><h2 id="faqh">Questions about ' + esc(p['style']) + ' style</h2>'
            + ''.join(f'<details{" open" if i == 0 else ""}><summary>{esc(f["q"])}</summary><p>{esc(f["a"])}</p></details>' for i, f in enumerate(p['faq'])) + '</section>') if p.get('faq') else ''
@@ -318,11 +325,11 @@ def post_page(p, posts, SITE):
 <button type="button" id="copyLink">Copy link</button><button type="button" id="nativeShare" hidden>More…</button></div>
 <section class="rate box" aria-labelledby="rateh"><h2 id="rateh">Did you enjoy this article?</h2><small id="rateAvg">Be the first to rate it</small>
 <div class="stars" role="group" aria-label="Rate this article from 1 to 5">{''.join(f'<button type="button" aria-label="{i} star{"s" if i > 1 else ""}">★</button>' for i in range(1, 6))}</div><small id="rateMsg">Tap a star to rate</small></section>
-<section class="comments" aria-labelledby="cmh"><h2 id="cmh">Comments{f" ({len(comments)})" if comments else ""}</h2>
+<section class="comments" aria-labelledby="cmh"><h2 id="cmh">Comments{f" ({n_comments})" if comments else ""}</h2>
 {cm_html or '<p class="note">No comments yet. Be the first to share your thoughts or ask Farnaz a question.</p>'}
-<form class="cform" id="cform" novalidate><div class="row2"><input name="name" required maxlength="60" placeholder="Your name" autocomplete="name" aria-label="Your name"><input name="email" type="email" required placeholder="Email (not published)" autocomplete="email" aria-label="Email, not published"></div>
+<form class="cform" id="cform" novalidate><p class="replying" id="replying" hidden><span id="replyingTo"></span><button type="button" id="replyCancel">Cancel</button></p><input type="hidden" name="replyto" value=""><div class="row2"><input name="name" required maxlength="60" placeholder="Your name" autocomplete="name" aria-label="Your name"><input name="email" type="email" required placeholder="Email (not published)" autocomplete="email" aria-label="Email, not published"></div>
 <textarea name="comment" required maxlength="2000" placeholder="Your comment or question…" aria-label="Your comment"></textarea><input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-<div><button class="btn btn-solid" type="submit">Post comment</button></div><p class="note">Comments are checked by Farnaz before they appear. Your email is never shown. <a href="/privacy/">Privacy policy</a>.</p><p class="note" id="cErr" role="alert"></p></form></section>
+<div><button class="btn btn-solid" type="submit">Post comment</button></div><p class="note">Comments and replies appear here within a day. Your email is never shown. <a href="/privacy/">Privacy policy</a>.</p><p class="note" id="cErr" role="alert"></p></form></section>
 <div class="author box"><img src="/img/farnaz-portrait.jpg" alt="Farnaz Sadeghian" width="84" height="84" loading="lazy"><div><h3>Farnaz Sadeghian</h3><p>Certified interior decorator (TAFE, Australia) based in Dubai, founder of Third Skin Interiors and creator of Decor with Farnaz, followed by about 390,000 people. Author of the upcoming book <em>Soul of the Room</em>.</p></div></div>
 <div class="cta-box"><h2>Want this look in your home?</h2><p>Book an interior design consultation in Dubai or online.</p><a class="btn" href="/#contact">Book a consultation</a></div>
 <nav class="pn" aria-label="More articles">{f'<a class="box" href="/blog/{older["slug"]}/" rel="prev"><small>← Previous</small><span>{esc(older["title"])}</span></a>' if older else '<span></span>'}{f'<a class="box" href="/blog/{newer["slug"]}/" rel="next" style="text-align:right"><small>Next →</small><span>{esc(newer["title"])}</span></a>' if newer else ''}</nav>
