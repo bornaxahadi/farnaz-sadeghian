@@ -77,6 +77,13 @@ Gmail DRAFT in decorwithfarnaz (never send). Note "Gmail draft created
 - In today's report, add what worked this week and the 3 things Farnaz
   should post this week.
 
+## 6b. First Monday of the month: visibility check
+Load the small-business plugin skill `seo-ai-visibility` and run only its
+assistant test: search the 3 fixed queries in `growth/ai-visibility.md`
+(plus up to 2 new ones), record exactly what came back as a new dated
+section, and compare with last month. Turn each gap into a queue item or a
+board note to SEO. Never report a score.
+
 ## 7. Shut-off check (from 2026-11-05, Mondays)
 Follow "Shut-off rule" in the agent file. If you fail, skip step 8 and
 remove yourself exactly as that rule says (report, delete files, delete
