@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://thirdskin.online/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/fa/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/ar/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/ru/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/es/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -152,7 +152,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/it/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -182,7 +182,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/zh/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -212,7 +212,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/ja/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -242,7 +242,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/de/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -272,7 +272,7 @@
   </url>
   <url>
     <loc>https://thirdskin.online/fr/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://thirdskin.online/"/>
@@ -306,7 +306,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-07</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-08</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thirdskin.online/blog/japandi-vs-scandinavian/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://thirdskin.online/blog/img/japandi-vs-scandinavian-bedroom-1536.webp</image:loc><image:title>Bedroom blending Japandi and Scandinavian style: low light-oak platform bed with linen bedding, warm clay plaster wall, paper lantern, dark walnut bench, jute rug, sheepskin and a bonsai</image:title></image:image>
+    <image:image><image:loc>https://thirdskin.online/blog/img/japandi-vs-scandinavian-details-1536.webp</image:loc><image:title>Side-by-side styling on one oak shelf: Scandinavian white jug with tulips, knitted throw and brass candlestick, next to Japandi stoneware bowl, linen cloth, bamboo whisk and a branch in a dark vase</image:title></image:image>
+  </url>
   <url><loc>https://thirdskin.online/blog/mid-century-modern-interior-style/</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority>
     <image:image><image:loc>https://thirdskin.online/blog/img/mid-century-modern-interior-style-living-room-1536.webp</image:loc><image:title>Mid-century modern living room with a mustard tufted sofa on tapered legs, walnut sideboard, moulded plywood lounge chair, slatted teak wall, sputnik pendant and a white pedestal dining table</image:title></image:image>
     <image:image><image:loc>https://thirdskin.online/blog/img/mid-century-modern-interior-style-details-1536.webp</image:loc><image:title>Mid-century modern details: walnut credenza with tambour doors, ceramic table lamp, amber glass vase, brass starburst clock, leather lounge chair and a geometric rug</image:title></image:image>
