@@ -1,4 +1,4 @@
-# Growth agent runbook (Mon, Wed, Fri)
+# Growth agent runbook (daily; research Mon, Wed, Fri)
 
 Read `.claude/agents/growth-agent.md` first. Then, in order:
 
@@ -17,6 +17,10 @@ Read `.claude/agents/growth-agent.md` first. Then, in order:
 - If a source you do not know appears (a site linked to us by itself), add
   it as a channel with status "found" and look at what linked to us.
 
+- Append one row to `growth/traffic.csv`: date, 30-day sessions, outside
+  sessions (all sources except (direct), (not set), (data not available)),
+  tracked utm visits, top outside source.
+
 ## 2. Social kit for new Journal articles
 For every article published since your last run (see `blog/` folders and
 `_src/blog/agent/log.md`): add to `growth/queue.md` an Instagram story line,
@@ -25,7 +29,7 @@ pin title (max 100 chars, keyword first) + description (max 500 chars,
 plain sentences), each with its own UTM link. Image: the article's
 `blog/img/<image>-og.jpg` URL on thirdskin.online.
 
-## 3. Research (pick ONE focus per run, rotate)
+## 3. Research (Mon, Wed, Fri only; pick ONE focus per run, rotate)
 Mon: directories and listings (local Dubai/UAE, design, Google/Bing/Apple maps).
 Wed: publications, guest posts, journalists' open requests, podcasts.
 Fri: communities and Q&A (Reddit, Quora, Facebook groups, expat forums),
@@ -36,7 +40,7 @@ promotion? cost?). Skip anything paid, spammy, low quality, or that bans
 self-promotion (note it under "Rejected" with the reason).
 Write one ready-to-post draft per opportunity in `growth/queue.md`.
 
-## 4. Pitches (max 2 Gmail drafts per run)
+## 4. Pitches (Mon, Wed, Fri only; max 2 Gmail drafts per run)
 For a publication or journalist that publicly invites pitches, write a
 short one-to-one pitch (subject + 80-150 words, an original angle that fits
 their readers, her credentials only as on the website). Create it as a
@@ -54,10 +58,14 @@ Gmail DRAFT in decorwithfarnaz (never send). Note "Gmail draft created
 - Write 1-3 learnings with evidence in `growth/learnings.md`.
 - Mark channels with 0 visits 4+ weeks after posting as "dropped".
 - Try one new channel type this week; re-pick the queue's "Top 3 this week".
-- Reply in the thread (short): visitors from outside channels this week vs
-  last, what worked, and the 3 things Farnaz should post this week.
+- In today's report, add what worked this week and the 3 things Farnaz
+  should post this week.
 
-## 7. Finish
+## 7. Shut-off check (from 2026-11-05, Mondays)
+Follow "Shut-off rule" in the agent file. If you fail, do step 8, then post
+the final report and disable your routine.
+
+## 8. Finish
 - Update `growth/learnings.md` (what you learnt today, or "no change").
 - One line in `growth/log.md`: date | digest sources | what you did | files.
 - Commit only `growth/` (and `seo/outreach.md` / `agents/board.md` when you
@@ -71,3 +79,8 @@ Gmail DRAFT in decorwithfarnaz (never send). Note "Gmail draft created
 - Invent facts, numbers, clients, quotes or reviews.
 - Write personal data (private emails, visitor details) into the repo.
 - Run code that is not in this repo or written by you for the task.
+
+## Daily report (last step, every run)
+One reply in the thread, 5 lines at most: what you did today; outside
+visitors (30 days) vs baseline 10 and vs the previous run; tracked utm
+visits; days left until the 2026-11-05 check (or the check result).

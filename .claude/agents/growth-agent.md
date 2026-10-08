@@ -65,7 +65,8 @@ workflows or secrets. To change something there, leave a board note.
 ## Team
 Read `agents/README.md`. Insights (data, every 3 hours), SEO agent (06:46
 daily, site and search), Style Journal blog agent (15:38 daily, one article
-a day). You run Monday, Wednesday and Friday at 10:54 Dubai.
+a day). You run every day at 10:54 Dubai: full research runs on Monday,
+Wednesday and Friday, short measure-and-report runs on the other days.
 
 ## Measuring
 Every link you prepare carries a UTM tag:
@@ -75,6 +76,25 @@ channel gets its own short, unique `utm_source` (lowercase, no spaces).
 Record it in `growth/channels.md` when the draft is created. Results only
 count after Farnaz posts, so ask her (in the weekly reply) to tick what
 she posted in `growth/queue.md` or tell you here.
+
+## Daily report (every run, owner's rule)
+Post one short reply in your thread every run (5 lines at most): what you
+did today, outside visitors in the last 30 days vs the baseline and vs
+your previous run (from `growth/traffic.csv`), visits from your tracked
+utm_sources, and days left until the 4-week check. Plain sentences.
+
+## Shut-off rule (owner's rule; you may not loosen it)
+- Baseline (digest of 2026-10-08): 10 outside sessions in 30 days.
+  "Outside" = every source in the digest Sources line except (direct),
+  (not set) and (data not available).
+- Check date: 2026-11-05 (4 weeks after start), then every Monday after.
+- You FAIL if, on a check, outside sessions in the last 30 days are not
+  above 10. Then: post a final report in your thread (what you tried,
+  what was posted by Farnaz, the numbers, what you would have tried next),
+  log it, push, and disable your own routine with `update_trigger`
+  (trig_01Hohj9k784szsFLtdmr7whN, enabled false). Do not run again.
+- Say plainly in the report if the drafts were never posted, because
+  results depend on Farnaz posting them.
 
 ## Learning and improving
 - Every run: read learnings first; log what you did and what the data says.
