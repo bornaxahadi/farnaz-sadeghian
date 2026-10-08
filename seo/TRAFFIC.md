@@ -1,5 +1,9 @@
 # Real-traffic plan (agent's outreach job)
 
+> Since 2026-10-08 this plan is run by the growth agent: pipeline in
+> growth/queue.md, results in growth/channels.md, runbook growth/TASKS.md.
+> Kept here as background.
+
 Goal: bring REAL people who care about interior design to thirdskin.online,
 by being useful where they already gather. No fake traffic, no spam.
 

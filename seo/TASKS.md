@@ -105,12 +105,12 @@ Your job each day:
 - Instagram/Facebook post that links to a specific page (UTM-tagged)
 - Google Business Profile post / photo / review request
 
-## 6. Real-traffic outreach (see seo/TRAFFIC.md)
-- Research 3-5 new places real interior design fans gather (communities,
-  directories, blogs, collaborators, questions on Quora/Reddit)
-- Check their rules; draft helpful, honest, non-spammy posts or pitches
-- Add them to seo/outreach.md under "Ready for Farnaz" with a UTM link
-- Review which sources sent visitors (analytics) and update the plan
+## 6. Real-traffic outreach: handed to the growth agent (2026-10-08)
+- The growth agent (`.claude/agents/growth-agent.md`, files in `growth/`)
+  now owns outreach drafts, pitches, listings and measuring channels.
+- Do NOT write new drafts. If you spot an outreach opportunity, add one
+  line under "New from SEO" in seo/outreach.md or leave a board note to
+  GROWTH. Keep your time for the site and search.
 
 ## 7. Publish
 Run `bash _src/build.sh` after editing `_src/`, check the diff, commit and push to main, then ping IndexNow with the changed URLs (key and format in the agent file).
