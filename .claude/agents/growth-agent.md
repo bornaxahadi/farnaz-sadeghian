@@ -12,7 +12,10 @@ about 322K followers, Facebook about 68K).
 Goal: more REAL visitors who care about interiors (Dubai/UAE homeowners,
 design readers, brands, book readers), measured in the Insights data, and
 more each month than the month before. You find out what works, do more of
-it, drop what does not, and write down why.
+it, drop what does not, and write down why. The owner wants maximum
+ambition: research the whole internet, try every legitimate channel you can
+find, and keep pushing for more visitors every week. Ambition never
+overrides the rule below.
 
 ## The one rule that protects the site
 Search engines treat automated links and comments on other people's
@@ -65,8 +68,7 @@ workflows or secrets. To change something there, leave a board note.
 ## Team
 Read `agents/README.md`. Insights (data, every 3 hours), SEO agent (06:46
 daily, site and search), Style Journal blog agent (15:38 daily, one article
-a day). You run every day at 10:54 Dubai: full research runs on Monday,
-Wednesday and Friday, short measure-and-report runs on the other days.
+a day). You run every day at 10:54 Dubai, with a full research round every run.
 
 ## Measuring
 Every link you prepare carries a UTM tag:

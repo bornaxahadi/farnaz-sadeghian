@@ -1,4 +1,4 @@
-# Growth agent runbook (daily; research Mon, Wed, Fri)
+# Growth agent runbook (daily)
 
 Read `.claude/agents/growth-agent.md` first. Then, in order:
 
@@ -29,18 +29,34 @@ pin title (max 100 chars, keyword first) + description (max 500 chars,
 plain sentences), each with its own UTM link. Image: the article's
 `blog/img/<image>-og.jpg` URL on thirdskin.online.
 
-## 3. Research (Mon, Wed, Fri only; pick ONE focus per run, rotate)
-Mon: directories and listings (local Dubai/UAE, design, Google/Bing/Apple maps).
-Wed: publications, guest posts, journalists' open requests, podcasts.
-Fri: communities and Q&A (Reddit, Quora, Facebook groups, expat forums),
-     and Pinterest search demand for interior topics.
-Find 2-3 NEW opportunities not already in `growth/channels.md`. For each:
-check it is real, active, relevant, and what its rules allow (links? self-
-promotion? cost?). Skip anything paid, spammy, low quality, or that bans
-self-promotion (note it under "Rejected" with the reason).
-Write one ready-to-post draft per opportunity in `growth/queue.md`.
+## 3. Research (EVERY run; go wide, the owner wants maximum reach)
+Search the whole web, not just the obvious places. Rotate the main focus
+by weekday, and always spend a little time on anything new you notice:
+- Mon: directories, listings and maps (Dubai/UAE, global design,
+  Google/Bing/Apple, Houzz-type marketplaces, design award sites).
+- Tue: publications and press: magazines, blogs that take guest posts,
+  journalist source requests (Qwoted, Featured, SourceBottle, Help a
+  B2B Writer, #journorequest on X), Gulf and expat media.
+- Wed: communities and Q&A: Reddit, Quora, Facebook groups, expat forums,
+  Houzz discussions, Discord/Slack design groups; collect real questions.
+- Thu: visual search and video: Pinterest trends, YouTube and TikTok
+  search demand, Instagram hashtags and collab partners.
+- Fri: partnerships: brands, furniture and decor shops, real-estate
+  agents and developers in Dubai, podcasts, events, design schools,
+  "featured designer" pages, book and reading communities.
+- Sat: link-earning ideas: what pages on similar sites get the most
+  links and shares (resource lists, guides, tools, data) and which one
+  thirdskin.online could do better; send the best idea to SEO or BLOG.
+- Sun: competitors: where similar Dubai designers and design blogs get
+  their links and mentions; find the ones open to her too.
+Find 3-5 NEW opportunities per run not already in `growth/channels.md`.
+For each: check it is real, active, relevant, and what its rules allow
+(links? self-promotion? cost?). Skip anything paid-for-links, spammy or
+low quality, or that bans self-promotion (note it under "Rejected" with
+the reason). Write one ready-to-post draft per opportunity in
+`growth/queue.md`, then re-rank the queue so the best bets stay on top.
 
-## 4. Pitches (Mon, Wed, Fri only; max 2 Gmail drafts per run)
+## 4. Pitches (max 2 Gmail drafts per run)
 For a publication or journalist that publicly invites pitches, write a
 short one-to-one pitch (subject + 80-150 words, an original angle that fits
 their readers, her credentials only as on the website). Create it as a
