@@ -306,7 +306,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-08</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thirdskin.online/blog/</loc><lastmod>2026-10-09</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thirdskin.online/blog/modern-interior-style/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://thirdskin.online/blog/img/modern-interior-style-palette-1536.webp</image:loc><image:title>Modern interior style colour palette: warm white, greige, stone grey, natural oak and matte black</image:title></image:image>
+  </url>
   <url><loc>https://thirdskin.online/blog/japandi-vs-scandinavian/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority>
     <image:image><image:loc>https://thirdskin.online/blog/img/japandi-vs-scandinavian-bedroom-1536.webp</image:loc><image:title>Bedroom blending Japandi and Scandinavian style: low light-oak platform bed with linen bedding, warm clay plaster wall, paper lantern, dark walnut bench, jute rug, sheepskin and a bonsai</image:title></image:image>
     <image:image><image:loc>https://thirdskin.online/blog/img/japandi-vs-scandinavian-details-1536.webp</image:loc><image:title>Side-by-side styling on one oak shelf: Scandinavian white jug with tulips, knitted throw and brass candlestick, next to Japandi stoneware bowl, linen cloth, bamboo whisk and a branch in a dark vase</image:title></image:image>

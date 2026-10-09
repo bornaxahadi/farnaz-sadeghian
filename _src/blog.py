@@ -68,9 +68,10 @@ a{color:var(--wine)}img{max-width:100%;height:auto;display:block}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .top img{height:34px;width:auto}
 .top nav{display:flex;gap:22px;align-items:center;font-size:14px;letter-spacing:.04em}
-.top nav a{text-decoration:none;color:var(--ink)}
+.top nav a{text-decoration:none;color:var(--ink);white-space:nowrap}
 .top nav a.cta{background:var(--wine);color:var(--paper);padding:9px 16px;border-radius:999px}
 @media(max-width:640px){.top nav a.hide-s{display:none}}
+@media(max-width:480px){.top nav .hide-xs{display:none}.top nav{gap:14px}.top img{height:30px}}
 .prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--wine),var(--gold));z-index:30}
 .crumbs{font-size:13px;color:var(--muted);margin:26px 0 0}.crumbs a{color:var(--muted);text-decoration:none}.crumbs a:hover{color:var(--wine)}
 .eyebrow{font:500 12px/1 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--wine)}
@@ -199,7 +200,7 @@ def head(title, desc, canonical, og_img, extra='', ld=None, keywords=''):
 
 TOPBAR = '''<div class="prog" id="prog"></div>
 <header class="top"><div class="wrap"><a href="/" aria-label="Third Skin Interiors home"><img src="/img/tsi-lockup.svg" alt="Third Skin Interiors by Farnaz Sadeghian" width="160" height="36"></a>
-<nav aria-label="Main"><a href="/blog/">Style Journal</a><a class="hide-s" href="/#about">About</a><a class="cta" href="/#contact">Book a consultation</a></nav></div></header>'''
+<nav aria-label="Main"><a href="/blog/"><span class="hide-xs">Style </span>Journal</a><a class="hide-s" href="/#about">About</a><a class="cta" href="/#contact">Book<span class="hide-xs"> a consultation</span></a></nav></div></header>'''
 
 FOOTER = '''<footer class="bf"><div class="wrap"><span>© 2026 Third Skin Interiors by Farnaz Sadeghian · Dubai, UAE</span>
 <span style="display:flex;gap:16px"><a href="/blog/">Style Journal</a><a href="https://www.instagram.com/decor.with.farnaz/" target="_blank" rel="noopener">Instagram</a><a href="/#contact">Contact</a><a href="/privacy/">Privacy</a><a href="/blog/feed.xml">RSS</a></span>

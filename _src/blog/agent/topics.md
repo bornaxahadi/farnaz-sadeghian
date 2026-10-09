@@ -15,13 +15,13 @@ Series numbering ("No. 01" ...) follows publication order.
 - [x] 2026-10-06 moroccan-interior-style (Moroccan, extra launch post)
 - [x] 2026-10-07 mid-century-modern-interior-style (Mid-century modern)
 - [x] 2026-10-08 japandi-vs-scandinavian (comparison; moved up 7 Oct as this week's swap: SEO board note, competitors rank comparison pages, both guides already live)
-- [ ] Modern
+- [x] 2026-10-09 modern-interior-style (Modern; cover is a palette graphic, all image credits empty)
+- [ ] Wabi-sabi (moved up 9 Oct: SEO note, fits the Japandi cluster)
 - [ ] Contemporary
 - [ ] Minimalist
 - [ ] Postmodern
 - [ ] Art Deco
 - [ ] Bohemian (Boho)
-- [ ] Wabi-sabi
 - [ ] Modern farmhouse
 - [ ] Industrial
 - [ ] Coastal

@@ -14,6 +14,11 @@
   `team::1685251187745843425`, model `gpt-image-2.5-sunburst`, 1536x1024),
   then download its asset URL in the workbench (expires in 7 days), crop
   and push to blog-assets like the Higgsfield files. Uses Figma AI credits.
+  On 9 Oct 2026 Figma ("usage limit reached") and Canva generate-image
+  ("credit quota exceeded") were empty too. Last resort that costs nothing:
+  a palette cover drawn locally with Pillow (site fonts load from
+  fonts/*-latin.woff2; the -latin-ext files lack basic letters), no img2.
+  Swap in real photos when credits return; never use other people's photos.
 - Workbench image saving: on 7 Oct 2026 the workbench's PIL could not save WebP
   ("unsupported image mode"). Workaround that works: push the raw PNG to
   blog-assets as `incoming/<name>-src.png`, fetch it locally and make the
