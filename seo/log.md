@@ -27,3 +27,7 @@
 | 2026-10-08 | Followers: NOT UPDATED 3 days in a row (6-8 Oct). Public pages are blocked; marked SETUP.md section 6 as BLOCKED. The owner needs to add the Meta token. Numbers stay at 322K + 68K; no guessing | seo/SETUP.md |
 | 2026-10-08 | Outreach: 4 drafts added (Bing Places, Gulf News expert source, Homeadore project, Expat.com forum) | seo/outreach.md |
 | 2026-10-08 | No English page change today: title/meta left as the owner set them; audit otherwise clean (1 H1, JSON-LD valid, all images have alt and size) | none |
+| 2026-10-09 | Team: 60 visitors, 98 sessions, 140 views (30 days). Top / 100, /fa/ 23, /blog/ 5; journal: moroccan 5, mid-century 3, scandinavian 2, persian 1. Sources: direct 77, ig 8, google 1. Posting time: KEEP (60 < 300). Closed 4 notes (Japandi vs Scandinavian is in sitemap + llms.txt and already covers "differences"/"how to choose"); left a Wabi-sabi topic note for blog | agents/board.md |
+| 2026-10-09 | Health: all URLs 200. Lighthouse mobile 71 (LCP 3.05 s, TBT 684 ms), desktop 100. Better than the last 3 runs; still the decorative animations, left as is | none |
+| 2026-10-09 | Followers: the new followers routine read Instagram 323,500 via vidIQ; Facebook 70,000 (owner screenshot). llms.txt still said 322,000 + 68,000, now 323,000 + 70,000. Total 393.5K is within 2% of the "390,000" text, so that stays | _src/build2.py, llms.txt |
+| 2026-10-09 | English page audit clean (1 H1, JSON-LD valid, 47 images with alt and size). Title 84 / description 163 chars left as the owner set them | none |

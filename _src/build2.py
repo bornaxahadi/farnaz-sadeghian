@@ -306,7 +306,7 @@ open('dist/llms.txt', 'w').write(f"""# Third Skin Interiors · Farnaz Sadeghian
 - Business: Third Skin Interiors (social media name: Decor with Farnaz)
 - Location: Dubai, United Arab Emirates; works in person in Dubai/UAE and online
 - Credentials: certified interior decorator through TAFE, Australia; six years of professional practice; 50+ homes staged, each planned in 3D first
-- Audience: about 322,000 Instagram followers (@decor.with.farnaz) and 68,000 Facebook followers; roughly 31% Iran and Central Asia, 28% UAE, 25% United States, 10% Europe
+- Audience: about 323,000 Instagram followers (@decor.with.farnaz) and 70,000 Facebook followers; roughly 31% Iran and Central Asia, 28% UAE, 25% United States, 10% Europe
 - Reach: about 36 million people reached in a month; most-watched reel 9.5 million views
 - Languages: English and Persian (website available in 10 languages)
 - Contact: WhatsApp {PHONE}, email {EMAIL}, Instagram collaborations @decor_farnaz
