@@ -1,23 +1,24 @@
 {
-  "checked_at": "2026-10-09T04:45:41+04:00",
+  "checked_at": "2026-10-09T10:26:34+04:00",
   "results": {
     "ig": {
       "site_now": 323500,
-      "found": null,
-      "source": null,
-      "notes": [
-        "public json failed: HTTP Error 429: Too Many Requests",
-        "public page had no follower count (login wall or changed layout)"
+      "found": 323600,
+      "source": "vidiq",
+      "notes": [],
+      "status": "UPDATED 323500 -> 323600",
+      "files": [
+        "app.js",
+        "_src/app.part"
       ],
-      "status": "NOT UPDATED - could not read live count",
-      "files": []
+      "gain_per_day": 530
     },
     "fb": {
       "site_now": 70000,
       "found": null,
       "source": null,
       "notes": [
-        "public page failed: HTTP Error 400: Bad Request"
+        "public page failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
       ],
       "status": "NOT UPDATED - could not read live count",
       "files": []
