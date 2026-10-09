@@ -13,7 +13,40 @@ itself. Copy, check, post, then tick it: change `[ ]` to `[x] posted <date>`
    - Link: https://thirdskin.online/blog/japandi-vs-scandinavian/?utm_source=facebook&utm_medium=post&utm_campaign=journal
 3. [ ] Houzz free profile (item 2 below): the listing with the highest homeowner intent; ask two real past clients for reviews.
 
+## Share kits for Journal articles
+
+### Moroccan interior style (most-read article: 6 views in 30 days)
+- [ ] Instagram story: "My most-read guide this month: Moroccan style at home. Zellige, lantern light and spice colours, without turning your living room into a souk."
+  Link: https://thirdskin.online/blog/moroccan-interior-style/?utm_source=instagram&utm_medium=story&utm_campaign=journal-moroccan
+- [ ] Facebook: "Moroccan style is all warmth: plaster walls, patterned tiles, lantern light and rugs in spice colours. The trick is using a few of these well, not all of them at once. Here is how I'd bring it into a modern apartment. Which would you try first, the tiles or the lanterns?"
+  Link: https://thirdskin.online/blog/moroccan-interior-style/?utm_source=facebook&utm_medium=post&utm_campaign=journal-moroccan
+- [ ] Pinterest pin. Title: "Moroccan interior style: zellige tiles, lantern light and spice colours". Description: "How to bring Moroccan warmth into a modern home: soft plaster walls, zellige tiles, brass lanterns and rugs in saffron and terracotta, used with restraint. A decorator's guide from Dubai."
+  Image: https://thirdskin.online/blog/img/moroccan-interior-style-living-room-og.jpg
+  Link: https://thirdskin.online/blog/moroccan-interior-style/?utm_source=pinterest&utm_medium=pin&utm_campaign=journal-moroccan
+
+### Japandi vs Scandinavian (newest; Instagram and Facebook are in Top 3)
+- [ ] Pinterest pin. Title: "Japandi vs Scandinavian: the real differences and how to choose". Description: "Both styles are calm and natural, but Japandi uses darker woods, fewer objects and earthy tones, while Scandinavian is lighter, cosier and more layered. A side-by-side guide to choosing the right one for your bedroom or living room."
+  Image: https://thirdskin.online/blog/img/japandi-vs-scandinavian-bedroom-og.jpg
+  Link: https://thirdskin.online/blog/japandi-vs-scandinavian/?utm_source=pinterest&utm_medium=pin&utm_campaign=journal-japandi-vs-scandi
+
 ## Queue
+
+Added 2026-10-09 (Friday: partnerships and press).
+
+15. [ ] identity magazine and its podcast "In Design With" (Dubai's interiors magazine, Motivate Media)
+   - Why: the main Dubai interiors title; its new podcast interviews people shaping design in the region. A feature, a quote or an episode would reach exactly her local audience.
+   - How: one personal email to the editor listed on https://identity.ae/contact-us/ (the page lists an editorial contact but does not invite pitches, so this is Farnaz's call; not put in Gmail drafts).
+   - Draft: "Hello, I'm Farnaz Sadeghian, a TAFE-certified interior decorator in Dubai (Third Skin Interiors). I teach practical home styling to a large audience as Decor with Farnaz, and I'm writing a book, Soul of the Room, on 50 interior styles. If you ever cover making rented Dubai apartments feel personal, or how global styles translate to Gulf homes, I'd be glad to contribute ideas, quotes or project photos, and I'd love to be considered as a guest for In Design With. Thank you, Farnaz"
+   - Link: https://thirdskin.online/?utm_source=identity&utm_medium=pr&utm_campaign=expert-source
+
+16. [ ] Showroom designer events (example: Interiors UAE hosted a Bernhardt designer event, https://blog.bernhardt.com/interiors-uae-hosts-bernhardt-designer-event)
+   - Why: furniture showrooms invite designers to trade evenings; brands then feature or tag designers who style their pieces, which links back to her.
+   - How: when visiting a showroom she likes, ask to join their designer list. No draft needed; mention thirdskin.online on her card.
+
+Gmail drafts created 2026-10-09 (in decorwithfarnaz Drafts, NOT sent; review and send if happy):
+- Item 4, Home Renovation AE: "Guest Post Pitch" with three Dubai headlines and an outline.
+- Item 8, Style Curator: "Story idea: Persian warmth in a modern apartment".
+
 (Items 1-14 were prepared by the SEO agent on 6-8 Oct and moved here on 8 Oct.)
 
 Added 2026-10-06. Check each site's current terms before submitting. Use the UTM link shown.
