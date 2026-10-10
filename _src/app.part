@@ -8,7 +8,7 @@ const CONFIG = {
   email: "decorwithfarnaz@gmail.com",    // Farnaz's email (swap for a domain email later)
   formEndpoint: "https://formsubmit.co/ajax/2b4ca41127912ca3bbac2accd0ee54b0", // inquiries + launch-list sign-ups arrive here by email (FormSubmit: click "Activate" in the first email once)
   stats: {                               // real follower counts, updated automatically by .github/scripts/followers.py (gainPerDay = real measured growth)
-    ig: { followers: 323600, gainPerDay: 530, asOf: "2026-10-09T10:26:34+04:00" },
+    ig: { followers: 324400, gainPerDay: 598, asOf: "2026-10-10T10:21:39+04:00" },
     fb: { followers: 70000, gainPerDay: 738, asOf: "2026-10-09T03:04:14+04:00" }
   }
 };
