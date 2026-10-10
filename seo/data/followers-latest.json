@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-09T22:35:48+04:00",
+  "checked_at": "2026-10-10T04:43:42+04:00",
   "results": {
     "ig": {
       "site_now": 323600,
@@ -7,7 +7,7 @@
       "source": null,
       "notes": [
         "public json failed: HTTP Error 429: Too Many Requests",
-        "public page had no follower count (login wall or changed layout)"
+        "public page failed: HTTP Error 429: Too Many Requests"
       ],
       "status": "NOT UPDATED - could not read live count",
       "files": []
