@@ -1,4 +1,4 @@
-# Live followers - 2026-10-13 10:44 Dubai
+# Live followers - 2026-10-13 16:45 Dubai
 
 | Platform | On site before | Live count found | Source | Result |
 |---|---|---|---|---|
