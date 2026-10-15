@@ -1,74 +1,74 @@
 {
-  "checked_at": "2026-10-14T02:13:49+00:00",
+  "checked_at": "2026-10-15T02:17:19+00:00",
   "healthy": true,
   "checks": [
     {
       "url": "https://thirdskin.online/",
       "status": 200,
-      "ms": 221,
+      "ms": 236,
       "bytes": 216030,
       "final": "https://thirdskin.online/"
     },
     {
       "url": "https://thirdskin.online/sitemap.xml",
       "status": 200,
-      "ms": 189,
+      "ms": 76,
       "bytes": 29727,
       "final": "https://thirdskin.online/sitemap.xml"
     },
     {
       "url": "https://thirdskin.online/robots.txt",
       "status": 200,
-      "ms": 179,
+      "ms": 91,
       "bytes": 472,
       "final": "https://thirdskin.online/robots.txt"
     },
     {
       "url": "https://thirdskin.online/llms.txt",
       "status": 200,
-      "ms": 147,
+      "ms": 81,
       "bytes": 6368,
       "final": "https://thirdskin.online/llms.txt"
     },
     {
       "url": "https://thirdskin.online/manifest.webmanifest",
       "status": 200,
-      "ms": 194,
+      "ms": 65,
       "bytes": 515,
       "final": "https://thirdskin.online/manifest.webmanifest"
     },
     {
       "url": "https://thirdskin.online/sw.js",
       "status": 200,
-      "ms": 298,
+      "ms": 59,
       "bytes": 894,
       "final": "https://thirdskin.online/sw.js"
     },
     {
       "url": "https://thirdskin.online/media-kit.pdf",
       "status": 200,
-      "ms": 259,
+      "ms": 177,
       "bytes": 1696100,
       "final": "https://thirdskin.online/media-kit.pdf"
     },
     {
       "url": "https://thirdskin.online/privacy/",
       "status": 200,
-      "ms": 161,
+      "ms": 71,
       "bytes": 4070,
       "final": "https://thirdskin.online/privacy/"
     },
     {
       "url": "https://thirdskin.online/img/og-image.jpg",
       "status": 200,
-      "ms": 210,
+      "ms": 69,
       "bytes": 68032,
       "final": "https://thirdskin.online/img/og-image.jpg"
     },
     {
       "url": "https://thirdskin.online/app.js",
       "status": 200,
-      "ms": 252,
+      "ms": 86,
       "bytes": 49887,
       "final": "https://thirdskin.online/app.js"
     }
@@ -79,9 +79,9 @@
       "seo": 100,
       "accessibility": 92,
       "best_practices": 100,
-      "lcp_s": 3.21,
+      "lcp_s": 2.98,
       "cls": 0.002,
-      "tbt_ms": 538,
+      "tbt_ms": 675,
       "page_kb": 336,
       "failed": [
         "first-contentful-paint",
@@ -100,7 +100,7 @@
       "seo": 100,
       "accessibility": 92,
       "best_practices": 100,
-      "lcp_s": 0.47,
+      "lcp_s": 0.55,
       "cls": 0.016,
       "tbt_ms": 0,
       "page_kb": 527,
