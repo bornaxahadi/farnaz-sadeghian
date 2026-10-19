@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-19T04:58:58+04:00",
+  "checked_at": "2026-10-19T11:04:54+04:00",
   "results": {
     "ig": {
       "site_now": 326900,
@@ -17,7 +17,7 @@
       "found": null,
       "source": null,
       "notes": [
-        "public page had no follower count (login wall or changed layout)"
+        "public page failed: HTTP Error 400: Bad Request"
       ],
       "status": "NOT UPDATED - could not read live count",
       "files": []
