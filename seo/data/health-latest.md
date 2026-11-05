@@ -1,27 +1,25 @@
-# Live site health and speed - 2026-11-04 08:14 UTC
+# Live site health and speed - 2026-11-05 08:39 UTC
 
 **Status: HEALTHY**
 
 | URL | HTTP | ms | KB |
 |---|---|---|---|
-| https://thirdskin.online/ | 200 | 235 | 210 |
-| https://thirdskin.online/sitemap.xml | 200 | 152 | 29 |
-| https://thirdskin.online/robots.txt | 200 | 142 | 0 |
-| https://thirdskin.online/llms.txt | 200 | 151 | 6 |
-| https://thirdskin.online/manifest.webmanifest | 200 | 125 | 0 |
-| https://thirdskin.online/sw.js | 200 | 118 | 0 |
-| https://thirdskin.online/media-kit.pdf | 200 | 256 | 1656 |
-| https://thirdskin.online/privacy/ | 200 | 174 | 3 |
-| https://thirdskin.online/img/og-image.jpg | 200 | 147 | 66 |
-| https://thirdskin.online/app.js | 200 | 158 | 48 |
+| https://thirdskin.online/ | 200 | 256 | 210 |
+| https://thirdskin.online/sitemap.xml | 200 | 155 | 29 |
+| https://thirdskin.online/robots.txt | 200 | 130 | 0 |
+| https://thirdskin.online/llms.txt | 200 | 154 | 6 |
+| https://thirdskin.online/manifest.webmanifest | 200 | 131 | 0 |
+| https://thirdskin.online/sw.js | 200 | 143 | 0 |
+| https://thirdskin.online/media-kit.pdf | 200 | 378 | 1656 |
+| https://thirdskin.online/privacy/ | 200 | 155 | 3 |
+| https://thirdskin.online/img/og-image.jpg | 200 | 152 | 66 |
+| https://thirdskin.online/app.js | 200 | 133 | 48 |
 
 ## Lighthouse (home page)
 
 | | Perf | SEO | A11y | Best practices | LCP s | CLS | TBT ms | Page KB |
 |---|---|---|---|---|---|---|---|---|
-| mobile | 92 | 100 | 92 | 100 | 2.73 | 0.002 | 20 | 336 |
-| desktop | 100 | 100 | 92 | 100 | 0.47 | 0.016 | 2 | 527 |
+| mobile | error: Command '['npx', '--yes', 'lighthouse@12', 'https://thirdskin.online/', '--quiet', '--chrome-flags=--headless=new --no-sandbox', '--output=json', '--output-path=lh-mobile.json', '--only-categories=per |
+| desktop | 71 | 100 | 92 | 100 | 1.28 | 0.016 | 444 | 527 |
 
-Audits below 90 (mobile): first-contentful-paint, forced-reflow-insight, largest-contentful-paint, meta-viewport, network-dependency-tree-insight, speed-index, target-size
-
-Audits below 90 (desktop): color-contrast, meta-viewport, network-dependency-tree-insight
+Audits below 90 (desktop): color-contrast, first-contentful-paint, largest-contentful-paint, max-potential-fid, meta-viewport, network-dependency-tree-insight, speed-index, total-blocking-time

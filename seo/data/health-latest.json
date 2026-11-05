@@ -1,111 +1,100 @@
 {
-  "checked_at": "2026-11-04T08:14:35+00:00",
+  "checked_at": "2026-11-05T08:39:40+00:00",
   "healthy": true,
   "checks": [
     {
       "url": "https://thirdskin.online/",
       "status": 200,
-      "ms": 235,
+      "ms": 256,
       "bytes": 216030,
       "final": "https://thirdskin.online/"
     },
     {
       "url": "https://thirdskin.online/sitemap.xml",
       "status": 200,
-      "ms": 152,
+      "ms": 155,
       "bytes": 29727,
       "final": "https://thirdskin.online/sitemap.xml"
     },
     {
       "url": "https://thirdskin.online/robots.txt",
       "status": 200,
-      "ms": 142,
+      "ms": 130,
       "bytes": 472,
       "final": "https://thirdskin.online/robots.txt"
     },
     {
       "url": "https://thirdskin.online/llms.txt",
       "status": 200,
-      "ms": 151,
+      "ms": 154,
       "bytes": 6368,
       "final": "https://thirdskin.online/llms.txt"
     },
     {
       "url": "https://thirdskin.online/manifest.webmanifest",
       "status": 200,
-      "ms": 125,
+      "ms": 131,
       "bytes": 515,
       "final": "https://thirdskin.online/manifest.webmanifest"
     },
     {
       "url": "https://thirdskin.online/sw.js",
       "status": 200,
-      "ms": 118,
+      "ms": 143,
       "bytes": 894,
       "final": "https://thirdskin.online/sw.js"
     },
     {
       "url": "https://thirdskin.online/media-kit.pdf",
       "status": 200,
-      "ms": 256,
+      "ms": 378,
       "bytes": 1696100,
       "final": "https://thirdskin.online/media-kit.pdf"
     },
     {
       "url": "https://thirdskin.online/privacy/",
       "status": 200,
-      "ms": 174,
+      "ms": 155,
       "bytes": 4070,
       "final": "https://thirdskin.online/privacy/"
     },
     {
       "url": "https://thirdskin.online/img/og-image.jpg",
       "status": 200,
-      "ms": 147,
+      "ms": 152,
       "bytes": 68032,
       "final": "https://thirdskin.online/img/og-image.jpg"
     },
     {
       "url": "https://thirdskin.online/app.js",
       "status": 200,
-      "ms": 158,
+      "ms": 133,
       "bytes": 49887,
       "final": "https://thirdskin.online/app.js"
     }
   ],
   "lighthouse": {
     "mobile": {
-      "performance": 92,
-      "seo": 100,
-      "accessibility": 92,
-      "best_practices": 100,
-      "lcp_s": 2.73,
-      "cls": 0.002,
-      "tbt_ms": 20,
-      "page_kb": 336,
-      "failed": [
-        "first-contentful-paint",
-        "forced-reflow-insight",
-        "largest-contentful-paint",
-        "meta-viewport",
-        "network-dependency-tree-insight",
-        "speed-index",
-        "target-size"
-      ]
+      "error": "Command '['npx', '--yes', 'lighthouse@12', 'https://thirdskin.online/', '--quiet', '--chrome-flags=--headless=new --no-sandbox', '--output=json', '--output-path=lh-mobile.json', '--only-categories=per"
     },
     "desktop": {
-      "performance": 100,
+      "performance": 71,
       "seo": 100,
       "accessibility": 92,
       "best_practices": 100,
-      "lcp_s": 0.47,
+      "lcp_s": 1.28,
       "cls": 0.016,
-      "tbt_ms": 2,
+      "tbt_ms": 444,
       "page_kb": 527,
       "failed": [
         "color-contrast",
+        "first-contentful-paint",
+        "largest-contentful-paint",
+        "max-potential-fid",
         "meta-viewport",
-        "network-dependency-tree-insight"
+        "network-dependency-tree-insight",
+        "speed-index",
+        "total-blocking-time"
       ]
     }
   }
