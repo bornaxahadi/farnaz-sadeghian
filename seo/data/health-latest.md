@@ -1,27 +1,27 @@
-# Live site health and speed - 2026-11-09 08:47 UTC
+# Live site health and speed - 2026-11-10 08:54 UTC
 
 **Status: HEALTHY**
 
 | URL | HTTP | ms | KB |
 |---|---|---|---|
-| https://thirdskin.online/ | 200 | 199 | 210 |
-| https://thirdskin.online/sitemap.xml | 200 | 126 | 29 |
-| https://thirdskin.online/robots.txt | 200 | 163 | 0 |
-| https://thirdskin.online/llms.txt | 200 | 106 | 6 |
-| https://thirdskin.online/manifest.webmanifest | 200 | 293 | 0 |
-| https://thirdskin.online/sw.js | 200 | 106 | 0 |
-| https://thirdskin.online/media-kit.pdf | 200 | 392 | 1656 |
-| https://thirdskin.online/privacy/ | 200 | 103 | 3 |
-| https://thirdskin.online/img/og-image.jpg | 200 | 107 | 66 |
-| https://thirdskin.online/app.js | 200 | 136 | 48 |
+| https://thirdskin.online/ | 200 | 236 | 210 |
+| https://thirdskin.online/sitemap.xml | 200 | 153 | 29 |
+| https://thirdskin.online/robots.txt | 200 | 122 | 0 |
+| https://thirdskin.online/llms.txt | 200 | 103 | 6 |
+| https://thirdskin.online/manifest.webmanifest | 200 | 144 | 0 |
+| https://thirdskin.online/sw.js | 200 | 170 | 0 |
+| https://thirdskin.online/media-kit.pdf | 200 | 358 | 1656 |
+| https://thirdskin.online/privacy/ | 200 | 267 | 3 |
+| https://thirdskin.online/img/og-image.jpg | 200 | 115 | 66 |
+| https://thirdskin.online/app.js | 200 | 126 | 48 |
 
 ## Lighthouse (home page)
 
 | | Perf | SEO | A11y | Best practices | LCP s | CLS | TBT ms | Page KB |
 |---|---|---|---|---|---|---|---|---|
-| mobile | 66 | 100 | 92 | 100 | 2.67 | 0.002 | 1606 | 336 |
-| desktop | 100 | 100 | 92 | 100 | 0.43 | 0.017 | 0 | 527 |
+| mobile | 77 | 100 | 92 | 100 | 1.57 | 0 | 1048 | 337 |
+| desktop | 100 | 100 | 92 | 100 | 0.62 | 0.016 | 0 | 528 |
 
-Audits below 90 (mobile): first-contentful-paint, forced-reflow-insight, interactive, largest-contentful-paint, max-potential-fid, meta-viewport, network-dependency-tree-insight, target-size, total-blocking-time
+Audits below 90 (mobile): forced-reflow-insight, max-potential-fid, meta-viewport, network-dependency-tree-insight, target-size, total-blocking-time
 
-Audits below 90 (desktop): color-contrast, forced-reflow-insight, meta-viewport, network-dependency-tree-insight
+Audits below 90 (desktop): color-contrast, meta-viewport, network-dependency-tree-insight
